@@ -1,0 +1,323 @@
+/* Products Page Styles */
+
+/* 1. Header Bar */
+.products-header-bar {
+    background-color: #333333;
+    /* Dark Grey/Black bar */
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+.header-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.products-header-bar .breadcrumbs {
+    font-size: 0.9rem;
+    color: #aeaeae;
+}
+
+.products-header-bar .breadcrumbs a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.products-header-bar .breadcrumbs a:hover {
+    color: #2233AD;
+}
+
+/* 2. Hero Section */
+.products-hero {
+    position: relative;
+    height: 500px;
+    /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+    /* Slight upward shift to accommodate cards overlap */
+    text-align: center;
+    /* Enforce text centering */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-main-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.products-hero .hero-subtitle {
+    font-size: 1.2rem;
+    color: #2233AD !important;
+    /* Blue Subtitle with !important to force override */
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* 3. Cards Section */
+.product-cards-section {
+    position: relative;
+    margin-top: -80px;
+    /* Negative margin to pull cards up over hero */
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+.product-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 Columns */
+    gap: 20px;
+}
+
+.product-feature-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 2px;
+}
+
+.product-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(34, 51, 173, 0.3);
+    /* Blue shadow */
+    background-color: #2233AD;
+    /* Blue background */
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    color: #2233AD;
+    /* Blue Icon */
+}
+
+.card-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: #2233AD;
+    /* Stroke color */
+    transition: stroke 0.3s ease;
+}
+
+.product-feature-card:hover .card-icon svg {
+    stroke: #ffffff;
+}
+
+.product-feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.product-feature-card:hover h3 {
+    color: #ffffff;
+}
+
+.product-feature-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.product-feature-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .product-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cols on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-cards-grid {
+        grid-template-columns: 1fr;
+        /* 1 col on mobile */
+    }
+
+    .hero-main-title {
+        font-size: 2.5rem;
+    }
+
+    .product-cards-section {
+        margin-top: -40px;
+    }
+}
+
+/* 4. Product Catalog Grid */
+.product-catalog-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.catalog-card {
+    position: relative;
+    height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+}
+
+.catalog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.catalog-card:hover .catalog-image {
+    transform: scale(1.05);
+}
+
+.catalog-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    /* Solid dark bar */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.catalog-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 65%;
+    text-align: left;
+}
+
+.btn-more {
+    background-color: #2233AD;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: capitalize;
+    /* "More....." usually isn't all caps in this style */
+    border-radius: 0;
+    /* Rectangular as requested */
+    margin-left: auto;
+    /* Push to right */
+}
+
+.btn-more:hover {
+    background-color: #1a2a8e;
+}
+
+
+
+/* Pagination */
+.catalog-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover,
+.page-btn.active {
+    background-color: #2233AD;
+    /* Blue */
+    color: #ffffff;
+    border-color: #2233AD;
+}
+
+/* Responsive Catalog */
+@media (max-width: 992px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+}

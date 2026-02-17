@@ -1,0 +1,10 @@
+﻿/* Update projects grid to show 4 columns */
+.projects-carousel .projects-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    flex: 1;
+}
+
+/* Remove carousel button styles since we don't need them */
+.carousel-btn {
+    display: none;
+}

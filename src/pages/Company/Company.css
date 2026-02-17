@@ -1,0 +1,282 @@
+.company-page {
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.company-hero {
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    padding: var(--spacing-5xl) 0 var(--spacing-4xl);
+    text-align: center;
+}
+
+.company-hero h1 {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-extrabold);
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-xl);
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Company Introduction */
+.company-intro-section {
+    background: var(--color-white);
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro-content h2 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-gray-900);
+}
+
+.intro-content .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-lg);
+    font-weight: var(--font-weight-medium);
+}
+
+.intro-content p {
+    font-size: var(--font-size-base);
+    color: var(--color-gray-600);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Differentiators Section */
+.differentiators-section {
+    background: var(--color-gray-50);
+}
+
+.differentiators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-3xl);
+}
+
+.diff-card {
+    background: var(--color-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid var(--color-gray-100);
+    text-align: center;
+}
+
+.diff-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
+    border-color: var(--color-primary-light);
+}
+
+.diff-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.diff-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-gray-900);
+}
+
+.diff-card p {
+    color: var(--color-gray-600);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+/* Company Stats */
+.company-stats-section {
+    background: var(--color-white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-3xl);
+}
+
+.stat-card {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--color-primary-light);
+    transition: all var(--transition-base);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-number {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: var(--font-size-base);
+    color: var(--color-gray-700);
+    font-weight: var(--font-weight-medium);
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--gradient-secondary);
+    color: var(--color-white);
+}
+
+.cta-section h2 {
+    color: var(--color-white);
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.section-intro-light {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-2xl);
+}
+
+.btn {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-lg {
+    padding: var(--spacing-lg) var(--spacing-3xl);
+    font-size: var(--font-size-lg);
+}
+
+.btn-primary {
+    background: #2233AD !important;
+    border-color: #2233AD !important;
+    background: var(--gradient-accent);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    color: var(--color-white);
+}
+
+.btn-secondary-light {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary-light:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-white);
+    transform: translateY(-3px);
+    color: var(--color-white);
+}
+
+/* Section Utilities */
+.section {
+    padding: var(--spacing-5xl) 0;
+}
+
+.section-header {
+    margin-bottom: var(--spacing-4xl);
+}
+
+.section-header h2 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-gray-900);
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-600);
+    line-height: var(--line-height-relaxed);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-gray-50 {
+    background: var(--color-gray-50);
+}
+
+.bg-gradient {
+    background: var(--gradient-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .company-hero h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .differentiators-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

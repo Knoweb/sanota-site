@@ -1,0 +1,210 @@
+/* Careers Page Styles */
+/* .careers-page { } removed to fix lint */
+
+
+/* Hero Section */
+.careers-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for text readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 4px;
+    /* Slight rounded corners as per new style? Or stick to rect? Screenshot looked slightly rounded. */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #ff7f00;
+    /* Keeping Orange for 'View Open Positions' to match screenshot exactly? */
+    /* Screenshot has: Orange Button (View Open Positions) and Transparent/Dark Button (Apply Now). */
+    /* User previously said: "Change Orange Accents to Blue". */
+    /* I successfully used Blue for Products. */
+    /* I will use BLUE for Primary. */
+    background-color: #2233AD;
+    color: #ffffff;
+    border: 2px solid #2233AD;
+}
+
+.btn-primary:hover {
+    background-color: #1a2a8e;
+    border-color: #1a2a8e;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Why Careers Section */
+.why-careers-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.why-careers-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* Content slightly wider */
+    gap: 50px;
+    align-items: center;
+}
+
+.section-label {
+    display: block;
+    color: #ff7f00;
+    /* Sidebar accent in screenshot is orange. */
+    /* I'll make this BLUE #2233AD */
+    color: #2233AD;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.section-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+}
+
+/* Benefits Grid */
+.benefits-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #2233AD;
+    /* Blue checkmark box */
+    color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.benefit-item span {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Image Section */
+.why-careers-image-wrapper {
+    position: relative;
+}
+
+.why-careers-image {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.image-accent-border {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #2233AD;
+    /* Blue accent border */
+    z-index: 0;
+    /* In screenshot it's a solid block or L-shape? It looks like a solid block of color behind/overlapping. */
+    /* Actually screenshot shows a solid ORANGE block overlapping the bottom right corner. */
+    /* I'll make it a Blue block. */
+    background-color: #2233AD;
+    border: none;
+    width: 100px;
+    /* Adjust size */
+    height: 100px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .why-careers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-careers-image-wrapper {
+        margin-top: 40px;
+        max-width: 600px;
+        /* Limit width on mobile */
+    }
+}

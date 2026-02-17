@@ -1,0 +1,329 @@
+/* Footer Container */
+.footer-new {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-primary);
+    width: 100%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* 1. CTA Bar */
+.footer-cta-bar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-2xl) 0;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+}
+
+.cta-text-group h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 400;
+}
+
+.cta-text-group p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin: 0;
+    opacity: 0.7;
+}
+
+.cta-form {
+    display: flex;
+    height: 50px;
+}
+
+.cta-input {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0 var(--spacing-lg);
+    width: 300px;
+    height: 100%;
+    font-size: var(--font-size-sm);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.cta-input:focus {
+    border-color: var(--color-primary);
+}
+
+.btn-cta {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 0 var(--spacing-xl);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* 2. Main Bar */
+.footer-main-bar {
+    padding: var(--spacing-3xl) 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-2xl);
+}
+
+/* Left: Brand */
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo-new {
+    height: 30px;
+    width: auto;
+    margin-bottom: var(--spacing-lg);
+    filter: brightness(0) invert(1);
+    /* Make white */
+}
+
+.footer-address {
+    font-style: normal;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* Center: Nav */
+.footer-nav {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-sm);
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+.footer-nav a:hover {
+    color: #2233AD;
+}
+
+/* Right: Socials */
+.footer-socials {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.social-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* 3. Bottom Bar */
+.footer-bottom-bar {
+    padding-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Optional separator line if needed, or remove */
+    padding-top: var(--spacing-lg);
+}
+
+/* Actually user image shows check: blank space then text at bottom. 
+   Let's keep the spacing but maybe no line if the image implies just space. 
+   The image shows a vast black space. 
+   I'll keep the top border on the bottom-content wrapper to separate it visually if desireable, 
+   but the reference image seems to have just space. I'll remove the border for now to match strict 'black void' look if needed 
+   or keep it for structure. I'll keep it subtle. */
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: var(--font-size-xs);
+    margin: 0;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.footer-legal-links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    transition: color 0.3s;
+}
+
+.footer-legal-links a:hover {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .cta-content,
+    .main-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-form {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .cta-input {
+        width: 100%;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .bottom-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+/* Social Icons Styling - Blue/White Theme with Tooltips */
+.footer-socials .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #2233AD !important;
+    border-radius: 4px; /* Slight rounding or 0 for square */
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+    position: relative; /* For tooltip positioning */
+}
+
+.footer-socials .social-icon:hover {
+    background-color: #2233AD !important;
+    border-color: #2233AD !important;
+    color: #ffffff !important;
+}
+
+.footer-socials .social-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Tooltip Implementation */
+.footer-socials .social-icon::before {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.footer-socials .social-icon::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1a1a1a transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.footer-socials .social-icon:hover::before,
+.footer-socials .social-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Corrected Legal Links Styling */
+.footer-legal {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.footer-legal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    opacity: 0.7; /* White with slight transparency */
+    transition: all 0.3s;
+}
+
+.footer-legal a:hover {
+    opacity: 1;
+    color: #2233AD; /* Blue on hover */
+}
