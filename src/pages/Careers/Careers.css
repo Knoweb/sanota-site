@@ -64,7 +64,7 @@
 }
 
 .btn-primary {
-    background-color: #ff7f00;
+    background-color: #2233AD;
     /* Keeping Orange for 'View Open Positions' to match screenshot exactly? */
     /* Screenshot has: Orange Button (View Open Positions) and Transparent/Dark Button (Apply Now). */
     /* User previously said: "Change Orange Accents to Blue". */
@@ -107,7 +107,7 @@
 
 .section-label {
     display: block;
-    color: #ff7f00;
+    color: #2233AD;
     /* Sidebar accent in screenshot is orange. */
     /* I'll make this BLUE #2233AD */
     color: #2233AD;
@@ -191,9 +191,9 @@
     /* I'll make it a Blue block. */
     background-color: #2233AD;
     border: none;
-    width: 100px;
+    width: 250px;
     /* Adjust size */
-    height: 100px;
+    height: 250px;
 }
 
 /* Responsive */
@@ -206,5 +206,322 @@
         margin-top: 40px;
         max-width: 600px;
         /* Limit width on mobile */
+    }
+}
+
+/* Life at Sanota Section */
+.life-at-sanota-section {
+    position: relative;
+    padding: 100px 0 100px 0;
+    margin-bottom: 200px;
+    /* Space for overlapping card */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+
+.life-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Darker overlay */
+}
+
+.life-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.life-header {
+    margin-bottom: 60px;
+}
+
+.life-header h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    /* Thin/Light font weight like screenshot */
+    margin-bottom: 15px;
+}
+
+.life-subtitle {
+    color: #2233AD;
+    /* Blue accent */
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1000px;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Divider lines between stats */
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Stronger divider */
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #2233AD;
+    /* Blue */
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Life at Sanota Slider Section ===== */
+
+.life-slider-wrapper {
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* Overlap bottom edge completely */
+    max-width: 1100px;
+    width: 95%;
+    margin: 0;
+    z-index: 5;
+}
+
+/* Main Card */
+.life-slider-card {
+    background: #2233AD;
+    /* Orange color */
+    padding: 50px 60px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.life-slider-card h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.life-slider-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Arrow Buttons */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slider-arrow.left {
+    left: -20px;
+}
+
+.slider-arrow.right {
+    right: -20px;
+}
+
+.slider-arrow:hover {
+    background: #000;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 20px;
+    }
+
+    .stat-item:not(:last-child)::after {
+        display: none;
+        /* Remove dividers on mobile/tablet */
+    }
+
+    .life-slider-wrapper {
+        padding: 30px;
+        position: relative;
+        transform: none;
+        bottom: auto;
+        left: auto;
+        margin-top: 40px;
+    }
+
+    .life-at-sanota-section {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .life-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .feature-text-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Open Positions Section */
+.open-positions-section {
+    padding: 100px 0 80px 0;
+    background-color: #ffffff;
+}
+
+.open-positions-section .section-header {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.open-positions-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #2233AD;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.position-card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.position-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.position-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.position-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.position-card:hover .position-image {
+    transform: scale(1.05);
+}
+
+.position-content {
+    background-color: #111;
+    padding: 25px 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.position-title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.btn-see-more {
+    background-color: #ff7f00;
+    /* Keeping Orange here as user provided Orange styles previously and it matches screenshot */
+    color: #fff;
+    border: none;
+    padding: 8px 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-see-more:hover {
+    background-color: #e67300;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .positions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .positions-grid {
+        grid-template-columns: 1fr;
     }
 }
