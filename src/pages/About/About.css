@@ -62,60 +62,11 @@
     /* Center vertically */
     gap: 60px;
     padding: 100px 0;
-    overflow: hidden;
-    /* Hide overflow from accent box */
+    /* overflow: hidden; Removed to let accent box show */
 }
 
 .history-content {
     flex: 1;
-}
-
-/* ... (other styles) */
-
-/* Features Grid */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.feature-item {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-}
-
-.feature-icon {
-    min-width: 32px;
-    height: 32px;
-    background-color: #2233AD;
-    color: white !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    padding: 0;
-    /* Remove padding to let flexbox center */
-}
-
-.feature-icon svg {
-    width: 20px;
-    height: 20px;
-    /* stroke-width removed as we use fill */
-}
-
-.feature-info h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 5px;
-}
-
-.feature-info p {
-    font-size: 0.85rem;
-    color: #777;
-    margin: 0;
-    line-height: 1.4;
 }
 
 /* History Image Side */
@@ -123,6 +74,10 @@
     flex: 1;
     position: relative;
     max-width: 600px;
+    margin-right: 30px;
+    /* Add space for the accent box */
+    margin-bottom: 30px;
+    /* Add space for the accent box */
 }
 
 .history-image {
@@ -132,15 +87,18 @@
     position: relative;
     z-index: 2;
     /* Ensure image is above accent box */
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); Removed grayscale */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for depth */
 }
 
 .orange-accent-box {
     position: absolute;
     bottom: -30px;
     right: -30px;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    /* Slightly smaller to match proportion */
+    height: 300px;
     background-color: #2233AD;
     z-index: 1;
 }
@@ -227,28 +185,40 @@
     color: #ddd;
 }
 
-/* --- Features Grid Styling (Clean List) --- */
+/* --- Features Grid Styling (Clean List with Blue Hover) --- */
 .feature-item {
     display: flex;
+    flex-direction: row;
+    /* Icon left, text right */
     gap: 15px;
+    /* Space between icon and text */
     align-items: flex-start;
-    padding: 10px 0;
-    transition: transform 0.3s ease;
+    padding: 15px;
+    /* Added padding to make hover card look good */
     background-color: transparent !important;
+    /* Transparent initially */
     box-shadow: none !important;
     border: none !important;
-    border-radius: 0;
+    border-radius: 0 !important;
+    /* Sharp corners */
+    text-align: left;
+    /* Align text to left */
+    transition: all 0.3s ease;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
+    background-color: #2233AD !important;
+    /* Blue background on hover */
+    box-shadow: 0 4px 15px rgba(34, 51, 173, 0.3) !important;
+    /* Soft blue shadow */
+    color: white !important;
 }
 
-/* Specific Card Backgrounds - Reset to transparent */
+/* Specific Card Backgrounds - Ensure transparent */
 .features-grid .feature-item:nth-child(n) {
     background-color: transparent;
     color: #333;
-    box-shadow: none;
 }
 
 .features-grid .feature-item h3 {
@@ -256,6 +226,14 @@
     font-weight: 700;
     color: #333 !important;
     margin-bottom: 5px;
+    text-transform: none;
+    /* Normal case */
+    transition: color 0.3s ease;
+}
+
+.feature-item:hover h3 {
+    color: white !important;
+    /* Text turns WHITE on hover */
 }
 
 .features-grid .feature-item p {
@@ -263,7 +241,39 @@
     font-size: 0.95rem;
     line-height: 1.4;
     margin: 0;
+    transition: color 0.3s ease;
 }
+
+.feature-item:hover p {
+    color: #e0e0e0 !important;
+    /* Description turns light grey on hover */
+}
+
+/* Standard Icon Style */
+.feature-item .feature-icon {
+    min-width: 45px;
+    height: 45px;
+    background-color: #2233AD;
+    /* Blue background */
+    color: white !important;
+    /* White icon */
+    border-radius: 0 !important;
+    /* Sharp corner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    background-color: #000000;
+    /* BLACK background on hover */
+    color: white !important;
+    /* White icon on hover */
+}
+
+
 
 /* --- Testimonials Section (About Page) --- */
 .about-testimonials-section {
@@ -624,8 +634,8 @@
     position: absolute;
     bottom: -30px;
     right: -30px;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     background-color: #2233AD;
     z-index: 1;
 }
