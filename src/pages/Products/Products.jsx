@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Products.css';
 import heroBg from '../../assets/pic1.jpg'; // Using pic1 for industrial background
-import controlIcon from '../../assets/icon1 (1).png';
-import customIcon from '../../assets/icon1 (2).png';
-import sensorIcon from '../../assets/icon1 (3).png';
-import softwareIcon from '../../assets/icon1 (4).png';
+import controlIcon from '../../assets/plc-icon-1.png';
+import customIcon from '../../assets/plc-icon-2.png';
+import sensorIcon from '../../assets/plc-icon-3.png';
+import softwareIcon from '../../assets/plc-icon-4.png';
 
 // Using placeholder icons or existing assets where possible, matching the 5 cards
 

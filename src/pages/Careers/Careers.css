@@ -1,6 +1,54 @@
 /* Careers Page Styles */
-/* .careers-page { } removed to fix lint */
 
+/* --- Page Header (New) --- */
+.careers-page-header {
+    background-color: #1a1a1a;
+    /* Dark background */
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #2233AD;
+    /* Brand Blue accent line */
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb-link {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-link:hover {
+    color: #fff;
+}
+
+.breadcrumb-separator {
+    color: #666;
+}
+
+.breadcrumb-current {
+    color: #fff;
+}
 
 /* Hero Section */
 .careers-hero {
@@ -21,8 +69,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* Dark overlay for text readability */
+    /* Purple/Blue tint overlay matching screenshot */
+    background: linear-gradient(rgba(30, 0, 60, 0.6), rgba(30, 0, 60, 0.7));
+    mix-blend-mode: multiply;
+    /* Optional: blends better with image */
 }
 
 .hero-content {
@@ -54,41 +104,39 @@
 .btn-primary,
 .btn-secondary {
     padding: 12px 30px;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 4px;
-    /* Slight rounded corners as per new style? Or stick to rect? Screenshot looked slightly rounded. */
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    /* Screenshot shows "View Open Positions" capitalized properly, not UPPERCASE */
 }
 
+/* Orange Button */
 .btn-primary {
-    background-color: #2233AD;
-    /* Keeping Orange for 'View Open Positions' to match screenshot exactly? */
-    /* Screenshot has: Orange Button (View Open Positions) and Transparent/Dark Button (Apply Now). */
-    /* User previously said: "Change Orange Accents to Blue". */
-    /* I successfully used Blue for Products. */
-    /* I will use BLUE for Primary. */
-    background-color: #2233AD;
+    background-color: #FF6B00;
+    /* Vibrant Orange */
     color: #ffffff;
-    border: 2px solid #2233AD;
+    border: none;
 }
 
 .btn-primary:hover {
-    background-color: #1a2a8e;
-    border-color: #1a2a8e;
+    background-color: #e65c00;
 }
 
+/* Transparent/Dark Button */
 .btn-secondary {
     background-color: transparent;
+    /* Or a very dark semi-transparent black if needed */
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 1px solid #777;
+    /* Thin grey border */
 }
 
 .btn-secondary:hover {
-    background-color: #ffffff;
-    color: #333;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
 }
 
 /* Why Careers Section */

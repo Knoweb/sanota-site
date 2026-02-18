@@ -1,121 +1,37 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import './About.css';
+import historyImage from '../../assets/old.png';
+import logo1 from '../../assets/logo1.png';
+import logo2 from '../../assets/logo2.png';
+import logo3 from '../../assets/logo3.png';
+import logo4 from '../../assets/logo4.png';
+import logo5 from '../../assets/logo5.png';
 
 function About() {
-    const teamMembers = [
-        {
-            name: 'Eng. Rajitha Perera',
-            position: 'Founder & Managing Director',
-            expertise: 'Industrial Automation & Control Systems',
-            description: '20+ years of experience in automation engineering and project management',
-            icon: '👨‍💼'
-        },
-        {
-            name: 'Eng. Samantha Silva',
-            position: 'Technical Director',
-            expertise: 'SCADA Systems & Software Development',
-            description: 'Expert in SCADA design and industrial software solutions',
-            icon: '👨‍💻'
-        },
-        {
-            name: 'Eng. Nimal Fernando',
-            position: 'Projects Manager',
-            expertise: 'Project Execution & Commissioning',
-            description: 'Specialized in large-scale automation project delivery',
-            icon: '👨‍🔧'
-        },
-        {
-            name: 'Eng. Priya Wickramasinghe',
-            position: 'Lead Electrical Engineer',
-            expertise: 'Electrical Design & Panel Engineering',
-            description: 'Expert in electrical system design and control panel fabrication',
-            icon: '👩‍🔬'
-        },
-        {
-            name: 'Eng. Kasun Jayawardena',
-            position: 'Senior Automation Engineer',
-            expertise: 'PLC Programming & System Integration',
-            description: 'Specialist in PLC programming and system integration',
-            icon: '👨‍💼'
-        },
-        {
-            name: 'Eng. Dilini Amarasinghe',
-            position: 'Software Engineer',
-            expertise: 'HMI/SCADA Development',
-            description: 'Expert in HMI design and SCADA application development',
-            icon: '👩‍💻'
-        }
-    ];
+    const [activeAccordion, setActiveAccordion] = useState(0);
 
-    const certifications = [
-        {
-            title: 'ISO 9001:2015',
-            category: 'Quality Management',
-            description: 'Certified quality management system ensuring consistent delivery of high-quality solutions',
-            icon: '🏆'
-        },
-        {
-            title: 'Siemens Solution Partner',
-            category: 'Technology Partnership',
-            description: 'Authorized Siemens solution partner for automation and drive technologies',
-            icon: '🤝'
-        },
-        {
-            title: 'Rockwell Automation Partner',
-            category: 'Technology Partnership',
-            description: 'Certified partner for Allen-Bradley and Rockwell Automation products',
-            icon: '🤝'
-        },
-        {
-            title: 'Schneider Electric Partner',
-            category: 'Technology Partnership',
-            description: 'Authorized partner for Schneider Electric automation solutions',
-            icon: '🤝'
-        },
-        {
-            title: 'IESL Corporate Member',
-            category: 'Professional Membership',
-            description: 'Corporate member of Institution of Engineers Sri Lanka',
-            icon: '📜'
-        },
-        {
-            title: 'Electrical Installation License',
-            category: 'Regulatory Compliance',
-            description: 'Licensed electrical installation contractor in Sri Lanka',
-            icon: '⚡'
-        }
-    ];
+    const toggleAccordion = (index) => {
+        setActiveAccordion(activeAccordion === index ? null : index);
+    };
 
-    const values = [
+    const accordionData = [
         {
-            title: 'Excellence',
-            description: 'We strive for excellence in every project, delivering solutions that exceed expectations',
-            icon: '⭐'
+            title: "COMPLETE PRODUCTION LINE INSTALLATION",
+            content: "From concept to commissioning, we handle the entire setup of your manufacturing facility. Our team ensures seamless integration of mechanical, electrical, and control systems for maximum operational efficiency."
         },
         {
-            title: 'Innovation',
-            description: 'Continuously adopting cutting-edge technologies to provide innovative automation solutions',
-            icon: '💡'
+            title: "CUSTOM CONTROL PANEL FABRICATION",
+            content: "We design and build custom control panels tailored to your specific industrial needs, ensuring safety, reliability, and compliance with international standards."
         },
         {
-            title: 'Integrity',
-            description: 'Operating with honesty, transparency, and ethical business practices',
-            icon: '🛡️'
+            title: "INDUSTRIAL PIPING & UTILITY SYSTEMS",
+            content: "Expert installation of industrial piping for water, steam, compressed air, and other utilities, designed for durability and optimal flow performance."
         },
         {
-            title: 'Customer Focus',
-            description: 'Putting our clients\' needs first and building long-term partnerships',
-            icon: '🎯'
-        },
-        {
-            title: 'Quality',
-            description: 'Maintaining the highest standards in design, implementation, and support',
-            icon: '✓'
-        },
-        {
-            title: 'Teamwork',
-            description: 'Collaborating effectively to deliver comprehensive automation solutions',
-            icon: '🤝'
+            title: "MACHINE RETROFITTING & OVERHAUL",
+            content: "Extending the lifespan of your existing machinery through modern control upgrades, mechanical overhauls, and performance optimization."
         }
     ];
 
@@ -123,165 +39,220 @@ function About() {
         <div className="about-page">
             <Helmet>
                 <title>About Sanota | Leading Automation Engineering Company in Sri Lanka</title>
-                <meta name="description" content="Learn about Sanota's 15+ year journey in industrial automation, our expert team, certifications, and commitment to excellence in engineering solutions." />
-                <meta name="keywords" content="about Sanota, automation company Sri Lanka, engineering team, ISO certified, automation partners" />
+                <meta name="description" content="Learn about Sanota's 15+ year journey in industrial automation." />
             </Helmet>
 
             {/* Hero Section */}
-            <section className="about-hero section">
+            <div className="about-hero-section">
                 <div className="container">
-                    <div className="hero-content text-center">
-                        <h1>About Sanota</h1>
-                        <p className="hero-subtitle">
-                            Engineering Excellence in Industrial Automation Since 2008
-                        </p>
+                    <div className="hero-inner">
+                        <h1 className="about-hero-title">About Sanota</h1>
+                        <div className="breadcrumbs">
+                            <Link to="/" className="breadcrumb-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                                </svg>
+                            </Link>
+                            <span className="breadcrumb-separator">›</span>
+                            <span className="breadcrumb-current">About Sanota</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container">
+                {/* History Section */}
+                <section className="history-section">
+                    <div className="history-content">
+                        <span className="section-subtitle">ABOUT OUR COMPANY</span>
+                        <h2 className="section-title">Our History</h2>
+
+                        <div className="history-text">
+                            <p>
+                                Founded in 2009 with a vision to modernize Sri Lanka's industrial sector,
+                                Sanota has grown from a specialized engineering team into a nationwide
+                                leader in automation. Today, we power over 200 factories with cutting-edge
+                                technology, ensuring they operate at maximum efficiency and safety.
+                            </p>
+                        </div>
+
+                        <div className="features-grid">
+                            <div className="feature-item">
+                                <div className="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                    </svg>
+                                </div>
+                                <div className="feature-info">
+                                    <h3>Turnkey Projects</h3>
+                                    <p>End-to-end design & build</p>
+                                </div>
+                            </div>
+                            <div className="feature-item">
+                                <div className="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                    </svg>
+                                </div>
+                                <div className="feature-info">
+                                    <h3>Sustainable Solutions</h3>
+                                    <p>Energy efficiency & waste reduction</p>
+                                </div>
+                            </div>
+                            <div className="feature-item">
+                                <div className="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                    </svg>
+                                </div>
+                                <div className="feature-info">
+                                    <h3>Advanced Automation</h3>
+                                    <p>Robotics & PLC integration</p>
+                                </div>
+                            </div>
+                            <div className="feature-item">
+                                <div className="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <div className="feature-info">
+                                    <h3>Power Systems</h3>
+                                    <p>High-voltage safety & distribution</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="history-image-wrapper">
+                        <img src={historyImage} alt="Sanota History - Factory Floor" className="history-image" />
+                        <div className="orange-accent-box"></div>
+                    </div>
+                </section>
+
+
+            </div>
+
+            {/* Application Form Section (Removed from here, ensuring it's not needed or if it was part of previous instructions. 
+               Wait, the user asked for "What We Did" and "Testimonials".
+               I will add them here.) */}
+
+            {/* Results Section */}
+            <section className="results-section">
+                <div className="results-overlay"></div>
+                <div className="container">
+                    <span className="section-subtitle-center">OUR RESULTS</span>
+                    <h2 className="section-title-center text-white">What We Did?</h2>
+
+                    <div className="results-grid">
+                        <div className="result-item">
+                            <span className="result-number">15+</span>
+                            <p className="result-label">Years of Experience</p>
+                        </div>
+                        <div className="result-item">
+                            <span className="result-number">200+</span>
+                            <p className="result-label">Successful Projects</p>
+                        </div>
+                        <div className="result-item">
+                            <span className="result-number">50+</span>
+                            <p className="result-label">Loyal Clients</p>
+                        </div>
+                        <div className="result-item">
+                            <span className="result-number">9</span>
+                            <p className="result-label">Provinces Covered</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Company Story */}
-            <section className="story-section section">
+            {/* Testimonials Section */}
+            <section className="about-testimonials-section">
                 <div className="container">
-                    <div className="story-content">
-                        <div className="story-text">
-                            <h2>Our Story</h2>
-                            <p className="lead">
-                                Founded in 2008, Sanota has grown from a small automation startup to become one of Sri Lanka's most trusted names in industrial automation and engineering solutions.
-                            </p>
-                            <p>
-                                Our journey began with a simple vision: to bring world-class automation technology to Sri Lankan industries. What started as a team of passionate engineers has evolved into a comprehensive automation solutions provider, serving clients across multiple industries throughout the country.
-                            </p>
-                            <p>
-                                Over the past 15+ years, we've completed more than 200 projects, ranging from small machine automation to large-scale SCADA systems for critical infrastructure. Our success is built on a foundation of technical expertise, customer focus, and unwavering commitment to quality.
-                            </p>
-                            <p>
-                                Today, Sanota stands as a testament to what can be achieved through dedication, innovation, and a relentless pursuit of excellence. We continue to invest in our people, technology, and processes to ensure we remain at the forefront of automation engineering in Sri Lanka.
-                            </p>
-                        </div>
-                        <div className="story-stats">
-                            <div className="stat-box">
-                                <div className="stat-number">2008</div>
-                                <div className="stat-label">Founded</div>
+                    <span className="section-subtitle-center text-blue">TESTIMONIALS</span>
+                    <h2 className="section-title-center text-black">What Clients Say?</h2>
+
+                    <div className="testimonial-carousel-container">
+                        <button className="nav-arrow left-arrow">←</button>
+
+                        <div className="testimonial-card-dark">
+                            <div className="testimonial-user-image">
+                                {/* Using client1.png as placeholder */}
+                                <img src="/src/assets/client1.png" alt="Client" />
                             </div>
-                            <div className="stat-box">
-                                <div className="stat-number">15+</div>
-                                <div className="stat-label">Years Experience</div>
-                            </div>
-                            <div className="stat-box">
-                                <div className="stat-number">200+</div>
-                                <div className="stat-label">Projects Completed</div>
-                            </div>
-                            <div className="stat-box">
-                                <div className="stat-number">50+</div>
-                                <div className="stat-label">Active Clients</div>
+                            <p className="testimonial-quote">
+                                "We upgraded our hotel's central air conditioning and BMS system with Sanota. The energy savings have been remarkable, and their maintenance team is always just a call away."
+                            </p>
+                            <div className="testimonial-author">
+                                <h4>Nimal Perera</h4>
+                                <p>Engineer</p>
                             </div>
                         </div>
+
+                        <button className="nav-arrow right-arrow">→</button>
                     </div>
                 </div>
             </section>
-
-            {/* Mission & Vision */}
-            <section className="mission-vision-section section bg-gray-50">
-                <div className="container">
-                    <div className="mission-vision-grid">
-                        <div className="mission-card">
-                            <div className="mv-icon">🎯</div>
-                            <h3>Our Mission</h3>
-                            <p>
-                                To deliver innovative, reliable, and cost-effective automation solutions that empower Sri Lankan industries to achieve operational excellence and compete globally.
-                            </p>
-                        </div>
-                        <div className="vision-card">
-                            <div className="mv-icon">🔭</div>
-                            <h3>Our Vision</h3>
-                            <p>
-                                To be the most trusted and preferred automation engineering partner in Sri Lanka, recognized for technical excellence, innovation, and customer satisfaction.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Core Values */}
-            <section className="values-section section">
-                <div className="container">
-                    <div className="section-header text-center">
-                        <h2>Our Core Values</h2>
-                        <p className="section-intro">
-                            The principles that guide everything we do
-                        </p>
-                    </div>
-                    <div className="values-grid">
-                        {values.map((value, index) => (
-                            <div key={index} className="value-card">
-                                <div className="value-icon">{value.icon}</div>
-                                <h3>{value.title}</h3>
-                                <p>{value.description}</p>
+            {/* Services Accordion Section */}
+            <section className="services-accordion-section">
+                <div className="container accordion-container">
+                    <div className="accordion-content">
+                        {accordionData.map((item, index) => (
+                            <div
+                                key={index}
+                                className={`accordion-item ${activeAccordion === index ? 'active' : ''}`}
+                                onClick={() => toggleAccordion(index)}
+                            >
+                                <div className={`accordion-header ${activeAccordion === index ? 'active' : ''}`}>
+                                    <span>{item.title}</span>
+                                    <span className="accordion-icon">
+                                        {activeAccordion === index ? '−' : '+'}
+                                    </span>
+                                </div>
+                                <div className={`accordion-body ${activeAccordion === index ? 'open' : ''}`}>
+                                    <p>{item.content}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
+
+                    <div className="accordion-image-wrapper">
+                        {/* Using picture3.jpg as it looks like a machine/factory image from Home.jsx imports */}
+                        <img src="/src/assets/picture3.jpg" alt="Industrial Machine" className="accordion-image" />
+                        <div className="accordion-orange-box"></div>
+                    </div>
                 </div>
             </section>
 
-            {/* Team Section */}
-            <section className="team-section section bg-gray-50">
+            {/* Clients Logo Marquee Section */}
+            <section className="partners">
                 <div className="container">
-                    <div className="section-header text-center">
-                        <h2>Our Leadership Team</h2>
-                        <p className="section-intro">
-                            Experienced professionals driving innovation and excellence
-                        </p>
-                    </div>
-                    <div className="team-grid">
-                        {teamMembers.map((member, index) => (
-                            <div key={index} className="team-card">
-                                <div className="team-avatar">{member.icon}</div>
-                                <h3>{member.name}</h3>
-                                <p className="team-position">{member.position}</p>
-                                <p className="team-expertise">{member.expertise}</p>
-                                <p className="team-description">{member.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+                    <div className="logo-marquee">
+                        <div className="logo-track">
+                            {/* Set 1 */}
+                            <img src={logo1} alt="Client 1" />
+                            <img src={logo2} alt="Client 2" />
+                            <img src={logo3} alt="Client 3" />
+                            <img src={logo4} alt="Client 4" />
+                            <img src={logo5} alt="Client 5" />
 
-            {/* Certifications Section */}
-            <section className="certifications-section section">
-                <div className="container">
-                    <div className="section-header text-center">
-                        <h2>Certifications & Partnerships</h2>
-                        <p className="section-intro">
-                            Recognized expertise and trusted partnerships
-                        </p>
-                    </div>
-                    <div className="certifications-grid">
-                        {certifications.map((cert, index) => (
-                            <div key={index} className="cert-card">
-                                <div className="cert-icon">{cert.icon}</div>
-                                <h3>{cert.title}</h3>
-                                <p className="cert-category">{cert.category}</p>
-                                <p className="cert-description">{cert.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+                            {/* Set 2 (Duplicate for seamless loop) */}
+                            <img src={logo1} alt="Client 1" />
+                            <img src={logo2} alt="Client 2" />
+                            <img src={logo3} alt="Client 3" />
+                            <img src={logo4} alt="Client 4" />
+                            <img src={logo5} alt="Client 5" />
 
-            {/* CTA Section */}
-            <section className="cta-section section bg-gradient">
-                <div className="container text-center">
-                    <h2>Join Us on Our Journey</h2>
-                    <p className="section-intro-light">
-                        Partner with Sanota for your automation needs and experience the difference that expertise and dedication make
-                    </p>
-                    <div className="cta-buttons">
-                        <a href="/contact" className="btn btn-primary btn-lg">Get in Touch</a>
-                        <a href="/careers" className="btn btn-secondary-light btn-lg">Join Our Team</a>
+                            {/* Set 3 (Extra duplication for wide screens) */}
+                            <img src={logo1} alt="Client 1" />
+                            <img src={logo2} alt="Client 2" />
+                            <img src={logo3} alt="Client 3" />
+                            <img src={logo4} alt="Client 4" />
+                            <img src={logo5} alt="Client 5" />
+                        </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 }
 
