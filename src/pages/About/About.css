@@ -180,7 +180,7 @@
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 10px;
-    color: #FF6B00;
+    color: #2233AD;
     /* Orange subtitle */
     text-transform: uppercase;
 }
@@ -217,7 +217,7 @@
     display: block;
     font-size: 3.5rem;
     font-weight: 700;
-    color: #FF6B00;
+    color: #2233AD;
     /* Orange numbers */
     margin-bottom: 10px;
 }
@@ -227,48 +227,42 @@
     color: #ddd;
 }
 
-/* --- Features Grid Styling (Grey Cards) --- */
+/* --- Features Grid Styling (Clean List) --- */
 .feature-item {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    padding: 20px;
-    border-radius: 8px;
-    /* Rounded corners */
+    padding: 10px 0;
     transition: transform 0.3s ease;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
 }
 
-/* Specific Card Backgrounds */
-.features-grid .feature-item:nth-child(1) {
-    background-color: #E0E0E0;
-    /* Light Grey */
-}
-
-.features-grid .feature-item:nth-child(1) h3,
-.features-grid .feature-item:nth-child(1) p {
+/* Specific Card Backgrounds - Reset to transparent */
+.features-grid .feature-item:nth-child(n) {
+    background-color: transparent;
     color: #333;
-    /* Darker text for light bg */
+    box-shadow: none;
 }
 
-.features-grid .feature-item:nth-child(2),
-.features-grid .feature-item:nth-child(3),
-.features-grid .feature-item:nth-child(4) {
-    background-color: #606060;
-    /* Dark Grey */
-    color: white;
+.features-grid .feature-item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333 !important;
+    margin-bottom: 5px;
 }
 
-.features-grid .feature-item:nth-child(2) h3,
-.features-grid .feature-item:nth-child(2) p,
-.features-grid .feature-item:nth-child(3) h3,
-.features-grid .feature-item:nth-child(3) p,
-.features-grid .feature-item:nth-child(4) h3,
-.features-grid .feature-item:nth-child(4) p {
-    color: white;
+.features-grid .feature-item p {
+    color: #555 !important;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
 }
 
 /* --- Testimonials Section (About Page) --- */
@@ -320,7 +314,7 @@
 }
 
 .testimonial-author h4 {
-    color: #FF6B00;
+    color: #2233AD;
     /* Orange Name */
     margin: 0;
     font-size: 1.1rem;
@@ -333,7 +327,7 @@
 }
 
 .nav-arrow {
-    background-color: #FF6B00;
+    background-color: #2233AD;
     color: white;
     border: none;
     width: 40px;
@@ -347,7 +341,7 @@
 }
 
 .nav-arrow:hover {
-    background-color: #e55e00;
+    background-color: #2233AD;
 }
 
 /* Responsive */
@@ -451,7 +445,7 @@
     left: -30px;
     width: 100px;
     height: 100px;
-    background-color: #FF6B00;
+    background-color: #2233AD;
     z-index: 1;
 }
 
@@ -467,7 +461,7 @@
 }
 
 .history-dark-subtitle {
-    color: #FF6B00;
+    color: #2233AD;
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -579,7 +573,7 @@
 }
 
 .accordion-header.active {
-    background-color: #FF6B00;
+    background-color: #2233AD;
     /* Orange Active */
     color: #000;
     /* Black text on orange as per screenshot usually */
@@ -632,7 +626,7 @@
     right: -30px;
     width: 150px;
     height: 150px;
-    background-color: #FF6B00;
+    background-color: #2233AD;
     z-index: 1;
 }
 
@@ -660,7 +654,7 @@
     padding: 20px 0;
     background: #f9f9f9;
     border-top: 1px solid #ddd;
-    border-bottom: 5px solid #00AAFF;
+    border-bottom: 5px solid #2233AD;
     /* Blue Bottom Border */
     overflow: hidden;
     /* Ensure no scrollbars */
