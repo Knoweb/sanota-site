@@ -1,231 +1,185 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import './Insights.css';
+import heroBg from '../../assets/pic1.jpg';
+import img1 from '../../assets/picture1.jpg';
+import img2 from '../../assets/picture2.jpg';
+import img3 from '../../assets/picture3.jpg';
+import img4 from '../../assets/picture4.jpg';
+import img5 from '../../assets/picture5.jpg';
 
 function Insights() {
-    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [searchTerm, setSearchTerm] = useState('');
 
-    const categories = [
-        'All',
-        'Automation',
-        'Industry 4.0',
-        'SCADA & HMI',
-        'Energy Management',
-        'Best Practices',
-        'Case Studies'
-    ];
-
-    const articles = [
+    const posts = [
         {
             id: 1,
-            title: 'The Future of Industrial Automation in Sri Lanka',
-            slug: 'future-industrial-automation-sri-lanka',
-            excerpt: 'Exploring emerging trends and technologies shaping the future of automation in Sri Lankan manufacturing and industrial sectors.',
-            category: 'Automation',
-            author: 'Sanota Engineering Team',
-            date: '2024-01-15',
-            readTime: '8 min read',
-            image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800',
-            featured: true
+            title: "The Future of Industrial Automation in Sri Lanka",
+            category: "Industry 4.0",
+            date: "1 June 2024",
+            image: img1,
+            excerpt: "Discover how AI and IoT are transforming local manufacturing industries. Learn about the shift from traditional SCADA to smart factories."
         },
         {
             id: 2,
-            title: 'Implementing Industry 4.0: A Practical Guide',
-            slug: 'implementing-industry-4-0-practical-guide',
-            excerpt: 'Step-by-step approach to implementing Industry 4.0 technologies in traditional manufacturing environments.',
-            category: 'Industry 4.0',
-            author: 'Sanota Engineering Team',
-            date: '2024-01-10',
-            readTime: '10 min read',
-            image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800',
-            featured: true
+            title: "Energy Optimization in Water Treatment Plants",
+            category: "Energy Management",
+            date: "1 June 2024",
+            image: img2,
+            excerpt: "Rising electricity costs are a major challenge. We explore how VFDs and smart pumping strategies can reduce your energy bill by up to 25%."
         },
         {
             id: 3,
-            title: 'SCADA System Design Best Practices',
-            slug: 'scada-system-design-best-practices',
-            excerpt: 'Essential considerations and best practices for designing robust and scalable SCADA systems.',
-            category: 'SCADA & HMI',
-            author: 'Sanota Engineering Team',
-            date: '2024-01-05',
-            readTime: '12 min read',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
-            featured: false
+            title: "Why Preventive Maintenance Matters?",
+            category: "Best Practices",
+            date: "1 June 2024",
+            image: img5,
+            excerpt: "Don't wait for a breakdown. Learn the importance of regular PLC backups, sensor calibration, and thermal imaging for switchboards."
         },
         {
             id: 4,
-            title: 'Energy Optimization in Water Treatment Plants',
-            slug: 'energy-optimization-water-treatment',
-            excerpt: 'How automation and smart control strategies can reduce energy consumption in water treatment facilities.',
-            category: 'Energy Management',
-            author: 'Sanota Engineering Team',
-            date: '2023-12-28',
-            readTime: '7 min read',
-            image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800',
-            featured: false
-        },
-        {
-            id: 5,
-            title: 'PLC Programming Standards and Guidelines',
-            slug: 'plc-programming-standards-guidelines',
-            excerpt: 'Comprehensive guide to PLC programming standards that ensure maintainable and reliable automation systems.',
-            category: 'Best Practices',
-            author: 'Sanota Engineering Team',
-            date: '2023-12-20',
-            readTime: '15 min read',
-            image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800',
-            featured: false
-        },
-        {
-            id: 6,
-            title: 'Successful Factory Automation: Lessons Learned',
-            slug: 'successful-factory-automation-lessons',
-            excerpt: 'Key insights and lessons from implementing complete factory automation projects across different industries.',
-            category: 'Case Studies',
-            author: 'Sanota Engineering Team',
-            date: '2023-12-15',
-            readTime: '9 min read',
-            image: 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=800',
-            featured: false
+            title: "Sanota Wins National Engineering Excellence Award",
+            category: "Company News",
+            date: "1 June 2024",
+            image: img3,
+            excerpt: "We are proud to announce that Sanota has been recognized with the Gold Award for Best Automation Service Provider, reinforcing our commitment to quality and innovation."
         }
     ];
 
-    const filteredArticles = selectedCategory === 'All'
-        ? articles
-        : articles.filter(article => article.category === selectedCategory);
+    const categories = [
+        "Industrial Automation",
+        "Electrical Engineering",
+        "Smart Technology (IoT)",
+        "Company News",
+        "Maintenance Tips"
+    ];
 
-    const featuredArticles = articles.filter(article => article.featured);
+    const projects = [img1, img2, img3, img4, img5, heroBg];
 
     return (
         <div className="insights-page">
             <Helmet>
-                <title>Insights & Articles | Sanota Automation Engineering</title>
-                <meta name="description" content="Expert insights, technical articles, and industry best practices in industrial automation, SCADA systems, and engineering solutions from Sanota." />
-                <meta name="keywords" content="automation insights, industrial automation articles, SCADA best practices, Industry 4.0, engineering blog" />
+                <title>Insights | Sanota Automation</title>
             </Helmet>
 
-            {/* Hero Section */}
-            <section className="insights-hero section">
-                <div className="container">
-                    <div className="hero-content text-center">
-                        <h1>Insights & Knowledge Hub</h1>
-                        <p className="hero-subtitle">
-                            Expert insights, technical articles, and industry best practices in automation and engineering
-                        </p>
+            {/* Top Resource Bar */}
+            <div className="resources-top-bar">
+                <div className="container bar-content">
+                    <span className="bar-title">Resources</span>
+                    <div className="breadcrumbs">
+                        <Link to="/" className="breadcrumb-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                            </svg>
+                        </Link>
+                        <span className="separator">›</span>
+                        <span className="current">Insights</span>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            {/* Featured Articles */}
-            {featuredArticles.length > 0 && (
-                <section className="featured-section section">
-                    <div className="container">
-                        <h2 className="section-title">Featured Articles</h2>
-                        <div className="featured-grid">
-                            {featuredArticles.map((article) => (
-                                <Link
-                                    key={article.id}
-                                    to={`/insights/${article.slug}`}
-                                    className="featured-article-card"
-                                >
-                                    <div
-                                        className="featured-image"
-                                        style={{ backgroundImage: `url(${article.image})` }}
-                                    >
-                                        <div className="featured-badge">Featured</div>
+            <div className="container insights-container">
+                <div className="row">
+                    {/* Left Column: Blog Posts */}
+                    <div className="col-left">
+                        <div className="posts-list">
+                            {posts.map(post => (
+                                <div key={post.id} className="blog-card">
+                                    <div className="blog-card-image">
+                                        <img src={post.image} alt={post.title} />
                                     </div>
-                                    <div className="featured-content">
-                                        <div className="article-meta">
-                                            <span className="category-badge">{article.category}</span>
-                                            <span className="read-time">{article.readTime}</span>
+                                    <div className="blog-card-content">
+                                        <h2 className="blog-title">{post.title}</h2>
+                                        <div className="blog-meta">
+                                            <div className="meta-item">
+                                                <span className="meta-icon">👤</span> {/* Placeholder icon */}
+                                                <span className="meta-text">{post.category}</span>
+                                            </div>
+                                            <div className="meta-item">
+                                                <span className="meta-text">{post.date}</span>
+                                            </div>
                                         </div>
-                                        <h3>{article.title}</h3>
-                                        <p>{article.excerpt}</p>
-                                        <div className="article-footer">
-                                            <span className="author">{article.author}</span>
-                                            <span className="date">{new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
-
-            {/* Category Filter & Articles */}
-            <section className="articles-section section bg-gray-50">
-                <div className="container">
-                    <div className="section-header">
-                        <h2 className="section-title">All Articles</h2>
-
-                        {/* Category Filter */}
-                        <div className="category-filter">
-                            {categories.map((category) => (
-                                <button
-                                    key={category}
-                                    className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-                                    onClick={() => setSelectedCategory(category)}
-                                >
-                                    {category}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Articles Grid */}
-                    <div className="articles-grid">
-                        {filteredArticles.map((article) => (
-                            <Link
-                                key={article.id}
-                                to={`/insights/${article.slug}`}
-                                className="article-card"
-                            >
-                                <div
-                                    className="article-image"
-                                    style={{ backgroundImage: `url(${article.image})` }}
-                                />
-                                <div className="article-content">
-                                    <div className="article-meta">
-                                        <span className="category-badge">{article.category}</span>
-                                        <span className="read-time">{article.readTime}</span>
-                                    </div>
-                                    <h3>{article.title}</h3>
-                                    <p>{article.excerpt}</p>
-                                    <div className="article-footer">
-                                        <span className="date">{new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                                        <p className="blog-excerpt">{post.excerpt}</p>
+                                        <button className="read-more-btn">Read More</button>
                                     </div>
                                 </div>
-                            </Link>
-                        ))}
-                    </div>
-
-                    {filteredArticles.length === 0 && (
-                        <div className="no-articles">
-                            <p>No articles found in this category.</p>
+                            ))}
                         </div>
-                    )}
-                </div>
-            </section>
 
-            {/* Newsletter CTA */}
-            <section className="newsletter-section section bg-gradient">
-                <div className="container text-center">
-                    <h2>Stay Updated</h2>
-                    <p className="section-intro-light">
-                        Subscribe to our newsletter for the latest insights and industry updates
-                    </p>
-                    <div className="newsletter-form">
-                        <input
-                            type="email"
-                            placeholder="Enter your email address"
-                            className="newsletter-input"
-                        />
-                        <button className="btn btn-primary btn-lg">Subscribe</button>
+                        {/* Pagination */}
+                        <div className="pagination">
+                            <button className="page-btn active">1</button>
+                            <button className="page-btn">2</button>
+                            <button className="page-btn">»</button>
+                        </div>
+                    </div>
+
+                    {/* Right Column: Sidebar */}
+                    <div className="col-right sidebar">
+
+                        {/* Search Widget */}
+                        <div className="widget search-widget">
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                            <button className="search-btn">Search</button>
+                        </div>
+
+                        {/* Categories Widget */}
+                        <div className="widget categories-widget">
+                            <h3 className="widget-title">Categories</h3>
+                            <ul className="categories-list">
+                                {categories.map((cat, idx) => (
+                                    <li key={idx}><a href="#">{cat}</a></li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Projects Gallery Widget */}
+                        <div className="widget projects-widget">
+                            <h3 className="widget-title">Projects</h3>
+                            <div className="projects-grid">
+                                {projects.map((img, idx) => (
+                                    <div key={idx} className="project-thumb">
+                                        <img src={img} alt="Project" />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Latest Posts Widget */}
+                        <div className="widget latest-posts-widget">
+                            <h3 className="widget-title">Latest Posts</h3>
+                            <div className="latest-list">
+                                {posts.slice(0, 3).map(post => (
+                                    <div key={post.id} className="latest-item">
+                                        <img src={post.image} alt={post.title} className="latest-thumb" />
+                                        <div className="latest-info">
+                                            <h4>{post.title}</h4>
+                                            <span className="latest-date">🕒 {post.date}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Newsletter Widget */}
+                        <div className="widget newsletter-widget">
+                            <h3 className="widget-title">Stay Updated with Sanota</h3>
+                            <div className="newsletter-content">
+                                <p>Get the latest industrial automation trends and company updates delivered to your inbox.</p>
+                                <input type="email" placeholder="Your Email" />
+                                <button className="subscribe-btn">Subscribe</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     );
 }
