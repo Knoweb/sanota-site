@@ -150,7 +150,7 @@
 
 .read-more-btn {
     align-self: flex-start;
-    background-color: #ff6600;
+    background-color: #2233AD;
     /* Sanota Orange */
     color: #fff;
     border: none;
@@ -165,7 +165,7 @@
 }
 
 .read-more-btn:hover {
-    background-color: #e65c00;
+    background-color: #000;
 }
 
 /* Pagination */
@@ -194,12 +194,12 @@
 }
 
 .page-btn.active {
-    background-color: #ff6600;
+    background-color: #2233AD;
     /* Active Orange */
 }
 
 .page-btn:hover {
-    background-color: #ff6600;
+    background-color: #2233AD;
 }
 
 
@@ -228,7 +228,7 @@
     font-weight: 600;
     text-transform: uppercase;
     /* Match Header style */
-    border-bottom: 3px solid #ff6600;
+    border-bottom: 3px solid #2233AD;
     /* Orange Accent Border */
     margin: -20px -20px 20px -20px;
     /* Negative margin to stretch header to edges */
@@ -250,7 +250,7 @@
 }
 
 .search-widget button {
-    background-color: #ff6600;
+    background-color: #2233AD;
     color: #fff;
     border: none;
     padding: 0 20px;
@@ -260,7 +260,7 @@
 }
 
 .search-widget button:hover {
-    background-color: #e65c00;
+    background-color: #2233AD;
 }
 
 /* Categories Widget */
@@ -285,13 +285,13 @@
 
 .categories-list li a:before {
     content: '•';
-    color: #ff6600;
+    color: #2233AD;
     margin-right: 10px;
     font-weight: bold;
 }
 
 .categories-list li a:hover {
-    color: #ff6600;
+    color: #2233AD;
     padding-left: 5px;
 }
 
@@ -376,7 +376,7 @@
 .subscribe-btn {
     width: 100%;
     padding: 12px;
-    background-color: #ff6600;
+    background-color: #2233AD;
     color: #fff;
     border: none;
     font-weight: 600;
@@ -386,7 +386,7 @@
 }
 
 .subscribe-btn:hover {
-    background-color: #e65c00;
+    background-color: #2233AD;
 }
 
 /* Responsive */
