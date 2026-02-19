@@ -9,7 +9,7 @@ import heroBg from '../../assets/pic1.jpg';
 import picture1 from '../../assets/picture1.jpg';
 import picture2 from '../../assets/picture2.jpg';
 import picture3 from '../../assets/picture3.jpg';
-import logo6 from '../../assets/logo6.jpeg';
+import logo6 from '../../assets/logo6.jpg';
 import logo7 from '../../assets/logo7.png';
 import logo8 from '../../assets/logo8.webp';
 import logo9 from '../../assets/logo9.webp';
