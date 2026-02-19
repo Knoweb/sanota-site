@@ -39,23 +39,36 @@
 .hero-container {
     position: relative;
     z-index: 1;
-    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 var(--spacing-xl);
+    margin: 0;
+    padding-left: var(--spacing-3xl);
+    /* Specific left padding */
+    padding-right: var(--spacing-3xl);
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Force flex items to start */
+    justify-content: center;
 }
 
 .hero-content {
-    text-align: left;
-    max-width: 800px;
+    text-align: left !important;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin-left: 0;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-family: 'Questrial', sans-serif;
+    font-size: 72px;
+    font-weight: 400;
     line-height: 1.2;
     margin: 0 0 var(--spacing-lg) 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left !important;
 }
 
 .hero-subtitle {
@@ -65,6 +78,7 @@
     color: rgba(255, 255, 255, 0.9);
     margin: 0 0 var(--spacing-2xl) 0;
     max-width: 600px;
+    text-align: left !important;
 }
 
 /* --- Specific Hero CTA Styles (Higher Specificity) --- */

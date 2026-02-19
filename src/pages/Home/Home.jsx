@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import pic1 from '../../assets/pic1.jpg';
 import picture1 from '../../assets/picture1.jpg';
 import picture2 from '../../assets/picture3.jpg';
@@ -86,19 +87,59 @@ const Home = () => {
 
                 <div className="container hero-container">
                     <div className="hero-content">
-                        <h1>End-to-End Automation <br /> & Engineering Partner</h1>
-                        <p className="hero-subtitle">
-                            Sanota delivers integrated automation, engineering, and
-                            digital solutions from design and integration to retrofits,
-                            software, and long-term support under one accountable
-                            partner.
-                        </p>
-                        <div className="hero-cta">
-                            <Link to="/contact" className="btn btn-primary">CONTACT US</Link>
-                            <Link to="/case-studies" className="btn btn-secondary-outline">
-                                SEE PROJECTS <span className="arrow">→</span>
-                            </Link>
-                        </div>
+                        <motion.h1
+                            style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }} // Ensure block layout for lines
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                        >
+                            <motion.span
+                                style={{ display: 'inline-block' }}
+                                variants={{
+                                    visible: { transition: { staggerChildren: 0.05 } }
+                                }}
+                            >
+                                {Array.from("End-to-End Automation").map((char, index) => (
+                                    <motion.span key={index} variants={{
+                                        hidden: { opacity: 0, x: -10 },
+                                        visible: { opacity: 1, x: 0 }
+                                    }} style={{ display: 'inline-block' }}>{char === ' ' ? '\u00A0' : char}</motion.span>
+                                ))}
+                            </motion.span>
+                            <motion.span
+                                style={{ display: 'inline-block' }}
+                                variants={{
+                                    visible: { transition: { staggerChildren: 0.05, delayChildren: 1.1 } } // Delay line 2
+                                }}
+                            >
+                                {Array.from("& Engineering Partner").map((char, index) => (
+                                    <motion.span key={index} variants={{
+                                        hidden: { opacity: 0, x: -10 },
+                                        visible: { opacity: 1, x: 0 }
+                                    }} style={{ display: 'inline-block' }}>{char === ' ' ? '\u00A0' : char}</motion.span>
+                                ))}
+                            </motion.span>
+                        </motion.h1>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 2.4, duration: 0.8, ease: "easeOut" }} // Delay to wait for text (~2.2s)
+                        >
+                            <p className="hero-subtitle">
+                                Sanota delivers integrated automation, engineering, and
+                                digital solutions from design and integration to retrofits,
+                                software, and long-term support under one accountable
+                                partner.
+                            </p>
+                            <div className="hero-cta">
+                                <Link to="/contact" className="btn btn-primary">CONTACT US</Link>
+                                <Link to="/case-studies" className="btn btn-secondary-outline">
+                                    SEE PROJECTS <span className="arrow">→</span>
+                                </Link>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
