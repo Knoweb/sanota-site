@@ -10,10 +10,6 @@
     background-color: #1a1a1a;
     color: #fff;
     padding: 15px 0;
-    border-bottom: 3px solid #0099ff;
-    /* Subtle blue line as per some design patterns or just plain */
-    /* Screenshot shows a blue line at the top, possibly standard header or part of this bar */
-    border-top: 3px solid #2233AD;
 }
 
 .resources-top-bar .bar-content {
@@ -102,7 +98,7 @@
 
 .hero-subtitle {
     font-size: 1rem;
-    color: #e65100;
+    color: #2233AD;
     /* Orange color */
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -148,7 +144,7 @@
 
 .stat-value {
     font-size: 4.5rem;
-    color: #ff6600;
+    color: #2233AD;
     /* Bright orange numbers */
     font-weight: 300;
     /* Thin font style as per screenshot */
@@ -219,7 +215,7 @@
 
 .section-subtitle-orange {
     font-size: 1rem;
-    color: #ff6600;
+    color: #2233AD;
     font-weight: 400;
 }
 
@@ -234,8 +230,8 @@
     margin: 0 auto;
     background-color: #000;
     padding: 40px;
-    border-top: 2px solid #0099ff;
-    border-bottom: 2px solid #0099ff;
+    border-top: 2px solid #2233AD;
+    border-bottom: 2px solid #2233AD;
     /* Simulate the blue border look */
 }
 
@@ -296,7 +292,7 @@
     /* Half overlapping */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #ff6600;
+    background-color: #2233AD;
     color: white;
     padding: 8px 25px;
     font-size: 0.9rem;
@@ -414,9 +410,9 @@
     width: 250px;
     /* Matched to selection box */
     height: 250px;
-    border-top: 65px solid #ff6600;
+    border-top: 65px solid #2233AD;
     /* Thicker border */
-    border-left: 65px solid #ff6600;
+    border-left: 65px solid #2233AD;
     z-index: 1;
     /* Behind the map wrapper */
 }
@@ -458,7 +454,7 @@
 .province-value {
     font-size: 3.5rem;
     /* Larger numbers */
-    color: #ff6600;
+    color: #2233AD;
     font-weight: 300;
     /* Thinner font */
     line-height: 1;
@@ -494,7 +490,7 @@
 .cov-nav-btn {
     width: 50px;
     height: 50px;
-    background-color: #ff6600;
+    background-color: #2233AD;
     border: none;
     display: flex;
     align-items: center;
@@ -505,7 +501,7 @@
 }
 
 .cov-nav-btn:hover {
-    background-color: #e65c00;
+    background-color: #2233AD;
 }
 
 @media (max-width: 992px) {
@@ -544,5 +540,86 @@
     .coverage-nav-buttons {
         justify-content: center;
         gap: 20px;
+    }
+}
+
+/* --- Trusted Leaders Section --- */
+.trusted-leaders-section {
+    width: 100%;
+}
+
+.trusted-header {
+    background-color: #000;
+    padding: 60px 0;
+    border-bottom: 1px solid #222;
+    /* Subtle divider */
+}
+
+.trusted-logos-container {
+    background-color: #f5f5f5;
+    /* Light gray background */
+    padding: 30px 0;
+    overflow: hidden;
+    /* Hide overflow for marquee */
+    border-bottom: 5px solid #2233AD;
+    /* Blue bottom border like reference */
+}
+
+/* Marquee Styles */
+.logo-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* Soft fade edges */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+    padding: 20px 0;
+}
+
+/* Pause on hover */
+.logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+}
+
+.client-logo-marquee {
+    height: 80px;
+    /* Reduced height for better scroll */
+    width: auto;
+    object-fit: contain;
+    /* Removed filter/opacity so they are fully visible */
+    transition: transform 0.3s ease;
+}
+
+.client-logo-marquee:hover {
+    transform: scale(1.1);
+}
+
+/* Smooth Infinite Loop Keyframes */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        /* Move by 1/3 (one set of logos) */
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-track {
+        gap: 50px;
+    }
+
+    .client-logo-marquee {
+        height: 60px;
     }
 }

@@ -9,8 +9,14 @@ import heroBg from '../../assets/pic1.jpg';
 import picture1 from '../../assets/picture1.jpg';
 import picture2 from '../../assets/picture2.jpg';
 import picture3 from '../../assets/picture3.jpg';
+import logo6 from '../../assets/logo6.jpeg';
+import logo7 from '../../assets/logo7.png';
+import logo8 from '../../assets/logo8.webp';
+import logo9 from '../../assets/logo9.webp';
+import logo10 from '../../assets/logo10.png';
 
 function ClientsExperience() {
+
     const stats = [
         { value: '15+', label: 'Years of Experience' },
         { value: '200+', label: 'Successful Projects' },
@@ -250,35 +256,21 @@ function ClientsExperience() {
                                                 key={index}
                                                 center={province.coords}
                                                 radius={Math.max(10, province.projects / 3)} // Dynamic size
-                                                fillColor="#ff6600"
-                                                color="#fff"
-                                                weight={2}
-                                                opacity={1}
-                                                fillOpacity={0.8}
+                                                pathOptions={{ fillColor: '#2233AD', color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.8 }}
                                                 eventHandlers={{
                                                     mouseover: (e) => {
-                                                        e.target.setStyle({
-                                                            fillColor: '#2233AD',
-                                                            fillOpacity: 0.9
-                                                        });
+                                                        e.target.setStyle({ fillColor: '#000000' }); // Black on Hover
                                                     },
                                                     mouseout: (e) => {
-                                                        e.target.setStyle({
-                                                            fillColor: '#ff6600',
-                                                            fillOpacity: 0.8
-                                                        });
+                                                        e.target.setStyle({ fillColor: '#2233AD' }); // Back to Blue
                                                     }
                                                 }}
                                             >
                                                 <Popup>
-                                                    <div className="map-popup">
-                                                        <h4>{province.name}</h4>
-                                                        <p className="popup-projects">
-                                                            <strong>{province.projects} Projects</strong>
-                                                        </p>
-                                                        <p className="popup-cities">
-                                                            {province.cities.join(' • ')}
-                                                        </p>
+                                                    <div style={{ textAlign: 'center', color: '#000' }}>
+                                                        <h3 style={{ margin: '0 0 5px 0', color: '#000', fontSize: '1.2rem', fontWeight: 'bold' }}>{province.name}</h3>
+                                                        <p style={{ margin: 0, fontWeight: 'bold', color: '#000' }}>{province.projects} Projects</p>
+                                                        <p style={{ fontSize: '0.9rem', color: '#000', marginTop: '5px' }}>{province.cities.join(' • ')}</p>
                                                     </div>
                                                 </Popup>
                                                 <Tooltip direction="top" offset={[0, -10]} opacity={0.9}>
@@ -315,6 +307,44 @@ function ClientsExperience() {
                                         <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                                     </svg>
                                 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Trusted by Industry Leaders Section */}
+            <section className="trusted-leaders-section">
+                <div className="trusted-header">
+                    <div className="container text-center">
+                        <h2 className="section-title-white">Trusted by Industry Leaders</h2>
+                        <p className="section-subtitle-orange">Proud to serve leading organizations across diverse industries</p>
+                    </div>
+                </div>
+                <div className="trusted-logos-container">
+                    <div className="container">
+                        <div className="logo-marquee">
+                            <div className="logo-track">
+                                {/* Set 1 */}
+                                <img src={logo6} alt="Client Logo 6" className="client-logo-marquee" />
+                                <img src={logo7} alt="Client Logo 7" className="client-logo-marquee" />
+                                <img src={logo8} alt="Client Logo 8" className="client-logo-marquee" />
+                                <img src={logo9} alt="Client Logo 9" className="client-logo-marquee" />
+                                <img src={logo10} alt="Client Logo 10" className="client-logo-marquee" />
+
+                                {/* Set 2 */}
+                                <img src={logo6} alt="Client Logo 6" className="client-logo-marquee" />
+                                <img src={logo7} alt="Client Logo 7" className="client-logo-marquee" />
+                                <img src={logo8} alt="Client Logo 8" className="client-logo-marquee" />
+                                <img src={logo9} alt="Client Logo 9" className="client-logo-marquee" />
+                                <img src={logo10} alt="Client Logo 10" className="client-logo-marquee" />
+
+                                {/* Set 3 */}
+                                <img src={logo6} alt="Client Logo 6" className="client-logo-marquee" />
+                                <img src={logo7} alt="Client Logo 7" className="client-logo-marquee" />
+                                <img src={logo8} alt="Client Logo 8" className="client-logo-marquee" />
+                                <img src={logo9} alt="Client Logo 9" className="client-logo-marquee" />
+                                <img src={logo10} alt="Client Logo 10" className="client-logo-marquee" />
                             </div>
                         </div>
                     </div>
