@@ -121,15 +121,15 @@ const Home = () => {
                             <div className="about-stats">
                                 <div className="stat-item">
                                     <div className="stat-icon">✓</div>
-                                    <div className="stat-text">15+ Years Experience</div>
+                                    <div className="stat-text">15+ Years<br />Experience</div>
                                 </div>
                                 <div className="stat-item">
                                     <div className="stat-icon">✓</div>
-                                    <div className="stat-text">200+ Complete Projects</div>
+                                    <div className="stat-text">200+ Complete<br />Projects</div>
                                 </div>
                                 <div className="stat-item">
                                     <div className="stat-icon">✓</div>
-                                    <div className="stat-text">Trusted Engineering Experts</div>
+                                    <div className="stat-text">Trusted Engineering<br />Experts</div>
                                 </div>
                             </div>
 
@@ -264,21 +264,23 @@ const Home = () => {
 
             {/* History Section */}
             <section className="history-section">
-                <div className="history-grid">
-                    <div className="history-image-container">
-                        <div className="history-square-top"></div>
-                        <img src={old} alt="Factory History" className="history-image" />
-                        <div className="history-square-bottom">
-                            <span className="history-count">200+</span>
-                            <span className="history-label">Projects Done</span>
+                <div className="coverage-content-wrapper">
+                    <div className="history-grid">
+                        <div className="history-image-container">
+                            <div className="history-square-top"></div>
+                            <img src={old} alt="Factory History" className="history-image" />
+                            <div className="history-square-bottom">
+                                <span className="history-count">200+</span>
+                                <span className="history-label">Projects Done</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="history-content">
-                        <span className="history-tagline">Our History</span>
-                        <h2 className="history-title">Engineering Excellence Since 2009</h2>
-                        <p className="history-description">
-                            Started as a specialized engineering team, Sanota has grown into Sri Lanka's leading partner for end-to-end industrial automation. Over the last 15 years, we have modernized factories, secured critical infrastructure, and delivered innovative engineering solutions that power the nation's industries.
-                        </p>
+                        <div className="history-content">
+                            <span className="history-tagline">Our History</span>
+                            <h2 className="history-title">Engineering Excellence Since 2009</h2>
+                            <p className="history-description">
+                                Started as a specialized engineering team, Sanota has grown into Sri Lanka's leading partner for end-to-end industrial automation. Over the last 15 years, we have modernized factories, secured critical infrastructure, and delivered innovative engineering solutions that power the nation's industries.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>

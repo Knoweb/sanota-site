@@ -10,6 +10,8 @@
     background-color: #1a1a1a;
     color: #fff;
     padding: 15px 0;
+    margin: 0;
+    /* Align perfectly with no gap */
 }
 
 .resources-top-bar .bar-content {
@@ -58,7 +60,6 @@
 .clients-hero-section {
     position: relative;
     height: 85vh;
-    /* Large impactful hero */
     min-height: 600px;
     background-size: cover;
     background-position: center;
@@ -67,6 +68,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0;
+    /* Remove potential margin collapse or default margin */
 }
 
 .hero-overlay {
@@ -98,6 +101,8 @@
 
 .hero-subtitle {
     font-size: 1rem;
+    margin-top: 0;
+    /* Prevent top margin collapse */
     color: #2233AD;
     /* Orange color */
     text-transform: uppercase;
