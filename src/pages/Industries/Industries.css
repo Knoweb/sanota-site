@@ -541,6 +541,23 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
+.ind-cta-card h3 {
+    color: #2233AD;
+    /* Brand Blue for visibility */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.ind-cta-card p {
+    color: #334155;
+    /* Dark Slate for visibility */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
 .ind-cta-card-primary {
     background: #2233AD;
     border-color: #2233AD;
