@@ -238,7 +238,21 @@ function CaseStudies() {
 
     return (
         <div className="case-studies-page">
-            {/* ── Page Header Bar (Consistent with Industries) ── */}
+            {/* ── Page Header Bar ── */}
+            <div className="cs-page-header">
+                <div className="container">
+                    <div className="cs-header-inner">
+                        <h1 className="cs-header-title">Case Studies</h1>
+                        <div className="cs-breadcrumbs">
+                            <Link to="/" className="cs-breadcrumb-link">Home</Link>
+                            <span className="cs-breadcrumb-separator">›</span>
+                            <span className="cs-breadcrumb-current">Case Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* ── Hero Section ── */}
             <div className="case-studies-hero">
                 <div className="container">
                     <motion.div

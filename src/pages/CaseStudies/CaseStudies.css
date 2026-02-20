@@ -3,6 +3,52 @@
 }
 
 /* Case Studies Hero */
+/* ── Page Header Bar ── */
+.cs-page-header {
+    background-color: #1A1A1A;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.cs-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cs-header-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Questrial', sans-serif;
+}
+
+.cs-breadcrumbs {
+    font-size: 0.9rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cs-breadcrumb-link {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cs-breadcrumb-link:hover {
+    color: #fff;
+}
+
+.cs-breadcrumb-separator {
+    color: #555;
+}
+
+.cs-breadcrumb-current {
+    color: #fff;
+}
+
 .case-studies-hero {
     background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), url('../../assets/succes1.jpg');
     background-size: cover;
