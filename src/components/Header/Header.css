@@ -12,7 +12,7 @@
 
 .container-fluid {
     width: 100%;
-    padding: 0 var(--spacing-xl);
+    padding: 0 32px 0 16px;
     margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .logo-image {
-    height: 48px;
+    height: 28px;
     width: auto;
     object-fit: contain;
 }
@@ -47,10 +47,11 @@
 .nav-list {
     display: flex;
     list-style: none;
-    gap: var(--spacing-xl);
+    gap: 18px;
     margin: 0;
     padding: 0;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .nav-list li {
@@ -60,13 +61,11 @@
 .nav-list a,
 .nav-dropdown-button {
     color: #aeaeae;
-    /* Muted Text */
-    font-size: 0.85rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    /* Bolder to match screenshot */
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
     transition: color 0.3s ease;
     background: none;
     border: none;
@@ -77,7 +76,7 @@
     gap: 4px;
     font-family: var(--font-primary);
     position: relative;
-    /* Needed for triangle positioning */
+    white-space: nowrap;
 }
 
 /* Triangle Indicator */
@@ -258,9 +257,26 @@
 }
 
 /* Responsive */
+@media (max-width: 1400px) {
+    .nav-list {
+        gap: 14px;
+    }
+
+    .nav-list a,
+    .nav-dropdown-button {
+        font-size: 0.68rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .nav-list {
-        gap: var(--spacing-md);
+        gap: 10px;
+    }
+
+    .nav-list a,
+    .nav-dropdown-button {
+        font-size: 0.65rem;
+        letter-spacing: 0;
     }
 }
 
