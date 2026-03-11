@@ -19,6 +19,7 @@ import client1 from '../../assets/client1.png';
 import old from '../../assets/old.png';
 import project5 from '../../assets/picture2.jpg';
 import project6 from '../../assets/picture1.jpg';
+import AnimatedStats from '../../components/AnimatedStats/AnimatedStats';
 import './Home.css';
 
 const Home = () => {
@@ -143,6 +144,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Animated Statistics */}
+            <AnimatedStats />
 
             {/* About Section */}
             <section className="about-section">

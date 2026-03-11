@@ -8,6 +8,7 @@ import logo2 from '../../assets/logo2.png';
 import logo3 from '../../assets/logo3.png';
 import logo4 from '../../assets/logo4.png';
 import logo5 from '../../assets/logo5.png';
+import { CountUp } from '../../components/AnimatedStats/AnimatedStats';
 
 function About() {
     const [activeAccordion, setActiveAccordion] = useState(0);
@@ -145,20 +146,28 @@ function About() {
                     <h2 className="section-title-center text-white">What We Did?</h2>
 
                     <div className="results-grid">
-                        <div className="result-item">
-                            <span className="result-number">15+</span>
+                        <div className="result-item fade-in-up" style={{ animationDelay: '0s' }}>
+                            <span className="result-number">
+                                <CountUp end={15} duration={3000} suffix="+" />
+                            </span>
                             <p className="result-label">Years of Experience</p>
                         </div>
-                        <div className="result-item">
-                            <span className="result-number">200+</span>
+                        <div className="result-item fade-in-up" style={{ animationDelay: '0.15s' }}>
+                            <span className="result-number">
+                                <CountUp end={200} duration={3000} suffix="+" />
+                            </span>
                             <p className="result-label">Successful Projects</p>
                         </div>
-                        <div className="result-item">
-                            <span className="result-number">50+</span>
+                        <div className="result-item fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            <span className="result-number">
+                                <CountUp end={50} duration={3000} suffix="+" />
+                            </span>
                             <p className="result-label">Loyal Clients</p>
                         </div>
-                        <div className="result-item">
-                            <span className="result-number">9</span>
+                        <div className="result-item fade-in-up" style={{ animationDelay: '0.45s' }}>
+                            <span className="result-number">
+                                <CountUp end={9} duration={3000} suffix="" />
+                            </span>
                             <p className="result-label">Provinces Covered</p>
                         </div>
                     </div>

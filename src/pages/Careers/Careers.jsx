@@ -9,6 +9,7 @@ import career5 from '../../assets/career5.png';
 import career6 from '../../assets/career6.png';
 
 import career10 from '../../assets/carrer10.jpg';
+import { CountUp } from '../../components/AnimatedStats/AnimatedStats';
 
 function Careers() {
     return (
@@ -100,20 +101,28 @@ function Careers() {
                     </div>
 
                     <div className="stats-grid">
-                        <div className="stat-item">
-                            <span className="stat-number">15+</span>
+                        <div className="stat-item fade-in-up" style={{ animationDelay: '0s' }}>
+                            <span className="stat-number">
+                                <CountUp end={15} duration={3000} suffix="+" />
+                            </span>
                             <span className="stat-label">Years in Business</span>
                         </div>
-                        <div className="stat-item">
-                            <span className="stat-number">200+</span>
+                        <div className="stat-item fade-in-up" style={{ animationDelay: '0.15s' }}>
+                            <span className="stat-number">
+                                <CountUp end={200} duration={3000} suffix="+" />
+                            </span>
                             <span className="stat-label">Projects Delivered</span>
                         </div>
-                        <div className="stat-item">
-                            <span className="stat-number">30+</span>
+                        <div className="stat-item fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            <span className="stat-number">
+                                <CountUp end={30} duration={3000} suffix="+" />
+                            </span>
                             <span className="stat-label">Team Members</span>
                         </div>
-                        <div className="stat-item">
-                            <span className="stat-number">6</span>
+                        <div className="stat-item fade-in-up" style={{ animationDelay: '0.45s' }}>
+                            <span className="stat-number">
+                                <CountUp end={6} duration={3000} suffix="" />
+                            </span>
                             <span className="stat-label">Industries Served</span>
                         </div>
                     </div>

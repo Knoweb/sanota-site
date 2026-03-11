@@ -7,6 +7,7 @@ import picture2 from '../../assets/picture2.jpg';
 import picture3 from '../../assets/picture3.jpg';
 import picture4 from '../../assets/picture4.jpg';
 import picture5 from '../../assets/picture5.jpg';
+import { CountUp } from '../../components/AnimatedStats/AnimatedStats';
 
 const industries = [
     {
@@ -213,12 +214,22 @@ function Industries() {
                         </p>
                     </div>
                     <div className="ind-philosophy-stats">
-                        {[['15+', 'Years'], ['5', 'Industries'], ['100+', 'Projects'], ['24/7', 'Support']].map(([num, label]) => (
-                            <div key={label} className="ind-stat">
-                                <span className="ind-stat-num">{num}</span>
-                                <span className="ind-stat-label">{label}</span>
-                            </div>
-                        ))}
+                        <div className="ind-stat fade-in-up" style={{ animationDelay: '0s' }}>
+                            <span className="ind-stat-num"><CountUp end={15} duration={3000} suffix="+" /></span>
+                            <span className="ind-stat-label">Years</span>
+                        </div>
+                        <div className="ind-stat fade-in-up" style={{ animationDelay: '0.15s' }}>
+                            <span className="ind-stat-num"><CountUp end={5} duration={3000} suffix="" /></span>
+                            <span className="ind-stat-label">Industries</span>
+                        </div>
+                        <div className="ind-stat fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            <span className="ind-stat-num"><CountUp end={100} duration={3000} suffix="+" /></span>
+                            <span className="ind-stat-label">Projects</span>
+                        </div>
+                        <div className="ind-stat fade-in-up" style={{ animationDelay: '0.45s' }}>
+                            <span className="ind-stat-num"><CountUp end={24} duration={3000} suffix="/7" /></span>
+                            <span className="ind-stat-label">Support</span>
+                        </div>
                     </div>
                 </div>
             </section>

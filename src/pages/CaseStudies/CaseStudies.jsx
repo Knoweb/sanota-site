@@ -8,6 +8,7 @@ import picture3 from '../../assets/picture3.jpg';
 import picture4 from '../../assets/picture4.jpg';
 import picture5 from '../../assets/picture5.jpg';
 import historyImage from '../../assets/old.png';
+import AnimatedStats from '../../components/AnimatedStats/AnimatedStats';
 
 const caseStudies = [
     {
@@ -267,6 +268,9 @@ function CaseStudies() {
                     </motion.div>
                 </div>
             </div>
+
+            {/* ── Animated Stats Section ── */}
+            <AnimatedStats />
 
             {/* ── Carousel Section ── */}
             <section className="cs-carousel-section">

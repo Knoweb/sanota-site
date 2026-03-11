@@ -1,0 +1,92 @@
+.animated-stats-section {
+    padding: 60px 0;
+    background-color: #050505;
+    /* Black Background to fit theme */
+}
+
+.animated-stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.animated-stat-card {
+    flex: 1;
+    min-width: 200px;
+    background: #111;
+    /* Dark card */
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #222;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.animated-stat-card:hover {
+    transform: translateY(35px);
+    /* Note: since it starts at 0 when animated, hover needs to subtract from 0. Let's fix fade in up state */
+}
+
+/* Base class for hover */
+.animated-stat-card.fade-in-up {
+    animation: statFadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.fade-in-up {
+    animation: statFadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animated-stat-card.fade-in-up:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(34, 51, 173, 0.2);
+    border-color: #2233AD;
+}
+
+@keyframes statFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2233AD;
+    margin: 0 0 10px 0;
+    font-family: 'Questrial', sans-serif;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #ccc;
+    /* Lighter text for dark backgrounds */
+    font-weight: 500;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+@media (max-width: 992px) {
+    .animated-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+    }
+}
+
+@media (max-width: 576px) {
+    .animated-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

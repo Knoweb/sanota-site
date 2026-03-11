@@ -14,6 +14,7 @@ import logo7 from '../../assets/logo7.png';
 import logo8 from '../../assets/logo8.webp';
 import logo9 from '../../assets/logo9.webp';
 import logo10 from '../../assets/logo10.png';
+import { CountUp } from '../../components/AnimatedStats/AnimatedStats';
 
 function ClientsExperience() {
 
@@ -155,12 +156,24 @@ function ClientsExperience() {
                     </div>
 
                     <div className="hero-stats-grid">
-                        {stats.map((stat, index) => (
-                            <div key={index} className="hero-stat-item">
-                                <div className="stat-value">{stat.value}</div>
-                                <div className="stat-label">{stat.label}</div>
-                            </div>
-                        ))}
+                        {stats.map((stat, index) => {
+                            const numberMatch = stat.value.match(/\d+/);
+                            const numericValue = numberMatch ? parseInt(numberMatch[0]) : 0;
+                            const suffix = stat.value.replace(/\d+/g, '');
+
+                            return (
+                                <div
+                                    key={index}
+                                    className="hero-stat-item fade-in-up"
+                                    style={{ animationDelay: `${index * 0.15}s` }}
+                                >
+                                    <div className="stat-value">
+                                        <CountUp end={numericValue} duration={3000} suffix={suffix} />
+                                    </div>
+                                    <div className="stat-label">{stat.label}</div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
@@ -288,8 +301,14 @@ function ClientsExperience() {
                         <div className="coverage-stats-container">
                             <div className="province-stats-grid">
                                 {displayedProvinces.map((province, index) => (
-                                    <div key={index} className="province-stat-item">
-                                        <div className="province-value">{province.projects}+</div>
+                                    <div
+                                        key={index}
+                                        className="province-stat-item fade-in-up"
+                                        style={{ animationDelay: `${index * 0.15}s` }}
+                                    >
+                                        <div className="province-value">
+                                            <CountUp end={province.projects} duration={3000} suffix="+" />
+                                        </div>
                                         <div className="province-label">{province.name}</div>
                                     </div>
                                 ))}
