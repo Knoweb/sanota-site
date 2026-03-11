@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './About.css';
 import historyImage from '../../assets/old.png';
@@ -125,9 +126,71 @@ function About() {
                         </div>
                     </div>
 
-                    <div className="history-image-wrapper">
-                        <img src={historyImage} alt="Sanota History - Factory Floor" className="history-image" />
-                        <div className="orange-accent-box"></div>
+                    <div className="history-image-wrapper" style={{ position: 'relative' }}>
+                        {/* Background Blue Shape with smooth scale-in and infinite float */}
+                        <motion.div
+                            style={{ position: 'absolute', bottom: '-40px', right: '-40px', zIndex: 1 }}
+                            initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+                            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                            transition={{ duration: 1.1, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
+                            <motion.div
+                                className="orange-accent-box"
+                                style={{ position: 'relative', bottom: 'auto', right: 'auto' }}
+                                animate={{ y: [0, -12, 0], x: [0, 8, 0], rotate: [0, 1, 0] }}
+                                transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut', delay: 0.5 }}
+                            ></motion.div>
+                        </motion.div>
+
+                        {/* Image Entrance Animation with complex cinematic floating and hover scale */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40, scale: 0.96 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 1, ease: 'easeOut', delay: 0.1 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            style={{ position: 'relative', zIndex: 2 }}
+                        >
+                            <motion.div
+                                animate={{ y: [0, -12, 0], x: [0, 8, 0], rotate: [0, 1, 0] }}
+                                transition={{
+                                    y: { repeat: Infinity, duration: 7, ease: 'easeInOut' },
+                                    x: { repeat: Infinity, duration: 8, ease: 'easeInOut' },
+                                    rotate: { repeat: Infinity, duration: 9, ease: 'easeInOut' }
+                                }}
+                                whileHover={{ scale: 1.02, transition: { duration: 0.5, ease: 'easeOut' } }}
+                                style={{ position: 'relative', display: 'inline-block', width: '100%' }}
+                            >
+                                <img src={historyImage} alt="Sanota History - Factory Floor" className="history-image" style={{ display: 'block' }} />
+
+                                {/* Premium Sparkle Overlay */}
+                                <motion.div
+                                    style={{
+                                        position: 'absolute',
+                                        bottom: '30px',
+                                        right: '30px',
+                                        zIndex: 10,
+                                        width: '28px',
+                                        height: '28px',
+                                        pointerEvents: 'none'
+                                    }}
+                                    animate={{
+                                        opacity: [0.4, 1, 0.4],
+                                        scale: [0.85, 1.1, 0.85],
+                                        y: [0, -4, 0]
+                                    }}
+                                    transition={{
+                                        duration: 2.5,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                >
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0Z" fill="white" style={{ filter: 'drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.6))' }} />
+                                    </svg>
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </section>
 
@@ -224,10 +287,45 @@ function About() {
                         ))}
                     </div>
 
-                    <div className="accordion-image-wrapper">
-                        {/* Using picture3.jpg as it looks like a machine/factory image from Home.jsx imports */}
-                        <img src="/src/assets/picture3.jpg" alt="Industrial Machine" className="accordion-image" />
-                        <div className="accordion-orange-box"></div>
+                    <div className="accordion-image-wrapper" style={{ position: 'relative' }}>
+                        {/* Background Blue Shape with smooth scale-in and infinite float */}
+                        <motion.div
+                            style={{ position: 'absolute', bottom: '-30px', right: '-30px', zIndex: 1 }}
+                            initial={{ opacity: 0, scale: 0.8, x: 20, y: 20 }}
+                            whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+                            transition={{ duration: 1.1, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
+                            <motion.div
+                                className="accordion-orange-box"
+                                style={{ position: 'relative', bottom: 'auto', right: 'auto' }}
+                                animate={{ y: [0, -8, 0], rotate: [0, 2, 0] }}
+                                transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 0.5 }}
+                            ></motion.div>
+                        </motion.div>
+
+                        {/* Image Engine Animation with continuous float and hover scale */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 60, scale: 0.96 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 1.1, ease: 'easeOut', delay: 0.1 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            style={{ position: 'relative', zIndex: 2 }}
+                        >
+                            <motion.img
+                                src="/src/assets/picture3.jpg"
+                                alt="Industrial Machine"
+                                className="accordion-image"
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{
+                                    y: { repeat: Infinity, duration: 6, ease: 'easeInOut', delay: 0.2 }
+                                }}
+                                whileHover={{
+                                    scale: 1.03,
+                                    transition: { duration: 0.4, ease: 'easeOut' }
+                                }}
+                            />
+                        </motion.div>
                     </div>
                 </div>
             </section>

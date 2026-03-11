@@ -18,7 +18,7 @@
     min-width: 200px;
     background: #111;
     /* Dark card */
-    border-radius: 12px;
+    border-radius: 0;
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);

@@ -8,7 +8,7 @@ import picture3 from '../../assets/picture3.jpg';
 import picture4 from '../../assets/picture4.jpg';
 import picture5 from '../../assets/picture5.jpg';
 import historyImage from '../../assets/old.png';
-import AnimatedStats from '../../components/AnimatedStats/AnimatedStats';
+import AnimatedStats, { CountUp } from '../../components/AnimatedStats/AnimatedStats';
 
 const caseStudies = [
     {
@@ -327,27 +327,133 @@ function CaseStudies() {
 
 
             {/* ── History Section ── */}
-            <section className="cs-history-section">
+            <section className="cs-history-section" style={{ overflow: 'hidden' }}>
                 <div className="container cs-history-container">
                     <div className="cs-history-image-wrapper">
-                        <div className="cs-history-deco-box"></div>
-                        <img src={historyImage} alt="Sanota History" className="cs-history-img" />
-                        <div className="cs-stats-box">
-                            <span className="cs-stats-number">200+</span>
-                            <span className="cs-stats-label">PROJECTS DONE</span>
-                        </div>
+                        {/* 2. Background Blue Shape */}
+                        <motion.div
+                            style={{ position: 'absolute', top: '-40px', left: '-40px', zIndex: 1 }}
+                            initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+                            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                            transition={{ duration: 1.1, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
+                            <motion.div
+                                className="cs-history-deco-box"
+                                style={{ position: 'relative', top: 'auto', left: 'auto' }}
+                                animate={{ y: [0, -8, 0], rotate: [0, 3, 0] }}
+                                transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 0.5 }}
+                            ></motion.div>
+                        </motion.div>
+
+                        {/* 1. Image Entrance Animation */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 60, scale: 0.96 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 1.1, ease: 'easeOut', delay: 0.1 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            style={{ position: 'relative', zIndex: 2 }}
+                        >
+                            <motion.div
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{ y: { repeat: Infinity, duration: 6, ease: 'easeInOut', delay: 0.2 } }}
+                                whileHover={{ scale: 1.03, transition: { duration: 0.4, ease: 'easeOut' } }}
+                                style={{ position: 'relative', display: 'inline-block', width: '100%' }}
+                            >
+                                <img
+                                    src={historyImage}
+                                    alt="Sanota History"
+                                    className="cs-history-img"
+                                />
+
+                                {/* Premium Sparkle Overlay */}
+                                <motion.div
+                                    style={{
+                                        position: 'absolute',
+                                        bottom: '30px',
+                                        right: '30px',
+                                        zIndex: 10,
+                                        width: '28px',
+                                        height: '28px',
+                                        pointerEvents: 'none'
+                                    }}
+                                    animate={{
+                                        opacity: [0.4, 1, 0.4],
+                                        scale: [0.85, 1.1, 0.85],
+                                        y: [0, -4, 0]
+                                    }}
+                                    transition={{
+                                        duration: 2.5,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }}
+                                >
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0Z" fill="white" style={{ filter: 'drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.6))' }} />
+                                    </svg>
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+
+                        {/* 3. Floating Stats Card */}
+                        <motion.div
+                            style={{ position: 'absolute', bottom: '-40px', right: '-40px', zIndex: 3 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
+                            <motion.div
+                                className="cs-stats-box"
+                                style={{ position: 'relative', right: 'auto', bottom: 'auto' }} // Override absolute to allow proper floating relative to wrapper
+                                animate={{ y: [0, -15, 0] }}
+                                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                            >
+                                {/* 4. Counter Animation */}
+                                <span className="cs-stats-number">
+                                    <CountUp end={200} duration={3000} suffix="+" />
+                                </span>
+                                <span className="cs-stats-label">PROJECTS DONE</span>
+                            </motion.div>
+                        </motion.div>
                     </div>
+
                     <div className="cs-history-content">
-                        <h2 className="cs-history-title">Ready to Create Your Success Story?</h2>
-                        <p className="cs-history-text">
+                        {/* Title: fade-in + slide from right */}
+                        <motion.h2
+                            className="cs-history-title"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.5 }}
+                        >
+                            Ready to Create Your Success Story?
+                        </motion.h2>
+
+                        {/* Subtitle: fade-in + slide from right with delay */}
+                        <motion.p
+                            className="cs-history-text"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.5 }}
+                        >
                             Let's discuss how we can deliver similar results for your business.
-                        </p>
-                        <div className="cs-cta-buttons">
+                        </motion.p>
+
+                        {/* Buttons: fade-in with delay */}
+                        <motion.div
+                            className="cs-cta-buttons"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                        >
                             <Link to="/contact" className="cs-btn cs-btn-solid">REQUEST CONSULTATION</Link>
                             <Link to="/industries" className="cs-btn cs-btn-outline">
                                 EXPLORE INDUSTRIES <span>→</span>
                             </Link>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

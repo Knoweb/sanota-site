@@ -19,7 +19,6 @@ import client1 from '../../assets/client1.png';
 import old from '../../assets/old.png';
 import project5 from '../../assets/picture2.jpg';
 import project6 from '../../assets/picture1.jpg';
-import AnimatedStats from '../../components/AnimatedStats/AnimatedStats';
 import './Home.css';
 
 const Home = () => {
@@ -145,9 +144,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Animated Statistics */}
-            <AnimatedStats />
-
             {/* About Section */}
             <section className="about-section">
                 <div className="container">
@@ -184,11 +180,64 @@ const Home = () => {
                         {/* Right: Image Collage */}
                         <div className="about-images">
                             <div className="collage-left">
-                                <img src={picture2} alt="Circuit Board Technology" className="left-image" />
+                                <motion.div
+                                    initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    style={{ height: '100%' }}
+                                >
+                                    <motion.img
+                                        src={picture2}
+                                        alt="Circuit Board Technology"
+                                        className="left-image"
+                                        animate={{ y: [0, -10, 0], x: [0, 5, 0], rotate: [0, 0.5, 0] }}
+                                        transition={{
+                                            y: { repeat: Infinity, duration: 7, ease: "easeInOut" },
+                                            x: { repeat: Infinity, duration: 8.5, ease: "easeInOut" },
+                                            rotate: { repeat: Infinity, duration: 10, ease: "easeInOut" }
+                                        }}
+                                        style={{ display: 'block' }}
+                                    />
+                                </motion.div>
                             </div>
                             <div className="collage-right">
-                                <img src={picture3} alt="Engineering Work" className="right-image-top" />
-                                <img src={picture4} alt="Technical Inspection" className="right-image-bottom" />
+                                <motion.div
+                                    initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                >
+                                    <motion.img
+                                        src={picture3}
+                                        alt="Engineering Work"
+                                        className="right-image-top"
+                                        animate={{ y: [0, -8, 0], rotate: [0, -0.5, 0] }}
+                                        transition={{
+                                            y: { repeat: Infinity, duration: 6.5, ease: "easeInOut", delay: 0.5 },
+                                            rotate: { repeat: Infinity, duration: 9, ease: "easeInOut", delay: 0.5 }
+                                        }}
+                                        style={{ display: 'block' }}
+                                    />
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                >
+                                    <motion.img
+                                        src={picture4}
+                                        alt="Technical Inspection"
+                                        className="right-image-bottom"
+                                        animate={{ y: [0, -6, 0], x: [0, -4, 0] }}
+                                        transition={{
+                                            y: { repeat: Infinity, duration: 8, ease: "easeInOut", delay: 1 },
+                                            x: { repeat: Infinity, duration: 7.5, ease: "easeInOut", delay: 1 }
+                                        }}
+                                        style={{ display: 'block' }}
+                                    />
+                                </motion.div>
                             </div>
                         </div>
                     </div>
