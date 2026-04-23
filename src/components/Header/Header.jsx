@@ -19,8 +19,6 @@ function Header() {
                     {/* Center: Navigation */}
                     <nav className="nav">
                         <ul className="nav-list">
-                            <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>HOME</NavLink></li>
-                            
                             {/* 1. Solutions Dropdown */}
                             <li className="nav-dropdown">
                                 <NavLink to="/solutions" className={({ isActive }) => isActive ? "active nav-dropdown-button" : "nav-dropdown-button"}>
@@ -56,7 +54,7 @@ function Header() {
                             {/* 3. Industry Initiatives Dropdown */}
                             <li className="nav-dropdown">
                                 <NavLink to="/initiatives" className={({ isActive }) => isActive ? "active nav-dropdown-button" : "nav-dropdown-button"}>
-                                    INITIATIVES <span className="nav-dropdown-arrow">▼</span>
+                                    INDUSTRY INITIATIVES <span className="nav-dropdown-arrow">▼</span>
                                 </NavLink>
                                 <ul className="nav-dropdown-menu">
                                     <li><Link to="/initiatives/tea-modernization" className="nav-dropdown-item">Tea Industry Modernization</Link></li>
@@ -73,7 +71,7 @@ function Header() {
                             {/* 5. Knowledge Centre Dropdown */}
                             <li className="nav-dropdown">
                                 <NavLink to="/knowledge-centre" className={({ isActive }) => isActive ? "active nav-dropdown-button" : "nav-dropdown-button"}>
-                                    KNOWLEDGE <span className="nav-dropdown-arrow">▼</span>
+                                    KNOWLEDGE CENTRE <span className="nav-dropdown-arrow">▼</span>
                                 </NavLink>
                                 <ul className="nav-dropdown-menu">
                                     <li><Link to="/knowledge-centre/insights" className="nav-dropdown-item">Insights</Link></li>
@@ -119,7 +117,7 @@ function Header() {
 
                     {/* Right: Actions */}
                     <div className="header-actions">
-                        <Link to="/contact" className="quote-button">REQUEST A QUOTE</Link>
+                        <Link to="/contact" className="quote-button">DISCUSS YOUR REQUIREMENT</Link>
                         {isAuthenticated ? (
                             <Link to="/profile" className="profile-icon-link">
                                 <span className="user-icon">👤</span>

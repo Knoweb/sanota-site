@@ -47,7 +47,7 @@
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 0; /* Gap managed by separators */
     margin: 0;
     padding: 0;
     align-items: center;
@@ -56,43 +56,52 @@
 
 .nav-list li {
     margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li:not(:last-child)::after {
+    content: '|';
+    color: rgba(255, 255, 255, 0.2);
+    margin: 0 12px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    pointer-events: none;
 }
 
 .nav-list a,
 .nav-dropdown-button {
     color: #aeaeae;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
-    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 8px 0;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     font-family: var(--font-primary);
     position: relative;
     white-space: nowrap;
 }
 
-/* Triangle Indicator */
-.nav-list a::after,
-.nav-dropdown-button::after {
+/* Triangle Indicator - Adjusted for new spacing */
+.nav-list a::before,
+.nav-dropdown-button::before {
     content: '';
     position: absolute;
-    bottom: -32px;
-    /* Position at the bottom of the 80px header (approx distance from center) */
+    bottom: -22px;
     left: 50%;
     transform: translateX(-50%) scale(0);
-    border-width: 6px;
+    border-width: 5px;
     border-style: solid;
     border-color: transparent transparent #2233AD transparent;
-    /* Blue pointing up */
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
 }
 
@@ -101,33 +110,35 @@
 .nav-dropdown:hover .nav-dropdown-button,
 .nav-list a.active,
 .nav-dropdown-button.active {
-    color: #2233AD;
-    /* Blue Accent */
+    color: #ffffff;
 }
 
-.nav-list a:hover::after,
-.nav-dropdown-button:hover::after,
-.nav-dropdown:hover .nav-dropdown-button::after,
-.nav-list a.active::after,
-.nav-dropdown-button.active::after {
+.nav-list a:hover::before,
+.nav-dropdown-button:hover::before,
+.nav-dropdown:hover .nav-dropdown-button::before,
+.nav-list a.active::before,
+.nav-dropdown-button.active::before {
     transform: translateX(-50%) scale(1);
     opacity: 1;
 }
 
 /* Dropdown Arrow */
 .nav-dropdown-arrow {
-    font-size: 0.6em;
+    font-size: 0.55em;
+    opacity: 0.5;
     transition: transform 0.3s ease;
 }
 
 .nav-dropdown:hover .nav-dropdown-arrow {
     transform: rotate(180deg);
+    opacity: 1;
+    color: #2233AD;
 }
 
-/* Dropdown Menu - Dark */
+/* Dropdown Menu - Refined Spacing */
 .nav-dropdown {
     position: relative;
-    height: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
 }
@@ -136,16 +147,16 @@
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: #111;
-    border: 1px solid #333;
-    border-top: 2px solid #2233AD;
-    padding: var(--spacing-xs) 0;
-    min-width: 240px;
+    transform: translateX(-50%) translateY(15px);
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #2233AD;
+    padding: 10px 0;
+    min-width: 280px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     z-index: var(--z-dropdown);
 }
 
@@ -157,35 +168,20 @@
 
 .nav-dropdown-item {
     display: block;
-    padding: 12px 20px;
-    border-bottom: 1px solid #222;
-}
-
-.nav-dropdown-item:last-child {
-    border-bottom: none;
+    padding: 14px 28px;
+    color: #999;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
 }
 
 .nav-dropdown-item:hover {
-    background: #1a1a1a;
-}
-
-.nav-dropdown-title {
-    display: block;
+    background: rgba(34, 51, 173, 0.05);
     color: #fff;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 2px;
-}
-
-.nav-dropdown-desc {
-    display: block;
-    color: #777;
-    font-size: 0.75rem;
-    text-transform: none;
-}
-
-.nav-dropdown-item:hover .nav-dropdown-title {
-    color: #2233AD;
+    padding-left: 32px;
+    border-left: 3px solid #2233AD;
 }
 
 /* Right Actions */
