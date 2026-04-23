@@ -47,7 +47,7 @@
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 18px;
+    gap: 16px;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -264,7 +264,7 @@
 /* Responsive */
 @media (max-width: 1400px) {
     .nav-list {
-        gap: 14px;
+        gap: 12px;
     }
 
     .nav-list a,
@@ -275,7 +275,7 @@
 
 @media (max-width: 1200px) {
     .nav-list {
-        gap: 10px;
+        gap: 8px;
     }
 
     .nav-list a,
