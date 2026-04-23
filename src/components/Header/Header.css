@@ -47,7 +47,7 @@
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 18px;
+    gap: 15px;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -61,11 +61,11 @@
 .nav-list a,
 .nav-dropdown-button {
     color: #aeaeae;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
     transition: color 0.3s ease;
     background: none;
     border: none;
