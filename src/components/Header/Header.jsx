@@ -20,44 +20,21 @@ function Header() {
                     <nav className="nav">
                         <ul className="nav-list">
                             <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>HOME</NavLink></li>
-                            
-                            {/* Solutions Dropdown */}
-                            <li className="nav-dropdown">
-                                <NavLink to="/solutions" className={({ isActive }) => isActive ? "active nav-dropdown-button" : "nav-dropdown-button"}>
-                                    SOLUTIONS <span className="nav-dropdown-arrow">▼</span>
-                                </NavLink>
-                                <div className="nav-dropdown-menu">
-                                    <Link to="/solutions/engineering-automation" className="nav-dropdown-item">
-                                        <span className="nav-dropdown-title">End-to-End Engineering & Automation</span>
-                                    </Link>
-                                    <Link to="/solutions/developed-products" className="nav-dropdown-item">
-                                        <span className="nav-dropdown-title">Sanota Developed Products</span>
-                                    </Link>
-                                    <Link to="/solutions/digital-solutions" className="nav-dropdown-item">
-                                        <span className="nav-dropdown-title">Software & Digital Solutions</span>
-                                    </Link>
-                                    <Link to="/solutions/retrofit-takeover" className="nav-dropdown-item">
-                                        <span className="nav-dropdown-title">Retrofit & System Takeover</span>
-                                    </Link>
-                                    <Link to="/solutions/lifecycle-support" className="nav-dropdown-item">
-                                        <span className="nav-dropdown-title">AMC & Lifecycle Support</span>
-                                    </Link>
-                                </div>
-                            </li>
-
-                            <li><NavLink to="/industries" className={({ isActive }) => isActive ? "active" : ""}>INDUSTRIES</NavLink></li>
-                            <li><NavLink to="/industry-initiatives" className={({ isActive }) => isActive ? "active" : ""}>INDUSTRY INITIATIVES</NavLink></li>
-                            <li><NavLink to="/case-studies" className={({ isActive }) => isActive ? "active" : ""}>CASE STUDIES</NavLink></li>
-                            <li><NavLink to="/knowledge-centre" className={({ isActive }) => isActive ? "active" : ""}>KNOWLEDGE CENTRE</NavLink></li>
+                            <li><NavLink to="/solutions" className={({ isActive }) => isActive ? "active" : ""}>SOLUTIONS</NavLink></li>
                             <li><NavLink to="/products" className={({ isActive }) => isActive ? "active" : ""}>PRODUCTS</NavLink></li>
-                            <li><NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT</NavLink></li>
-                            <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>CONTACT</NavLink></li>
+                            <li><NavLink to="/industries" className={({ isActive }) => isActive ? "active" : ""}>INDUSTRIES</NavLink></li>
+                            <li><NavLink to="/clients-experience" className={({ isActive }) => isActive ? "active" : ""}>CLIENTS & EXPERIENCE</NavLink></li>
+                            <li><NavLink to="/case-studies" className={({ isActive }) => isActive ? "active" : ""}>CASE STUDIES</NavLink></li>
+                            <li><NavLink to="/insights" className={({ isActive }) => isActive ? "active" : ""}>INSIGHTS</NavLink></li>
+                            <li><NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>ABOUT SANOTA</NavLink></li>
+                            <li><NavLink to="/careers" className={({ isActive }) => isActive ? "active" : ""}>CAREERS</NavLink></li>
+                            <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>CONTACT US</NavLink></li>
                         </ul>
                     </nav>
 
                     {/* Right: Actions */}
                     <div className="header-actions">
-                        <Link to="/contact" className="quote-button">DISCUSS YOUR REQUIREMENT</Link>
+                        <Link to="/contact" className="quote-button">REQUEST A QUOTE</Link>
                         {isAuthenticated ? (
                             <Link to="/profile" className="profile-icon-link">
                                 <span className="user-icon">👤</span>
