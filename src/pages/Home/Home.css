@@ -165,9 +165,8 @@
 
 /* --- Trust Signal Strip --- */
 .trust-signal-strip {
-    background-color: #0a0a0a;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 25px 0;
+    background-color: #050505;
+    padding: 60px 0;
 }
 
 .trust-container {
@@ -176,39 +175,47 @@
     padding: 0 40px;
 }
 
-.trust-signals {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
-.trust-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.trust-card {
+    background-color: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 50px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.trust-icon {
+.trust-card:hover {
+    border-color: #2233AD;
+    transform: translateY(-8px);
+    background-color: #111;
+}
+
+.trust-number {
+    font-size: 4rem;
+    font-weight: 500;
     color: #2233AD;
-    font-weight: 700;
-    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1;
 }
 
-.trust-text {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.75rem;
+.trust-label {
+    font-size: 0.85rem;
     font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    white-space: nowrap;
+    letter-spacing: 1.5px;
+    margin: 0;
 }
 
 @media (max-width: 1200px) {
-    .trust-signals {
-        justify-content: center;
-        gap: 30px 40px;
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -217,9 +224,12 @@
         padding: 40px 0;
     }
     
-    .trust-item {
-        flex: 1 1 200px;
-        justify-content: center;
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-number {
+        font-size: 3.5rem;
     }
 }
 

@@ -145,30 +145,22 @@ const Home = () => {
             {/* Trust Signal Strip */}
             <section className="trust-signal-strip">
                 <div className="container trust-container">
-                    <div className="trust-signals">
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">15+ Years Experience</span>
+                    <div className="trust-grid">
+                        <div className="trust-card">
+                            <h3 className="trust-number">15+</h3>
+                            <p className="trust-label">YEARS EXPERIENCE</p>
                         </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">250+ Engineering Projects</span>
+                        <div className="trust-card">
+                            <h3 className="trust-number">100+</h3>
+                            <p className="trust-label">PROJECTS DONE</p>
                         </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Multi-Industry Capability</span>
+                        <div className="trust-card">
+                            <h3 className="trust-number">50+</h3>
+                            <p className="trust-label">CLIENTS SERVED</p>
                         </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Nationwide Implementation</span>
-                        </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Engineering + Digital Integration</span>
-                        </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Lifecycle Support Approach</span>
+                        <div className="trust-card">
+                            <h3 className="trust-number">24/7</h3>
+                            <p className="trust-label">SUPPORT</p>
                         </div>
                     </div>
                 </div>
