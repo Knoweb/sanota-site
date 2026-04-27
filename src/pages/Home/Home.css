@@ -1875,3 +1875,33 @@
         font-size: 2.2rem;
     }
 }
+
+/* Project Features List Styles */
+.project-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.project-card:hover .project-features-list {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-features-list li {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.project-features-list li::before {
+    content: '?';
+    position: absolute;
+    left: 0;
+    color: #2233AD;
+}

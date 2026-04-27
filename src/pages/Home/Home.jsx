@@ -25,9 +25,27 @@ const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const projects = [
-        { id: 1, image: project1, name: 'Industrial Dryer Systems', category: 'Capacity & Energy Optimization' },
-        { id: 2, image: project2, name: 'Smart Greenhouse System', category: 'Precision Monitoring & Yield' },
-        { id: 3, image: project3, name: 'RFID Tracking System', category: 'Workflow Visibility & Efficiency' }
+        { 
+            id: 1, 
+            image: project1, 
+            name: 'Industrial Dryer Systems', 
+            category: 'Operational Efficiency',
+            features: ['Capacity Improvement', 'Energy Optimization']
+        },
+        { 
+            id: 2, 
+            image: project2, 
+            name: 'Smart Greenhouse System', 
+            category: 'Precision Agriculture',
+            features: ['Precision Monitoring', 'Yield Improvement']
+        },
+        { 
+            id: 3, 
+            image: project3, 
+            name: 'RFID Tracking System', 
+            category: 'Digital Logistics',
+            features: ['Workflow Visibility', 'Efficiency Improvement']
+        }
     ];
 
     const totalSlides = projects.length - 3; // Shows 4 at a time, so 3 slides total
@@ -515,8 +533,15 @@ const Home = () => {
                                 <div key={project.id} className="project-card">
                                     <div className="project-image" style={{ backgroundImage: `url(${project.image})` }}></div>
                                     <div className="project-overlay">
-                                        <h3 className="project-name">{project.name}</h3>
                                         <p className="project-category">{project.category}</p>
+                                        <h3 className="project-name">{project.name}</h3>
+                                        {project.features && (
+                                            <ul className="project-features-list">
+                                                {project.features.map((feature, idx) => (
+                                                    <li key={idx}>{feature}</li>
+                                                ))}
+                                            </ul>
+                                        )}
                                     </div>
                                 </div>
                             ))}
