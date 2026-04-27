@@ -69,32 +69,40 @@ const Initiatives = () => {
                 </div>
             </section>
 
-            {/* Content Section */}
+            {/* Content Section with Ticker */}
             <section className="initiatives-content">
-                <div className="container">
-                    <div className="initiatives-grid-page">
-                        {initiativeCards.map((card, index) => (
-                            <motion.div 
-                                key={index}
-                                id={card.id}
-                                className={`initiative-page-card ${slug === card.id ? 'highlighted-card' : ''}`}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                                <div className="card-icon">{card.icon}</div>
-                                <div className="card-info">
-                                    <h3 className="card-title">{card.title}</h3>
-                                    <ul className="card-points">
-                                        {card.points.map((point, idx) => (
-                                            <li key={idx}>{point}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </motion.div>
+                <div className="initiatives-ticker-wrapper">
+                    <motion.div 
+                        className="initiatives-ticker-content"
+                        animate={{ x: ["0%", "-50%"] }}
+                        transition={{ 
+                            duration: 35,
+                            ease: "linear",
+                            repeat: Infinity
+                        }}
+                    >
+                        {[1, 2].map((set) => (
+                            <React.Fragment key={set}>
+                                {initiativeCards.map((card, index) => (
+                                    <div 
+                                        key={`${set}-${index}`}
+                                        id={card.id}
+                                        className={`initiative-page-card ${slug === card.id ? 'highlighted-card' : ''}`}
+                                    >
+                                        <div className="card-icon">{card.icon}</div>
+                                        <div className="card-info">
+                                            <h3 className="card-title">{card.title}</h3>
+                                            <ul className="card-points">
+                                                {card.points.map((point, idx) => (
+                                                    <li key={idx}>{point}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
+                            </React.Fragment>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 

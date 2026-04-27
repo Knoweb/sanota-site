@@ -59,19 +59,27 @@
     position: relative;
 }
 
-.initiatives-grid-page {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.initiatives-ticker-wrapper {
+    overflow: hidden;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.initiatives-ticker-content {
+    display: flex;
     gap: 40px;
+    width: max-content;
 }
 
 .initiative-page-card {
+    flex: 0 0 450px;
     background: #F0F7FF;
-    padding: 60px 50px;
+    padding: 50px 40px;
     display: flex;
-    gap: 35px;
+    gap: 30px;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 1px solid rgba(34, 51, 173, 0.05);
+    min-height: 220px;
 }
 
 .initiative-page-card:hover {
