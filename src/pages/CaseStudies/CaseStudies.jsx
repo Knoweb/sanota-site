@@ -13,132 +13,80 @@ import AnimatedStats, { CountUp } from '../../components/AnimatedStats/AnimatedS
 const caseStudies = [
     {
         id: 1,
-        title: 'Complete Factory Automation Transformation',
-        industry: 'Manufacturing',
-        client: 'Leading Textile Manufacturing Facility',
+        title: 'Industrial Dryer Systems Optimization',
+        industry: 'Food Processing',
+        client: 'Major Agricultural Export Facility',
         image: picture1,
         problem: {
             title: 'The Challenge',
-            description: 'Struggling with outdated manual production processes, high defect rates (15%), and significant operational bottlenecks.',
-            points: ['Manual quality control', '30% capacity underutilization', 'No real-time visibility']
+            description: 'Struggling with inconsistent drying times and high energy consumption in large-scale industrial dryers.',
+            points: ['Energy inefficiency', 'Capacity bottlenecks', 'Inconsistent moisture control']
         },
         solution: {
             title: 'Our Approach',
-            description: 'Implemented a comprehensive automation solution with PLC-based control systems and SCADA integration.',
-            points: ['PLC & SCADA deployment', 'Automated quality inspection', 'MES implementation']
+            description: 'Integrated advanced thermal sensors and automated airflow control systems to optimize drying cycles.',
+            points: ['Automated thermal control', 'Real-time moisture sensing', 'Variable frequency drives']
         },
         outcome: {
             title: 'Results Achieved',
-            description: 'Transformative results including 40% production increase and 60% defect reduction.',
+            description: 'Significant improvements in both throughput and energy efficiency.',
             metrics: [
-                { value: '40%', label: 'Output Increase' },
-                { value: '60%', label: 'Defect Reduction' }
+                { value: '25%', label: 'Capacity Increase' },
+                { value: '30%', label: 'Energy Savings' }
             ],
-            benefits: ['Consistent product quality', 'Reduced labor costs', 'ROI within 18 months']
+            benefits: ['Capacity improvement', 'Energy optimization', 'Uniform product quality']
         }
     },
     {
         id: 2,
-        title: 'SCADA System for Water Treatment',
-        industry: 'Water & Wastewater',
-        client: 'Municipal Water Treatment Authority',
+        title: 'Smart Greenhouse Control System',
+        industry: 'Agriculture',
+        client: 'High-Tech Commercial Greenhouse',
         image: picture2,
         problem: {
             title: 'The Challenge',
-            description: 'Limited visibility across 8 remote facilities, manual testing delays, and high energy consumption.',
-            points: ['Remote visibility gaps', 'Delayed incident response', 'High energy costs']
+            description: 'Manual environmental control leading to yield fluctuations and high labor requirements for monitoring.',
+            points: ['Unstable micro-climates', 'Manual data logging', 'Resource waste']
         },
         solution: {
             title: 'Our Approach',
-            description: 'Deployed a centralized SCADA system with automated monitoring and energy-optimized pump control.',
-            points: ['Centralized SCADA', 'Automated monitoring', 'Energy optimization']
+            description: 'Implemented a fully automated environmental control system with IoT sensors and precision irrigation.',
+            points: ['IoT sensor network', 'Automated climate control', 'Precision nutrient delivery']
         },
         outcome: {
             title: 'Results Achieved',
-            description: 'Achieved 100% remote monitoring coverage and 35% reduction in energy costs.',
+            description: 'Achieved optimal growing conditions with minimal human intervention and higher yields.',
             metrics: [
-                { value: '100%', label: 'Remote Coverage' },
-                { value: '35%', label: 'Energy Savings' }
+                { value: '20%', label: 'Yield Increase' },
+                { value: '95%', label: 'Monitoring Accuracy' }
             ],
-            benefits: ['Complete visibility', 'Automated compliance', 'Faster incident response']
+            benefits: ['Precision monitoring', 'Yield improvement', 'Reduced operational costs']
         }
     },
     {
         id: 3,
-        title: 'Power Distribution Modernization',
-        industry: 'Energy & Power',
-        client: 'Regional Power Distribution Company',
+        title: 'RFID Workflow Tracking System',
+        industry: 'Logistics & Warehousing',
+        client: 'Global Logistics Hub',
         image: picture3,
         problem: {
             title: 'The Challenge',
-            description: 'Aging infrastructure leading to frequent outages, billing delays, and customer dissatisfaction.',
-            points: ['Frequent outages', 'Manual meter reading', 'Grid instability']
+            description: 'Lack of real-time visibility into warehouse workflows, leading to delays and inventory errors.',
+            points: ['Blind spots in workflow', 'Manual asset tracking', 'Process delays']
         },
         solution: {
             title: 'Our Approach',
-            description: 'Implemented Advanced Distribution Management System (ADMS) with smart metering and grid automation.',
-            points: ['ADMS deployment', 'Smart metering (AMI)', 'Automated switching']
+            description: 'Deployed an enterprise-wide RFID tracking system with real-time dashboard integration.',
+            points: ['RFID tag deployment', 'Fixed & mobile readers', 'Real-time dashboard']
         },
         outcome: {
             title: 'Results Achieved',
-            description: 'Dramatically improved reliability with 90% reduction in outage duration.',
+            description: 'Transformed warehouse operations with 100% real-time visibility and faster throughput.',
             metrics: [
-                { value: '90%', label: 'Less Outage Time' },
-                { value: '99.9%', label: 'Reliability' }
+                { value: '100%', label: 'Asset Visibility' },
+                { value: '40%', label: 'Efficiency Gain' }
             ],
-            benefits: ['Improved satisfaction', 'Automated billing', 'Real-time visibility']
-        }
-    },
-    {
-        id: 4,
-        title: 'Food Processing Plant Automation',
-        industry: 'Food & Beverage',
-        client: 'Major Food Processing Facility',
-        image: picture4,
-        problem: {
-            title: 'The Challenge',
-            description: 'Manual batch processes causing quality inconsistencies and difficulty in maintaining hygiene standards.',
-            points: ['Quality inconsistencies', 'Hygiene challenges', 'Limited traceability']
-        },
-        solution: {
-            title: 'Our Approach',
-            description: 'Implemented hygienic automation with automated batch control and full traceability integration.',
-            points: ['Washdown automation', 'Batch control', 'Traceability system']
-        },
-        outcome: {
-            title: 'Results Achieved',
-            description: 'Ensured 100% batch traceability and 50% reduction in quality incidents.',
-            metrics: [
-                { value: '100%', label: 'Traceability' },
-                { value: '50%', label: 'Less Incidents' }
-            ],
-            benefits: ['Regulatory compliance', 'Consistent quality', 'Reduced contamination risk']
-        }
-    },
-    {
-        id: 5,
-        title: 'Smart Building Management System',
-        industry: 'Building Automation',
-        client: 'Commercial Office Complex',
-        image: picture5,
-        problem: {
-            title: 'The Challenge',
-            description: 'High energy costs, manual lighting control, and tenant complaints about comfort levels.',
-            points: ['High energy usage', 'Manual controls', 'Tenant complaints']
-        },
-        solution: {
-            title: 'Our Approach',
-            description: 'Integrated BMS with smart HVAC, automated lighting, and energy analytics.',
-            points: ['Comprehensive BMS', 'Smart HVAC', 'Energy analytics']
-        },
-        outcome: {
-            title: 'Results Achieved',
-            description: 'Delivered 45% energy cost reduction and significantly improved tenant satisfaction.',
-            metrics: [
-                { value: '45%', label: 'Energy Savings' },
-                { value: '95%', label: 'Tenant Satisfaction' }
-            ],
-            benefits: ['Lower maintenance costs', 'Centralized control', 'Enhanced sustainability']
+            benefits: ['Workflow visibility', 'Efficiency improvement', 'Reduced inventory errors']
         }
     }
 ];
@@ -261,7 +209,7 @@ function CaseStudies() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h1>Success Stories</h1>
+                        <h1>Real Operational Challenges.<br />Practical Engineering Solutions.</h1>
                         <p className="hero-subtitle">
                             Real-world automation projects delivering measurable results across industries.
                         </p>
