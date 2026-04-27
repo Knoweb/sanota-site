@@ -142,6 +142,38 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Trust Signal Strip */}
+            <section className="trust-signal-strip">
+                <div className="container trust-container">
+                    <div className="trust-signals">
+                        <div className="trust-item">
+                            <span className="trust-icon">✓</span>
+                            <span className="trust-text">15+ Years Experience</span>
+                        </div>
+                        <div className="trust-item">
+                            <span className="trust-icon">✓</span>
+                            <span className="trust-text">250+ Engineering Projects</span>
+                        </div>
+                        <div className="trust-item">
+                            <span className="trust-icon">✓</span>
+                            <span className="trust-text">Multi-Industry Capability</span>
+                        </div>
+                        <div className="trust-item">
+                            <span className="trust-icon">✓</span>
+                            <span className="trust-text">Nationwide Implementation</span>
+                        </div>
+                        <div className="trust-item">
+                            <span className="trust-icon">✓</span>
+                            <span className="trust-text">Engineering + Digital Integration</span>
+                        </div>
+                        <div className="trust-item">
+                            <span className="trust-icon">✓</span>
+                            <span className="trust-text">Lifecycle Support Approach</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* About Section */}
             <section className="about-section">
                 <div className="container">

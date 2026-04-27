@@ -163,6 +163,66 @@
     transform: translateX(4px);
 }
 
+/* --- Trust Signal Strip --- */
+.trust-signal-strip {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+}
+
+.trust-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.trust-signals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trust-icon {
+    color: #2233AD;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.trust-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+    .trust-signals {
+        justify-content: center;
+        gap: 30px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-signal-strip {
+        padding: 40px 0;
+    }
+    
+    .trust-item {
+        flex: 1 1 200px;
+        justify-content: center;
+    }
+}
+
 /* --- About Section --- */
 .about-section {
     background: #ffffff;
