@@ -702,6 +702,15 @@ const Home = () => {
                         <div className="nationwide-visual">
                             <div className="map-glow-container">
                                 <img src={slMap} alt="Sri Lanka Coverage Map" className="sl-map-creative" />
+                                {/* Animated Pulse Nodes */}
+                                <div className="map-pulse p-colombo" data-city="Colombo"></div>
+                                <div className="map-pulse p-kandy" data-city="Kandy"></div>
+                                <div className="map-pulse p-galle" data-city="Galle"></div>
+                                <div className="map-pulse p-trinco" data-city="Trincomalee"></div>
+                                <div className="map-pulse p-jaffna" data-city="Jaffna"></div>
+                                <div className="map-pulse p-anuradhapura" data-city="Anuradhapura"></div>
+                                <div className="map-pulse p-matara" data-city="Matara"></div>
+                                <div className="map-pulse p-kuranegala" data-city="Kurunegala"></div>
                             </div>
                         </div>
                     </div>
