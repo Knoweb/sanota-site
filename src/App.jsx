@@ -14,6 +14,7 @@ import About from './pages/About/About';
 import Company from './pages/Company/Company';
 import Contact from './pages/Contact/Contact';
 import Careers from './pages/Careers/Careers';
+import Initiatives from './pages/Initiatives/Initiatives';
 import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 
@@ -37,6 +38,7 @@ function App() {
               <Route path="/company" element={<Company />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/initiatives" element={<Initiatives />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               {/* Additional routes will be added as we build pages */}
