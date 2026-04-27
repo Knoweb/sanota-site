@@ -498,6 +498,11 @@
     display: flex;
     gap: 30px;
     width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.capabilities-ticker-wrapper:hover .capabilities-ticker-content {
+    animation-play-state: paused;
 }
 
 .capability-card {
@@ -1529,6 +1534,11 @@
     display: flex;
     gap: 30px;
     width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.initiatives-ticker-wrapper:hover .initiatives-ticker-content {
+    animation-play-state: paused;
 }
 
 .initiatives-section .initiative-card {
@@ -1705,4 +1715,8 @@
         grid-template-columns: 1fr;
         gap: 40px;
     }
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }

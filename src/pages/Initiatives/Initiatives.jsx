@@ -74,12 +74,6 @@ const Initiatives = () => {
                 <div className="initiatives-ticker-wrapper">
                     <motion.div 
                         className="initiatives-ticker-content"
-                        animate={{ x: ["0%", "-50%"] }}
-                        transition={{ 
-                            duration: 35,
-                            ease: "linear",
-                            repeat: Infinity
-                        }}
                     >
                         {[1, 2].map((set) => (
                             <React.Fragment key={set}>

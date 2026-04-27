@@ -69,6 +69,11 @@
     display: flex;
     gap: 40px;
     width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.initiatives-ticker-wrapper:hover .initiatives-ticker-content {
+    animation-play-state: paused;
 }
 
 .initiative-page-card {
@@ -187,4 +192,9 @@
         flex-direction: column;
         gap: 20px;
     }
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }

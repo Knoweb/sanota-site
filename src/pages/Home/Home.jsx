@@ -278,12 +278,6 @@ const Home = () => {
                 <div className="capabilities-ticker-wrapper">
                     <motion.div 
                         className="capabilities-ticker-content"
-                        animate={{ x: ["0%", "-50%"] }}
-                        transition={{ 
-                            duration: 30, 
-                            repeat: Infinity, 
-                            ease: "linear" 
-                        }}
                     >
                         {/* First set of 5 cards */}
                         {[1, 2].map((set) => (
@@ -348,12 +342,6 @@ const Home = () => {
                 <div className="initiatives-ticker-wrapper">
                     <motion.div 
                         className="initiatives-ticker-content"
-                        animate={{ x: ["0%", "-50%"] }}
-                        transition={{ 
-                            duration: 35,
-                            ease: "linear",
-                            repeat: Infinity
-                        }}
                     >
                         {[1, 2].map((set) => (
                             <React.Fragment key={set}>
