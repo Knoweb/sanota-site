@@ -1792,20 +1792,79 @@
     .diff-title {
         font-size: 2.2rem;
     }
+}/* --- Industry Initiatives (Dark Theme) --- */
+.initiatives-section {
+    background-color: #0D0D0D !important;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.initiatives-header { text-align: center; margin-bottom: 70px; position: relative; }
-.initiatives-tagline { color: #2233AD !important; font-size: 0.95rem !important; font-weight: 800 !important; letter-spacing: 3px !important; text-transform: uppercase !important; margin-bottom: 15px !important; }
-.initiatives-title { font-size: 3.2rem !important; font-weight: 800 !important; color: #1a1a1a !important; line-height: 1.2 !important; margin-bottom: 25px !important; }
-.initiatives-subtitle { font-size: 1.15rem !important; color: #475569 !important; max-width: 800px !important; margin: 0 auto !important; line-height: 1.6 !important; }
+.initiatives-header {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 2;
+}
 
+.initiatives-tagline {
+    color: #2233AD !important;
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 15px !important;
+}
 
-/* --- FINAL DARK THEME FIX FOR INITIATIVES --- */
-.initiatives-section { background-color: #0D0D0D !important; }
-.initiatives-title { color: #ffffff !important; }
-.initiatives-subtitle { color: rgba(255, 255, 255, 0.7) !important; }
-.initiative-card { background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; border-radius: 0 !important; }
-.initiative-card-title { color: #ffffff !important; }
-.initiative-list li { color: rgba(255, 255, 255, 0.6) !important; }
-.initiative-card-icon { color: #ffffff !important; }
+.initiatives-title {
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    line-height: 1.1 !important;
+    margin-bottom: 25px !important;
+    letter-spacing: -1px !important;
+}
+
+.initiatives-subtitle {
+    font-size: 1.2rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    line-height: 1.6 !important;
+}
+
+.initiative-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0 !important;
+    padding: 60px 50px !important;
+    transition: all 0.4s ease !important;
+}
+
+.initiative-card:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #2233AD !important;
+    transform: translateY(-10px) !important;
+}
+
+.initiative-card-title {
+    color: #ffffff !important;
+    font-size: 1.7rem !important;
+    font-weight: 800 !important;
+}
+
+.initiative-list li {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 1.1rem !important;
+}
+
+.initiative-card-icon {
+    color: #ffffff !important;
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.initiative-card:hover .initiative-card-icon {
+    color: #2233AD !important;
+} }
 
