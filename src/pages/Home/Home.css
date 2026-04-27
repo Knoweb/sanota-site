@@ -444,7 +444,7 @@
 /* --- Core Capability Areas (5 Pillars) --- */
 .capabilities-section {
     padding: 100px 0;
-    background-color: #ffffff;
+    background-color: #0D0D0D;
     position: relative;
     overflow: hidden;
 }
@@ -456,9 +456,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#f1f5f9 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.8;
+    opacity: 1;
     pointer-events: none;
 }
 
@@ -481,7 +481,7 @@
 .capabilities-title {
     font-size: 3rem;
     font-weight: 800;
-    color: #1a1a1a;
+    color: #ffffff;
     line-height: 1.2;
     letter-spacing: -1px;
 }
@@ -502,13 +502,12 @@
 
 .capability-card {
     flex: 0 0 380px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
+    background: #161616;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 0 !important;
     padding: 50px 35px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -517,19 +516,20 @@
 .capability-card:hover {
     transform: translateY(-10px);
     border-color: #2233AD;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    background: #1a1a1a;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .capability-icon {
     width: 80px;
     height: 80px;
-    background: #f1f5f9;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    color: #2233AD;
+    color: #ffffff;
     transition: all 0.4s ease;
 }
 
@@ -542,14 +542,14 @@
 .capability-card-title {
     font-size: 1.35rem;
     font-weight: 800;
-    color: #1a1a1a;
+    color: #ffffff;
     margin-bottom: 20px;
     line-height: 1.3;
 }
 
 .capability-card-description {
     font-size: 1rem;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
 }
 
