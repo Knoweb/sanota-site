@@ -20,6 +20,7 @@ import old from '../../assets/old.png';
 import project5 from '../../assets/picture2.jpg';
 import project6 from '../../assets/picture1.jpg';
 import knowledgeThumb from '../../assets/knowledge-thumbnails.png';
+import slMap from '../../assets/sl-map-creative.png';
 import './Home.css';
 
 const Home = () => {
@@ -672,6 +673,37 @@ const Home = () => {
                         <Link to="/knowledge-centre" className="btn btn-secondary-outline">
                             VISIT KNOWLEDGE CENTRE
                         </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Nationwide Execution Capability Section */}
+            <section className="nationwide-section">
+                <div className="container">
+                    <div className="nationwide-grid">
+                        <div className="nationwide-content">
+                            <p className="nationwide-tagline">NATIONWIDE EXECUTION CAPABILITY</p>
+                            <h2 className="nationwide-title">Engineering Capability Across Sri Lanka</h2>
+                            <p className="nationwide-text">
+                                Sanota delivers engineering solutions across the country, 
+                                supporting clients from assessment to long-term operational support.
+                            </p>
+                            <div className="nationwide-stats">
+                                <div className="n-stat">
+                                    <span className="n-num">9/9</span>
+                                    <span className="n-lab">Provinces Covered</span>
+                                </div>
+                                <div className="n-stat">
+                                    <span className="n-num">24/7</span>
+                                    <span className="n-lab">On-site Support</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="nationwide-visual">
+                            <div className="map-glow-container">
+                                <img src={slMap} alt="Sri Lanka Coverage Map" className="sl-map-creative" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
