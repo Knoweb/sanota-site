@@ -347,38 +347,85 @@ const Home = () => {
                     </div>
 
                     <div className="initiatives-grid">
-                        <div className="initiative-card">
-                            <h3 className="initiative-card-title">Tea Industry Modernization</h3>
-                            <ul className="initiative-list">
-                                <li>process automation</li>
-                                <li>energy-efficient drying</li>
-                                <li>quality consistency</li>
-                            </ul>
-                        </div>
-                        <div className="initiative-card">
-                            <h3 className="initiative-card-title">Smart Controlled Agriculture</h3>
-                            <ul className="initiative-list">
-                                <li>greenhouse systems</li>
-                                <li>fertigation automation</li>
-                                <li>precision agriculture</li>
-                            </ul>
-                        </div>
-                        <div className="initiative-card">
-                            <h3 className="initiative-card-title">Smart Industrial Systems</h3>
-                            <ul className="initiative-list">
-                                <li>IoT monitoring</li>
-                                <li>workflow visibility</li>
-                                <li>performance analytics</li>
-                            </ul>
-                        </div>
-                        <div className="initiative-card">
-                            <h3 className="initiative-card-title">Energy & Resource Efficiency</h3>
-                            <ul className="initiative-list">
-                                <li>monitoring systems</li>
-                                <li>efficiency engineering</li>
-                                <li>sustainability solutions</li>
-                            </ul>
-                        </div>
+                        <motion.div 
+                            className="initiative-card"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <div className="initiative-card-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m2 22 1-1h3l9-9"></path><path d="M3 21v-3l9-9"></path><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z"></path><path d="M22 22v-3l-5-5-3 3 5 5h3Z"></path></svg>
+                            </div>
+                            <div className="initiative-card-content">
+                                <h3 className="initiative-card-title">Tea Industry Modernization</h3>
+                                <ul className="initiative-list">
+                                    <li>process automation</li>
+                                    <li>energy-efficient drying</li>
+                                    <li>quality consistency</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+
+                        <motion.div 
+                            className="initiative-card"
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                        >
+                            <div className="initiative-card-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a9 9 0 0 1-18 0c0-1.5.1-3 .4-4.4"></path><path d="m13 22-3-3"></path><path d="m15 22-4-4"></path></svg>
+                            </div>
+                            <div className="initiative-card-content">
+                                <h3 className="initiative-card-title">Smart Controlled Agriculture</h3>
+                                <ul className="initiative-list">
+                                    <li>greenhouse systems</li>
+                                    <li>fertigation automation</li>
+                                    <li>precision agriculture</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+
+                        <motion.div 
+                            className="initiative-card"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                            <div className="initiative-card-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+                            </div>
+                            <div className="initiative-card-content">
+                                <h3 className="initiative-card-title">Smart Industrial Systems</h3>
+                                <ul className="initiative-list">
+                                    <li>IoT monitoring</li>
+                                    <li>workflow visibility</li>
+                                    <li>performance analytics</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+
+                        <motion.div 
+                            className="initiative-card"
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                        >
+                            <div className="initiative-card-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                            </div>
+                            <div className="initiative-card-content">
+                                <h3 className="initiative-card-title">Energy & Resource Efficiency</h3>
+                                <ul className="initiative-list">
+                                    <li>monitoring systems</li>
+                                    <li>efficiency engineering</li>
+                                    <li>sustainability solutions</li>
+                                </ul>
+                            </div>
+                        </motion.div>
                     </div>
 
                     <div className="initiatives-cta">
@@ -391,29 +438,40 @@ const Home = () => {
             <section className="industries-served-section">
                 <div className="container">
                     <div className="industries-header">
-                        <h2 className="industries-title">Engineering Experience Across Diverse Industries</h2>
+                        <p className="industries-count">9+ Industries Served</p>
+                        <h2 className="industries-title">Engineering Experience Across <br />Diverse Industries</h2>
                     </div>
 
                     <div className="industries-grid">
                         {[
-                            { name: "Manufacturing", icon: "factory" },
-                            { name: "Food Processing", icon: "utensils" },
-                            { name: "Tea Industry", icon: "leaf" },
-                            { name: "Agriculture", icon: "sprout" },
-                            { name: "Logistics", icon: "truck" },
-                            { name: "Infrastructure", icon: "building" },
-                            { name: "Institutions", icon: "school" },
-                            { name: "Energy", icon: "zap" },
-                            { name: "Environmental Systems", icon: "wind" }
+                            { name: "Manufacturing", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg> },
+                            { name: "Food Processing", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 12.5A10 10 0 1 1 12 2v10z"></path></svg> },
+                            { name: "Tea Industry", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a9 9 0 0 1-18 0c0-1.5.1-3 .4-4.4"></path></svg> },
+                            { name: "Agriculture", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 20h10"></path><path d="M10 20c5.5 0 8-10 8-10"></path><path d="M14 20c-5.5 0-8-10-8-10"></path></svg> },
+                            { name: "Logistics", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 17h4V5H2v12h3"></path><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L17 7h-3"></path><circle cx="7.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> },
+                            { name: "Infrastructure", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 4v.01"></path><path d="M16 4v.01"></path><path d="M12 4v.01"></path><path d="M12 8v.01"></path><path d="M12 12v.01"></path></svg> },
+                            { name: "Institutions", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> },
+                            { name: "Energy", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg> },
+                            { name: "Environmental Systems", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.2 20.2A9 9 0 1 0 3.8 3.8a9 9 0 1 0 16.4 16.4Z"></path><path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path><path d="M12 12v10"></path><path d="m12 12 4 4"></path><path d="m12 12-4 4"></path></svg> }
                         ].map((item, index) => (
-                            <div key={index} className="industry-item">
+                            <motion.div 
+                                key={index} 
+                                className="industry-item"
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.1 }}
+                            >
                                 <div className="industry-icon-box">
-                                    {/* Using simple text placeholders or can be SVGs */}
-                                    <span className={`industry-icon icon-${item.icon}`}></span>
+                                    {item.icon}
                                 </div>
                                 <p className="industry-name">{item.name}</p>
-                            </div>
+                            </motion.div>
                         ))}
+                    </div>
+
+                    <div className="industries-cta">
+                        <Link to="/industries" className="btn btn-primary">VIEW INDUSTRIES</Link>
                     </div>
                 </div>
             </section>
