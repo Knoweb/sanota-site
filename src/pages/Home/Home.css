@@ -486,22 +486,25 @@
     letter-spacing: -1px;
 }
 
-.capabilities-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1300px;
-    margin: 0 auto;
+.capabilities-ticker-wrapper {
+    overflow: hidden;
+    padding: 20px 0 60px;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
 
+.capabilities-ticker-content {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+}
+
 .capability-card {
-    flex: 0 1 calc(33.333% - 20px);
+    flex: 0 0 380px;
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: 0 !important;
     padding: 50px 35px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -509,7 +512,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 340px;
 }
 
 .capability-card:hover {
@@ -552,7 +554,7 @@
 }
 
 .capabilities-cta {
-    margin-top: 80px;
+    margin-top: 40px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -575,7 +577,7 @@
 
 @media (max-width: 1200px) {
     .capability-card {
-        flex: 0 1 calc(50% - 15px);
+        flex: 0 0 340px;
     }
 }
 
@@ -585,8 +587,8 @@
     }
     
     .capability-card {
-        flex: 1 1 100%;
-        min-width: auto;
+        flex: 0 0 300px;
+        padding: 40px 25px;
     }
 }
 
