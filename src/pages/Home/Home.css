@@ -1475,3 +1475,186 @@
 .news-card:hover .news-headline {
     color: #ffffff;
 }
+
+/* --- Industry Initiatives --- */
+.initiatives-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.initiatives-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.initiatives-tagline {
+    color: #2233AD;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.initiatives-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.initiatives-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.initiative-card {
+    background: #f8fafc;
+    padding: 50px 40px;
+    border-left: 6px solid #2233AD;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.initiative-card:hover {
+    background: #ffffff;
+    transform: translateX(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.initiative-card-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+}
+
+.initiative-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.initiative-list li {
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+.initiative-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #2233AD;
+    font-weight: 800;
+    transition: transform 0.3s ease;
+}
+
+.initiative-card:hover .initiative-list li::before {
+    transform: translateX(3px);
+}
+
+.initiatives-cta {
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* --- Industries Served --- */
+.industries-served-section {
+    padding: 100px 0;
+    background-color: #0d0d0d;
+}
+
+.industries-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.industries-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.industry-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.industry-icon-box {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: #2233AD;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.industry-item:hover .industry-icon-box {
+    background: #2233AD;
+    color: #ffffff;
+    transform: translateY(-10px) rotate(10deg);
+    border-color: #2233AD;
+}
+
+.industry-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 992px) {
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .initiatives-title {
+        font-size: 2.2rem;
+    }
+    
+    .industries-title {
+        font-size: 2rem;
+    }
+    
+    .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

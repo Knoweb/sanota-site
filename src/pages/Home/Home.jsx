@@ -337,6 +337,87 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Industry Initiatives */}
+            <section className="initiatives-section">
+                <div className="container">
+                    <div className="initiatives-header">
+                        <p className="initiatives-tagline">INDUSTRY INITIATIVES</p>
+                        <h2 className="initiatives-title">Engineering Initiatives Supporting <br />Industry Development</h2>
+                        <p className="initiatives-subtitle">Sanota actively develops engineering solutions addressing structural challenges observed across selected industries.</p>
+                    </div>
+
+                    <div className="initiatives-grid">
+                        <div className="initiative-card">
+                            <h3 className="initiative-card-title">Tea Industry Modernization</h3>
+                            <ul className="initiative-list">
+                                <li>process automation</li>
+                                <li>energy-efficient drying</li>
+                                <li>quality consistency</li>
+                            </ul>
+                        </div>
+                        <div className="initiative-card">
+                            <h3 className="initiative-card-title">Smart Controlled Agriculture</h3>
+                            <ul className="initiative-list">
+                                <li>greenhouse systems</li>
+                                <li>fertigation automation</li>
+                                <li>precision agriculture</li>
+                            </ul>
+                        </div>
+                        <div className="initiative-card">
+                            <h3 className="initiative-card-title">Smart Industrial Systems</h3>
+                            <ul className="initiative-list">
+                                <li>IoT monitoring</li>
+                                <li>workflow visibility</li>
+                                <li>performance analytics</li>
+                            </ul>
+                        </div>
+                        <div className="initiative-card">
+                            <h3 className="initiative-card-title">Energy & Resource Efficiency</h3>
+                            <ul className="initiative-list">
+                                <li>monitoring systems</li>
+                                <li>efficiency engineering</li>
+                                <li>sustainability solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="initiatives-cta">
+                        <Link to="/initiatives" className="btn btn-secondary-outline">EXPLORE INDUSTRY INITIATIVES <span className="arrow">→</span></Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Industries Served */}
+            <section className="industries-served-section">
+                <div className="container">
+                    <div className="industries-header">
+                        <h2 className="industries-title">Engineering Experience Across Diverse Industries</h2>
+                    </div>
+
+                    <div className="industries-grid">
+                        {[
+                            { name: "Manufacturing", icon: "factory" },
+                            { name: "Food Processing", icon: "utensils" },
+                            { name: "Tea Industry", icon: "leaf" },
+                            { name: "Agriculture", icon: "sprout" },
+                            { name: "Logistics", icon: "truck" },
+                            { name: "Infrastructure", icon: "building" },
+                            { name: "Institutions", icon: "school" },
+                            { name: "Energy", icon: "zap" },
+                            { name: "Environmental Systems", icon: "wind" }
+                        ].map((item, index) => (
+                            <div key={index} className="industry-item">
+                                <div className="industry-icon-box">
+                                    {/* Using simple text placeholders or can be SVGs */}
+                                    <span className={`industry-icon icon-${item.icon}`}></span>
+                                </div>
+                                <p className="industry-name">{item.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Featured Projects Section */}
             <section className="projects-section">
                 <div className="projects-container">
