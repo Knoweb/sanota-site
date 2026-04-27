@@ -1493,57 +1493,6 @@
 /* --- Industry Initiatives --- */
 .initiatives-section {
     padding: 120px 0;
-    background-color: #ffffff;
-    position: relative;
-    overflow: hidden;
-}
-
-.initiatives-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    pointer-events: none;
-    opacity: 1;
-}
-
-.initiatives-header {
-    text-align: center;
-    margin-bottom: 70px;
-    position: relative;
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
-}
-
-.initiatives-ticker-wrapper {
-    overflow: hidden;
-    padding: 20px 0 60px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.initiatives-ticker-content {
-    display: flex;
-    gap: 30px;
-    width: max-content;
-    animation: scroll 40s linear infinite;
-}
-
-.initiatives-ticker-wrapper:hover .initiatives-ticker-content {
-    animation-play-state: paused;
-}
-
-.initiatives-section .initiative-card {
-    flex: 0 0 350px;
-    background: #F0F7FF;
     padding: 40px 30px;
     display: flex;
     gap: 20px;
@@ -1844,3 +1793,9 @@
         font-size: 2.2rem;
     }
 }
+
+.initiatives-header { text-align: center; margin-bottom: 70px; position: relative; }
+.initiatives-tagline { color: #2233AD !important; font-size: 0.95rem !important; font-weight: 800 !important; letter-spacing: 3px !important; text-transform: uppercase !important; margin-bottom: 15px !important; }
+.initiatives-title { font-size: 3.2rem !important; font-weight: 800 !important; color: #1a1a1a !important; line-height: 1.2 !important; margin-bottom: 25px !important; }
+.initiatives-subtitle { font-size: 1.15rem !important; color: #475569 !important; max-width: 800px !important; margin: 0 auto !important; line-height: 1.6 !important; }
+
