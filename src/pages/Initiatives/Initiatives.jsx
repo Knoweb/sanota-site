@@ -106,7 +106,11 @@ const Initiatives = () => {
                     <div className="cta-box">
                         <h2>Ready to Modernize Your Industry?</h2>
                         <p>Discuss your specific requirements with our engineering team.</p>
-                        <button className="btn btn-primary">DISCUSS YOUR REQUIREMENT</button>
+                        <div className="cta-buttons">
+                            <button className="btn btn-primary">DISCUSS YOUR REQUIREMENT</button>
+                            <Link to="/solutions" className="btn btn-secondary-outline">EXPLORE ALL SOLUTIONS</Link>
+                            <Link to="/industries" className="btn btn-secondary-outline">VIEW ALL INDUSTRIES</Link>
+                        </div>
                     </div>
                 </div>
             </section>
