@@ -1868,3 +1868,33 @@
     color: #2233AD !important;
 } }
 
+
+/* --- RELOCATE AND RESIZE INITIATIVES BUTTON --- */
+.initiatives-cta {
+    margin-top: 50px !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.initiatives-cta .btn {
+    padding: 12px 30px !important; /* Smaller padding */
+    font-size: 0.85rem !important; /* Smaller font */
+    letter-spacing: 1px !important;
+    background-color: #2233AD !important;
+    color: #ffffff !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important; /* Force single line */
+    border-radius: 0 !important;
+}
+
+.initiatives-cta .btn:hover {
+    background-color: #1a288a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(34, 51, 173, 0.3) !important;
+}
+
