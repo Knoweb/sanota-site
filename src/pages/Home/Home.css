@@ -1511,53 +1511,38 @@
     text-align: center;
     margin-bottom: 70px;
     position: relative;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
 }
 
-.initiatives-tagline {
-    color: #2233AD;
-    font-size: 0.95rem;
-    font-weight: 800;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.initiatives-title {
-    font-size: 3.2rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.initiatives-subtitle {
-    font-size: 1.15rem;
-    color: #64748b;
-    max-width: 850px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-.initiatives-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+.initiatives-ticker-wrapper {
+    overflow: hidden;
+    padding: 20px 0 60px;
+    width: 100%;
     position: relative;
+    z-index: 1;
 }
 
-.initiative-card {
-    background: #F0F7FF;
-    padding: 50px 40px;
+.initiatives-ticker-content {
     display: flex;
     gap: 30px;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 1px solid rgba(34, 51, 173, 0.05);
-    min-height: 220px;
+    width: max-content;
 }
 
-.initiative-card:hover {
+.initiatives-section .initiative-card {
+    flex: 0 0 350px;
+    background: #F0F7FF;
+    padding: 40px 30px;
+    display: flex;
+    gap: 20px;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(34, 51, 173, 0.05);
+    min-height: 200px;
+}
+
+.initiatives-section .initiative-card:hover {
     background: #ffffff;
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 30px 60px rgba(34, 51, 173, 0.1);
@@ -1566,8 +1551,8 @@
 
 .initiative-card-icon {
     flex-shrink: 0;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     color: #2233AD;
     transition: all 0.3s ease;
 }
