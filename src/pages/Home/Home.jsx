@@ -354,38 +354,97 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Featured Projects Section */}
-            <section className="projects-section">
-                <div className="projects-container">
-                    <div className="projects-header">
-                        <div className="projects-header-left">
-                            <p className="projects-tagline">LATEST PROJECTS</p>
-                            <h2 className="projects-title">Featured Projects</h2>
-                        </div>
-                        <Link to="/case-studies" className="btn btn-primary">PROJECTS</Link>
+            {/* Success Stories Section */}
+            <section className="success-stories-section">
+                <div className="success-stories-background" style={{ backgroundImage: `url(${picture4})` }}></div>
+                <div className="success-stories-overlay"></div>
+                
+                <div className="container">
+                    <div className="success-stories-header">
+                        <p className="success-tagline">CASE STUDIES</p>
+                        <h2 className="success-title">Success Stories</h2>
+                        <p className="success-subtitle">See how we've helped businesses transform their operations</p>
                     </div>
-                    <div className="projects-carousel">
-                        <div className="projects-grid">
-                            {projects.slice(currentSlide, currentSlide + 4).map((project) => (
-                                <div key={project.id} className="project-card">
-                                    <div className="project-image" style={{ backgroundImage: `url(${project.image})` }}></div>
-                                    <div className="project-overlay">
-                                        <h3 className="project-name">{project.name}</h3>
-                                        <p className="project-category">{project.category}</p>
-                                    </div>
+
+                    <div className="success-grid">
+                        <motion.div 
+                            className="success-card"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <div className="success-card-image" style={{ backgroundImage: `url(${project1})` }}></div>
+                            <div className="success-card-badge">Manufacturing</div>
+                            <div className="success-card-content">
+                                <div className="success-detail">
+                                    <span className="detail-label">Challenge:</span>
+                                    <p className="detail-text">Manual packing caused delays.</p>
                                 </div>
-                            ))}
-                        </div>
+                                <div className="success-detail">
+                                    <span className="detail-label">Solution:</span>
+                                    <p className="detail-text">Installed automated conveyor system.</p>
+                                </div>
+                                <div className="success-detail">
+                                    <span className="detail-label">Result:</span>
+                                    <p className="detail-text">40% Increase in daily output.</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div 
+                            className="success-card"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                        >
+                            <div className="success-card-image" style={{ backgroundImage: `url(${project2})` }}></div>
+                            <div className="success-card-badge">Water Treatment</div>
+                            <div className="success-card-content">
+                                <div className="success-detail">
+                                    <span className="detail-label">Challenge:</span>
+                                    <p className="detail-text">High electricity bills in pump houses.</p>
+                                </div>
+                                <div className="success-detail">
+                                    <span className="detail-label">Solution:</span>
+                                    <p className="detail-text">VFD Motor Control & SCADA monitoring.</p>
+                                </div>
+                                <div className="success-detail">
+                                    <span className="detail-label">Result:</span>
+                                    <p className="detail-text">25% Reduction in energy costs.</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div 
+                            className="success-card"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                            <div className="success-card-image" style={{ backgroundImage: `url(${project3})` }}></div>
+                            <div className="success-card-badge">Energy</div>
+                            <div className="success-card-content">
+                                <div className="success-detail">
+                                    <span className="detail-label">Challenge:</span>
+                                    <p className="detail-text">Frequent power trips.</p>
+                                </div>
+                                <div className="success-detail">
+                                    <span className="detail-label">Solution:</span>
+                                    <p className="detail-text">Upgraded switchgear protection.</p>
+                                </div>
+                                <div className="success-detail">
+                                    <span className="detail-label">Result:</span>
+                                    <p className="detail-text">100% Uptime for the last 12 months.</p>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
-                    <div className="carousel-dots">
-                        {Array.from({ length: totalSlides }).map((_, index) => (
-                            <button
-                                key={index}
-                                className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
-                                onClick={() => setCurrentSlide(index)}
-                                aria-label={`Go to slide ${index + 1}`}
-                            />
-                        ))}
+
+                    <div className="success-cta">
+                        <Link to="/case-studies" className="btn btn-secondary-outline">VIEW ALL CASE STUDIES <span className="arrow">→</span></Link>
                     </div>
                 </div>
             </section>
