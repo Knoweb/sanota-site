@@ -1643,7 +1643,11 @@
 /* --- Industries Served --- */
 .industries-served-section {
     padding: 120px 0;
-    background-color: #f8fafc;
+    background-image: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)), url('../../assets/industries-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
 }
 
 .industries-header {
