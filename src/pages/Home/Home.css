@@ -1493,6 +1493,57 @@
 /* --- Industry Initiatives --- */
 .initiatives-section {
     padding: 120px 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.initiatives-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.initiatives-header {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+.initiatives-ticker-wrapper {
+    overflow: hidden;
+    padding: 20px 0 60px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.initiatives-ticker-content {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.initiatives-ticker-wrapper:hover .initiatives-ticker-content {
+    animation-play-state: paused;
+}
+
+.initiatives-section .initiative-card {
+    flex: 0 0 350px;
+    background: #F0F7FF;
     padding: 40px 30px;
     display: flex;
     gap: 20px;
@@ -1792,109 +1843,4 @@
     .diff-title {
         font-size: 2.2rem;
     }
-}/* --- Industry Initiatives (Dark Theme) --- */
-.initiatives-section {
-    background-color: #0D0D0D !important;
-    padding: 120px 0;
-    position: relative;
-    overflow: hidden;
 }
-
-.initiatives-header {
-    text-align: center;
-    margin-bottom: 70px;
-    position: relative;
-    z-index: 2;
-}
-
-.initiatives-tagline {
-    color: #2233AD !important;
-    font-size: 0.95rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    margin-bottom: 15px !important;
-}
-
-.initiatives-title {
-    font-size: 3.5rem !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    line-height: 1.1 !important;
-    margin-bottom: 25px !important;
-    letter-spacing: -1px !important;
-}
-
-.initiatives-subtitle {
-    font-size: 1.2rem !important;
-    color: rgba(255, 255, 255, 0.7) !important;
-    max-width: 850px !important;
-    margin: 0 auto !important;
-    line-height: 1.6 !important;
-}
-
-.initiative-card {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 0 !important;
-    padding: 60px 50px !important;
-    transition: all 0.4s ease !important;
-}
-
-.initiative-card:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border-color: #2233AD !important;
-    transform: translateY(-10px) !important;
-}
-
-.initiative-card-title {
-    color: #ffffff !important;
-    font-size: 1.7rem !important;
-    font-weight: 800 !important;
-}
-
-.initiative-list li {
-    color: rgba(255, 255, 255, 0.6) !important;
-    font-size: 1.1rem !important;
-}
-
-.initiative-card-icon {
-    color: #ffffff !important;
-    width: 60px !important;
-    height: 60px !important;
-}
-
-.initiative-card:hover .initiative-card-icon {
-    color: #2233AD !important;
-} }
-
-
-/* --- RELOCATE AND RESIZE INITIATIVES BUTTON --- */
-.initiatives-cta {
-    margin-top: 50px !important;
-    text-align: center !important;
-    display: block !important;
-    width: 100% !important;
-}
-
-.initiatives-cta .btn {
-    padding: 12px 30px !important; /* Smaller padding */
-    font-size: 0.85rem !important; /* Smaller font */
-    letter-spacing: 1px !important;
-    background-color: #2233AD !important;
-    color: #ffffff !important;
-    border: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-transform: uppercase !important;
-    white-space: nowrap !important; /* Force single line */
-    border-radius: 0 !important;
-}
-
-.initiatives-cta .btn:hover {
-    background-color: #1a288a !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 5px 15px rgba(34, 51, 173, 0.3) !important;
-}
-
