@@ -1643,11 +1643,12 @@
 /* --- Industries Served --- */
 .industries-served-section {
     padding: 120px 0;
-    background-image: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), url('../../assets/industries-bg.png');
+    background-image: linear-gradient(rgba(10, 15, 30, 0.65), rgba(10, 15, 30, 0.65)), url('../../assets/industries-bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    color: #ffffff;
 }
 
 .industries-header {
@@ -1656,18 +1657,18 @@
 }
 
 .industries-count {
-    color: #2233AD;
+    color: #4d61ff; /* Brighter blue for dark background */
     font-weight: 800;
     font-size: 1.15rem;
     margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .industries-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
-    color: #050505;
+    color: #ffffff;
     line-height: 1.3;
 }
 
@@ -1691,7 +1692,7 @@
 .industry-icon-box {
     width: 70px;
     height: 70px;
-    color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.8);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     align-items: center;
@@ -1700,20 +1701,21 @@
 }
 
 .industry-item:hover .industry-icon-box {
-    color: #2233AD;
+    color: #4d61ff;
     transform: translateY(-10px) scale(1.1);
 }
 
 .industry-name {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #050505;
+    color: #ffffff;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .industry-item:hover .industry-name {
-    color: #2233AD;
-    font-weight: 800;
+    color: #4d61ff;
 }
 
 .industries-cta {
