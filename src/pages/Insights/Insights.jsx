@@ -15,35 +15,35 @@ function Insights() {
     const posts = [
         {
             id: 1,
-            title: "The Future of Industrial Automation in Sri Lanka",
-            category: "Industry 4.0",
-            date: "1 June 2024",
+            title: "When retrofit is better than replacement",
+            category: "Engineering",
+            date: "27 April 2026",
             image: img1,
-            excerpt: "Discover how AI and IoT are transforming local manufacturing industries. Learn about the shift from traditional SCADA to smart factories."
+            excerpt: "Discover when upgrading existing systems is more cost-effective and operationally efficient than a full equipment replacement."
         },
         {
             id: 2,
-            title: "Energy Optimization in Water Treatment Plants",
-            category: "Energy Management",
-            date: "1 June 2024",
+            title: "Understanding automation ROI",
+            category: "Automation",
+            date: "27 April 2026",
             image: img2,
-            excerpt: "Rising electricity costs are a major challenge. We explore how VFDs and smart pumping strategies can reduce your energy bill by up to 25%."
+            excerpt: "How to calculate the real profit and value of automation investments. Learn to measure both tangible and intangible gains."
         },
         {
             id: 3,
-            title: "Why Preventive Maintenance Matters?",
-            category: "Best Practices",
-            date: "1 June 2024",
+            title: "Designing systems for long-term maintainability",
+            category: "Systems",
+            date: "27 April 2026",
             image: img5,
-            excerpt: "Don't wait for a breakdown. Learn the importance of regular PLC backups, sensor calibration, and thermal imaging for switchboards."
+            excerpt: "Engineering systems that are easy to maintain and support for decades. Focus on modular design and standard components."
         },
         {
             id: 4,
-            title: "Sanota Wins National Engineering Excellence Award",
-            category: "Company News",
-            date: "1 June 2024",
+            title: "Engineering considerations in food processing",
+            category: "Industry",
+            date: "27 April 2026",
             image: img3,
-            excerpt: "We are proud to announce that Sanota has been recognized with the Gold Award for Best Automation Service Provider, reinforcing our commitment to quality and innovation."
+            excerpt: "Key technical factors when designing systems for the food industry, including hygiene standards and material selection."
         }
     ];
 
@@ -51,8 +51,8 @@ function Insights() {
         "Industrial Automation",
         "Electrical Engineering",
         "Smart Technology (IoT)",
-        "Company News",
-        "Maintenance Tips"
+        "Food Processing",
+        "Maintenance & Support"
     ];
 
     const projects = [img1, img2, img3, img4, img5, heroBg];
@@ -60,13 +60,13 @@ function Insights() {
     return (
         <div className="insights-page">
             <Helmet>
-                <title>Insights | Sanota Automation</title>
+                <title>Knowledge Centre | Sanota Automation</title>
             </Helmet>
 
             {/* Top Resource Bar */}
             <div className="resources-top-bar">
                 <div className="container bar-content">
-                    <span className="bar-title">Resources</span>
+                    <span className="bar-title">Knowledge Centre</span>
                     <div className="breadcrumbs">
                         <Link to="/" className="breadcrumb-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
@@ -74,7 +74,7 @@ function Insights() {
                             </svg>
                         </Link>
                         <span className="separator">›</span>
-                        <span className="current">Insights</span>
+                        <span className="current">Knowledge Centre</span>
                     </div>
                 </div>
             </div>
