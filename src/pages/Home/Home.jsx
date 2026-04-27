@@ -142,37 +142,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Trust Signal Strip */}
-            <section className="trust-signal-strip">
-                <div className="container trust-container">
-                    <div className="trust-signals">
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">15+ Years Experience</span>
-                        </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">250+ Engineering Projects</span>
-                        </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Multi-Industry Capability</span>
-                        </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Nationwide Implementation</span>
-                        </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Engineering + Digital Integration</span>
-                        </div>
-                        <div className="trust-item">
-                            <span className="trust-icon">✓</span>
-                            <span className="trust-text">Lifecycle Support Approach</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* About Section */}
             <section className="about-section">
@@ -189,20 +158,32 @@ const Home = () => {
                                 systems backed by technical expertise, quality, and reliability.
                             </p>
 
-                            <div className="about-stats">
-                                <div className="stat-item">
-                                    <div className="stat-icon">✓</div>
-                                    <div className="stat-text">15+ Years<br />Experience</div>
-                                </div>
-                                <div className="stat-item">
-                                    <div className="stat-icon">✓</div>
-                                    <div className="stat-text">200+ Complete<br />Projects</div>
-                                </div>
-                                <div className="stat-item">
-                                    <div className="stat-icon">✓</div>
-                                    <div className="stat-text">Trusted Engineering<br />Experts</div>
-                                </div>
-                            </div>
+                             <div className="about-stats-grid">
+                                 <div className="stat-item">
+                                     <div className="stat-icon">✓</div>
+                                     <div className="stat-text">15+ Years Experience</div>
+                                 </div>
+                                 <div className="stat-item">
+                                     <div className="stat-icon">✓</div>
+                                     <div className="stat-text">250+ Engineering Projects</div>
+                                 </div>
+                                 <div className="stat-item">
+                                     <div className="stat-icon">✓</div>
+                                     <div className="stat-text">Multi-Industry Capability</div>
+                                 </div>
+                                 <div className="stat-item">
+                                     <div className="stat-icon">✓</div>
+                                     <div className="stat-text">Nationwide Implementation</div>
+                                 </div>
+                                 <div className="stat-item">
+                                     <div className="stat-icon">✓</div>
+                                     <div className="stat-text">Engineering + Digital Integration</div>
+                                 </div>
+                                 <div className="stat-item">
+                                     <div className="stat-icon">✓</div>
+                                     <div className="stat-text">Lifecycle Support Approach</div>
+                                 </div>
+                             </div>
 
                             <Link to="/about" className="btn btn-primary">ABOUT US</Link>
                         </div>
