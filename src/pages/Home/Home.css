@@ -1799,3 +1799,13 @@
 .initiatives-title { font-size: 3.2rem !important; font-weight: 800 !important; color: #1a1a1a !important; line-height: 1.2 !important; margin-bottom: 25px !important; }
 .initiatives-subtitle { font-size: 1.15rem !important; color: #475569 !important; max-width: 800px !important; margin: 0 auto !important; line-height: 1.6 !important; }
 
+
+/* --- FINAL DARK THEME FIX FOR INITIATIVES --- */
+.initiatives-section { background-color: #0D0D0D !important; }
+.initiatives-title { color: #ffffff !important; }
+.initiatives-subtitle { color: rgba(255, 255, 255, 0.7) !important; }
+.initiative-card { background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; border-radius: 0 !important; }
+.initiative-card-title { color: #ffffff !important; }
+.initiative-list li { color: rgba(255, 255, 255, 0.6) !important; }
+.initiative-card-icon { color: #ffffff !important; }
+
