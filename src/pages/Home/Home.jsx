@@ -43,6 +43,14 @@ const Home = () => {
         setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
     };
 
+    // Auto-rotate Hero lines
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % totalSlides);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [totalSlides]);
+
     // Testimonials Logic
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
@@ -88,55 +96,45 @@ const Home = () => {
                 <div className="container hero-container">
                     <div className="hero-content">
                         <motion.h1
-                            style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }} // Ensure block layout for lines
-                            initial="hidden"
-                            whileInView="visible"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
                         >
-                            <motion.span
-                                style={{ display: 'inline-block' }}
-                                variants={{
-                                    visible: { transition: { staggerChildren: 0.05 } }
-                                }}
-                            >
-                                {Array.from("End-to-End Automation").map((char, index) => (
-                                    <motion.span key={index} variants={{
-                                        hidden: { opacity: 0, x: -10 },
-                                        visible: { opacity: 1, x: 0 }
-                                    }} style={{ display: 'inline-block' }}>{char === ' ' ? '\u00A0' : char}</motion.span>
-                                ))}
-                            </motion.span>
-                            <motion.span
-                                style={{ display: 'inline-block' }}
-                                variants={{
-                                    visible: { transition: { staggerChildren: 0.05, delayChildren: 1.1 } } // Delay line 2
-                                }}
-                            >
-                                {Array.from("& Engineering Partner").map((char, index) => (
-                                    <motion.span key={index} variants={{
-                                        hidden: { opacity: 0, x: -10 },
-                                        visible: { opacity: 1, x: 0 }
-                                    }} style={{ display: 'inline-block' }}>{char === ' ' ? '\u00A0' : char}</motion.span>
-                                ))}
-                            </motion.span>
+                            Integrated Engineering <br />
+                            <span className="accent-text">for Evolving Industries</span>
                         </motion.h1>
+
+                        <div className="rotating-text-wrapper">
+                            <motion.p
+                                className="hero-rotating-line"
+                                key={currentSlide % 2 === 0 ? "line1" : "line2"}
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                {currentSlide % 2 === 0 
+                                    ? "Designed, Built, Integrated, and Supported by One Team"
+                                    : "Automation, Digital Integration, and Lifecycle Support under One Accountable Partner"}
+                            </motion.p>
+                        </div>
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 2.4, duration: 0.8, ease: "easeOut" }} // Delay to wait for text (~2.2s)
+                            transition={{ delay: 0.4, duration: 0.8 }}
                         >
                             <p className="hero-subtitle">
-                                Sanota delivers integrated automation, engineering, and
-                                digital solutions from design and integration to retrofits,
-                                software, and long-term support under one accountable
-                                partner.
+                                Sanota develops engineering, automation, and digital solutions that 
+                                improve productivity, reliability, and operational performance 
+                                across industries.
                             </p>
                             <div className="hero-cta">
-                                <Link to="/contact" className="btn btn-primary">CONTACT US</Link>
-                                <Link to="/case-studies" className="btn btn-secondary-outline">
-                                    SEE PROJECTS <span className="arrow">→</span>
+                                <Link to="/contact" className="btn btn-primary">DISCUSS YOUR REQUIREMENT</Link>
+                                <Link to="/solutions" className="btn btn-secondary-outline">
+                                    EXPLORE SOLUTIONS <span className="arrow">→</span>
                                 </Link>
                             </div>
                         </motion.div>

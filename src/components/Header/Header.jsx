@@ -107,6 +107,7 @@ function Header() {
                                     <li><Link to="/about/philosophy" className="nav-dropdown-item">Engineering Philosophy</Link></li>
                                     <li><Link to="/about/capability" className="nav-dropdown-item">Integrated Capability</Link></li>
                                     <li><Link to="/clients-experience" className="nav-dropdown-item">Clients & Experience</Link></li>
+                                    <li><Link to="/careers" className="nav-dropdown-item">Careers</Link></li>
                                 </ul>
                             </li>
 
