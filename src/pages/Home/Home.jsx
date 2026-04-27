@@ -19,6 +19,7 @@ import client1 from '../../assets/client1.png';
 import old from '../../assets/old.png';
 import project5 from '../../assets/picture2.jpg';
 import project6 from '../../assets/picture1.jpg';
+import knowledgeThumb from '../../assets/knowledge-thumbnails.png';
 import './Home.css';
 
 const Home = () => {
@@ -591,6 +592,86 @@ const Home = () => {
                                 →
                             </button>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Knowledge Centre Preview Section */}
+            <section className="knowledge-preview-section">
+                <div className="container">
+                    <div className="knowledge-header">
+                        <p className="knowledge-tagline">KNOWLEDGE CENTRE</p>
+                        <h2 className="knowledge-title">Insights from Real Engineering Experience</h2>
+                        <p className="knowledge-subtitle">
+                            We don't just provide services; we share the expertise and insights gained from 
+                            decades of solving complex industrial challenges.
+                        </p>
+                    </div>
+
+                    <div className="knowledge-grid-pro">
+                        {/* Featured Article */}
+                        <div className="knowledge-card featured">
+                            <div className="knowledge-card-image">
+                                <img src={knowledgeThumb} alt="Retrofit vs Replacement" />
+                                <span className="knowledge-category">Engineering</span>
+                            </div>
+                            <div className="knowledge-card-content">
+                                <span className="knowledge-read-time">5 min read</span>
+                                <h3 className="knowledge-card-title">When retrofit is better than replacement</h3>
+                                <p className="knowledge-card-desc">
+                                    Discover when upgrading existing systems is more cost-effective and 
+                                    operationally efficient than a full equipment replacement.
+                                </p>
+                                <Link to="/knowledge/retrofit-vs-replacement" className="knowledge-link">
+                                    Read Article <span className="arrow">→</span>
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Smaller Articles */}
+                        <div className="knowledge-secondary-column">
+                            <div className="knowledge-card small">
+                                <div className="knowledge-card-content">
+                                    <div className="knowledge-card-meta">
+                                        <span className="knowledge-category">Automation</span>
+                                        <span className="knowledge-read-time">4 min read</span>
+                                    </div>
+                                    <h3 className="knowledge-card-title">Understanding automation ROI</h3>
+                                    <p className="knowledge-card-desc">How to calculate the real profit and value of automation investments.</p>
+                                    <Link to="/knowledge/automation-roi" className="knowledge-link">Read Article →</Link>
+                                </div>
+                            </div>
+
+                            <div className="knowledge-card small">
+                                <div className="knowledge-card-content">
+                                    <div className="knowledge-card-meta">
+                                        <span className="knowledge-category">Systems</span>
+                                        <span className="knowledge-read-time">6 min read</span>
+                                    </div>
+                                    <h3 className="knowledge-card-title">Designing systems for long-term maintainability</h3>
+                                    <p className="knowledge-card-desc">Engineering systems that are easy to maintain and support for decades.</p>
+                                    <Link to="/knowledge/maintainability" className="knowledge-link">Read Article →</Link>
+                                </div>
+                            </div>
+
+                            <div className="knowledge-card small">
+                                <div className="knowledge-card-content">
+                                    <div className="knowledge-card-meta">
+                                        <span className="knowledge-category">Industry</span>
+                                        <span className="knowledge-read-time">5 min read</span>
+                                    </div>
+                                    <h3 className="knowledge-card-title">Engineering considerations in food processing</h3>
+                                    <p className="knowledge-card-desc">Key technical factors when designing systems for the food industry.</p>
+                                    <Link to="/knowledge/food-processing" className="knowledge-link">Read Article →</Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="knowledge-footer">
+                        <Link to="/knowledge-centre" className="btn btn-secondary-outline">
+                            VISIT KNOWLEDGE CENTRE
+                        </Link>
                     </div>
                 </div>
             </section>
