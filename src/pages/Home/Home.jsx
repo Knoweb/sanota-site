@@ -268,45 +268,88 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Services Section */}
-            <section className="services-section">
-                <div className="services-background" style={{ backgroundImage: `url(${picture4})` }}></div>
-                <div className="services-overlay"></div>
-                <div className="services-container">
-                    <div className="services-header">
-                        <p className="services-tagline">OUR SERVICES</p>
-                        <h2 className="services-title">What We Offer &<br />What We Do.</h2>
-                        <p className="services-subtitle">"Transforming industries with innovative, tailored, and future-focused, automated success delivery."</p>
+            {/* Core Capability Areas (5 Pillars) */}
+            <section className="capabilities-section">
+                <div className="container">
+                    <div className="capabilities-header">
+                        <p className="capabilities-tagline">CORE CAPABILITY AREAS</p>
+                        <h2 className="capabilities-title">Integrated Capability Across the <br />Full System Lifecycle</h2>
                     </div>
-                    <div className="services-grid">
-                        <div className="service-card">
-                            <div className="service-icon">
-                                <img src={systemIntegrationIcon} alt="System Integration" />
+
+                    <div className="capabilities-grid">
+                        <motion.div 
+                            className="capability-card"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <div className="capability-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                             </div>
-                            <h3 className="service-name">System Integration</h3>
-                            <p className="service-description">Integrating all elements into the final system</p>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-icon">
-                                <img src={expertEngineeringIcon} alt="Expert Engineering" />
+                            <h3 className="capability-card-title">End-to-End Engineering & Automation</h3>
+                            <p className="capability-card-description">Custom-designed engineering and automation systems aligned with operational realities.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="capability-card"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                        >
+                            <div className="capability-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
                             </div>
-                            <h3 className="service-name">Expert Engineering</h3>
-                            <p className="service-description">Certified experts for unparalleled automation systems</p>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-icon">
-                                <img src={strategicPlanningIcon} alt="Strategic Planning" />
+                            <h3 className="capability-card-title">Sanota Developed Products</h3>
+                            <p className="capability-card-description">Field-proven engineered systems designed for repeatable industrial applications.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="capability-card"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            <div className="capability-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                             </div>
-                            <h3 className="service-name">Strategic Planning</h3>
-                            <p className="service-description">Smart planning with clear roadmap and milestones</p>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-icon">
-                                <img src={lifecycleSupportIcon} alt="Lifecycle Support" />
+                            <h3 className="capability-card-title">Software & Digital Solutions</h3>
+                            <p className="capability-card-description">Monitoring, automation, and operational intelligence platforms developed together with Knoweb.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="capability-card"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                        >
+                            <div className="capability-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 2v6h6"></path><path d="M2.66 15.57a10 10 0 1 0 .57-8.38"></path></svg>
                             </div>
-                            <h3 className="service-name">Lifecycle Support</h3>
-                            <p className="service-description">Full support to keep your systems running smoothly</p>
-                        </div>
+                            <h3 className="capability-card-title">Retrofit & System Modernization</h3>
+                            <p className="capability-card-description">Improving performance and extending life of existing systems without unnecessary replacement.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="capability-card"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
+                            <div className="capability-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                            </div>
+                            <h3 className="capability-card-title">Lifecycle Support & AMC</h3>
+                            <p className="capability-card-description">Long-term engineering support ensuring sustained operational reliability.</p>
+                        </motion.div>
+                    </div>
+
+                    <div className="capabilities-cta">
+                        <Link to="/solutions" className="btn btn-primary">EXPLORE ALL SOLUTIONS</Link>
                     </div>
                 </div>
             </section>

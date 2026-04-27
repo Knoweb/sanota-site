@@ -441,189 +441,152 @@
     }
 }
 
-/* --- Services Section --- */
-.services-section {
+/* --- Core Capability Areas (5 Pillars) --- */
+.capabilities-section {
+    padding: 100px 0;
+    background-color: #f8fafc;
     position: relative;
-    padding: 6rem 0 7rem;
-    color: var(--color-white);
     overflow: hidden;
 }
 
-.services-background {
+.capabilities-section::before {
+    content: '';
     position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    z-index: -3;
-}
-
-.services-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: -2;
-}
-
-.services-section::after {
-    content: "";
-    position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
     width: 100%;
-    height: 170px;
-    background: #ffffff;
-    z-index: -1;
+    height: 100%;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.4;
+    pointer-events: none;
 }
 
-.services-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-xl);
+.capabilities-header {
+    text-align: center;
+    margin-bottom: 70px;
     position: relative;
+    z-index: 1;
 }
 
-.services-header {
-    text-align: center;
-    margin-bottom: 2.2rem;
-}
-
-.services-tagline {
-    color: #2233AD;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+.capabilities-tagline {
+    color: #00AEEF;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.services-title {
-    font-size: 2.35rem;
-    font-weight: 700;
+.capabilities-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0A2540;
     line-height: 1.2;
-    margin-bottom: 1rem;
-    color: #fff;
+    letter-spacing: -1px;
 }
 
-.services-subtitle {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.75);
-    max-width: 620px;
+.capabilities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1300px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-/* Cards position (slightly lower) */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    transform: translateY(52px);
-}
-
-/* Service Card */
-.service-card {
-    background: #fff;
-    padding: 2rem 1.5rem;
+.capability-card {
+    flex: 0 1 calc(33.333% - 20px);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 50px 35px;
     text-align: center;
-    border-radius: 2px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
-    transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
-    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 340px;
 }
 
-/* Hover: full blue background */
-.service-card:hover {
-    background: #2233AD;
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.30);
+.capability-card:hover {
+    transform: translateY(-10px);
+    border-color: #00AEEF;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
 }
 
-/* Icon */
-.service-icon {
-    width: 44px;
-    height: 44px;
-    margin: 0 auto 1.2rem;
+.capability-icon {
+    width: 80px;
+    height: 80px;
+    background: #f1f5f9;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
+    color: #0A2540;
+    transition: all 0.4s ease;
 }
 
-/* Default SVG icon color */
-.service-icon svg {
-    width: 100%;
-    height: 100%;
-    stroke: #2233AD;
-    fill: none;
-    transition: stroke 0.35s ease, fill 0.35s ease;
-}
-
-/* Default image icons */
-.service-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: filter 0.35s ease;
-}
-
-.service-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.65rem;
-    transition: color 0.35s ease;
-}
-
-.service-description {
-    font-size: 0.82rem;
-    color: #666;
-    line-height: 1.55;
-    transition: color 0.35s ease;
-}
-
-/* Hover: white text */
-.service-card:hover .service-name,
-.service-card:hover .service-description {
+.capability-card:hover .capability-icon {
+    background: #00AEEF;
     color: #ffffff;
+    transform: scale(1.1);
 }
 
-/* Hover: white SVG icon */
-.service-card:hover .service-icon svg {
-    stroke: #ffffff;
+.capability-card-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0A2540;
+    margin-bottom: 20px;
+    line-height: 1.3;
 }
 
-/* Hover: convert image icons to white */
-.service-card:hover .service-icon img {
-    filter: brightness(0) invert(1);
+.capability-card-description {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
 }
 
-/* Services Responsive */
-@media (max-width: 992px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        transform: translateY(45px);
-    }
+.capabilities-cta {
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
 
-    .services-section::after {
-        height: 200px;
+.capabilities-cta .btn {
+    padding: 18px 45px !important;
+    font-size: 1rem !important;
+    border-radius: 12px !important;
+    background-color: #0A2540 !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.capabilities-cta .btn:hover {
+    background-color: #00AEEF !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 174, 239, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .capability-card {
+        flex: 0 1 calc(50% - 15px);
     }
 }
 
-@media (max-width: 576px) {
-    .services-section {
-        padding: 4.5rem 0 6rem;
+@media (max-width: 768px) {
+    .capabilities-title {
+        font-size: 2.2rem;
     }
-
-    .services-title {
-        font-size: 2rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        transform: translateY(35px);
-    }
-
-    .services-section::after {
-        height: 220px;
+    
+    .capability-card {
+        flex: 1 1 100%;
+        min-width: auto;
     }
 }
 
