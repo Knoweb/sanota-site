@@ -1720,3 +1720,38 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+.initiatives-cta .btn, .industries-cta .btn {
+    border-radius: 0 !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+}
+
+.initiatives-cta .btn {
+    padding: 18px 40px !important;
+    background-color: #2233AD !important;
+    color: #ffffff !important;
+    border: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.initiatives-cta .btn:hover {
+    background-color: #1a288a !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(34, 51, 173, 0.2);
+}
+
+.industries-cta .btn {
+    padding: 18px 50px !important;
+    background-color: transparent !important;
+    color: #2233AD !important;
+    border: 2px solid #2233AD !important;
+}
+
+.industries-cta .btn:hover {
+    background-color: #2233AD !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+}
