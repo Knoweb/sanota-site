@@ -81,6 +81,12 @@
     border-color: rgba(34, 51, 173, 0.15);
 }
 
+.initiative-page-card.highlighted-card {
+    border-color: #2233AD;
+    box-shadow: 0 0 20px rgba(34, 51, 173, 0.2);
+    background: #ffffff;
+}
+
 .initiative-page-card .card-icon {
     flex-shrink: 0;
     width: 60px;

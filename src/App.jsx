@@ -39,6 +39,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/initiatives" element={<Initiatives />} />
+              <Route path="/initiatives/:slug" element={<Initiatives />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               {/* Additional routes will be added as we build pages */}
