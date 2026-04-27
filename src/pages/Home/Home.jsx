@@ -189,21 +189,6 @@ const Home = () => {
                                 systems backed by technical expertise, quality, and reliability.
                             </p>
 
-                            <div className="about-stats">
-                                <div className="stat-item">
-                                    <div className="stat-icon">✓</div>
-                                    <div className="stat-text">15+ Years<br />Experience</div>
-                                </div>
-                                <div className="stat-item">
-                                    <div className="stat-icon">✓</div>
-                                    <div className="stat-text">200+ Complete<br />Projects</div>
-                                </div>
-                                <div className="stat-item">
-                                    <div className="stat-icon">✓</div>
-                                    <div className="stat-text">Trusted Engineering<br />Experts</div>
-                                </div>
-                            </div>
-
                             <Link to="/about" className="btn btn-primary">ABOUT US</Link>
                         </div>
 
