@@ -25,12 +25,9 @@ const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const projects = [
-        { id: 1, image: project1, name: 'Smart Factory Automation', category: 'Industrial' },
-        { id: 2, image: project2, name: 'Water Treatment Facilities', category: 'Commercial' },
-        { id: 3, image: project3, name: 'Power Distribution', category: 'Factory' },
-        { id: 4, image: project4, name: 'Pharmaceutical Production', category: 'Industrial' },
-        { id: 5, image: project5, name: 'Industrial Control Systems', category: 'Commercial' },
-        { id: 6, image: project6, name: 'Quality Assurance Lab', category: 'Factory' }
+        { id: 1, image: project1, name: 'Industrial Dryer Systems', category: 'Capacity & Energy Optimization' },
+        { id: 2, image: project2, name: 'Smart Greenhouse System', category: 'Precision Monitoring & Yield' },
+        { id: 3, image: project3, name: 'RFID Tracking System', category: 'Workflow Visibility & Efficiency' }
     ];
 
     const totalSlides = projects.length - 3; // Shows 4 at a time, so 3 slides total
@@ -507,14 +504,14 @@ const Home = () => {
                 <div className="projects-container">
                     <div className="projects-header">
                         <div className="projects-header-left">
-                            <p className="projects-tagline">LATEST PROJECTS</p>
-                            <h2 className="projects-title">Featured Projects</h2>
+                            <p className="projects-tagline">FEATURED CASE STUDIES</p>
+                            <h2 className="projects-title">Real Operational Challenges. <br />Practical Engineering Solutions.</h2>
                         </div>
-                        <Link to="/case-studies" className="btn btn-primary">PROJECTS</Link>
+                        <Link to="/case-studies" className="btn btn-primary">VIEW CASE STUDIES</Link>
                     </div>
                     <div className="projects-carousel">
                         <div className="projects-grid">
-                            {projects.slice(currentSlide, currentSlide + 4).map((project) => (
+                            {projects.map((project) => (
                                 <div key={project.id} className="project-card">
                                     <div className="project-image" style={{ backgroundImage: `url(${project.image})` }}></div>
                                     <div className="project-overlay">
@@ -525,16 +522,18 @@ const Home = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="carousel-dots">
-                        {Array.from({ length: totalSlides }).map((_, index) => (
-                            <button
-                                key={index}
-                                className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
-                                onClick={() => setCurrentSlide(index)}
-                                aria-label={`Go to slide ${index + 1}`}
-                            />
-                        ))}
-                    </div>
+                    {projects.length > 3 && (
+                        <div className="carousel-dots">
+                            {Array.from({ length: totalSlides }).map((_, index) => (
+                                <button
+                                    key={index}
+                                    className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
+                                    onClick={() => setCurrentSlide(index)}
+                                    aria-label={`Go to slide ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 
