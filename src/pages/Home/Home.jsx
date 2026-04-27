@@ -151,16 +151,24 @@ const Home = () => {
                             <p className="trust-label">YEARS EXPERIENCE</p>
                         </div>
                         <div className="trust-card">
-                            <h3 className="trust-number">100+</h3>
-                            <p className="trust-label">PROJECTS DONE</p>
+                            <h3 className="trust-number">250+</h3>
+                            <p className="trust-label">ENGINEERING PROJECTS</p>
                         </div>
                         <div className="trust-card">
-                            <h3 className="trust-number">50+</h3>
-                            <p className="trust-label">CLIENTS SERVED</p>
+                            <h3 className="trust-number">MULTI</h3>
+                            <p className="trust-label">INDUSTRY CAPABILITY</p>
                         </div>
                         <div className="trust-card">
-                            <h3 className="trust-number">24/7</h3>
-                            <p className="trust-label">SUPPORT</p>
+                            <h3 className="trust-number">NATION</h3>
+                            <p className="trust-label">WIDE IMPLEMENTATION</p>
+                        </div>
+                        <div className="trust-card">
+                            <h3 className="trust-number">ENG+DIGITAL</h3>
+                            <p className="trust-label">INTEGRATION</p>
+                        </div>
+                        <div className="trust-card">
+                            <h3 className="trust-number">LIFECYCLE</h3>
+                            <p className="trust-label">SUPPORT APPROACH</p>
                         </div>
                     </div>
                 </div>
