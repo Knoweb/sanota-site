@@ -162,31 +162,18 @@ const Home = () => {
             {/* Trust Signal Strip */}
             <section className="trust-signal-strip">
                 <div className="container trust-container">
-                    <div className="trust-grid">
-                        <div className="trust-card">
-                            <h3 className="trust-number">15+</h3>
-                            <p className="trust-label">YEARS EXPERIENCE</p>
-                        </div>
-                        <div className="trust-card">
-                            <h3 className="trust-number">250+</h3>
-                            <p className="trust-label">ENGINEERING PROJECTS</p>
-                        </div>
-                        <div className="trust-card">
-                            <h3 className="trust-number">MULTI</h3>
-                            <p className="trust-label">INDUSTRY CAPABILITY</p>
-                        </div>
-                        <div className="trust-card">
-                            <h3 className="trust-number">NATION</h3>
-                            <p className="trust-label">WIDE IMPLEMENTATION</p>
-                        </div>
-                        <div className="trust-card">
-                            <h3 className="trust-number">ENG+DIGITAL</h3>
-                            <p className="trust-label">INTEGRATION</p>
-                        </div>
-                        <div className="trust-card">
-                            <h3 className="trust-number">LIFECYCLE</h3>
-                            <p className="trust-label">SUPPORT APPROACH</p>
-                        </div>
+                    <div className="trust-inline-strip">
+                        <span className="trust-item"><span className="trust-blue">15+</span> Years Experience</span>
+                        <span className="trust-separator">|</span>
+                        <span className="trust-item"><span className="trust-blue">250+</span> Projects</span>
+                        <span className="trust-separator">|</span>
+                        <span className="trust-item">Multi-Industry</span>
+                        <span className="trust-separator">|</span>
+                        <span className="trust-item">Nationwide</span>
+                        <span className="trust-separator">|</span>
+                        <span className="trust-item">Eng + Digital</span>
+                        <span className="trust-separator">|</span>
+                        <span className="trust-item">Lifecycle Support</span>
                     </div>
                 </div>
             </section>
