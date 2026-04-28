@@ -93,7 +93,7 @@
     font-weight: 600;
     font-size: 1.05rem;
     transition: all 0.3s ease;
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 
 .tea-btn-primary:hover {
@@ -109,7 +109,7 @@
     font-weight: 600;
     font-size: 1.05rem;
     transition: all 0.3s ease;
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 
 .tea-btn-secondary:hover {
@@ -215,4 +215,110 @@
         width: 100%;
         text-align: center;
     }
+}
+
+/* --- Shared Section Components --- */
+.tea-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #080b1a;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.tea-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #2233AD;
+}
+
+.tea-section-title.light {
+    color: #fff;
+}
+
+/* --- Context Section --- */
+.tea-context-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.tea-challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tea-challenge-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+}
+
+.tea-challenge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2233AD;
+    flex-shrink: 0;
+}
+
+.tea-challenge-item p {
+    font-size: 1.05rem;
+    color: #333;
+    margin: 0;
+}
+
+/* --- Support Section --- */
+.tea-support-section {
+    padding: 100px 0;
+    background-color: #080b1a;
+    color: #fff;
+}
+
+.tea-support-lead {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 50px;
+    max-width: 800px;
+}
+
+.tea-support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tea-support-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-left: 3px solid #2233AD;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.tea-support-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateX(10px);
+}
+
+.tea-support-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.tea-support-card-desc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+    margin: 0;
 }
