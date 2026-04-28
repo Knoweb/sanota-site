@@ -2249,12 +2249,12 @@
 /* Map Pulse Animations */
 .map-pulse {
     position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #2233AD;
+    width: 8px;
+    height: 8px;
+    background-color: #4d61ff;
     border-radius: 50%;
     z-index: 5;
-    box-shadow: 0 0 10px #2233AD;
+    box-shadow: 0 0 8px #4d61ff;
 }
 
 .map-pulse::before {
@@ -2265,22 +2265,23 @@
     right: -100%;
     bottom: -100%;
     border-radius: 50%;
-    border: 2px solid #2233AD;
+    border: 2px solid #4d61ff;
     animation: pulseNode 2s ease-out infinite;
 }
 
 .map-pulse::after {
     content: attr(data-city);
     position: absolute;
-    top: -20px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     font-weight: 700;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease;
+    text-shadow: 0 0 5px rgba(0,0,0,1);
 }
 
 .map-pulse:hover::after {
@@ -2292,16 +2293,13 @@
     100% { transform: scale(2.5); opacity: 0; }
 }
 
-/* Specific Positions */
-.p-jaffna { top: 5%; left: 45%; }
-.p-anuradhapura { top: 32%; left: 45%; }
-.p-trinco { top: 30%; left: 63%; }
-.p-kuranegala { top: 52%; left: 40%; }
-.p-kandy { top: 62%; left: 48%; }
-.p-colombo { top: 72%; left: 28%; }
-.p-galle { top: 90%; left: 35%; }
-.p-matara { top: 92%; left: 45%; }
-
-.p-colombo, .p-kandy { background-color: #ffd700; box-shadow: 0 0 15px #ffd700; }
-.p-colombo::before, .p-kandy::before { border-color: #ffd700; }
+/* Specific Positions - Adjusted for landmass accuracy */
+.p-jaffna { top: 12%; left: 45%; }
+.p-anuradhapura { top: 35%; left: 48%; }
+.p-trinco { top: 32%; left: 65%; }
+.p-kuranegala { top: 55%; left: 42%; }
+.p-kandy { top: 65%; left: 52%; }
+.p-colombo { top: 75%; left: 32%; }
+.p-galle { top: 90%; left: 40%; }
+.p-matara { top: 92%; left: 50%; }
 
