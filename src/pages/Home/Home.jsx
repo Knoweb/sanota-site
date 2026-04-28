@@ -813,7 +813,7 @@ const Home = () => {
                             </p>
                             <div className="conversion-cta">
                                 <Link to="/contact" className="btn btn-primary btn-large conversion-btn">
-                                    Discuss Your Requirement <span className="btn-icon">→</span>
+                                    Discuss Your Requirement
                                 </Link>
                                 <div className="conversion-trust-line">
                                     <span>No obligation initial discussion</span>
