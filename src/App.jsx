@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Solutions from './pages/Solutions/Solutions';
 import Industries from './pages/Industries/Industries';
+import TeaIndustry from './pages/TeaIndustry/TeaIndustry';
 import CaseStudies from './pages/CaseStudies/CaseStudies';
 import Insights from './pages/Insights/Insights';
 import ArticlePage from './pages/Insights/ArticlePage';
@@ -29,6 +30,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/industries" element={<Industries />} />
+              <Route path="/industries/tea" element={<TeaIndustry />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/:slug" element={<ArticlePage />} />
