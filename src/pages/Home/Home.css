@@ -1191,7 +1191,7 @@
 .coverage-content-wrapper {
     display: flex;
     align-items: center;
-    background-color: #0c0c0c;
+    background-color: transparent;
     position: relative;
     border-radius: 0;
     width: 100%;
@@ -1201,11 +1201,11 @@
 
 /* --- History Section --- */
 .history-section {
-    background: #0a0a0a;
+    background: #ffffff;
     /* Light grey outer background */
     padding: 5rem 0;
     /* Outer padding for image overflow space */
-    color: #ffffff;
+    color: #1a1a1a;
     overflow: visible;
     /* Allow image to overflow outside black box */
 }
@@ -1298,11 +1298,11 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 .history-description {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(0, 0, 0, 0.75);
     font-size: 1rem;
     line-height: 1.6;
 }
