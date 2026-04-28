@@ -13,8 +13,9 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.footer-main-content {
-    padding: 140px 0 60px;
+.strategic-footer .footer-main-content {
+    padding-top: 140px;
+    padding-bottom: 60px;
 }
 
 .footer-grid {
