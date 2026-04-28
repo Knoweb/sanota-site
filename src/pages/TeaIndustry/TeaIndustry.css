@@ -151,8 +151,8 @@
 .tea-visual-wrapper::after {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border: 2px solid #2233AD;
     z-index: 3;
 }
@@ -305,8 +305,8 @@
 }
 
 .tea-challenge-icon {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
     color: #2233AD;
     transition: all 0.3s ease;
 }
