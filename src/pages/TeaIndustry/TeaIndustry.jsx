@@ -155,6 +155,61 @@ const TeaIndustry = () => {
                     </div>
                 </div>
             </section>
+
+            {/* 6. RELATED INDUSTRY INITIATIVES */}
+            <section className="tea-initiatives-section">
+                <div className="container">
+                    <div className="tea-initiatives-layout">
+                        <div className="tea-initiatives-content">
+                            <h2 className="tea-section-title light">Related Industry Initiatives</h2>
+                            <p className="tea-initiatives-lead">
+                                Sanota is actively involved in broader industry movements aimed at technological advancement and sustainability.
+                            </p>
+                            <div className="tea-initiatives-list">
+                                {[
+                                    "Tea modernization initiative",
+                                    "Smart greenhouse initiative",
+                                    "Smart monitoring initiative",
+                                    "Energy efficiency initiative"
+                                ].map((initiative, index) => (
+                                    <div className="tea-initiative-tag" key={index}>
+                                        <span className="tea-initiative-bullet">→</span>
+                                        {initiative}
+                                    </div>
+                                ))}
+                            </div>
+                            <Link to="/initiatives" className="btn btn-primary tea-btn-primary mt-40">
+                                Explore Industry Initiatives
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 7. RELATED PRODUCTS */}
+            <section className="tea-products-section">
+                <div className="container">
+                    <div className="tea-section-header">
+                        <h2 className="tea-section-title">Related Products</h2>
+                        <p className="tea-section-subtitle">Specialized engineering products developed for the tea processing industry.</p>
+                    </div>
+                    <div className="tea-products-grid">
+                        {[
+                            { name: "Green Tea Dryer", desc: "Advanced thermal control for precise green tea processing." },
+                            { name: "Tea Roller", desc: "Heavy-duty engineering for consistent leaf cell rupture." },
+                            { name: "Withering Trough", desc: "Automated airflow and temperature control systems." },
+                            { name: "Tea Tablet Machine", desc: "Precision compression for specialized tea products." }
+                        ].map((product, index) => (
+                            <div className="tea-product-card" key={index}>
+                                <div className="tea-product-icon">⚙️</div>
+                                <h3 className="tea-product-name">{product.name}</h3>
+                                <p className="tea-product-desc">{product.desc}</p>
+                                <Link to="/products" className="tea-product-link">View Details</Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
