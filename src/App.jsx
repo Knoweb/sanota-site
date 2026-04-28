@@ -31,6 +31,7 @@ function App() {
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/industries" element={<Industries />} />
               <Route path="/industries/tea" element={<TeaIndustry />} />
+              <Route path="/industries/tea-industry" element={<TeaIndustry />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/:slug" element={<ArticlePage />} />
