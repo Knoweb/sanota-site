@@ -626,53 +626,120 @@
     }
 }
 
-/* --- Application Areas Section --- */
+/* --- Application Areas Carousel --- */
 .tea-applications-section {
     padding: 120px 0;
     background-color: #f8f9fa;
+    overflow: hidden;
 }
 
-.tea-applications-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.tea-application-item {
+.tea-applications-header-flex {
     display: flex;
-    gap: 25px;
-    padding: 30px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.tea-app-nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.tea-app-nav-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #080b1a;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tea-app-nav-btn:hover {
+    background: #080b1a;
+    color: #fff;
+    border-color: #080b1a;
+}
+
+.tea-apps-carousel-viewport {
+    width: 100%;
+    overflow: visible;
+}
+
+.tea-apps-carousel-track {
+    display: flex;
+    gap: 30px;
+}
+
+.tea-app-carousel-card {
+    min-width: calc(33.33% - 20px);
     background: #fff;
     border: 1px solid #eee;
     transition: all 0.3s ease;
     border-radius: 0;
 }
 
-.tea-application-item:hover {
-    border-color: #2233AD;
-    transform: translateX(10px);
+.tea-app-card-image-box {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
 }
 
-.tea-app-index {
-    font-size: 1.5rem;
+.tea-app-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tea-app-carousel-card:hover .tea-app-card-img {
+    transform: scale(1.1);
+}
+
+.tea-app-card-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #2233AD;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: #2233AD;
-    line-height: 1;
+    letter-spacing: 1px;
+    z-index: 2;
 }
 
-.tea-app-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #080b1a;
-    margin-bottom: 10px;
+.tea-app-card-content {
+    padding: 30px;
 }
 
-.tea-app-desc {
+.tea-app-card-desc {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.6;
     margin: 0;
+}
+
+@media (max-width: 1100px) {
+    .tea-app-carousel-card {
+        min-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .tea-app-carousel-card {
+        min-width: 100%;
+    }
+    
+    .tea-applications-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
 }
 
 @media (max-width: 768px) {

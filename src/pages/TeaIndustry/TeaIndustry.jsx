@@ -9,7 +9,28 @@ import picture1 from '../../assets/picture1.jpg';
 import teaSolutionsImg from '../../assets/tea-solutions.png';
 import productsBg from '../../assets/products-bg.png';
 
+import appDrying from '../../assets/app-drying.png';
+import appRolling from '../../assets/app-rolling.png';
+import appSorting from '../../assets/app-sorting.png';
+import appMonitoring from '../../assets/app-monitoring.png';
+import appEnergy from '../../assets/app-energy.png';
+import appPackaging from '../../assets/app-packaging.png';
+
 const TeaIndustry = () => {
+    const [activeAppIndex, setActiveAppIndex] = React.useState(0);
+    
+    const apps = [
+        { title: "Drying & Withering Systems", image: appDrying, desc: "Automated controls for withering troughs and fluid bed dryers to maintain precise moisture levels." },
+        { title: "Rolling & Fermentation Control", image: appRolling, desc: "Digital monitoring of rolling pressure and fermentation temperature for optimum quality." },
+        { title: "Material Handling & Sorting", image: appSorting, desc: "Efficient conveyor systems and automated sorting to reduce manual dependency and breakage." },
+        { title: "Factory-wide Monitoring", image: appMonitoring, desc: "Centralized dashboards to track production metrics, energy usage, and machine status." },
+        { title: "Energy Management Systems", image: appEnergy, desc: "Optimizing firewood and electricity consumption through intelligent combustion and motor controls." },
+        { title: "Packaging & Quality Control", image: appPackaging, desc: "Precision weighing and inspection systems to ensure batch consistency and compliance." }
+    ];
+
+    const nextApp = () => setActiveAppIndex((prev) => (prev + 1) % apps.length);
+    const prevApp = () => setActiveAppIndex((prev) => (prev - 1 + apps.length) % apps.length);
+
     return (
         <div className="tea-industry-page">
             {/* 1. HERO SECTION */}
@@ -241,29 +262,35 @@ const TeaIndustry = () => {
             {/* 5. INDUSTRY-SPECIFIC APPLICATION AREAS */}
             <section className="tea-applications-section">
                 <div className="container">
-                    <div className="tea-applications-wrapper">
+                    <div className="tea-applications-header-flex">
                         <div className="tea-section-header">
                             <h2 className="tea-section-title">Industry-Specific Application Areas</h2>
                             <p className="tea-section-subtitle">Practical engineering implementations designed for tea factory environments.</p>
                         </div>
-                        <div className="tea-applications-list">
-                            {[
-                                { title: "Drying & Withering Systems", desc: "Automated controls for withering troughs and fluid bed dryers to maintain precise moisture levels." },
-                                { title: "Rolling & Fermentation Control", desc: "Digital monitoring of rolling pressure and fermentation temperature for optimum quality." },
-                                { title: "Material Handling & Sorting", desc: "Efficient conveyor systems and automated sorting to reduce manual dependency and breakage." },
-                                { title: "Factory-wide Monitoring", desc: "Centralized dashboards to track production metrics, energy usage, and machine status." },
-                                { title: "Energy Management Systems", desc: "Optimizing firewood and electricity consumption through intelligent combustion and motor controls." },
-                                { title: "Packaging & Quality Control", desc: "Precision weighing and inspection systems to ensure batch consistency and compliance." }
-                            ].map((app, index) => (
-                                <div className="tea-application-item" key={index}>
-                                    <div className="tea-app-index">{index + 1}.</div>
-                                    <div className="tea-app-details">
-                                        <h3 className="tea-app-title">{app.title}</h3>
-                                        <p className="tea-app-desc">{app.desc}</p>
+                        <div className="tea-app-nav-buttons">
+                            <button className="tea-app-nav-btn prev" onClick={prevApp}>←</button>
+                            <button className="tea-app-nav-btn next" onClick={nextApp}>→</button>
+                        </div>
+                    </div>
+
+                    <div className="tea-apps-carousel-viewport">
+                        <motion.div 
+                            className="tea-apps-carousel-track"
+                            animate={{ x: `-${activeAppIndex * (100 / (window.innerWidth > 1100 ? 3 : window.innerWidth > 768 ? 2 : 1))}%` }}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        >
+                            {apps.map((app, index) => (
+                                <div className="tea-app-carousel-card" key={index}>
+                                    <div className="tea-app-card-image-box">
+                                        <img src={app.image} alt={app.title} className="tea-app-card-img" />
+                                        <div className="tea-app-card-badge">{app.title.toUpperCase()}</div>
+                                    </div>
+                                    <div className="tea-app-card-content">
+                                        <p className="tea-app-card-desc">{app.desc}</p>
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
