@@ -55,7 +55,7 @@
 }
 
 /* --- History Section --- */
-.history-section {
+.about-page .history-section {
     background-color: #ffffff !important;
     display: flex;
     align-items: center;
