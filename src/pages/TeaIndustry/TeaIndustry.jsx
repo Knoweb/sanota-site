@@ -73,28 +73,54 @@ const TeaIndustry = () => {
             {/* 3. HOW SANOTA SUPPORTS THIS INDUSTRY */}
             <section className="tea-support-section">
                 <div className="container">
-                    <div className="tea-support-layout">
-                        <div className="tea-support-content">
-                            <h2 className="tea-section-title light">How Sanota Supports This Industry</h2>
-                            <p className="tea-support-lead">
-                                Sanota applies integrated engineering, automation, and digital technologies to improve operational performance across key areas.
-                            </p>
-                            <div className="tea-support-grid">
-                                {[
-                                    { title: "Process Automation", desc: "Streamlining repetitive tasks and reducing human error." },
-                                    { title: "Equipment Optimization", desc: "Enhancing the performance of existing tea machinery." },
-                                    { title: "Monitoring and Control Systems", desc: "Providing visibility into critical process parameters." },
-                                    { title: "Modernization of Existing Systems", desc: "Retrofitting legacy setups with modern controls." },
-                                    { title: "Workflow Efficiency Improvement", desc: "Optimizing material flow and labor utilization." },
-                                    { title: "Quality Control Improvement", desc: "Implementing sensors and automated checks for consistency." },
-                                    { title: "Lifecycle Maintenance Support", desc: "Ensuring long-term reliability through AMC and expert care." }
-                                ].map((item, index) => (
-                                    <div className="tea-support-card" key={index}>
-                                        <h3 className="tea-support-card-title">{item.title}</h3>
-                                        <p className="tea-support-card-desc">{item.desc}</p>
-                                    </div>
-                                ))}
+                    <div className="tea-support-header">
+                        <h2 className="tea-section-title light">How Sanota Supports This Industry</h2>
+                        <p className="tea-support-lead">
+                            Sanota applies integrated engineering, automation, and digital technologies to improve operational performance across key areas.
+                        </p>
+                    </div>
+                    <div className="tea-support-grid">
+                        {[
+                            { title: "Process Automation", desc: "Automating withering, rolling, and drying processes to ensure precise control and repeatability." },
+                            { title: "Equipment Optimization", desc: "Engineering enhancements for rollers, dryers, and sifters to maximize output and quality." },
+                            { title: "Monitoring & Control", desc: "Implementing centralized SCADA systems for real-time visibility into factory-wide operations." },
+                            { title: "System Modernization", desc: "Converting traditional tea factories into smart facilities through phased technology integration." },
+                            { title: "Workflow Efficiency", desc: "Redesigning material handling and production flows to reduce labor intensity and waste." },
+                            { title: "Quality Intelligence", desc: "Utilizing sensors and analytics to maintain optimum temperature and moisture profiles." },
+                            { title: "Lifecycle Support", desc: "Providing specialized AMC and technical support to ensure 24/7 reliability of critical assets." }
+                        ].map((item, index) => (
+                            <div className="tea-support-card" key={index}>
+                                <div className="tea-support-card-content">
+                                    <h3 className="tea-support-card-title">{item.title}</h3>
+                                    <p className="tea-support-card-desc">{item.desc}</p>
+                                </div>
                             </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* 4. RELEVANT SOLUTIONS FOR THIS INDUSTRY */}
+            <section className="tea-solutions-section">
+                <div className="container">
+                    <div className="tea-solutions-wrapper">
+                        <div className="tea-section-header">
+                            <h2 className="tea-section-title">Relevant Solution Areas</h2>
+                            <p className="tea-section-subtitle">Practical engineering and digital solutions tailored for the tea industry.</p>
+                        </div>
+                        <div className="tea-solutions-grid">
+                            {[
+                                { title: "End-to-End Engineering & Automation", link: "/solutions" },
+                                { title: "Sanota Developed Products", link: "/products" },
+                                { title: "Retrofit & System Takeover", link: "/solutions" },
+                                { title: "Software & Digital Solutions", link: "/solutions" },
+                                { title: "AMC & Lifecycle Support", link: "/solutions" }
+                            ].map((solution, index) => (
+                                <Link to={solution.link} className="tea-solution-card" key={index}>
+                                    <h3 className="tea-solution-card-title">{solution.title}</h3>
+                                    <div className="tea-solution-card-arrow">→</div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>

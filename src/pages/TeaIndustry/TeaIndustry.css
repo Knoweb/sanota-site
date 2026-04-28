@@ -302,16 +302,20 @@
 
 /* --- Support Section --- */
 .tea-support-section {
-    padding: 100px 0;
+    padding: 120px 0;
     background-color: #080b1a;
     color: #fff;
+}
+
+.tea-support-header {
+    margin-bottom: 60px;
+    max-width: 800px;
 }
 
 .tea-support-lead {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 50px;
-    max-width: 800px;
 }
 
 .tea-support-grid {
@@ -321,16 +325,17 @@
 }
 
 .tea-support-card {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 30px;
-    border-left: 3px solid #2233AD;
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    border-top: 4px solid #2233AD;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border-radius: 0;
 }
 
 .tea-support-card:hover {
-    background: rgba(255, 255, 255, 0.07);
-    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .tea-support-card-title {
@@ -345,4 +350,63 @@
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.5;
     margin: 0;
+}
+
+/* --- Relevant Solutions Section --- */
+.tea-solutions-section {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.tea-section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.tea-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tea-solution-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tea-solution-card:hover {
+    background-color: #080b1a;
+    border-color: #080b1a;
+    transform: translateY(-5px);
+}
+
+.tea-solution-card:hover .tea-solution-card-title {
+    color: #fff;
+}
+
+.tea-solution-card:hover .tea-solution-card-arrow {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.tea-solution-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #080b1a;
+    transition: color 0.3s ease;
+    margin: 0;
+}
+
+.tea-solution-card-arrow {
+    color: #2233AD;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
 }
