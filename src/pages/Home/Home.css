@@ -225,7 +225,7 @@
     .trust-signal-strip {
         padding: 40px 0;
     }
-    
+
     .trust-grid {
         grid-template-columns: 1fr;
     }
@@ -590,7 +590,7 @@
     .capabilities-title {
         font-size: 2.2rem;
     }
-    
+
     .capability-card {
         flex: 0 0 300px;
         padding: 40px 25px;
@@ -1506,7 +1506,7 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
     pointer-events: none;
     opacity: 1;
@@ -1597,9 +1597,17 @@
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .initiative-card-content {
@@ -1657,7 +1665,8 @@
 }
 
 .industries-count {
-    color: #4d61ff; /* Brighter blue for dark background */
+    color: #4d61ff;
+    /* Brighter blue for dark background */
     font-weight: 800;
     font-size: 1.15rem;
     margin-bottom: 10px;
@@ -1727,7 +1736,7 @@
     .initiatives-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .industries-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1737,22 +1746,29 @@
     .initiatives-title {
         font-size: 2.2rem;
     }
-    
+
     .industries-title {
         font-size: 2rem;
     }
-    
+
     .industries-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 }
+
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
-.initiatives-cta .btn, .industries-cta .btn {
+.initiatives-cta .btn,
+.industries-cta .btn {
     border-radius: 0 !important;
     font-weight: 700 !important;
     transition: all 0.3s ease !important;
@@ -1870,7 +1886,7 @@
     .diff-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .diff-title {
         font-size: 2.2rem;
     }
@@ -2111,7 +2127,7 @@
     .knowledge-title {
         font-size: 2.2rem;
     }
-    
+
     .knowledge-card-content {
         padding: 25px;
     }
@@ -2200,8 +2216,15 @@
 }
 
 @keyframes mapFloat {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-15px) scale(1.02); }
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.02);
+    }
 }
 
 /* Light Sweep effect to mimic video feel */
@@ -2212,22 +2235,25 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(
-        45deg,
-        transparent 0%,
-        transparent 40%,
-        rgba(34, 51, 173, 0.1) 50%,
-        transparent 60%,
-        transparent 100%
-    );
+    background: linear-gradient(45deg,
+            transparent 0%,
+            transparent 40%,
+            rgba(34, 51, 173, 0.1) 50%,
+            transparent 60%,
+            transparent 100%);
     animation: lightSweep 8s linear infinite;
     pointer-events: none;
     z-index: 2;
 }
 
 @keyframes lightSweep {
-    0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
-    100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
+    0% {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
 }
 
 @media (max-width: 992px) {
@@ -2236,11 +2262,11 @@
         gap: 60px;
         text-align: center;
     }
-    
+
     .nationwide-stats {
         justify-content: center;
     }
-    
+
     .nationwide-title {
         font-size: 2.5rem;
     }
@@ -2281,7 +2307,7 @@
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease;
-    text-shadow: 0 0 5px rgba(0,0,0,1);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 .map-pulse:hover::after {
@@ -2289,19 +2315,57 @@
 }
 
 @keyframes pulseNode {
-    0% { transform: scale(0.5); opacity: 1; }
-    100% { transform: scale(2.5); opacity: 0; }
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
 /* Specific Positions - Adjusted for landmass accuracy */
-.p-jaffna { top: 12%; left: 45%; }
-.p-anuradhapura { top: 35%; left: 48%; }
-.p-trinco { top: 32%; left: 65%; }
-.p-kuranegala { top: 55%; left: 42%; }
-.p-kandy { top: 65%; left: 52%; }
-.p-colombo { top: 75%; left: 32%; }
-.p-galle { top: 90%; left: 40%; }
-.p-matara { top: 92%; left: 50%; }
+.p-jaffna {
+    top: 12%;
+    left: 45%;
+}
+
+.p-anuradhapura {
+    top: 35%;
+    left: 48%;
+}
+
+.p-trinco {
+    top: 32%;
+    left: 65%;
+}
+
+.p-kuranegala {
+    top: 55%;
+    left: 42%;
+}
+
+.p-kandy {
+    top: 65%;
+    left: 52%;
+}
+
+.p-colombo {
+    top: 75%;
+    left: 32%;
+}
+
+.p-galle {
+    top: 90%;
+    left: 40%;
+}
+
+.p-matara {
+    top: 92%;
+    left: 50%;
+}
 
 
 /* --- Conversion Section (Final CTA) --- */
@@ -2319,7 +2383,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
@@ -2403,16 +2467,20 @@
     .conversion-section {
         padding: 80px 0;
     }
+
     .conversion-title {
         font-size: 2.5rem;
     }
+
     .conversion-text {
         font-size: 1.1rem;
     }
+
     .conversion-trust-line {
         flex-direction: column;
         gap: 5px;
     }
+
     .conversion-trust-line .dot {
         display: none;
     }
