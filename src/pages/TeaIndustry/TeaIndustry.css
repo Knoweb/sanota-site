@@ -241,63 +241,98 @@
     color: #fff;
 }
 
-/* --- Context Section --- */
+/* --- Context Section Refined (Split Layout) --- */
 .tea-context-section {
     padding: 120px 0;
-    background-color: #fcfcfc;
+    background-color: #080b1a; /* Dark background as requested */
+    color: #fff;
 }
 
-.tea-context-header {
-    margin-bottom: 60px;
-    max-width: 800px;
+.tea-context-split {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: start;
 }
 
-.tea-context-intro {
-    font-size: 1.15rem;
-    color: #666;
-    margin-top: -20px;
+.tea-context-left {
+    position: sticky;
+    top: 100px;
+}
+
+.tea-context-lead {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.tea-impact-line {
+    font-size: 1rem;
+    font-style: italic;
+    color: #2233AD;
+    border-left: 2px solid #2233AD;
+    padding-left: 20px;
+    margin-top: 40px;
 }
 
 .tea-challenges-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
 .tea-challenge-card {
-    display: flex;
-    gap: 20px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 30px;
-    border: 1px solid #eee;
-    transition: all 0.3s ease;
-    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .tea-challenge-card:hover {
+    background: rgba(255, 255, 255, 0.07);
     border-color: #2233AD;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.tea-challenge-number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2233AD;
-    opacity: 0.3;
+.tea-challenge-card:hover .tea-challenge-icon {
+    transform: scale(1.1);
+}
+
+.tea-challenge-icon {
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
 }
 
 .tea-challenge-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    color: #080b1a;
-    margin-bottom: 10px;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 8px;
 }
 
 .tea-challenge-desc {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.5;
     margin: 0;
+}
+
+@media (max-width: 1100px) {
+    .tea-context-split {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .tea-context-left {
+        position: static;
+    }
 }
 
 /* --- Support Section --- */
