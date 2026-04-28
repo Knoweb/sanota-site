@@ -22,7 +22,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 30px 30px;
@@ -139,11 +139,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(34, 51, 173, 0.2),
-        rgba(0, 0, 0, 0.4)
-    );
+    background: linear-gradient(to bottom,
+            rgba(34, 51, 173, 0.2),
+            rgba(0, 0, 0, 0.4));
     z-index: 2;
     pointer-events: none;
 }
@@ -244,7 +242,8 @@
 /* --- Context Section Refined (Split Layout) --- */
 .tea-context-section {
     padding: 120px 0;
-    background-color: #ffffff; /* White background as requested */
+    background-color: #ffffff;
+    /* White background as requested */
     color: #080b1a;
 }
 
@@ -306,8 +305,8 @@
 }
 
 .tea-challenge-icon {
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     color: #2233AD;
     transition: all 0.3s ease;
 }
@@ -338,7 +337,7 @@
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .tea-context-left {
         position: static;
     }
@@ -349,7 +348,7 @@
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .tea-context-left {
         position: static;
     }
@@ -358,7 +357,8 @@
 /* --- Support Section Refined (Interactive Split) --- */
 .tea-support-section {
     padding: 120px 0;
-    background-color: #080b1a; /* Dark background as requested */
+    background-color: #080b1a;
+    /* Dark background as requested */
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -420,9 +420,20 @@
     box-shadow: 0 0 15px #2233AD;
 }
 
-.tea-node-1 { top: 20%; left: 30%; }
-.tea-node-2 { top: 60%; left: 70%; }
-.tea-node-3 { top: 40%; left: 50%; }
+.tea-node-1 {
+    top: 20%;
+    left: 30%;
+}
+
+.tea-node-2 {
+    top: 60%;
+    left: 70%;
+}
+
+.tea-node-3 {
+    top: 40%;
+    left: 50%;
+}
 
 .tea-support-list {
     display: flex;
@@ -502,9 +513,10 @@
     .tea-support-split {
         grid-template-columns: 1fr;
     }
-    
+
     .tea-support-visual {
-        display: none; /* Hide visual on mobile to focus on solutions */
+        display: none;
+        /* Hide visual on mobile to focus on solutions */
     }
 }
 
@@ -536,7 +548,7 @@
     object-fit: cover;
     position: relative;
     z-index: 2;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 .tea-solutions-accent-box {
@@ -608,7 +620,7 @@
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .tea-solutions-img {
         height: 350px;
     }
