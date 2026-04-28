@@ -677,3 +677,52 @@
     line-height: 1.6;
     margin: 0;
 }
+
+/* --- Final CTA Section --- */
+.tea-final-cta-section {
+    padding: 120px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.tea-final-cta-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tea-final-cta-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #080b1a;
+    margin-bottom: 25px;
+}
+
+.tea-final-cta-desc {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.tea-final-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .tea-final-cta-title {
+        font-size: 2.2rem;
+    }
+
+    .tea-final-cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tea-final-cta-actions .btn {
+        width: 100%;
+        max-width: 400px;
+    }
+}

@@ -267,6 +267,29 @@ const TeaIndustry = () => {
                     </div>
                 </div>
             </section>
+
+            {/* 10. FINAL CTA SECTION */}
+            <section className="tea-final-cta-section">
+                <div className="container">
+                    <div className="tea-final-cta-wrapper">
+                        <h2 className="tea-final-cta-title">Discuss Opportunities in This Industry</h2>
+                        <p className="tea-final-cta-desc">
+                            Sanota works with organizations to understand operational environments and identify practical engineering approaches aligned with productivity, reliability, and long-term performance objectives.
+                        </p>
+                        <div className="tea-final-cta-actions">
+                            <Link to="/contact" className="btn btn-primary tea-btn-primary">
+                                Discuss Industry Requirement
+                            </Link>
+                            <Link to="/contact" className="btn btn-secondary-outline tea-btn-secondary">
+                                Request Technical Discussion
+                            </Link>
+                            <Link to="/solutions" className="btn btn-secondary-outline tea-btn-secondary">
+                                Explore Solutions
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
