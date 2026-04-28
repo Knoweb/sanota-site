@@ -5,7 +5,6 @@ import sanotalogo from '../../assets/sanotalogo.png';
 function Footer() {
     return (
         <footer className="footer-new strategic-footer">
-            <div className="footer-top-border"></div>
             
             <div className="container footer-main-content">
                 <div className="footer-grid">
