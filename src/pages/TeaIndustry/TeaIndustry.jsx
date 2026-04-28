@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './TeaIndustry.css';
 
-// Using an existing image as placeholder
+// Assets
 import heroImage from '../../assets/industries-bg.png';
+import picture1 from '../../assets/picture1.jpg';
 
 const TeaIndustry = () => {
     return (
