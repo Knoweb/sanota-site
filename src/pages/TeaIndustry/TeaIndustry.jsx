@@ -40,24 +40,32 @@ const TeaIndustry = () => {
             {/* 2. INDUSTRY CONTEXT */}
             <section className="tea-context-section">
                 <div className="container">
-                    <div className="tea-section-header">
-                        <h2 className="tea-section-title">Understanding Operational Challenges in This Industry</h2>
-                    </div>
-                    <div className="tea-challenges-grid">
-                        {[
-                            "Process variability and complexity",
-                            "Rising energy consumption and costs",
-                            "Heavy dependency on manual handling",
-                            "Quality consistency challenges across batches",
-                            "Aging machinery and infrastructure",
-                            "Limited real-time monitoring and data capability",
-                            "Need for modernization without operational disruption"
-                        ].map((challenge, index) => (
-                            <div className="tea-challenge-item" key={index}>
-                                <span className="tea-challenge-dot"></span>
-                                <p>{challenge}</p>
-                            </div>
-                        ))}
+                    <div className="tea-context-wrapper">
+                        <div className="tea-context-header">
+                            <h2 className="tea-section-title">Understanding Operational Challenges in This Industry</h2>
+                            <p className="tea-context-intro">
+                                The tea industry faces unique operational realities that require specialized engineering approaches to ensure quality, consistency, and profitability.
+                            </p>
+                        </div>
+                        <div className="tea-challenges-grid">
+                            {[
+                                { title: "Process Variability", desc: "Complex chemical and physical changes during withering and rolling require precise control." },
+                                { title: "Energy Consumption", desc: "High thermal energy requirements for drying and electricity for machinery drive up costs." },
+                                { title: "Manual Dependency", desc: "Heavy reliance on manual handling affects speed, safety, and operational throughput." },
+                                { title: "Quality Consistency", desc: "Maintaining exact flavor profiles across different batches remains a significant challenge." },
+                                { title: "Aging Infrastructure", desc: "Legacy machinery often lacks the precision and efficiency of modern industrial standards." },
+                                { title: "Limited Monitoring", desc: "Lack of real-time data on moisture, temperature, and flow hinders proactive management." },
+                                { title: "Disruption-Free Modernization", desc: "The need to upgrade systems without stopping ongoing production during peak seasons." }
+                            ].map((challenge, index) => (
+                                <div className="tea-challenge-card" key={index}>
+                                    <div className="tea-challenge-number">0{index + 1}</div>
+                                    <div className="tea-challenge-info">
+                                        <h3 className="tea-challenge-title">{challenge.title}</h3>
+                                        <p className="tea-challenge-desc">{challenge.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

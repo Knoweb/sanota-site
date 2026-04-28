@@ -243,36 +243,60 @@
 
 /* --- Context Section --- */
 .tea-context-section {
-    padding: 100px 0;
-    background-color: #f8f9fa;
+    padding: 120px 0;
+    background-color: #fcfcfc;
+}
+
+.tea-context-header {
+    margin-bottom: 60px;
+    max-width: 800px;
+}
+
+.tea-context-intro {
+    font-size: 1.15rem;
+    color: #666;
+    margin-top: -20px;
 }
 
 .tea-challenges-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
 }
 
-.tea-challenge-item {
+.tea-challenge-card {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 20px;
     background: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
     border-radius: 0;
 }
 
-.tea-challenge-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #2233AD;
-    flex-shrink: 0;
+.tea-challenge-card:hover {
+    border-color: #2233AD;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.tea-challenge-item p {
-    font-size: 1.05rem;
-    color: #333;
+.tea-challenge-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2233AD;
+    opacity: 0.3;
+}
+
+.tea-challenge-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #080b1a;
+    margin-bottom: 10px;
+}
+
+.tea-challenge-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
     margin: 0;
 }
 
