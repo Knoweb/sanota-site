@@ -798,6 +798,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
             {/* Conversion Section */}
             <section className="conversion-section">
                 <div className="conversion-pattern"></div>
