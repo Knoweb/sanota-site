@@ -178,21 +178,24 @@
 .trust-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+    gap: 25px;
 }
 
 .trust-card {
-    background-color: #0d0d0d;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 30px 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: none;
+    border-radius: 16px;
+    padding: 20px 10px;
     text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
 .trust-card:hover {
-    border-color: #2233AD;
-    transform: translateY(-5px);
-    background-color: #111;
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(34, 51, 173, 0.2);
 }
 
 .trust-number {
