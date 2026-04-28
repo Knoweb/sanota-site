@@ -92,6 +92,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: flex-start;
 }
 
 .footer-nav-list a {
@@ -103,43 +104,66 @@
     position: relative;
 }
 
-.footer-nav-list a:not(.primary-download):not(.download-link):hover {
+.footer-nav-list a:not(.download-btn):not(.resource-link):hover {
     color: #4d61ff;
     transform: translateX(5px);
 }
 
-.download-link {
-    display: flex;
+/* Professional Download Button */
+.download-btn {
+    display: inline-flex !important;
     align-items: center;
-    gap: 10px;
-    color: rgba(255, 255, 255, 0.8) !important;
+    gap: 8px;
+    background: rgba(34, 51, 173, 0.15);
+    border: 1px solid rgba(34, 51, 173, 0.4);
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
-.download-link svg {
-    color: #2233AD;
+.download-btn svg {
+    color: #4d61ff;
     transition: transform 0.3s ease;
 }
 
-.download-link:hover svg {
-    transform: translateY(3px); /* Subtle download animation */
+.download-btn:hover {
+    background: rgba(34, 51, 173, 0.25);
+    border-color: #4d61ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 51, 173, 0.2);
 }
 
-/* Highlighted Download Button Style */
-.primary-download {
-    background: rgba(34, 51, 173, 0.1);
-    border: 1px solid rgba(34, 51, 173, 0.3);
-    padding: 10px 15px;
-    border-radius: 6px;
-    color: #ffffff !important;
-    font-weight: 600;
+.download-btn:hover svg {
+    transform: translateY(2px);
+}
+
+/* Regular Resource Links */
+.resource-link {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
-.primary-download:hover {
-    background: rgba(34, 51, 173, 0.2);
-    border-color: #2233AD;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(34, 51, 173, 0.2);
+.resource-link svg {
+    color: #4d61ff;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.resource-link:hover {
+    color: #ffffff !important;
+}
+
+.resource-link:hover svg {
+    opacity: 1;
+    transform: translateX(3px);
 }
 
 /* Articles */
