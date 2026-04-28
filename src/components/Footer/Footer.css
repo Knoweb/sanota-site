@@ -202,7 +202,7 @@
 
 .email-icon {
     stroke: #9ca3af; /* Grey color for email */
-    fill: #9ca3af;
+    fill: none;
 }
 
 /* Phone Highlight */
