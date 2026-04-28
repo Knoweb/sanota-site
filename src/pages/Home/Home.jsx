@@ -798,6 +798,31 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            {/* Conversion Section */}
+            <section className="conversion-section">
+                <div className="conversion-pattern"></div>
+                <div className="container">
+                    <div className="conversion-card">
+                        <div className="conversion-content">
+                            <h2 className="conversion-title">Start with a Practical Discussion</h2>
+                            <p className="conversion-text">
+                                Whether planning a new automation initiative, modernizing an existing system, 
+                                or exploring operational improvements, Sanota provides structured guidance 
+                                from the first conversation.
+                            </p>
+                            <div className="conversion-cta">
+                                <Link to="/contact" className="btn btn-primary btn-large conversion-btn">
+                                    Discuss Your Requirement <span className="btn-icon">→</span>
+                                </Link>
+                                <div className="conversion-trust-line">
+                                    <span>No obligation initial discussion</span>
+                                    <span className="dot">•</span>
+                                    <span>Response within 24 hours</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     );
