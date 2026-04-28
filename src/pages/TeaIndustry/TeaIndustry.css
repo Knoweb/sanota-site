@@ -410,3 +410,58 @@
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
+
+/* --- Application Areas Section --- */
+.tea-applications-section {
+    padding: 120px 0;
+    background-color: #f8f9fa;
+}
+
+.tea-applications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.tea-application-item {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.tea-application-item:hover {
+    border-color: #2233AD;
+    transform: translateX(10px);
+}
+
+.tea-app-index {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2233AD;
+    line-height: 1;
+}
+
+.tea-app-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #080b1a;
+    margin-bottom: 10px;
+}
+
+.tea-app-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .tea-applications-list {
+        grid-template-columns: 1fr;
+    }
+}

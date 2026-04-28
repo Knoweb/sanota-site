@@ -125,6 +125,36 @@ const TeaIndustry = () => {
                     </div>
                 </div>
             </section>
+
+            {/* 5. INDUSTRY-SPECIFIC APPLICATION AREAS */}
+            <section className="tea-applications-section">
+                <div className="container">
+                    <div className="tea-applications-wrapper">
+                        <div className="tea-section-header">
+                            <h2 className="tea-section-title">Industry-Specific Application Areas</h2>
+                            <p className="tea-section-subtitle">Practical engineering implementations designed for tea factory environments.</p>
+                        </div>
+                        <div className="tea-applications-list">
+                            {[
+                                { title: "Drying & Withering Systems", desc: "Automated controls for withering troughs and fluid bed dryers to maintain precise moisture levels." },
+                                { title: "Rolling & Fermentation Control", desc: "Digital monitoring of rolling pressure and fermentation temperature for optimum quality." },
+                                { title: "Material Handling & Sorting", desc: "Efficient conveyor systems and automated sorting to reduce manual dependency and breakage." },
+                                { title: "Factory-wide Monitoring", desc: "Centralized dashboards to track production metrics, energy usage, and machine status." },
+                                { title: "Energy Management Systems", desc: "Optimizing firewood and electricity consumption through intelligent combustion and motor controls." },
+                                { title: "Packaging & Quality Control", desc: "Precision weighing and inspection systems to ensure batch consistency and compliance." }
+                            ].map((app, index) => (
+                                <div className="tea-application-item" key={index}>
+                                    <div className="tea-app-index">{index + 1}.</div>
+                                    <div className="tea-app-details">
+                                        <h3 className="tea-app-title">{app.title}</h3>
+                                        <p className="tea-app-desc">{app.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
