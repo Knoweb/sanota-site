@@ -50,18 +50,6 @@ function Footer() {
                             <Link to="/case-studies">Case Studies</Link>
                             <Link to="/knowledge-centre">Knowledge Centre</Link>
                         </nav>
-
-                        <div className="insights-divider"></div>
-
-                        <h4 className="col-title mt-articles">Latest Insights</h4>
-                        <ul className="footer-articles">
-                            <li>
-                                <Link to="/knowledge/retrofit-vs-replacement">When Retrofit is Better than Replacement</Link>
-                            </li>
-                            <li>
-                                <Link to="/knowledge/automation-roi">Understanding Automation ROI</Link>
-                            </li>
-                        </ul>
                     </div>
 
                     {/* Column 4: Contact & Social */}
@@ -103,6 +91,19 @@ function Footer() {
                                 </svg>
                             </a>
                         </div>
+                    </div>
+
+                    {/* Column 5: Insights */}
+                    <div className="footer-col insights-col">
+                        <h4 className="col-title">Latest Insights</h4>
+                        <ul className="footer-articles">
+                            <li>
+                                <Link to="/knowledge/retrofit-vs-replacement">When Retrofit is Better than Replacement</Link>
+                            </li>
+                            <li>
+                                <Link to="/knowledge/automation-roi">Understanding Automation ROI</Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
