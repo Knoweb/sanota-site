@@ -12,23 +12,47 @@ import { CountUp } from '../../components/AnimatedStats/AnimatedStats';
 const industries = [
     {
         id: 'manufacturing',
-        name: 'Manufacturing',
+        name: 'Manufacturing & Processing',
         image: picture1,
         color: '#2233AD',
         description: 'Operational reliability. Production efficiency. System integration.',
         challenges: ['Legacy machinery integration', 'Unplanned downtime', 'Inconsistent monitoring', 'Lack of system visibility'],
         solutions: ['PLC & SCADA implementations', 'Production line automation', 'Control panel upgrades', 'Industrial monitoring systems'],
         benefits: ['Reduced downtime', 'Improved production control', 'Better decision visibility', 'Long-term system stability'],
+        link: '/industries/manufacturing'
     },
     {
-        id: 'food-agro',
-        name: 'Food & Agro Processing',
+        id: 'food-processing',
+        name: 'Food Processing',
         image: picture2,
         color: '#2233AD',
         description: 'Compliance, hygiene, traceability, and operational continuity.',
         challenges: ['Manual process dependency', 'Quality inconsistency', 'Limited process data', 'Maintenance inefficiencies'],
         solutions: ['Automated batching & control', 'Monitoring & reporting systems', 'Retrofit of legacy control', 'Digital production tracking'],
         benefits: ['Improved consistency', 'Reduced operational risk', 'Enhanced traceability', 'Optimized energy use'],
+        link: '/industries/food-processing'
+    },
+    {
+        id: 'tea-industry',
+        name: 'Tea Industry',
+        image: picture4,
+        color: '#2233AD',
+        description: 'Engineering excellence for the traditional tea sector.',
+        challenges: ['Process variability', 'Energy consumption', 'Manual handling dependency', 'Quality consistency'],
+        solutions: ['Withering & Drying automation', 'Rolling & Fermentation control', 'Material flow optimization', 'Digital traceability'],
+        benefits: ['Higher grade consistency', 'Lower operational costs', 'Reduced labor intensity', 'Real-time monitoring'],
+        link: '/industries/tea-industry'
+    },
+    {
+        id: 'agriculture',
+        name: 'Agriculture & Greenhouse',
+        image: picture5,
+        color: '#2233AD',
+        description: 'Precision engineering for modern farming environments.',
+        challenges: ['Climate variability', 'Resource waste', 'Limited growth visibility', 'Manual irrigation control'],
+        solutions: ['Climate control systems', 'Automated fertigation', 'Soil & moisture monitoring', 'Hydroponic automation'],
+        benefits: ['Increased yield', 'Reduced water/fertilizer waste', 'Precise growth control', 'Remote facility management'],
+        link: '/industries/agriculture'
     },
     {
         id: 'logistics',
@@ -39,27 +63,30 @@ const industries = [
         challenges: ['Equipment synchronization issues', 'Manual tracking inefficiencies', 'Limited performance visibility', 'Maintenance coordination gaps'],
         solutions: ['Conveyor automation systems', 'Monitoring & control integration', 'Control panel modernization', 'Operational software integration'],
         benefits: ['Improved system coordination', 'Reduced delays', 'Enhanced monitoring', 'Increased operational reliability'],
-    },
-    {
-        id: 'commercial',
-        name: 'Commercial & Institutional',
-        image: picture4,
-        color: '#2233AD',
-        description: 'Operational continuity and infrastructure stability.',
-        challenges: ['Aging infrastructure systems', 'Fragmented vendor management', 'Limited monitoring systems', 'Energy inefficiencies'],
-        solutions: ['Building automation systems', 'Power monitoring integration', 'Infrastructure system upgrades', 'Retrofit & takeover projects'],
-        benefits: ['Better facility control', 'Reduced vendor dependency', 'Improved operational efficiency', 'Long-term maintenance support'],
+        link: '/industries/logistics'
     },
     {
         id: 'infrastructure',
         name: 'Infrastructure & Utilities',
-        image: picture5,
+        image: picture1,
         color: '#2233AD',
         description: 'Reliability, safety, and long-term sustainability.',
         challenges: ['High operational risk environments', 'System redundancy requirements', 'Legacy system integration', 'Monitoring limitations'],
         solutions: ['Control & monitoring systems', 'Retrofit & modernization programs', 'Integrated automation architecture', 'Long-term AMC support'],
         benefits: ['Increased reliability', 'Reduced operational risk', 'Improved lifecycle management', 'Structured long-term support'],
+        link: '/industries/infrastructure'
     },
+    {
+        id: 'institutions',
+        name: 'Institutions & Government',
+        image: picture2,
+        color: '#2233AD',
+        description: 'Operational continuity and infrastructure stability.',
+        challenges: ['Aging infrastructure systems', 'Fragmented vendor management', 'Limited monitoring systems', 'Energy inefficiencies'],
+        solutions: ['Building automation systems', 'Power monitoring integration', 'Infrastructure system upgrades', 'Retrofit & takeover projects'],
+        benefits: ['Better facility control', 'Reduced vendor dependency', 'Improved operational efficiency', 'Long-term maintenance support'],
+        link: '/industries/institutions'
+    }
 ];
 
 const IndustryCard = ({ industry }) => {
@@ -102,8 +129,8 @@ const IndustryCard = ({ industry }) => {
                             </div>
 
                             <div className="ind-consult-btn-wrapper">
-                                <Link to="/contact" className="ind-consult-btn" style={{ backgroundColor: industry.color }}>
-                                    Consult →
+                                <Link to={industry.link || '/contact'} className="ind-consult-btn" style={{ backgroundColor: industry.color }}>
+                                    {industry.id === 'tea-industry' ? 'Explore Industry Page →' : 'Consult →'}
                                 </Link>
                             </div>
                         </motion.div>
@@ -303,6 +330,50 @@ function Industries() {
                                 <div className="ind-lifecycle-name">{step}</div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Emerging Sectors ── */}
+            <section className="ind-emerging-section">
+                <div className="container">
+                    <div className="ind-section-label">
+                        <span className="ind-tagline">FUTURE FOCUS</span>
+                        <h2>Emerging Sectors</h2>
+                        <p>We are actively expanding our engineering and digital capabilities into these critical growth areas.</p>
+                    </div>
+                    <div className="ind-emerging-grid">
+                        {[
+                            { name: 'Energy Systems', icon: '⚡' },
+                            { name: 'Environmental Systems', icon: '🌱' },
+                            { name: 'Healthcare & Specialized Systems', icon: '🏥' }
+                        ].map((sector, i) => (
+                            <div key={i} className="ind-emerging-card">
+                                <div className="ind-emerging-icon">{sector.icon}</div>
+                                <h3 className="ind-emerging-name">{sector.name}</h3>
+                                <span className="ind-emerging-badge">Active R&D</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Future Directions ── */}
+            <section className="ind-future-section">
+                <div className="container">
+                    <div className="ind-future-wrapper">
+                        <div className="ind-future-content">
+                            <h3>Future Strategic Directions</h3>
+                            <p className="ind-future-subtext">Sanota is evaluating long-term engineering opportunities in the following specialized domains:</p>
+                            <div className="ind-future-list">
+                                {['Marine Systems', 'Construction Automation', 'Pharmaceutical Processing', 'Renewable Energy Systems'].map((item, i) => (
+                                    <div key={i} className="ind-future-item">
+                                        <span className="ind-future-dot"></span>
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

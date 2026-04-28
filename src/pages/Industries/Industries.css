@@ -608,6 +608,111 @@
     }
 }
 
+/* ── Emerging & Future Sections ── */
+.ind-emerging-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.ind-emerging-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.ind-emerging-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.ind-emerging-card:hover {
+    background: #fff;
+    border-color: #2233AD;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.ind-emerging-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.ind-emerging-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.ind-emerging-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2233AD;
+    background: rgba(34, 51, 173, 0.1);
+    padding: 4px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ind-future-section {
+    padding: 100px 0;
+    background-color: #0f172a;
+    color: #fff;
+}
+
+.ind-future-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ind-future-content h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.ind-future-subtext {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 40px;
+}
+
+.ind-future-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.ind-future-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ind-future-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2233AD;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .ind-future-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .ind-details-block {
         flex-direction: column;
