@@ -508,63 +508,110 @@
     }
 }
 
-/* --- Relevant Solutions Section --- */
+/* --- Relevant Solutions Section (White/Clean) --- */
 .tea-solutions-section {
     padding: 120px 0;
     background-color: #fff;
 }
 
-.tea-section-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    margin-top: -30px;
-    margin-bottom: 50px;
-}
-
-.tea-solutions-grid {
+.tea-solutions-split {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
-.tea-solution-card {
+.tea-solutions-visual {
+    position: relative;
+}
+
+.tea-solutions-image-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.tea-solutions-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.tea-solutions-accent-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #2233AD;
+    z-index: 1;
+}
+
+.tea-solutions-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #080b1a;
+    margin-bottom: 15px;
+}
+
+.tea-solutions-desc {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.tea-solutions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tea-solution-link-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
-    background-color: #f8f9fa;
-    border: 1px solid #eee;
+    padding: 20px 30px;
+    background-color: #f8fafc;
+    border: 1px solid #f1f5f9;
     text-decoration: none;
     transition: all 0.3s ease;
+    border-radius: 0;
 }
 
-.tea-solution-card:hover {
-    background-color: #080b1a;
-    border-color: #080b1a;
-    transform: translateY(-5px);
-}
-
-.tea-solution-card:hover .tea-solution-card-title {
-    color: #fff;
-}
-
-.tea-solution-card:hover .tea-solution-card-arrow {
-    color: #fff;
-    transform: translateX(5px);
+.tea-solution-link-card:hover {
+    background-color: #fff;
+    border-color: #2233AD;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateX(10px);
 }
 
 .tea-solution-card-title {
     font-size: 1.1rem;
     font-weight: 600;
     color: #080b1a;
-    transition: color 0.3s ease;
-    margin: 0;
 }
 
 .tea-solution-card-arrow {
     color: #2233AD;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.tea-solution-link-card:hover .tea-solution-card-arrow {
+    transform: translateX(5px);
+}
+
+@media (max-width: 1100px) {
+    .tea-solutions-split {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .tea-solutions-img {
+        height: 350px;
+    }
 }
 
 /* --- Application Areas Section --- */

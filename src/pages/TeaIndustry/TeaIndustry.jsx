@@ -6,6 +6,7 @@ import './TeaIndustry.css';
 // Assets
 import heroImage from '../../assets/industries-bg.png';
 import picture1 from '../../assets/picture1.jpg';
+import teaSolutionsImg from '../../assets/tea-solutions.png';
 
 const TeaIndustry = () => {
     return (
@@ -199,27 +200,38 @@ const TeaIndustry = () => {
                 </div>
             </section>
 
-            {/* 4. RELEVANT SOLUTIONS FOR THIS INDUSTRY */}
+            {/* 4. RELEVANT SOLUTION AREAS */}
             <section className="tea-solutions-section">
                 <div className="container">
-                    <div className="tea-solutions-wrapper">
-                        <div className="tea-section-header">
-                            <h2 className="tea-section-title">Relevant Solution Areas</h2>
-                            <p className="tea-section-subtitle">Practical engineering and digital solutions tailored for the tea industry.</p>
+                    <div className="tea-solutions-split">
+                        {/* LEFT SIDE: Image */}
+                        <div className="tea-solutions-visual">
+                            <div className="tea-solutions-image-wrapper">
+                                <img src={teaSolutionsImg} alt="Tea Solution Areas" className="tea-solutions-img" />
+                                <div className="tea-solutions-accent-box"></div>
+                            </div>
                         </div>
-                        <div className="tea-solutions-grid">
-                            {[
-                                { title: "End-to-End Engineering & Automation", link: "/solutions" },
-                                { title: "Sanota Developed Products", link: "/products" },
-                                { title: "Retrofit & System Takeover", link: "/solutions" },
-                                { title: "Software & Digital Solutions", link: "/solutions" },
-                                { title: "AMC & Lifecycle Support", link: "/solutions" }
-                            ].map((solution, index) => (
-                                <Link to={solution.link} className="tea-solution-card" key={index}>
-                                    <h3 className="tea-solution-card-title">{solution.title}</h3>
-                                    <div className="tea-solution-card-arrow">→</div>
-                                </Link>
-                            ))}
+
+                        {/* RIGHT SIDE: Solutions List */}
+                        <div className="tea-solutions-content">
+                            <h2 className="tea-solutions-title">Relevant Solution Areas</h2>
+                            <p className="tea-solutions-desc">
+                                Practical engineering and digital solutions tailored for the tea industry.
+                            </p>
+                            <div className="tea-solutions-list">
+                                {[
+                                    { title: "End-to-End Engineering & Automation", link: "/solutions" },
+                                    { title: "Sanota Developed Products", link: "/products" },
+                                    { title: "Retrofit & System Takeover", link: "/solutions" },
+                                    { title: "Software & Digital Solutions", link: "/solutions" },
+                                    { title: "AMC & Lifecycle Support", link: "/solutions" }
+                                ].map((sol, index) => (
+                                    <Link to={sol.link} className="tea-solution-link-card" key={index}>
+                                        <span className="tea-solution-card-title">{sol.title}</span>
+                                        <span className="tea-solution-card-arrow">→</span>
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
