@@ -109,29 +109,90 @@ const TeaIndustry = () => {
             {/* 3. HOW SANOTA SUPPORTS THIS INDUSTRY */}
             <section className="tea-support-section">
                 <div className="container">
-                    <div className="tea-support-header">
-                        <h2 className="tea-section-title light">How Sanota Supports This Industry</h2>
-                        <p className="tea-support-lead">
-                            Sanota applies integrated engineering, automation, and digital technologies to improve operational performance across key areas.
-                        </p>
-                    </div>
-                    <div className="tea-support-grid">
-                        {[
-                            { title: "Process Automation", desc: "Automating withering, rolling, and drying processes to ensure precise control and repeatability." },
-                            { title: "Equipment Optimization", desc: "Engineering enhancements for rollers, dryers, and sifters to maximize output and quality." },
-                            { title: "Monitoring & Control", desc: "Implementing centralized SCADA systems for real-time visibility into factory-wide operations." },
-                            { title: "System Modernization", desc: "Converting traditional tea factories into smart facilities through phased technology integration." },
-                            { title: "Workflow Efficiency", desc: "Redesigning material handling and production flows to reduce labor intensity and waste." },
-                            { title: "Quality Intelligence", desc: "Utilizing sensors and analytics to maintain optimum temperature and moisture profiles." },
-                            { title: "Lifecycle Support", desc: "Providing specialized AMC and technical support to ensure 24/7 reliability of critical assets." }
-                        ].map((item, index) => (
-                            <div className="tea-support-card" key={index}>
-                                <div className="tea-support-card-content">
-                                    <h3 className="tea-support-card-title">{item.title}</h3>
-                                    <p className="tea-support-card-desc">{item.desc}</p>
+                    <div className="tea-support-split">
+                        {/* LEFT SIDE: Visual Part */}
+                        <div className="tea-support-visual">
+                            <motion.div 
+                                className="tea-support-image-container"
+                                animate={{ 
+                                    scale: [1, 1.05, 1],
+                                    rotate: [0, 1, 0] 
+                                }}
+                                transition={{ 
+                                    duration: 20, 
+                                    repeat: Infinity, 
+                                    ease: "linear" 
+                                }}
+                            >
+                                <div className="tea-support-graphic">
+                                    <div className="tea-node tea-node-1"></div>
+                                    <div className="tea-node tea-node-2"></div>
+                                    <div className="tea-node tea-node-3"></div>
+                                    <div className="tea-graphic-lines"></div>
                                 </div>
+                                <img src={picture1} alt="Sanota Support Visual" className="tea-support-main-img" />
+                                <div className="tea-support-img-overlay"></div>
+                            </motion.div>
+                        </div>
+
+                        {/* RIGHT SIDE: Animated Solution List */}
+                        <div className="tea-support-content">
+                            <h2 className="tea-section-title light">How Sanota Supports This Industry</h2>
+                            <div className="tea-support-list">
+                                {[
+                                    { 
+                                        title: "Process Automation", 
+                                        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>,
+                                        desc: "Reducing manual intervention and improving consistency." 
+                                    },
+                                    { 
+                                        title: "Equipment Optimization", 
+                                        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.77 3.77Z"/></svg>,
+                                        desc: "Enhancing machine performance and efficiency." 
+                                    },
+                                    { 
+                                        title: "Monitoring & Control", 
+                                        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 20h.01M7 20h.01M12 20h.01M17 20h.01M22 20h.01M2 15h.01M22 15h.01M2 10h.01M22 10h.01M2 5h.01M7 5h.01M12 5h.01M17 5h.01M22 5h.01"/><rect x="7" y="10" width="10" height="10" rx="2"/></svg>,
+                                        desc: "Real-time visibility and system control." 
+                                    },
+                                    { 
+                                        title: "Modernization", 
+                                        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>,
+                                        desc: "Upgrading existing systems without full replacement." 
+                                    },
+                                    { 
+                                        title: "Workflow Efficiency", 
+                                        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m12 14 4-4-4-4M3 3l1.29 1.29M5 5l2.71 2.71M3 21l8-8M21 21l-3.29-3.29M15 15l-1.29-1.29M21 3l-8 8"/></svg>,
+                                        desc: "Streamlining operations and reducing delays." 
+                                    },
+                                    { 
+                                        title: "Quality Control", 
+                                        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>,
+                                        desc: "Ensuring consistent output standards." 
+                                    },
+                                    { 
+                                        title: "Lifecycle Support", 
+                                        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Z"/><path d="M12 8v4l3 3"/></svg>,
+                                        desc: "Long-term maintenance and reliability." 
+                                    }
+                                ].map((item, index) => (
+                                    <motion.div 
+                                        className="tea-support-item" 
+                                        key={index}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.1 }}
+                                    >
+                                        <div className="tea-support-item-icon">{item.icon}</div>
+                                        <div className="tea-support-item-info">
+                                            <h3 className="tea-support-item-title">{item.title}</h3>
+                                            <p className="tea-support-item-desc">{item.desc}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </div>
             </section>

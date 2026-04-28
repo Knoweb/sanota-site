@@ -355,56 +355,157 @@
     }
 }
 
-/* --- Support Section --- */
+/* --- Support Section Refined (Interactive Split) --- */
 .tea-support-section {
     padding: 120px 0;
-    background-color: #080b1a;
+    background-color: #080b1a; /* Dark background as requested */
     color: #fff;
+    position: relative;
+    overflow: hidden;
 }
 
-.tea-support-header {
-    margin-bottom: 60px;
-    max-width: 800px;
+.tea-support-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(34, 51, 173, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 0;
 }
 
-.tea-support-lead {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 50px;
-}
-
-.tea-support-grid {
+.tea-support-split {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
-.tea-support-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 35px;
-    border-top: 4px solid #2233AD;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 0;
+.tea-support-visual {
+    position: relative;
 }
 
-.tea-support-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+.tea-support-image-container {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.tea-support-card-title {
-    font-size: 1.2rem;
-    font-weight: 600;
+.tea-support-main-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    filter: grayscale(0.5) brightness(0.7);
+}
+
+.tea-support-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #080b1a, transparent 20%, transparent 80%, #080b1a);
+}
+
+.tea-support-graphic {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tea-node {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #2233AD;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #2233AD;
+}
+
+.tea-node-1 { top: 20%; left: 30%; }
+.tea-node-2 { top: 60%; left: 70%; }
+.tea-node-3 { top: 40%; left: 50%; }
+
+.tea-support-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.tea-support-list::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 30px;
+    bottom: 30px;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(34, 51, 173, 0.3) 10%, rgba(34, 51, 173, 0.3) 90%, transparent);
+}
+
+.tea-support-item {
+    display: flex;
+    gap: 25px;
+    padding: 25px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tea-support-item-icon {
+    width: 40px;
+    height: 40px;
+    background: #080b1a;
+    border: 1px solid rgba(34, 51, 173, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2233AD;
+    flex-shrink: 0;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.tea-support-item:hover .tea-support-item-icon {
+    background: #2233AD;
     color: #fff;
-    margin-bottom: 12px;
+    box-shadow: 0 0 15px rgba(34, 51, 173, 0.5);
+    transform: scale(1.1);
 }
 
-.tea-support-card-desc {
+.tea-support-item-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.tea-support-item-info {
+    padding-top: 5px;
+}
+
+.tea-support-item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.tea-support-item:hover .tea-support-item-title {
+    color: #2233AD;
+}
+
+.tea-support-item-desc {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.5;
     margin: 0;
+}
+
+@media (max-width: 1100px) {
+    .tea-support-split {
+        grid-template-columns: 1fr;
+    }
+    
+    .tea-support-visual {
+        display: none; /* Hide visual on mobile to focus on solutions */
+    }
 }
 
 /* --- Relevant Solutions Section --- */
