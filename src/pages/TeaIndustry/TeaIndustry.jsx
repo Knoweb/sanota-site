@@ -7,6 +7,7 @@ import './TeaIndustry.css';
 import heroImage from '../../assets/industries-bg.png';
 import picture1 from '../../assets/picture1.jpg';
 import teaSolutionsImg from '../../assets/tea-solutions.png';
+import productsBg from '../../assets/products-bg.png';
 
 const TeaIndustry = () => {
     return (
@@ -299,23 +300,43 @@ const TeaIndustry = () => {
 
             {/* 7. RELATED PRODUCTS */}
             <section className="tea-products-section">
+                <div className="tea-products-bg">
+                    <img src={productsBg} alt="Products Background" className="tea-products-bg-img" />
+                    <div className="tea-products-overlay"></div>
+                </div>
                 <div className="container">
-                    <div className="tea-section-header">
-                        <h2 className="tea-section-title">Related Products</h2>
-                        <p className="tea-section-subtitle">Specialized engineering products developed for the tea processing industry.</p>
+                    <div className="tea-products-header">
+                        <h2 className="tea-products-title">Related Products</h2>
+                        <p className="tea-products-subtitle">Specialized engineering products developed for the tea processing industry.</p>
                     </div>
                     <div className="tea-products-grid">
                         {[
-                            { name: "Green Tea Dryer", desc: "Advanced thermal control for precise green tea processing." },
-                            { name: "Tea Roller", desc: "Heavy-duty engineering for consistent leaf cell rupture." },
-                            { name: "Withering Trough", desc: "Automated airflow and temperature control systems." },
-                            { name: "Tea Tablet Machine", desc: "Precision compression for specialized tea products." }
+                            { 
+                                title: "Green Tea Dryer", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 14"/></svg>,
+                                desc: "Advanced thermal control for precise green tea processing." 
+                            },
+                            { 
+                                title: "Tea Roller", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>,
+                                desc: "Heavy-duty engineering for consistent leaf cell rupture." 
+                            },
+                            { 
+                                title: "Withering Trough", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 10h20M2 14h20"/></svg>,
+                                desc: "Automated airflow and temperature control systems." 
+                            },
+                            { 
+                                title: "Tea Tablet Machine", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>,
+                                desc: "Precision compression for specialized tea products." 
+                            }
                         ].map((product, index) => (
                             <div className="tea-product-card" key={index}>
-                                <div className="tea-product-icon">⚙️</div>
-                                <h3 className="tea-product-name">{product.name}</h3>
-                                <p className="tea-product-desc">{product.desc}</p>
-                                <Link to="/products" className="tea-product-link">View Details</Link>
+                                <div className="tea-product-icon">{product.icon}</div>
+                                <h3 className="tea-product-card-title">{product.title}</h3>
+                                <p className="tea-product-card-desc">{product.desc}</p>
+                                <Link to="/products" className="tea-product-link">VIEW DETAILS →</Link>
                             </div>
                         ))}
                     </div>
