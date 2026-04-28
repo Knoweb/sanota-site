@@ -210,6 +210,63 @@ const TeaIndustry = () => {
                     </div>
                 </div>
             </section>
+
+            {/* 8. RELATED CASE STUDIES */}
+            <section className="tea-case-studies-section">
+                <div className="container">
+                    <div className="tea-section-header">
+                        <h2 className="tea-section-title">Related Case Studies</h2>
+                        <p className="tea-section-subtitle">Real-world implementations of Sanota's engineering and digital solutions.</p>
+                    </div>
+                    <div className="tea-case-grid">
+                        {[
+                            { title: "Industrial Dryer Deployment", desc: "Optimizing thermal efficiency and quality consistency in a high-capacity tea factory." },
+                            { title: "RFID Tracking Implementation", desc: "End-to-end traceability of tea batches from withering troughs to final packaging." },
+                            { title: "Smart Greenhouse Monitoring", desc: "Automated climate and irrigation control for specialized tea cultivation environments." },
+                            { title: "Retrofit Automation Project", desc: "Modernizing legacy rolling and sifting lines with integrated digital control systems." }
+                        ].map((item, index) => (
+                            <div className="tea-case-card" key={index}>
+                                <div className="tea-case-content">
+                                    <h3 className="tea-case-title">{item.title}</h3>
+                                    <p className="tea-case-desc">{item.desc}</p>
+                                    <Link to="/case-studies" className="tea-case-link">Read More</Link>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="tea-case-footer">
+                        <Link to="/case-studies" className="btn btn-secondary-outline tea-btn-secondary">
+                            View All Case Studies
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* 9. WHY SANOTA FOR THIS INDUSTRY */}
+            <section className="tea-why-section">
+                <div className="container">
+                    <div className="tea-why-wrapper">
+                        <div className="tea-why-content">
+                            <h2 className="tea-section-title light">Why Sanota for the Tea Industry?</h2>
+                            <div className="tea-why-grid">
+                                {[
+                                    { title: "Proven Experience", desc: "Deep understanding of the operational environments and challenges unique to tea factories." },
+                                    { title: "Practical Engineering", desc: "Solutions focused on real-world reliability and productivity rather than just theoretical design." },
+                                    { title: "Modernization Expertise", desc: "Specialized in updating legacy systems without disrupting ongoing production cycles." },
+                                    { title: "Integration Capability", desc: "Ability to bridge mechanical engineering with modern automation and digital monitoring." },
+                                    { title: "Lifecycle Mindset", desc: "Dedicated support from initial implementation through long-term maintenance and optimization." },
+                                    { title: "Adaptability", desc: "Proven ability to adapt advanced solutions to function effectively in rugged field conditions." }
+                                ].map((item, index) => (
+                                    <div className="tea-why-item" key={index}>
+                                        <h3 className="tea-why-item-title">{item.title}</h3>
+                                        <p className="tea-why-item-desc">{item.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
