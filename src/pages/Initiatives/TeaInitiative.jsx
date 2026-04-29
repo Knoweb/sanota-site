@@ -92,60 +92,60 @@ const TeaInitiative = () => {
                             {[
                                 { 
                                     title: "Process Inefficiencies", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/><path d="M16.24 7.76a6 6 0 1 0 0 8.48"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> 
                                 },
                                 { 
                                     title: "Inconsistent Product Quality", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19"/><circle cx="12" cy="12" r="3"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M3 12h3l3-9 6 18 3-9h3"/><circle cx="12" cy="12" r="9" strokeDasharray="2 2"/></svg> 
                                 },
                                 { 
                                     title: "Manual Intervention Dependency", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M7 7l10 10M17 7L7 17M12 3v2M12 19v2M3 12h2M19 12h2"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"/><path d="M14 10V5a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8a7 7 0 0 0 7 7h1a2 2 0 0 0 2-2v-3"/><path d="M7 11V1h2v10"/><path d="M11 11V1h2v10"/><path d="M15 11V1h2v10"/></svg> 
                                 },
                                 { 
                                     title: "Limited Operational Visibility", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 7v2M12 15v2M7 12h2M15 12h2"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2 2"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M17.66 6.34l-1.42 1.42"/><path d="M7.76 16.24l-1.42 1.42"/><path d="M17.66 17.66l-1.42-1.42"/><path d="M7.76 7.76l-1.42-1.42"/><circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.1"/></svg> 
                                 },
                                 { 
                                     title: "Rising Production Costs", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><path d="M21 7l-4-4-4 4"/><path d="M21 3v8"/></svg> 
                                 },
                                 { 
                                     title: "Lack of Integrated Monitoring", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20"/><path d="M17 2v20"/><path d="M2 7h20"/><path d="M2 17h20"/><circle cx="12" cy="12" r="2" fill="currentColor" fillOpacity="0.2"/></svg> 
                                 },
                                 { 
                                     title: "Need for Scalable Solutions", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M2 20h20"/><path d="M7 20v-5"/><path d="M11 20V10"/><path d="M15 20V5"/><path d="M19 20V2"/><path d="M2 2l20 20" strokeDasharray="3 3"/></svg> 
                                 }
                             ].concat([
                                 { 
                                     title: "Process Inefficiencies", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/><path d="M16.24 7.76a6 6 0 1 0 0 8.48"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> 
                                 },
                                 { 
                                     title: "Inconsistent Product Quality", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19"/><circle cx="12" cy="12" r="3"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M3 12h3l3-9 6 18 3-9h3"/><circle cx="12" cy="12" r="9" strokeDasharray="2 2"/></svg> 
                                 },
                                 { 
                                     title: "Manual Intervention Dependency", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M7 7l10 10M17 7L7 17M12 3v2M12 19v2M3 12h2M19 12h2"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"/><path d="M14 10V5a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8a7 7 0 0 0 7 7h1a2 2 0 0 0 2-2v-3"/><path d="M7 11V1h2v10"/><path d="M11 11V1h2v10"/><path d="M15 11V1h2v10"/></svg> 
                                 },
                                 { 
                                     title: "Limited Operational Visibility", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 7v2M12 15v2M7 12h2M15 12h2"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2 2"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M17.66 6.34l-1.42 1.42"/><path d="M7.76 16.24l-1.42 1.42"/><path d="M17.66 17.66l-1.42-1.42"/><path d="M7.76 7.76l-1.42-1.42"/><circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.1"/></svg> 
                                 },
                                 { 
                                     title: "Rising Production Costs", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><path d="M21 7l-4-4-4 4"/><path d="M21 3v8"/></svg> 
                                 },
                                 { 
                                     title: "Lack of Integrated Monitoring", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20"/><path d="M17 2v20"/><path d="M2 7h20"/><path d="M2 17h20"/><circle cx="12" cy="12" r="2" fill="currentColor" fillOpacity="0.2"/></svg> 
                                 },
                                 { 
                                     title: "Need for Scalable Solutions", 
-                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z"/></svg> 
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><path d="M2 20h20"/><path d="M7 20v-5"/><path d="M11 20V10"/><path d="M15 20V5"/><path d="M19 20V2"/><path d="M2 2l20 20" strokeDasharray="3 3"/></svg> 
                                 }
                             ]).map((item, index) => (
                                 <div className="initiative-op-challenge-card" key={index}>
