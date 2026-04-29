@@ -209,13 +209,20 @@ const TeaInitiative = () => {
                                 { title: "Retrofit Modernization Concepts", desc: "Modernizing legacy machinery with current automation standards." },
                                 { title: "Lifecycle Reliability Focus", desc: "Ensuring long-term operational stability and maintenance efficiency." }
                             ].map((pillar, index) => (
-                                <div className="initiative-pillar-item" key={index}>
+                                <motion.div 
+                                    className="initiative-pillar-item" 
+                                    key={index}
+                                    initial={{ opacity: 0, y: -50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+                                >
                                     <div className="initiative-pillar-header">
                                         <div className="initiative-pillar-number">0{index + 1}</div>
                                         <h3 className="initiative-pillar-title">{pillar.title}</h3>
                                     </div>
                                     <p className="initiative-pillar-desc">{pillar.desc}</p>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
