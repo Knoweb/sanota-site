@@ -8,7 +8,7 @@ import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
 import approachVisual from '../../assets/tea-engineering-visual.png';
-import solutionsBanner from '../../assets/tea-solutions-banner.png';
+import solutionsBanner from '../../assets/tea-solutions-banner-v2.png';
 
 
 
