@@ -290,6 +290,31 @@ const Solutions = () => {
                                 image: cap6 
                             }
                         ].map((cap, index) => (
+                            <motion.div 
+                                className="cap-card-v2" 
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <div className="cap-img-wrapper">
+                                    <img src={cap.image} alt={cap.title} />
+                                    <div className="cap-badge">{cap.category}</div>
+                                </div>
+                                <div className="cap-body">
+                                    <h3 className="cap-card-title">{cap.title}</h3>
+                                    <p className="cap-card-subtitle">{cap.subtitle}</p>
+                                    <p className="cap-card-desc">{cap.desc}</p>
+                                </div>
+                                <div className="cap-footer">
+                                    <a href="#" className="see-details">SEE MORE DETAILS <span className="arrow-down">▾</span></a>
+                                    <a href="#" className="inquire-btn">Inquire →</a>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
                 <div className="cap-tech-overlay"></div>
             </section>
 
