@@ -14,6 +14,8 @@ import solProducts from '../../assets/solution-products.png';
 import solSoftware from '../../assets/solution-software.png';
 import solRetrofit from '../../assets/solution-retrofit.png';
 import solLifecycle from '../../assets/solution-lifecycle.png';
+import benefitsBgVisual from '../../assets/benefits-bg-visual.png';
+
 
 
 
@@ -340,6 +342,8 @@ const TeaInitiative = () => {
 
                 {/* Background Tech Animation */}
                 <div className="benefits-tech-bg">
+                    <img src={benefitsBgVisual} alt="Tech Background" className="benefits-main-bg-img" />
+                    <div className="benefits-bg-overlay"></div>
                     <div className="benefits-grid-pattern"></div>
                     <div className="benefits-data-rings"></div>
                     <div className="benefits-floating-glow"></div>
