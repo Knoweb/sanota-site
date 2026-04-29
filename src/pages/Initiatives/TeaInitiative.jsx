@@ -75,6 +75,59 @@ const TeaInitiative = () => {
                     </div>
                 </div>
             </section>
+            {/* 3. KEY CHALLENGES IDENTIFIED */}
+            <section className="initiative-challenges-section">
+                <div className="container">
+                    <div className="initiative-section-header centered">
+                        <h2 className="initiative-section-title light">Key Operational Challenges</h2>
+                        <p className="initiative-section-subtitle">Identified areas where traditional tea processing requires engineering transformation.</p>
+                    </div>
+
+                    <div className="initiative-operational-challenges-grid">
+                        {[
+                            { 
+                                title: "Process Inefficiencies", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg> 
+                            },
+                            { 
+                                title: "Inconsistent Product Quality", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19"/><circle cx="12" cy="12" r="3"/></svg> 
+                            },
+                            { 
+                                title: "Manual Intervention Dependency", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M7 7l10 10M17 7L7 17M12 3v2M12 19v2M3 12h2M19 12h2"/></svg> 
+                            },
+                            { 
+                                title: "Limited Operational Visibility", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 7v2M12 15v2M7 12h2M15 12h2"/></svg> 
+                            },
+                            { 
+                                title: "Rising Production Costs", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> 
+                            },
+                            { 
+                                title: "Lack of Integrated Monitoring", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 
+                            },
+                            { 
+                                title: "Need for Scalable Solutions", 
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z"/></svg> 
+                            }
+                        ].map((item, index) => (
+                            <motion.div 
+                                className="initiative-op-challenge-card" 
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <div className="initiative-op-challenge-icon">{item.icon}</div>
+                                <h3 className="initiative-op-challenge-title">{item.title}</h3>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
