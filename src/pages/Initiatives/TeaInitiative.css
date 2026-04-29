@@ -745,6 +745,22 @@
     overflow: hidden;
 }
 
+.initiative-section-header.centered {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.initiative-section-title.light {
+    color: #fff;
+}
+
+.initiative-section-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+}
+
 .initiative-challenges-carousel-viewport {
     width: 100%;
     overflow: hidden;
