@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './TeaInitiative.css';
 import initiativeHero from '../../assets/tea-initiative-hero.png';
+import caseDryer from '../../assets/case-dryer.png';
+import caseGreenhouse from '../../assets/case-greenhouse.png';
+import caseRetrofit from '../../assets/case-retrofit.png';
+import caseMonitoring from '../../assets/case-rfid.png';
 
 const TeaInitiative = () => {
     return (
@@ -264,6 +268,57 @@ const TeaInitiative = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+            {/* 9. RELATED CASE STUDIES */}
+            <section className="initiative-case-studies">
+                <div className="container">
+                    <div className="initiative-section-header centered">
+                        <h2 className="initiative-section-title">Project References</h2>
+                        <p className="initiative-section-subtitle">Real-world engineering implementations relevant to this initiative.</p>
+                    </div>
+                    <div className="initiative-case-grid">
+                        {[
+                            { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
+                            { title: "Industrial Dryer Systems", image: caseDryer },
+                            { title: "Automation Upgrades", image: caseRetrofit },
+                            { title: "Monitoring Solutions", image: caseMonitoring }
+                        ].map((item, index) => (
+                            <Link to="/case-studies" className="initiative-case-card" key={index}>
+                                <div className="initiative-case-img-box">
+                                    <img src={item.image} alt={item.title} className="initiative-case-img" />
+                                </div>
+                                <div className="initiative-case-content">
+                                    <h3 className="initiative-case-title">{item.title}</h3>
+                                    <span className="initiative-case-link">View Details →</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* 10. COLLABORATION INVITATION */}
+            <section className="initiative-collaboration">
+                <div className="container">
+                    <div className="initiative-collab-wrapper">
+                        <h2 className="initiative-collab-title">Collaboration Opportunities</h2>
+                        <p className="initiative-collab-desc">
+                            Sanota welcomes collaboration with industry stakeholders, institutions, and organizations 
+                            interested in developing practical engineering solutions addressing industry challenges.
+                        </p>
+                        <div className="initiative-collab-actions">
+                            <Link to="/contact" className="btn btn-primary initiative-btn-primary">Discuss Collaboration</Link>
+                            <Link to="/contact" className="btn btn-secondary-outline initiative-btn-secondary">Discuss Application</Link>
+                            <Link to="/contact" className="btn btn-secondary-outline initiative-btn-secondary">Request Technical Discussion</Link>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Tech Background elements */}
+                <div className="collab-tech-bg">
+                    <div className="collab-grid-pattern"></div>
+                    <div className="collab-glow-beam"></div>
                 </div>
             </section>
         </div>

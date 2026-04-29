@@ -506,6 +506,163 @@
     }
 }
 
+/* --- Case Studies Section --- */
+.initiative-case-studies {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.initiative-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.initiative-case-card {
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.initiative-case-card:hover {
+    transform: translateY(-10px);
+    border-color: #2233AD;
+    box-shadow: 0 15px 40px rgba(34, 51, 173, 0.08);
+}
+
+.initiative-case-img-box {
+    height: 200px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.initiative-case-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.initiative-case-card:hover .initiative-case-img {
+    transform: scale(1.1);
+}
+
+.initiative-case-content {
+    padding: 35px 30px;
+}
+
+.initiative-case-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #080b1a;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.initiative-case-link {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #2233AD;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Collaboration Section --- */
+.initiative-collaboration {
+    padding: 160px 0;
+    background-color: #080b1a;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.initiative-collab-wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.initiative-collab-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.initiative-collab-desc {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 60px;
+}
+
+.initiative-collab-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tech Background for Collaboration */
+.collab-tech-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.collab-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(34, 51, 173, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 51, 173, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.3;
+}
+
+.collab-glow-beam {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(34, 51, 173, 0.15) 0%, transparent 70%);
+    animation: rotateGlow 25s linear infinite;
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1100px) {
+    .initiative-collab-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .initiative-collab-title {
+        font-size: 2.8rem;
+    }
+    
+    .initiative-collab-desc {
+        font-size: 1.2rem;
+    }
+
+    .initiative-collaboration {
+        padding: 100px 0;
+    }
+}
+
 /* --- Operational Challenges Section --- */
 .initiative-challenges-section {
     padding: 120px 0;
