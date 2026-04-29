@@ -635,52 +635,30 @@
 
 .tea-applications-header-flex {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 60px;
-}
-
-.tea-app-nav-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.tea-app-nav-btn {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ddd;
-    background: #fff;
-    color: #080b1a;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.tea-app-nav-btn:hover {
-    background: #080b1a;
-    color: #fff;
-    border-color: #080b1a;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .tea-apps-carousel-viewport {
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
 .tea-apps-carousel-track {
     display: flex;
     gap: 30px;
+    width: max-content;
 }
 
 .tea-app-carousel-card {
-    min-width: calc(33.33% - 20px);
+    width: 350px;
     background: #fff;
     border: 1px solid #eee;
     transition: all 0.3s ease;
     border-radius: 0;
+    flex-shrink: 0;
 }
 
 .tea-app-card-image-box {
@@ -724,29 +702,14 @@
     margin: 0;
 }
 
-@media (max-width: 1100px) {
-    .tea-app-carousel-card {
-        min-width: calc(50% - 15px);
-    }
-}
-
 @media (max-width: 768px) {
-    .tea-app-carousel-card {
-        min-width: 100%;
-    }
-    
     .tea-applications-header-flex {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 30px;
     }
 }
 
-@media (max-width: 768px) {
-    .tea-applications-list {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* --- Initiatives Section --- */
 .tea-initiatives-section {

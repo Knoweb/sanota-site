@@ -17,8 +17,6 @@ import appEnergy from '../../assets/app-energy.png';
 import appPackaging from '../../assets/app-packaging.png';
 
 const TeaIndustry = () => {
-    const [activeAppIndex, setActiveAppIndex] = React.useState(0);
-    
     const apps = [
         { title: "Drying & Withering Systems", image: appDrying, desc: "Automated controls for withering troughs and fluid bed dryers to maintain precise moisture levels." },
         { title: "Rolling & Fermentation Control", image: appRolling, desc: "Digital monitoring of rolling pressure and fermentation temperature for optimum quality." },
@@ -27,9 +25,6 @@ const TeaIndustry = () => {
         { title: "Energy Management Systems", image: appEnergy, desc: "Optimizing firewood and electricity consumption through intelligent combustion and motor controls." },
         { title: "Packaging & Quality Control", image: appPackaging, desc: "Precision weighing and inspection systems to ensure batch consistency and compliance." }
     ];
-
-    const nextApp = () => setActiveAppIndex((prev) => (prev + 1) % apps.length);
-    const prevApp = () => setActiveAppIndex((prev) => (prev - 1 + apps.length) % apps.length);
 
     return (
         <div className="tea-industry-page">
@@ -267,19 +262,19 @@ const TeaIndustry = () => {
                             <h2 className="tea-section-title">Industry-Specific Application Areas</h2>
                             <p className="tea-section-subtitle">Practical engineering implementations designed for tea factory environments.</p>
                         </div>
-                        <div className="tea-app-nav-buttons">
-                            <button className="tea-app-nav-btn prev" onClick={prevApp}>←</button>
-                            <button className="tea-app-nav-btn next" onClick={nextApp}>→</button>
-                        </div>
                     </div>
 
                     <div className="tea-apps-carousel-viewport">
                         <motion.div 
                             className="tea-apps-carousel-track"
-                            animate={{ x: `-${activeAppIndex * (100 / (window.innerWidth > 1100 ? 3 : window.innerWidth > 768 ? 2 : 1))}%` }}
-                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            animate={{ x: ["0%", "-100%"] }}
+                            transition={{ 
+                                repeat: Infinity, 
+                                ease: "linear", 
+                                duration: 40 
+                            }}
                         >
-                            {apps.map((app, index) => (
+                            {[...apps, ...apps].map((app, index) => (
                                 <div className="tea-app-carousel-card" key={index}>
                                     <div className="tea-app-card-image-box">
                                         <img src={app.image} alt={app.title} className="tea-app-card-img" />
