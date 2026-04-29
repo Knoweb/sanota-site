@@ -646,10 +646,24 @@
     padding: 20px 0;
 }
 
-.tea-apps-carousel-track {
+.tea-apps-carousel-track-animate {
     display: flex;
     gap: 30px;
     width: max-content;
+    animation: teaInfiniteScroll 40s linear infinite;
+}
+
+.tea-apps-carousel-track-animate:hover {
+    animation-play-state: paused;
+}
+
+@keyframes teaInfiniteScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .tea-app-carousel-card {
@@ -659,6 +673,8 @@
     transition: all 0.3s ease;
     border-radius: 0;
     flex-shrink: 0;
+    text-decoration: none;
+    display: block;
 }
 
 .tea-app-card-image-box {

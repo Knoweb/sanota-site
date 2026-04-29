@@ -265,17 +265,9 @@ const TeaIndustry = () => {
                     </div>
 
                     <div className="tea-apps-carousel-viewport">
-                        <motion.div 
-                            className="tea-apps-carousel-track"
-                            animate={{ x: ["0%", "-100%"] }}
-                            transition={{ 
-                                repeat: Infinity, 
-                                ease: "linear", 
-                                duration: 40 
-                            }}
-                        >
+                        <div className="tea-apps-carousel-track-animate">
                             {[...apps, ...apps].map((app, index) => (
-                                <div className="tea-app-carousel-card" key={index}>
+                                <Link to="/solutions" className="tea-app-carousel-card" key={index}>
                                     <div className="tea-app-card-image-box">
                                         <img src={app.image} alt={app.title} className="tea-app-card-img" />
                                         <div className="tea-app-card-badge">{app.title.toUpperCase()}</div>
@@ -283,9 +275,9 @@ const TeaIndustry = () => {
                                     <div className="tea-app-card-content">
                                         <p className="tea-app-card-desc">{app.desc}</p>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
