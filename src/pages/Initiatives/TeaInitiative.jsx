@@ -7,6 +7,8 @@ import caseDryer from '../../assets/case-dryer.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
+import approachVisual from '../../assets/tea-engineering-visual.png';
+
 
 const TeaInitiative = () => {
     return (
@@ -172,6 +174,18 @@ const TeaInitiative = () => {
                                 <div className="hint-line"></div>
                                 <span>INTEGRATED SYSTEMS</span>
                             </div>
+
+                            <motion.div 
+                                className="initiative-approach-visual-box"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                            >
+                                <div className="approach-image-tech-wrapper">
+                                    <div className="approach-corner-square"></div>
+                                    <img src={approachVisual} alt="Engineering Approach Visual" className="initiative-approach-img" />
+                                </div>
+                            </motion.div>
                         </div>
                         <div className="initiative-approach-pillars">
                             {[
