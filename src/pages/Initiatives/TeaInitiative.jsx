@@ -321,6 +321,35 @@ const TeaInitiative = () => {
                     <div className="collab-glow-beam"></div>
                 </div>
             </section>
+            {/* 11. KNOWLEDGE CONNECTION */}
+            <section className="initiative-knowledge-connection">
+                <div className="container">
+                    <div className="initiative-knowledge-grid">
+                        <div className="initiative-knowledge-content">
+                            <h2 className="initiative-section-title">Knowledge Connection</h2>
+                            <p className="initiative-knowledge-lead">
+                                Explore detailed technical insights and research relevant to tea industry modernization.
+                            </p>
+                            <Link to="/insights" className="btn btn-secondary-outline initiative-btn-secondary mt-30">
+                                View Related Insights
+                            </Link>
+                        </div>
+                        <div className="initiative-knowledge-links">
+                            {[
+                                "Automation trends in agriculture",
+                                "Retrofit vs replacement",
+                                "Energy efficiency engineering",
+                                "Monitoring systems benefits"
+                            ].map((insight, index) => (
+                                <Link to="/insights" className="initiative-insight-item" key={index}>
+                                    <span className="initiative-insight-title">{insight}</span>
+                                    <span className="initiative-insight-arrow">→</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
