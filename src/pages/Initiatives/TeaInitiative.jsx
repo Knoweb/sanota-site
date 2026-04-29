@@ -7,7 +7,11 @@ import caseDryer from '../../assets/case-dryer.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
+import casePLC from '../../assets/case-plc.png';
+import caseSCADA from '../../assets/case-scada.png';
+import caseHMI from '../../assets/case-hmi.png';
 import approachVisual from '../../assets/tea-engineering-visual.png';
+
 import solutionsBanner from '../../assets/tea-solutions-banner-v2.png';
 
 
@@ -396,26 +400,28 @@ const TeaInitiative = () => {
                     <div className="initiative-projects-carousel-viewport">
                         <div className="initiative-projects-carousel-track">
                             {[
-                                { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
-                                { title: "Industrial Dryer Systems", image: caseDryer },
-                                { title: "Automation Upgrades", image: caseRetrofit },
-                                { title: "Monitoring Solutions", image: caseMonitoring }
+                                { title: "Industrial PLC Systems", image: casePLC },
+                                { title: "SCADA Software Platforms", image: caseSCADA },
+                                { title: "Industrial HMI Panels", image: caseHMI },
+                                { title: "Automation Upgrades", image: caseRetrofit }
                             ].concat([
-                                { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
-                                { title: "Industrial Dryer Systems", image: caseDryer },
-                                { title: "Automation Upgrades", image: caseRetrofit },
-                                { title: "Monitoring Solutions", image: caseMonitoring }
+                                { title: "Industrial PLC Systems", image: casePLC },
+                                { title: "SCADA Software Platforms", image: caseSCADA },
+                                { title: "Industrial HMI Panels", image: caseHMI },
+                                { title: "Automation Upgrades", image: caseRetrofit }
                             ]).map((item, index) => (
-                                <Link to="/case-studies" className="initiative-case-card" key={index}>
-                                    <div className="initiative-case-img-box">
-                                        <img src={item.image} alt={item.title} className="initiative-case-img" />
+                                <Link to="/case-studies" className="initiative-case-card-v2" key={index}>
+                                    <div className="case-card-image-wrapper">
+                                        <img src={item.image} alt={item.title} className="case-card-img" />
+                                        <div className="case-card-overlay"></div>
                                     </div>
-                                    <div className="initiative-case-content">
-                                        <h3 className="initiative-case-title">{item.title}</h3>
-                                        <span className="initiative-case-link">View Details →</span>
+                                    <div className="case-card-footer">
+                                        <h3 className="case-card-title">{item.title}</h3>
+                                        <div className="case-card-btn">More...</div>
                                     </div>
                                 </Link>
                             ))}
+
                         </div>
                     </div>
                 </div>

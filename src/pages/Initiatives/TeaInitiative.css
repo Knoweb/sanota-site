@@ -758,20 +758,21 @@
     animation-play-state: paused;
 }
 
-.initiative-case-card {
+.initiative-case-card-v2 {
     width: 400px;
     flex-shrink: 0;
     margin-right: 30px;
+    background: #080b1a;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    background: #fff;
-    border: 1px solid #eee;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.initiative-case-card:hover {
+.initiative-case-card-v2:hover {
     transform: translateY(-10px);
-    border-color: #2233AD;
-    box-shadow: 0 15px 40px rgba(34, 51, 173, 0.08);
 }
 
 @keyframes scrollProjects {
@@ -779,44 +780,59 @@
     100% { transform: translateX(calc(-400px * 4 - 30px * 4)); }
 }
 
-.initiative-case-img-box {
-    height: 200px;
+.case-card-image-wrapper {
+    width: 100%;
+    height: 250px;
+    position: relative;
     overflow: hidden;
-    background: #f8f9fa;
 }
 
-.initiative-case-img {
+.case-card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
-.initiative-case-card:hover .initiative-case-img {
-    transform: scale(1.1);
+.initiative-case-card-v2:hover .case-card-img {
+    transform: scale(1.05);
 }
 
-.initiative-case-content {
-    padding: 35px 30px;
+.case-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(8, 11, 26, 0), rgba(8, 11, 26, 0.4));
 }
 
-.initiative-case-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #080b1a;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.initiative-case-link {
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: #2233AD;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.case-card-footer {
+    padding: 22px 25px;
+    background: #0d1226;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+}
+
+.case-card-title {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.case-card-btn {
+    background: #2233AD;
+    color: #fff;
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.initiative-case-card-v2:hover .case-card-btn {
+    background: #2d44e0;
+    box-shadow: 0 0 15px rgba(34, 51, 173, 0.5);
 }
 
 /* --- Collaboration Section --- */
