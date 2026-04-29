@@ -416,6 +416,96 @@
     }
 }
 
+/* --- Related Solution Areas Section --- */
+.initiative-related-solutions {
+    padding: 120px 0;
+    background-color: #fcfcfc;
+}
+
+.initiative-solutions-link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1px;
+    background-color: #eee;
+    border: 1px solid #eee;
+}
+
+.initiative-solution-link-card {
+    background: #fff;
+    padding: 45px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.initiative-solution-link-card:hover {
+    background: #2233AD;
+}
+
+.initiative-solution-link-card:hover .initiative-solution-link-title,
+.initiative-solution-link-card:hover .initiative-solution-link-arrow {
+    color: #fff;
+}
+
+.initiative-solution-link-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #080b1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.initiative-solution-link-arrow {
+    font-size: 1.6rem;
+    color: #2233AD;
+    transition: transform 0.3s ease;
+}
+
+.initiative-solution-link-card:hover .initiative-solution-link-arrow {
+    transform: translateX(10px);
+}
+
+/* --- Related Industries Section --- */
+.initiative-related-industries {
+    padding: 120px 0 160px;
+    background-color: #fff;
+}
+
+.initiative-industries-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.initiative-industry-tag {
+    padding: 15px 30px;
+    background: #f9f9f9;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.initiative-industry-tag:hover {
+    border-color: #2233AD;
+    color: #2233AD;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(34, 51, 173, 0.1);
+}
+
+@media (max-width: 768px) {
+    .initiative-solution-link-card {
+        padding: 35px 30px;
+    }
+}
+
 /* --- Operational Challenges Section --- */
 .initiative-challenges-section {
     padding: 120px 0;

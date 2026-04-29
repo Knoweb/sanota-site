@@ -222,6 +222,50 @@ const TeaInitiative = () => {
                     </div>
                 </div>
             </section>
+            {/* 7. RELATED SOLUTION AREAS */}
+            <section className="initiative-related-solutions">
+                <div className="container">
+                    <div className="initiative-section-header">
+                        <h2 className="initiative-section-title">Related Solution Areas</h2>
+                    </div>
+                    <div className="initiative-solutions-link-grid">
+                        {[
+                            { title: "Engineering & Automation", link: "/solutions" },
+                            { title: "Products", link: "/products" },
+                            { title: "Software & Digital Solutions", link: "/solutions" },
+                            { title: "Retrofit Capability", link: "/solutions" },
+                            { title: "Lifecycle Support", link: "/solutions" }
+                        ].map((item, index) => (
+                            <Link to={item.link} className="initiative-solution-link-card" key={index}>
+                                <span className="initiative-solution-link-title">{item.title}</span>
+                                <span className="initiative-solution-link-arrow">→</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* 8. RELATED INDUSTRIES */}
+            <section className="initiative-related-industries">
+                <div className="container">
+                    <div className="initiative-section-header">
+                        <h2 className="initiative-section-title">Related Industries</h2>
+                    </div>
+                    <div className="initiative-industries-tag-cloud">
+                        {[
+                            "Food processing",
+                            "Agriculture",
+                            "Manufacturing",
+                            "Logistics",
+                            "Infrastructure"
+                        ].map((industry, index) => (
+                            <div className="initiative-industry-tag" key={index}>
+                                {industry}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
