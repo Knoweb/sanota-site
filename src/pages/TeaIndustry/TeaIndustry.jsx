@@ -334,15 +334,15 @@ const TeaIndustry = () => {
                             </p>
                             <div className="tea-initiatives-list">
                                 {[
-                                    "Tea modernization initiative",
-                                    "Smart greenhouse initiative",
-                                    "Smart monitoring initiative",
-                                    "Energy efficiency initiative"
+                                    { title: "Tea modernization initiative", link: "/initiatives/tea-modernization" },
+                                    { title: "Smart greenhouse initiative", link: "/initiatives" },
+                                    { title: "Smart monitoring initiative", link: "/initiatives" },
+                                    { title: "Energy efficiency initiative", link: "/initiatives" }
                                 ].map((initiative, index) => (
-                                    <div className="tea-initiative-tag" key={index}>
+                                    <Link to={initiative.link} className="tea-initiative-tag" key={index}>
                                         <span className="tea-initiative-bullet">→</span>
-                                        {initiative}
-                                    </div>
+                                        {initiative.title}
+                                    </Link>
                                 ))}
                             </div>
                             <Link to="/initiatives" className="btn btn-primary tea-btn-primary mt-40">

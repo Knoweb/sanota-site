@@ -16,6 +16,7 @@ import Company from './pages/Company/Company';
 import Contact from './pages/Contact/Contact';
 import Careers from './pages/Careers/Careers';
 import Initiatives from './pages/Initiatives/Initiatives';
+import TeaInitiative from './pages/Initiatives/TeaInitiative';
 import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 
@@ -44,6 +45,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/initiatives" element={<Initiatives />} />
+              <Route path="/initiatives/tea-modernization" element={<TeaInitiative />} />
               <Route path="/initiatives/:slug" element={<Initiatives />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />

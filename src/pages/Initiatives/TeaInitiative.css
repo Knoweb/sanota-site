@@ -1,0 +1,117 @@
+.tea-initiative-page {
+    background-color: #fff;
+    color: #080b1a;
+}
+
+/* --- Hero Section --- */
+.initiative-hero {
+    padding: 160px 0 100px;
+    background-color: #080b1a;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.initiative-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.initiative-hero-subtitle {
+    font-size: 1.1rem;
+    color: #2233AD;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.initiative-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.initiative-hero-desc {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 50px;
+    max-width: 650px;
+}
+
+.initiative-hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.initiative-btn-primary {
+    background-color: #2233AD !important;
+    border-color: #2233AD !important;
+    padding: 18px 35px !important;
+}
+
+.initiative-btn-secondary {
+    padding: 18px 35px !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #fff !important;
+}
+
+.initiative-btn-secondary:hover {
+    background-color: #fff !important;
+    color: #080b1a !important;
+}
+
+.initiative-hero-visual {
+    position: relative;
+}
+
+.initiative-visual-container {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+}
+
+.initiative-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: contrast(1.1) brightness(1.1);
+}
+
+.initiative-tech-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(34, 51, 173, 0.2), transparent);
+    pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+    .initiative-hero-title {
+        font-size: 3rem;
+    }
+    
+    .initiative-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .initiative-hero {
+        padding: 120px 0 80px;
+    }
+
+    .initiative-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .initiative-hero-actions {
+        flex-direction: column;
+    }
+}
