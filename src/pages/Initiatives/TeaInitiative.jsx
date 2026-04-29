@@ -392,9 +392,16 @@ const TeaInitiative = () => {
                             "Logistics",
                             "Infrastructure"
                         ].map((industry, index) => (
-                            <div className="initiative-industry-tag" key={index}>
+                            <motion.div 
+                                className="initiative-industry-tag" 
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false, amount: 0.1 }}
+                                transition={{ duration: 0.4, delay: index * 0.08 }}
+                            >
                                 {industry}
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
