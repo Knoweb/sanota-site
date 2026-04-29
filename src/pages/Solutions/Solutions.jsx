@@ -13,7 +13,14 @@ import reality4 from '../../assets/reality-4.png';
 import reality5 from '../../assets/reality-5.png';
 import reality6 from '../../assets/reality-6.png';
 import reality7 from '../../assets/reality-7.png';
+import cap1 from '../../assets/cap-1.png';
+import cap2 from '../../assets/cap-2.png';
+import cap3 from '../../assets/cap-3.png';
+import cap4 from '../../assets/cap-4.png';
+import cap5 from '../../assets/cap-5.png';
+import cap6 from '../../assets/cap-6.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
+
 import caseDryer from '../../assets/case-dryer.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
@@ -216,29 +223,73 @@ const Solutions = () => {
             </section>
 
             {/* 4. CAPABILITY DETAILS */}
-            <section className="solutions-capabilities section-padding dark-theme">
+            <section className="solutions-capabilities section-padding light-theme">
                 <div className="container">
                     <div className="section-header centered">
-                        <h2 className="section-title light">Engineering & Automation Capabilities</h2>
-                        <p className="section-subtitle light">Specialized Expertise for Complex Environments</p>
+                        <motion.h2 
+                            className="section-title"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                        >
+                            Engineering & Automation Capabilities
+                        </motion.h2>
+                        <motion.p 
+                            className="section-subtitle"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ delay: 0.1 }}
+                        >
+                            Specialized Expertise for Complex Environments
+                        </motion.p>
                     </div>
-                    <div className="capabilities-grid">
+
+                    <div className="capabilities-grid-v2">
                         {[
-                            "Custom machine development",
-                            "Process automation systems",
-                            "Mechanical + Electrical integration",
-                            "Control systems",
-                            "System optimization",
-                            "Greenfield and brownfield implementation"
+                            { 
+                                title: "Custom machine development", 
+                                category: "MANUFACTURING", 
+                                subtitle: "Precision Engineering Facility", 
+                                desc: "Design and fabrication of specialized machinery tailored to unique production requirements, ensuring maximum throughput and durability.",
+                                image: cap1 
+                            },
+                            { 
+                                title: "Process automation systems", 
+                                category: "AUTOMATION", 
+                                subtitle: "Industrial Processing Plant", 
+                                desc: "End-to-end automation of complex workflows using advanced PLC and HMI systems to minimize manual error and increase consistency.",
+                                image: cap2 
+                            },
+                            { 
+                                title: "Mechanical + Electrical integration", 
+                                category: "INTEGRATION", 
+                                subtitle: "Complex Assembly Lines", 
+                                desc: "Seamless fusion of mechanical robusticity with sophisticated electrical controls for unified system performance and easier maintenance.",
+                                image: cap3 
+                            },
+                            { 
+                                title: "Control systems", 
+                                category: "ELECTRONICS", 
+                                subtitle: "Centralized Monitoring Hub", 
+                                desc: "Developing intelligent control architectures that provide real-time logic processing and critical safety interlocks for large-scale operations.",
+                                image: cap4 
+                            },
+                            { 
+                                title: "System optimization", 
+                                category: "EFFICIENCY", 
+                                subtitle: "Legacy Plant Modernization", 
+                                desc: "Analyzing and re-engineering existing systems to identify bottlenecks and implement software/hardware upgrades for peak operational efficiency.",
+                                image: cap5 
+                            },
+                            { 
+                                title: "Greenfield and brownfield implementation", 
+                                category: "PROJECTS", 
+                                subtitle: "Global Industrial Expansion", 
+                                desc: "Full lifecycle support for new facility builds or retrofitting established sites with modern automation without interrupting current production.",
+                                image: cap6 
+                            }
                         ].map((cap, index) => (
-                            <div className="capability-card glass" key={index}>
-                                <div className="capability-indicator"></div>
-                                <p className="capability-text">{cap}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                {/* Tech background overlay */}
                 <div className="cap-tech-overlay"></div>
             </section>
 

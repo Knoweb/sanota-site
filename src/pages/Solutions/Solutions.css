@@ -462,50 +462,140 @@
 }
 
 
-/* 4. CAPABILITY DETAILS */
-.solutions-capabilities.dark-theme {
-    background-color: #05070f;
+/* 4. CAPABILITY DETAILS (Redesigned Slider Design) */
+.solutions-capabilities.light-theme {
+    background-color: #f8f9fa;
     position: relative;
+    padding: 120px 0;
+}
+
+.capabilities-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.cap-card-v2 {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid #f0f0f0;
+}
+
+.cap-card-v2:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 70px rgba(34, 51, 173, 0.12);
+    border-color: rgba(34, 51, 173, 0.1);
+}
+
+.cap-img-wrapper {
+    position: relative;
+    height: 240px;
     overflow: hidden;
 }
 
-.capabilities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.cap-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
 }
 
-.capability-card {
-    padding: 40px;
+.cap-card-v2:hover .cap-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.cap-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #2233AD;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    z-index: 2;
+}
+
+.cap-body {
+    padding: 35px;
+    flex-grow: 1;
+}
+
+.cap-card-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #080b1a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+}
+
+.cap-card-subtitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.cap-card-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.cap-footer {
+    padding: 0 35px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.see-details {
+    color: #2233AD;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    transition: all 0.4s ease;
+    gap: 8px;
+    transition: opacity 0.3s ease;
 }
 
-.capability-card:hover {
-    background: #2233AD;
-    border-color: #fff;
-    transform: scale(1.03);
+.see-details:hover {
+    opacity: 0.7;
 }
 
-.capability-indicator {
-    width: 6px;
-    height: 40px;
-    background: #2233AD;
-    transition: background 0.3s ease;
+.arrow-down {
+    font-size: 0.75rem;
 }
 
-.capability-card:hover .capability-indicator {
-    background: #fff;
+.inquire-btn {
+    color: #2233AD;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 800;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.capability-text {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.3;
-    margin: 0;
+.inquire-btn:hover {
+    border-bottom-color: #2233AD;
+}
+
+@media (max-width: 768px) {
+    .capabilities-grid-v2 {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* 5. BUSINESS OUTCOMES */
