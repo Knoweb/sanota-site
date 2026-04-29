@@ -302,11 +302,11 @@ const TeaInitiative = () => {
                 </div>
             </section>
             {/* 6. POTENTIAL INDUSTRY BENEFITS */}
-            <section className="initiative-benefits-section">
+            <section className="initiative-benefits-section dark-v2">
                 <div className="container">
                     <div className="initiative-section-header centered">
-                        <h2 className="initiative-section-title">Expected Industry Benefits</h2>
-                        <p className="initiative-section-subtitle">Practical improvements aimed at enhancing long-term operational viability.</p>
+                        <h2 className="initiative-section-title light">Expected Industry Benefits</h2>
+                        <p className="initiative-section-subtitle light">Practical improvements aimed at enhancing long-term operational viability.</p>
                     </div>
 
                     <div className="initiative-benefits-bento-grid">
@@ -320,7 +320,7 @@ const TeaInitiative = () => {
                             { title: 'Global competitiveness', icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> }
                         ].map((benefit, index) => (
                             <motion.div 
-                                className={`initiative-benefit-card-modern ${benefit.featured ? 'featured' : ''}`} 
+                                className={`initiative-benefit-card-modern glass ${benefit.featured ? 'featured' : ''}`} 
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -331,9 +331,17 @@ const TeaInitiative = () => {
                                     <div className="benefit-icon-box">{benefit.icon}</div>
                                 </div>
                                 <span className="benefit-title">{benefit.title}</span>
+                                <div className="benefit-bg-icon">{benefit.icon}</div>
                             </motion.div>
                         ))}
                     </div>
+                </div>
+
+                {/* Background Tech Animation */}
+                <div className="benefits-tech-bg">
+                    <div className="benefits-grid-pattern"></div>
+                    <div className="benefits-data-rings"></div>
+                    <div className="benefits-floating-glow"></div>
                 </div>
             </section>
             {/* 7. RELATED SOLUTION AREAS */}
