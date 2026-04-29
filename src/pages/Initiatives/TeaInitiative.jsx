@@ -165,6 +165,35 @@ const TeaInitiative = () => {
                     </div>
                 </div>
             </section>
+            {/* 5. SOLUTION DIRECTIONS UNDER DEVELOPMENT */}
+            <section className="initiative-solutions-direction">
+                <div className="container">
+                    <div className="initiative-section-header">
+                        <h2 className="initiative-section-title">Solution Directions</h2>
+                        <p className="initiative-section-subtitle">Actively developing engineering concepts for the tea industry's future requirements.</p>
+                    </div>
+
+                    <div className="initiative-solutions-grid">
+                        {[
+                            { title: "Energy-Efficient Drying Systems", desc: "Developing thermal systems focused on reducing firewood and electricity footprint." },
+                            { title: "Process Automation Modules", desc: "Modular control units designed for incremental factory-wide automation." },
+                            { title: "Monitoring and Control Systems", desc: "Advanced sensor integration for real-time visibility of process variables." },
+                            { title: "Workflow Optimization Approaches", desc: "Engineering studies to streamline leaf flow and reduce handling losses." },
+                            { title: "Quality Consistency Improvement", desc: "Automated feedback loops to ensure uniform product grade and flavor profile." }
+                        ].map((solution, index) => (
+                            <div className="initiative-solution-card" key={index}>
+                                <div className="initiative-solution-status">Development Direction</div>
+                                <h3 className="initiative-solution-title">{solution.title}</h3>
+                                <p className="initiative-solution-desc">{solution.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="initiative-disclaimer">
+                        <p>* We describe development directions and engineering objectives, not fixed product claims.</p>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

@@ -289,6 +289,82 @@
     }
 }
 
+/* --- Solution Directions Section --- */
+.initiative-solutions-direction {
+    padding: 120px 0;
+    background-color: #fcfcfc;
+    background-image: radial-gradient(rgba(34, 51, 173, 0.05) 2px, transparent 2px);
+    background-size: 40px 40px;
+}
+
+.initiative-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.initiative-solution-card {
+    background: #fff;
+    padding: 50px 40px;
+    border: 1px solid #eee;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 0;
+}
+
+.initiative-solution-card:hover {
+    border-color: #2233AD;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(34, 51, 173, 0.08);
+}
+
+.initiative-solution-status {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #2233AD;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(34, 51, 173, 0.05);
+}
+
+.initiative-solution-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #080b1a;
+    margin-bottom: 20px;
+}
+
+.initiative-solution-desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.initiative-disclaimer {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.initiative-disclaimer p {
+    font-size: 0.9rem;
+    color: #999;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .initiative-solution-card {
+        padding: 40px 30px;
+    }
+}
+
 /* --- Operational Challenges Section --- */
 .initiative-challenges-section {
     padding: 120px 0;
