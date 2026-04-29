@@ -742,37 +742,35 @@
     padding: 120px 0;
     background-color: #080b1a;
     color: #fff;
+    overflow: hidden;
 }
 
-.initiative-section-header.centered {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 60px;
+.initiative-challenges-carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px;
+    position: relative;
 }
 
-.initiative-section-title.light {
-    color: #fff;
+.initiative-challenges-carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scrollChallenges 35s linear infinite;
 }
 
-.initiative-section-subtitle {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.6);
-    margin-top: 10px;
-}
-
-.initiative-operational-challenges-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.initiative-challenges-carousel-track:hover {
+    animation-play-state: paused;
 }
 
 .initiative-op-challenge-card {
+    width: 320px;
+    flex-shrink: 0;
+    margin-right: 30px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 45px 30px;
+    padding: 60px 40px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 0;
 }
 
 .initiative-op-challenge-card:hover {
@@ -782,25 +780,33 @@
 }
 
 .initiative-op-challenge-icon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin: 0 auto 25px;
     color: #2233AD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.initiative-op-challenge-icon svg {
-    width: 100%;
-    height: 100%;
 }
 
 .initiative-op-challenge-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     line-height: 1.4;
+}
+
+@keyframes scrollChallenges {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-320px * 7 - 30px * 7)); }
+}
+
+@media (max-width: 768px) {
+    .initiative-op-challenge-card {
+        width: 280px;
+        padding: 40px 30px;
+    }
+    
+    @keyframes scrollChallenges {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-280px * 7 - 30px * 7)); }
+    }
 }
