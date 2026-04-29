@@ -128,6 +128,43 @@ const TeaInitiative = () => {
                     </div>
                 </div>
             </section>
+            {/* 4. SANOTA INITIATIVE APPROACH */}
+            <section className="initiative-approach-section">
+                <div className="container">
+                    <div className="initiative-approach-grid">
+                        <div className="initiative-approach-content">
+                            <h2 className="initiative-section-title">Engineering Approach</h2>
+                            <p className="initiative-approach-lead">
+                                Sanota develops integrated engineering solutions combining mechanical systems, 
+                                automation technologies, and digital monitoring capabilities aligned with real 
+                                operational environments.
+                            </p>
+                            <div className="initiative-approach-visual-hint">
+                                <div className="hint-line"></div>
+                                <span>INTEGRATED SYSTEMS</span>
+                            </div>
+                        </div>
+                        <div className="initiative-approach-pillars">
+                            {[
+                                { title: "Engineering System Design", desc: "Developing robust mechanical frameworks tailored for tea processing." },
+                                { title: "Process Optimization", desc: "Refining operational flows for maximum output and quality consistency." },
+                                { title: "Automation Integration", desc: "Seamlessly embedding PLC and SCADA systems into existing lines." },
+                                { title: "Monitoring Capability Development", desc: "Real-time data acquisition and factory-wide visibility solutions." },
+                                { title: "Retrofit Modernization Concepts", desc: "Modernizing legacy machinery with current automation standards." },
+                                { title: "Lifecycle Reliability Focus", desc: "Ensuring long-term operational stability and maintenance efficiency." }
+                            ].map((pillar, index) => (
+                                <div className="initiative-pillar-item" key={index}>
+                                    <div className="initiative-pillar-header">
+                                        <div className="initiative-pillar-number">0{index + 1}</div>
+                                        <h3 className="initiative-pillar-title">{pillar.title}</h3>
+                                    </div>
+                                    <p className="initiative-pillar-desc">{pillar.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
