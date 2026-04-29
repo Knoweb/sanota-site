@@ -37,6 +37,7 @@ const Solutions = () => {
         "Supported by One Team"
     ];
     const [lineIndex, setLineIndex] = useState(0);
+    const [capIndex, setCapIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -44,6 +45,63 @@ const Solutions = () => {
         }, 3000);
         return () => clearInterval(interval);
     }, []);
+
+    const capabilities = [
+        { 
+            title: "Custom machine development", 
+            category: "MANUFACTURING", 
+            subtitle: "Precision Engineering Facility", 
+            desc: "Design and fabrication of specialized machinery tailored to unique production requirements, ensuring maximum throughput and durability.",
+            image: cap1 
+        },
+        { 
+            title: "Process automation systems", 
+            category: "AUTOMATION", 
+            subtitle: "Industrial Processing Plant", 
+            desc: "End-to-end automation of complex workflows using advanced PLC and HMI systems to minimize manual error and increase consistency.",
+            image: cap2 
+        },
+        { 
+            title: "Mechanical + Electrical integration", 
+            category: "INTEGRATION", 
+            subtitle: "Complex Assembly Lines", 
+            desc: "Seamless fusion of mechanical robusticity with sophisticated electrical controls for unified system performance and easier maintenance.",
+            image: cap3 
+        },
+        { 
+            title: "Control systems", 
+            category: "ELECTRONICS", 
+            subtitle: "Centralized Monitoring Hub", 
+            desc: "Developing intelligent control architectures that provide real-time logic processing and critical safety interlocks for large-scale operations.",
+            image: cap4 
+        },
+        { 
+            title: "System optimization", 
+            category: "EFFICIENCY", 
+            subtitle: "Legacy Plant Modernization", 
+            desc: "Analyzing and re-engineering existing systems to identify bottlenecks and implement software/hardware upgrades for peak operational efficiency.",
+            image: cap5 
+        },
+        { 
+            title: "Greenfield and brownfield implementation", 
+            category: "PROJECTS", 
+            subtitle: "Global Industrial Expansion", 
+            desc: "Full lifecycle support for new facility builds or retrofitting established sites with modern automation without interrupting current production.",
+            image: cap6 
+        }
+    ];
+
+    const nextCap = () => {
+        if (capIndex < capabilities.length - 3) {
+            setCapIndex(capIndex + 1);
+        }
+    };
+
+    const prevCap = () => {
+        if (capIndex > 0) {
+            setCapIndex(capIndex - 1);
+        }
+    };
 
     return (
         <div className="solutions-page-v2">
@@ -113,7 +171,7 @@ const Solutions = () => {
                     <div className="reality-technical-grid">
                         {[
                             { title: "Inefficient manual processes", image: reality1, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> },
-                            { title: "Inconsistent output quality", image: reality2, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5c0 1.66 4 3 9 3s9-1.34 9-3"/><path d="M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg> },
+                            { title: "Inconsistent output quality", image: reality2, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5c0 1.66 4 3 9 3s9-1.34-9-3"/><path d="M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg> },
                             { title: "Aging machinery", image: reality3, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> },
                             { title: "Fragmented systems", image: reality4, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> },
                             { title: "Limited operational visibility", image: reality5, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> },
@@ -222,71 +280,6 @@ const Solutions = () => {
                 </div>
             </section>
 
-    const [capIndex, setCapIndex] = useState(0);
-
-    const capabilities = [
-        { 
-            title: "Custom machine development", 
-            category: "MANUFACTURING", 
-            subtitle: "Precision Engineering Facility", 
-            desc: "Design and fabrication of specialized machinery tailored to unique production requirements, ensuring maximum throughput and durability.",
-            image: cap1 
-        },
-        { 
-            title: "Process automation systems", 
-            category: "AUTOMATION", 
-            subtitle: "Industrial Processing Plant", 
-            desc: "End-to-end automation of complex workflows using advanced PLC and HMI systems to minimize manual error and increase consistency.",
-            image: cap2 
-        },
-        { 
-            title: "Mechanical + Electrical integration", 
-            category: "INTEGRATION", 
-            subtitle: "Complex Assembly Lines", 
-            desc: "Seamless fusion of mechanical robusticity with sophisticated electrical controls for unified system performance and easier maintenance.",
-            image: cap3 
-        },
-        { 
-            title: "Control systems", 
-            category: "ELECTRONICS", 
-            subtitle: "Centralized Monitoring Hub", 
-            desc: "Developing intelligent control architectures that provide real-time logic processing and critical safety interlocks for large-scale operations.",
-            image: cap4 
-        },
-        { 
-            title: "System optimization", 
-            category: "EFFICIENCY", 
-            subtitle: "Legacy Plant Modernization", 
-            desc: "Analyzing and re-engineering existing systems to identify bottlenecks and implement software/hardware upgrades for peak operational efficiency.",
-            image: cap5 
-        },
-        { 
-            title: "Greenfield and brownfield implementation", 
-            category: "PROJECTS", 
-            subtitle: "Global Industrial Expansion", 
-            desc: "Full lifecycle support for new facility builds or retrofitting established sites with modern automation without interrupting current production.",
-            image: cap6 
-        }
-    ];
-
-    const nextCap = () => {
-        if (capIndex < capabilities.length - 3) {
-            setCapIndex(capIndex + 1);
-        }
-    };
-
-    const prevCap = () => {
-        if (capIndex > 0) {
-            setCapIndex(capIndex - 1);
-        }
-    };
-
-    return (
-        <div className="solutions-page">
-            {/* ... previous sections ... */}
-            
-            {/* 4. CAPABILITY DETAILS (Slider) */}
-            <section className="solutions-capabilities section-padding light-theme">
                 <div className="container">
                     <div className="section-header centered">
                         <motion.h2 
