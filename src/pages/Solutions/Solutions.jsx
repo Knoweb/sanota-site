@@ -4,10 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Solutions.css';
 
 // Assets (Using placeholders if exact ones missing, but common ones are likely available)
+import solutionsHeroBg from '../../assets/solutions-hero-bg.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseDryer from '../../assets/case-dryer.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
+
 
 const Solutions = () => {
     // Rotating supporting line
@@ -29,7 +31,10 @@ const Solutions = () => {
     return (
         <div className="solutions-page-v2">
             {/* 1. HERO SECTION */}
-            <section className="solutions-hero dark-theme">
+            <section className="solutions-hero">
+                <div className="hero-bg-image" style={{ backgroundImage: `url(${solutionsHeroBg})` }}></div>
+                <div className="hero-overlay"></div>
+                
                 <div className="container">
                     <motion.div 
                         className="hero-content"
