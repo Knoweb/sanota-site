@@ -7,12 +7,14 @@ import caseDryer from '../../assets/case-dryer.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
-import casePLC from '../../assets/case-plc.png';
-import caseSCADA from '../../assets/case-scada.png';
-import caseHMI from '../../assets/case-hmi.png';
 import approachVisual from '../../assets/tea-engineering-visual.png';
-
 import solutionsBanner from '../../assets/tea-solutions-banner-v2.png';
+import solAutomation from '../../assets/solution-automation.png';
+import solProducts from '../../assets/solution-products.png';
+import solSoftware from '../../assets/solution-software.png';
+import solRetrofit from '../../assets/solution-retrofit.png';
+import solLifecycle from '../../assets/solution-lifecycle.png';
+
 
 
 
@@ -340,29 +342,36 @@ const TeaInitiative = () => {
                     <div className="initiative-section-header">
                         <h2 className="initiative-section-title">Related Solution Areas</h2>
                     </div>
-                    <div className="initiative-solutions-link-grid-v2">
+                    <div className="initiative-solutions-visual-grid">
                         {[
-                            { title: "Engineering & Automation", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> },
-                            { title: "Products", link: "/products", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> },
-                            { title: "Software & Digital Solutions", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> },
-                            { title: "Retrofit Capability", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.77 3.77Z"/></svg> },
-                            { title: "Lifecycle Support", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg> }
+                            { title: "Industrial PLC Systems", link: "/solutions", image: solAutomation },
+                            { title: "Industrial Hardware", link: "/products", image: solProducts },
+                            { title: "SCADA Software Platforms", link: "/solutions", image: solSoftware },
+                            { title: "Retrofit Capability", link: "/solutions", image: solRetrofit },
+                            { title: "Lifecycle Support", link: "/solutions", image: solLifecycle }
                         ].map((item, index) => (
-                            <Link to={item.link} className="initiative-solution-card-v2" key={index}>
-                                <div className="solution-card-content">
-                                    <div className="solution-card-icon">{item.icon}</div>
-                                    <h3 className="solution-card-title">{item.title}</h3>
+                            <Link to={item.link} className="initiative-solution-visual-card" key={index}>
+                                <div className="solution-visual-img-box">
+                                    <img src={item.image} alt={item.title} className="solution-visual-img" />
+                                    <div className="solution-visual-tech-overlay">
+                                        <div className="tech-overlay-title">{item.title}</div>
+                                        <div className="tech-overlay-icons">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82"/></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 2v20M2 12h20"/></svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="solution-card-arrow">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                <div className="solution-visual-footer">
+                                    <span className="solution-footer-title">{item.title}</span>
+                                    <div className="solution-footer-btn">More...</div>
                                 </div>
                             </Link>
                         ))}
-                        <Link to="/contact" className="initiative-solution-cta-box">
-                            <h3 className="cta-box-title">Need a Custom Solution?</h3>
-                            <p className="cta-box-desc">Talk to our engineering team today.</p>
-                            <div className="cta-box-link">
-                                Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <Link to="/contact" className="initiative-solution-visual-cta">
+                            <div className="visual-cta-content">
+                                <h3 className="visual-cta-title">Need a Custom Solution?</h3>
+                                <p className="visual-cta-desc">Talk to our engineering team today.</p>
+                                <div className="visual-cta-btn">Contact Us</div>
                             </div>
                         </Link>
                     </div>
@@ -400,28 +409,26 @@ const TeaInitiative = () => {
                     <div className="initiative-projects-carousel-viewport">
                         <div className="initiative-projects-carousel-track">
                             {[
-                                { title: "Industrial PLC Systems", image: casePLC },
-                                { title: "SCADA Software Platforms", image: caseSCADA },
-                                { title: "Industrial HMI Panels", image: caseHMI },
-                                { title: "Automation Upgrades", image: caseRetrofit }
+                                { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
+                                { title: "Industrial Dryer Systems", image: caseDryer },
+                                { title: "Automation Upgrades", image: caseRetrofit },
+                                { title: "Monitoring Solutions", image: caseMonitoring }
                             ].concat([
-                                { title: "Industrial PLC Systems", image: casePLC },
-                                { title: "SCADA Software Platforms", image: caseSCADA },
-                                { title: "Industrial HMI Panels", image: caseHMI },
-                                { title: "Automation Upgrades", image: caseRetrofit }
+                                { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
+                                { title: "Industrial Dryer Systems", image: caseDryer },
+                                { title: "Automation Upgrades", image: caseRetrofit },
+                                { title: "Monitoring Solutions", image: caseMonitoring }
                             ]).map((item, index) => (
-                                <Link to="/case-studies" className="initiative-case-card-v2" key={index}>
-                                    <div className="case-card-image-wrapper">
-                                        <img src={item.image} alt={item.title} className="case-card-img" />
-                                        <div className="case-card-overlay"></div>
+                                <Link to="/case-studies" className="initiative-case-card" key={index}>
+                                    <div className="initiative-case-img-box">
+                                        <img src={item.image} alt={item.title} className="initiative-case-img" />
                                     </div>
-                                    <div className="case-card-footer">
-                                        <h3 className="case-card-title">{item.title}</h3>
-                                        <div className="case-card-btn">More...</div>
+                                    <div className="initiative-case-content">
+                                        <h3 className="initiative-case-title">{item.title}</h3>
+                                        <span className="initiative-case-link">View Details →</span>
                                     </div>
                                 </Link>
                             ))}
-
                         </div>
                     </div>
                 </div>
