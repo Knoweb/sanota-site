@@ -194,6 +194,34 @@ const TeaInitiative = () => {
                     </div>
                 </div>
             </section>
+            {/* 6. POTENTIAL INDUSTRY BENEFITS */}
+            <section className="initiative-benefits-section">
+                <div className="container">
+                    <div className="initiative-section-header centered">
+                        <h2 className="initiative-section-title">Expected Industry Benefits</h2>
+                        <p className="initiative-section-subtitle">Practical improvements aimed at enhancing long-term operational viability.</p>
+                    </div>
+
+                    <div className="initiative-benefits-grid">
+                        {[
+                            "Improved productivity",
+                            "Improved product consistency",
+                            "Reduced waste",
+                            "Better resource utilization",
+                            "Improved monitoring capability",
+                            "Scalability for growth",
+                            "Improved global competitiveness"
+                        ].map((benefit, index) => (
+                            <div className="initiative-benefit-card" key={index}>
+                                <div className="initiative-benefit-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17L4 12"/></svg>
+                                </div>
+                                <span className="initiative-benefit-text">{benefit}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
