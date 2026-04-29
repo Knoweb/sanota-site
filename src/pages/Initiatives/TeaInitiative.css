@@ -411,8 +411,15 @@
 
 .initiative-solution-card-mini:hover {
     transform: translateY(-10px);
-    background: #f8f9ff;
+    background: #2233AD;
 }
+
+.initiative-solution-card-mini:hover .mini-card-icon,
+.initiative-solution-card-mini:hover .mini-card-title,
+.initiative-solution-card-mini:hover .mini-card-desc {
+    color: #ffffff;
+}
+
 
 .mini-card-icon {
     width: 35px;
@@ -856,6 +863,12 @@
         padding: 100px 0;
     }
 }
+
+.initiative-btn-primary,
+.initiative-btn-secondary {
+    border-radius: 0 !important;
+}
+
 
 /* --- Operational Challenges Section --- */
 .initiative-challenges-section {
