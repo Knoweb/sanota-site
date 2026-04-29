@@ -176,16 +176,114 @@
     border-radius: 50%;
 }
 
-/* 2. THE OPERATIONAL REALITY */
+/* 2. THE OPERATIONAL REALITY (Redesigned) */
 .solutions-reality.dark-v2 {
     background-color: #080b1a;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
 }
 
-.solutions-reality.dark-v2 .container {
+.reality-section-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, 
+        #080b1a 0%, 
+        rgba(8, 11, 26, 0.85) 50%, 
+        #080b1a 100%
+    );
+    z-index: 2;
+}
+
+.reality-technical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
     position: relative;
     z-index: 5;
+}
+
+.technical-unit {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.technical-unit:hover {
+    background: rgba(34, 51, 173, 0.2);
+    border-color: #2233AD;
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.unit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.unit-index {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 3px;
+    font-family: monospace;
+}
+
+.unit-icon {
+    width: 32px;
+    height: 32px;
+    color: #2233AD;
+    transition: all 0.4s ease;
+}
+
+.technical-unit:hover .unit-icon {
+    transform: rotate(15deg) scale(1.2);
+    color: #fff;
+}
+
+.unit-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.technical-unit:hover .unit-title {
+    transform: translateX(5px);
+}
+
+.unit-data-bar {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.data-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    background: #2233AD;
+    transition: width 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.technical-unit:hover .data-bar-fill {
+    width: 100%;
+    background: #fff;
 }
 
 /* Background Tech Animations */
@@ -194,81 +292,6 @@
     inset: 0;
     pointer-events: none;
     z-index: 1;
-}
-
-.reality-grid-pattern {
-    position: absolute;
-    inset: 0;
-    background-image: 
-        linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
-    background-size: 80px 80px;
-}
-
-.reality-energy-orb {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(34, 51, 173, 0.12) 0%, transparent 70%);
-    filter: blur(100px);
-    border-radius: 50%;
-}
-
-.orb-1 {
-    top: -10%;
-    right: -10%;
-    animation: moveOrb1 15s ease-in-out infinite alternate;
-}
-
-.orb-2 {
-    bottom: -15%;
-    left: -10%;
-    animation: moveOrb2 20s ease-in-out infinite alternate;
-}
-
-@keyframes moveOrb1 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-150px, 100px) scale(1.1); }
-}
-
-@keyframes moveOrb2 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(150px, -100px) scale(1.2); }
-}
-
-.reality-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.reality-card {
-    padding: 35px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    transition: all 0.4s ease;
-}
-
-.reality-card:hover {
-    background: rgba(34, 51, 173, 0.1);
-    border-color: rgba(34, 51, 173, 0.3);
-    transform: translateY(-5px);
-}
-
-.reality-icon-box {
-    width: 35px;
-    height: 35px;
-    color: #2233AD;
-    flex-shrink: 0;
-}
-
-.reality-text {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.4;
-    margin: 0;
 }
 
 /* 3. SANOTA APPROACH (Redesigned) */

@@ -5,10 +5,12 @@ import './Solutions.css';
 
 // Assets (Using placeholders if exact ones missing, but common ones are likely available)
 import solutionsHeroBg from '../../assets/solutions-hero-bg.png';
+import realityTechBg from '../../assets/reality-tech-bg.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseDryer from '../../assets/case-dryer.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
+
 
 
 const Solutions = () => {
@@ -71,7 +73,8 @@ const Solutions = () => {
             </section>
 
             {/* 2. THE OPERATIONAL REALITY */}
-            <section className="solutions-reality section-padding dark-v2">
+            <section className="solutions-reality section-padding dark-v2" style={{ backgroundImage: `url(${realityTechBg})` }}>
+                <div className="reality-section-overlay"></div>
                 <div className="container">
                     <div className="section-header centered">
                         <motion.h2 
@@ -92,18 +95,19 @@ const Solutions = () => {
                             Common Operational Challenges Organizations Face
                         </motion.p>
                     </div>
-                    <div className="reality-grid">
+
+                    <div className="reality-technical-grid">
                         {[
-                            "Inefficient manual processes",
-                            "Inconsistent output quality",
-                            "Aging machinery",
-                            "Fragmented systems",
-                            "Limited operational visibility",
-                            "High dependency on manual intervention",
-                            "Need for modernization without disruption"
-                        ].map((challenge, index) => (
+                            { title: "Inefficient manual processes", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> },
+                            { title: "Inconsistent output quality", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5c0 1.66 4 3 9 3s9-1.34 9-3"/><path d="M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg> },
+                            { title: "Aging machinery", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> },
+                            { title: "Fragmented systems", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> },
+                            { title: "Limited operational visibility", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> },
+                            { title: "High dependency on manual intervention", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg> },
+                            { title: "Need for modernization without disruption", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> }
+                        ].map((item, index) => (
                             <motion.div 
-                                className="reality-card glass" 
+                                className="technical-unit glass" 
                                 key={index}
                                 initial={{ opacity: 0, y: -40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -115,10 +119,14 @@ const Solutions = () => {
                                     stiffness: 100 
                                 }}
                             >
-                                <div className="reality-icon-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                <div className="unit-header">
+                                    <span className="unit-index">0{index + 1}</span>
+                                    <div className="unit-icon">{item.icon}</div>
                                 </div>
-                                <p className="reality-text">{challenge}</p>
+                                <h3 className="unit-title">{item.title}</h3>
+                                <div className="unit-data-bar">
+                                    <div className="data-bar-fill"></div>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
