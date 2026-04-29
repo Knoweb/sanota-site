@@ -510,16 +510,30 @@
 .initiative-case-studies {
     padding: 120px 0;
     background-color: #fff;
+    overflow: hidden;
 }
 
-.initiative-case-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+.initiative-projects-carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px;
+    position: relative;
+}
+
+.initiative-projects-carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scrollProjects 45s linear infinite;
+}
+
+.initiative-projects-carousel-track:hover {
+    animation-play-state: paused;
 }
 
 .initiative-case-card {
+    width: 400px;
+    flex-shrink: 0;
+    margin-right: 30px;
     text-decoration: none;
     background: #fff;
     border: 1px solid #eee;
@@ -530,6 +544,11 @@
     transform: translateY(-10px);
     border-color: #2233AD;
     box-shadow: 0 15px 40px rgba(34, 51, 173, 0.08);
+}
+
+@keyframes scrollProjects {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-400px * 4 - 30px * 4)); }
 }
 
 .initiative-case-img-box {

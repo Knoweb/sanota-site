@@ -302,23 +302,30 @@ const TeaInitiative = () => {
                         <h2 className="initiative-section-title">Project References</h2>
                         <p className="initiative-section-subtitle">Real-world engineering implementations relevant to this initiative.</p>
                     </div>
-                    <div className="initiative-case-grid">
-                        {[
-                            { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
-                            { title: "Industrial Dryer Systems", image: caseDryer },
-                            { title: "Automation Upgrades", image: caseRetrofit },
-                            { title: "Monitoring Solutions", image: caseMonitoring }
-                        ].map((item, index) => (
-                            <Link to="/case-studies" className="initiative-case-card" key={index}>
-                                <div className="initiative-case-img-box">
-                                    <img src={item.image} alt={item.title} className="initiative-case-img" />
-                                </div>
-                                <div className="initiative-case-content">
-                                    <h3 className="initiative-case-title">{item.title}</h3>
-                                    <span className="initiative-case-link">View Details →</span>
-                                </div>
-                            </Link>
-                        ))}
+                    <div className="initiative-projects-carousel-viewport">
+                        <div className="initiative-projects-carousel-track">
+                            {[
+                                { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
+                                { title: "Industrial Dryer Systems", image: caseDryer },
+                                { title: "Automation Upgrades", image: caseRetrofit },
+                                { title: "Monitoring Solutions", image: caseMonitoring }
+                            ].concat([
+                                { title: "Smart Greenhouse Monitoring", image: caseGreenhouse },
+                                { title: "Industrial Dryer Systems", image: caseDryer },
+                                { title: "Automation Upgrades", image: caseRetrofit },
+                                { title: "Monitoring Solutions", image: caseMonitoring }
+                            ]).map((item, index) => (
+                                <Link to="/case-studies" className="initiative-case-card" key={index}>
+                                    <div className="initiative-case-img-box">
+                                        <img src={item.image} alt={item.title} className="initiative-case-img" />
+                                    </div>
+                                    <div className="initiative-case-content">
+                                        <h3 className="initiative-case-title">{item.title}</h3>
+                                        <span className="initiative-case-link">View Details →</span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
