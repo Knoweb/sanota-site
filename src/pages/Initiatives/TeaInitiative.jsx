@@ -46,6 +46,35 @@ const TeaInitiative = () => {
                     </motion.div>
                 </div>
             </section>
+            {/* 2. INDUSTRY CONTEXT */}
+            <section className="initiative-context-section">
+                <div className="container">
+                    <div className="initiative-context-grid">
+                        <div className="initiative-context-text">
+                            <h2 className="initiative-section-title">Industry Context</h2>
+                            <p className="initiative-context-lead">
+                                Many industries face structural challenges that create a critical need for practical engineering improvements.
+                            </p>
+                        </div>
+                        <div className="initiative-challenges-list">
+                            {[
+                                "Inefficient processes",
+                                "Energy consumption pressures",
+                                "Quality variability",
+                                "Aging infrastructure",
+                                "Limited monitoring capability",
+                                "Increasing global competition",
+                                "Evolving regulatory expectations"
+                            ].map((challenge, index) => (
+                                <div className="initiative-challenge-item" key={index}>
+                                    <span className="initiative-challenge-dot"></span>
+                                    {challenge}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
