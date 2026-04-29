@@ -8,6 +8,8 @@ import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
 import approachVisual from '../../assets/tea-engineering-visual.png';
+import solutionsBanner from '../../assets/tea-solutions-banner.png';
+
 
 
 const TeaInitiative = () => {
@@ -229,58 +231,65 @@ const TeaInitiative = () => {
                 </div>
             </section>
             {/* 5. SOLUTION DIRECTIONS UNDER DEVELOPMENT */}
-            <section className="initiative-solutions-direction">
+            <section className="initiative-solutions-direction-v2">
+                <div className="initiative-solutions-banner" style={{ backgroundImage: `url(${solutionsBanner})` }}>
+                    <div className="banner-overlay"></div>
+                    <div className="container">
+                        <div className="initiative-section-header light centered">
+                            <h2 className="initiative-section-title">Solution Directions</h2>
+                            <p className="initiative-section-subtitle">Actively developing engineering concepts for the tea industry's future requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="initiative-solutions-overlap">
+                    <div className="container">
+                        <div className="initiative-solutions-grid small-cards">
+                            {[
+                                { 
+                                    title: "Energy-Efficient Drying", 
+                                    desc: "Reducing firewood and electricity footprint.",
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                },
+                                { 
+                                    title: "Automation Modules", 
+                                    desc: "Modular units for incremental automation.",
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><circle cx="12" cy="12" r="3"/></svg>
+                                },
+                                { 
+                                    title: "Monitoring & Control", 
+                                    desc: "Real-time visibility of process variables.",
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                                },
+                                { 
+                                    title: "Workflow Optimization", 
+                                    desc: "Streamlining leaf flow and reducing losses.",
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                },
+                                { 
+                                    title: "Quality Improvement", 
+                                    desc: "Feedback loops for uniform product grade.",
+                                    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                }
+                            ].map((solution, index) => (
+                                <motion.div 
+                                    className="initiative-solution-card-mini" 
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: false, amount: 0.1 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
+                                    <div className="mini-card-icon">{solution.icon}</div>
+                                    <h3 className="mini-card-title">{solution.title}</h3>
+                                    <p className="mini-card-desc">{solution.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
                 <div className="container">
-                    <div className="initiative-section-header">
-                        <h2 className="initiative-section-title">Solution Directions</h2>
-                        <p className="initiative-section-subtitle">Actively developing engineering concepts for the tea industry's future requirements.</p>
-                    </div>
-
-                    <div className="initiative-solutions-grid">
-                        {[
-                            { 
-                                title: "Energy-Efficient Drying Systems", 
-                                desc: "Developing thermal systems focused on reducing firewood and electricity footprint.",
-                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6M2 12h3M19 12h3"/></svg>
-                            },
-                            { 
-                                title: "Process Automation Modules", 
-                                desc: "Modular control units designed for incremental factory-wide automation.",
-                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="3"/></svg>
-                            },
-                            { 
-                                title: "Monitoring and Control Systems", 
-                                desc: "Advanced sensor integration for real-time visibility of process variables.",
-                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9M14 15l3 3M17 15l-3 3"/></svg>
-                            },
-                            { 
-                                title: "Workflow Optimization Approaches", 
-                                desc: "Engineering studies to streamline leaf flow and reduce handling losses.",
-                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                            },
-                            { 
-                                title: "Quality Consistency Improvement", 
-                                desc: "Automated feedback loops to ensure uniform product grade and flavor profile.",
-                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-                            }
-                        ].map((solution, index) => (
-                            <motion.div 
-                                className="initiative-solution-card modern" 
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false, amount: 0.1 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                                <div className="initiative-solution-icon-box">{solution.icon}</div>
-                                <div className="initiative-solution-status-tag">Development Direction</div>
-                                <h3 className="initiative-solution-title">{solution.title}</h3>
-                                <p className="initiative-solution-desc">{solution.desc}</p>
-                                <div className="initiative-solution-footer-accent"></div>
-                            </motion.div>
-                        ))}
-                    </div>
-
                     <div className="initiative-disclaimer">
                         <p>* We describe development directions and engineering objectives, not fixed product claims.</p>
                     </div>

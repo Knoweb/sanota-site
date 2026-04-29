@@ -352,91 +352,108 @@
     margin-bottom: 60px;
 }
 
-.initiative-solution-card.modern {
+/* --- Solution Directions V2 --- */
+.initiative-solutions-direction-v2 {
+    background-color: #080b1a;
+    padding-bottom: 120px;
+    overflow: hidden;
+}
+
+.initiative-solutions-banner {
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(8, 11, 26, 0.4), rgba(8, 11, 26, 1));
+}
+
+.initiative-solutions-overlap {
+    margin-top: -180px;
+    position: relative;
+    z-index: 5;
+}
+
+.initiative-solutions-grid.small-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-content: center;
+}
+
+.initiative-solution-card-mini {
     background: #fff;
-    border: 1px solid #eee;
-    padding: 55px 45px;
+    padding: 45px 25px;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     height: 100%;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
 
-.initiative-solution-card.modern:hover {
-    transform: translateY(-12px);
-    border-color: #2233AD;
-    box-shadow: 0 30px 60px rgba(34, 51, 173, 0.08);
+.initiative-solution-card-mini:hover {
+    transform: translateY(-10px);
+    background: #f8f9ff;
 }
 
-.initiative-solution-icon-box {
-    width: 42px;
-    height: 42px;
+.mini-card-icon {
+    width: 35px;
+    height: 35px;
     color: #2233AD;
-    margin-bottom: 35px;
-}
-
-.initiative-solution-status-tag {
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #2233AD;
-    letter-spacing: 2px;
     margin-bottom: 25px;
-    display: inline-block;
-    opacity: 0.7;
 }
 
-.initiative-solution-title {
-    font-size: 1.45rem;
+.mini-card-title {
+    font-size: 1.05rem;
     font-weight: 700;
     color: #080b1a;
+    margin-bottom: 15px;
     line-height: 1.3;
-    margin-bottom: 22px;
 }
 
-.initiative-solution-desc {
-    font-size: 1rem;
+.mini-card-desc {
+    font-size: 0.85rem;
     color: #666;
-    line-height: 1.7;
+    line-height: 1.5;
     margin: 0;
-    flex-grow: 1;
-}
-
-.initiative-solution-footer-accent {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: #2233AD;
-    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.initiative-solution-card.modern:hover .initiative-solution-footer-accent {
-    width: 100%;
 }
 
 .initiative-disclaimer {
+    margin-top: 60px;
     text-align: center;
-    border-top: 1px solid #eee;
-    padding-top: 50px;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .initiative-disclaimer p {
-    font-size: 0.9rem;
-    color: #999;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
     font-style: italic;
-    line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+    .initiative-solutions-grid.small-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
-    .initiative-solution-card {
-        padding: 40px 30px;
+    .initiative-solutions-grid.small-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .initiative-solutions-banner {
+        height: 450px;
+    }
+    .initiative-solutions-overlap {
+        margin-top: -120px;
     }
 }
 
