@@ -278,6 +278,8 @@ const Solutions = () => {
                         </motion.div>
                     </div>
                 </div>
+            </section>
+
             {/* 4. CAPABILITY DETAILS (Slider) */}
             <section className="solutions-capabilities section-padding light-theme">
                 <div className="container">
