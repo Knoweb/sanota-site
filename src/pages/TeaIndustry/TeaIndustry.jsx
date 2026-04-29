@@ -490,12 +490,6 @@ const TeaIndustry = () => {
                             <Link to="/contact" className="btn btn-primary tea-btn-primary">
                                 Discuss Industry Requirement
                             </Link>
-                            <Link to="/contact" className="btn btn-secondary-outline tea-btn-secondary">
-                                Request Technical Discussion
-                            </Link>
-                            <Link to="/solutions" className="btn btn-secondary-outline tea-btn-secondary">
-                                Explore Solutions
-                            </Link>
                         </div>
                     </div>
                 </div>
