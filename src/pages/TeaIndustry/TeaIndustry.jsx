@@ -452,6 +452,7 @@ const TeaIndustry = () => {
 
             {/* 9. WHY SANOTA FOR THIS INDUSTRY */}
             <section className="tea-why-section">
+                <div className="tea-why-tech-beam"></div>
                 <div className="container">
                     <div className="tea-why-wrapper">
                         <div className="tea-why-content">
