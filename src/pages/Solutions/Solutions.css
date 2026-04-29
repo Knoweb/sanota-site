@@ -271,85 +271,121 @@
     margin: 0;
 }
 
-/* 3. SANOTA APPROACH */
+/* 3. SANOTA APPROACH (Redesigned) */
 .solutions-approach.light-theme {
     background-color: #fff;
+    padding: 140px 0;
 }
 
-.approach-flow {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 60px;
-    position: relative;
-    padding-bottom: 60px;
-}
-
-.flow-item {
-    flex: 1;
-    display: flex;
+.approach-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 100px;
     align-items: center;
+}
+
+.approach-lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 30px 0 60px;
+    max-width: 580px;
+}
+
+.approach-visual-box {
     position: relative;
+    padding-left: 35px;
+    padding-top: 35px;
+    max-width: 550px;
 }
 
-.flow-node {
-    text-align: center;
-    flex: 1;
-    z-index: 2;
-}
-
-.flow-number-box {
-    width: 70px;
-    height: 70px;
-    background: #080b1a;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 1.5rem;
-    font-weight: 800;
-    position: relative;
-}
-
-.flow-step {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #080b1a;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.flow-desc {
-    font-size: 0.9rem;
-    color: #666;
-    max-width: 180px;
-    margin: 0 auto;
-}
-
-.flow-connector {
-    height: 2px;
-    background: #eee;
-    flex: 1;
-    margin: 0 -35px;
-    margin-top: -100px;
-    position: relative;
+.blue-accent-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    background: #2233AD;
     z-index: 1;
 }
 
-.approach-summary-box {
-    margin-top: 80px;
-    background: #f8f9fa;
-    padding: 30px;
-    text-align: center;
-    border-left: 5px solid #2233AD;
+.approach-main-img {
+    position: relative;
+    z-index: 2;
+    box-shadow: 25px 25px 70px rgba(0, 0, 0, 0.15);
 }
 
-.approach-summary-box p {
-    font-size: 1.15rem;
-    color: #333;
-    margin: 0;
+.approach-main-img img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
+.approach-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.approach-item {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.approach-item:last-child {
+    border-bottom: none;
+}
+
+.item-num {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #2233AD;
+    margin-top: 5px;
+}
+
+.item-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #080b1a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.item-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.approach-item:hover .item-title {
+    color: #2233AD;
+}
+
+@media (max-width: 1100px) {
+    .approach-grid {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+    .approach-left {
+        text-align: left;
+    }
+    .approach-lead {
+        max-width: 100%;
+    }
+    .approach-visual-box {
+        margin: 0 auto;
+    }
+}
+
 
 /* 4. CAPABILITY DETAILS */
 .solutions-capabilities.dark-theme {

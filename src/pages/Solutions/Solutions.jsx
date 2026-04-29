@@ -135,32 +135,62 @@ const Solutions = () => {
             {/* 3. SANOTA APPROACH */}
             <section className="solutions-approach section-padding light-theme">
                 <div className="container">
-                    <div className="section-header centered">
-                        <h2 className="section-title">Engineering Approach</h2>
-                        <p className="section-subtitle">A Lifecycle Responsibility, Not Just an Installation</p>
-                    </div>
-                    <div className="approach-flow">
-                        {[
-                            { step: "Assess", desc: "Understanding operational requirements" },
-                            { step: "Design", desc: "Custom engineering solutions" },
-                            { step: "Build", desc: "Precision fabrication & development" },
-                            { step: "Integrate", desc: "Seamless system deployment" },
-                            { step: "Support", desc: "Lifecycle maintenance & optimization" }
-                        ].map((item, index) => (
-                            <div className="flow-item" key={index}>
-                                <div className="flow-node">
-                                    <div className="flow-number-box">
-                                        <span className="flow-number">{index + 1}</span>
-                                    </div>
-                                    <h3 className="flow-step">{item.step}</h3>
-                                    <p className="flow-desc">{item.desc}</p>
+                    <div className="approach-grid">
+                        <motion.div 
+                            className="approach-left"
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="section-title">Engineering Approach</h2>
+                            <p className="approach-lead">
+                                Sanota develops integrated engineering solutions combining mechanical systems, 
+                                automation technologies, and digital monitoring capabilities aligned with real 
+                                operational environments.
+                            </p>
+                            
+                            <div className="approach-visual-box">
+                                <div className="blue-accent-box"></div>
+                                <div className="approach-main-img">
+                                    <img src={caseDryer} alt="Engineering Approach" />
                                 </div>
-                                {index < 4 && <div className="flow-connector"></div>}
                             </div>
-                        ))}
-                    </div>
-                    <div className="approach-summary-box">
-                        <p>Sanota approaches each engagement as a <strong>lifecycle responsibility</strong> rather than a one-time installation.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="approach-right"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="approach-list">
+                                {[
+                                    { num: "01", title: "ENGINEERING SYSTEM DESIGN", desc: "Developing robust mechanical frameworks tailored for tea processing." },
+                                    { num: "02", title: "PROCESS OPTIMIZATION", desc: "Refining operational flows for maximum output and quality consistency." },
+                                    { num: "03", title: "AUTOMATION INTEGRATION", desc: "Seamlessly embedding PLC and SCADA systems into existing lines." },
+                                    { num: "04", title: "MONITORING CAPABILITY DEVELOPMENT", desc: "Real-time data acquisition and factory-wide visibility solutions." },
+                                    { num: "05", title: "RETROFIT MODERNIZATION CONCEPTS", desc: "Modernizing legacy machinery with current automation standards." },
+                                    { num: "06", title: "LIFECYCLE RELIABILITY FOCUS", desc: "Ensuring long-term operational stability and maintenance efficiency." }
+                                ].map((item, index) => (
+                                    <motion.div 
+                                        className="approach-item" 
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: false }}
+                                        transition={{ delay: 0.3 + (index * 0.1) }}
+                                    >
+                                        <div className="item-num">{item.num}</div>
+                                        <div className="item-content">
+                                            <h3 className="item-title">{item.title}</h3>
+                                            <p className="item-desc">{item.desc}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
