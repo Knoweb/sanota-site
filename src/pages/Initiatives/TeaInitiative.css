@@ -1177,15 +1177,15 @@
     to { transform: rotate(360deg); }
 }
 
-/* --- Knowledge Connection Section (Modernized) --- */
-.initiative-knowledge-connection.dark-v2 {
+/* --- Knowledge Connection Section (Light Mode) --- */
+.initiative-knowledge-connection {
     padding: 140px 0;
-    background-color: #080b1a;
+    background-color: #fff;
     position: relative;
     overflow: hidden;
 }
 
-.initiative-knowledge-connection.dark-v2 .container {
+.initiative-knowledge-connection .container {
     position: relative;
     z-index: 2;
 }
@@ -1198,9 +1198,8 @@
 }
 
 .initiative-knowledge-card.glass {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #fcfcfc;
+    border: 1px solid #eee;
     padding: 45px 35px;
     height: 100%;
     display: flex;
@@ -1208,13 +1207,14 @@
     justify-content: space-between;
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
 }
 
 .initiative-knowledge-card.glass:hover {
     background: #2233AD;
-    border-color: #fff;
+    border-color: #2233AD;
     transform: translateY(-12px);
-    box-shadow: 0 25px 50px rgba(34, 51, 173, 0.4);
+    box-shadow: 0 25px 50px rgba(34, 51, 173, 0.2);
 }
 
 .knowledge-card-icon {
@@ -1238,10 +1238,14 @@
 .knowledge-card-title {
     font-size: 1.15rem;
     font-weight: 700;
-    color: #fff;
+    color: #080b1a;
     margin-bottom: 40px;
     line-height: 1.4;
     transition: all 0.3s ease;
+}
+
+.initiative-knowledge-card.glass:hover .knowledge-card-title {
+    color: #fff;
 }
 
 .knowledge-card-link {
@@ -1261,7 +1265,7 @@
     padding-left: 5px;
 }
 
-/* Knowledge Tech Background */
+/* Knowledge Tech Background (Light) */
 .knowledge-tech-bg {
     position: absolute;
     inset: 0;
@@ -1273,10 +1277,10 @@
     position: absolute;
     inset: 0;
     background-image: 
-        linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(34, 51, 173, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 51, 173, 0.03) 1px, transparent 1px);
     background-size: 80px 80px;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .knowledge-floating-glow {
@@ -1285,7 +1289,7 @@
     left: 50%;
     width: 900px;
     height: 900px;
-    background: radial-gradient(circle, rgba(34, 51, 173, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(34, 51, 173, 0.05) 0%, transparent 70%);
     filter: blur(100px);
     transform: translate(-50%, -50%);
     animation: pulseGlow 12s ease-in-out infinite;
@@ -1310,6 +1314,7 @@
         padding: 35px 25px;
     }
 }
+
 
 
 @media (max-width: 1100px) {

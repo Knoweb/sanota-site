@@ -484,14 +484,15 @@ const TeaInitiative = () => {
                 </div>
             </section>
             {/* 11. KNOWLEDGE CONNECTION */}
-            <section className="initiative-knowledge-connection dark-v2">
+            <section className="initiative-knowledge-connection">
                 <div className="container">
                     <div className="initiative-section-header centered">
-                        <h2 className="initiative-section-title light">Knowledge Connection</h2>
-                        <p className="initiative-section-subtitle light">
+                        <h2 className="initiative-section-title">Knowledge Connection</h2>
+                        <p className="initiative-section-subtitle">
                             Explore detailed technical insights and research relevant to tea industry modernization.
                         </p>
                     </div>
+
 
                     <div className="initiative-knowledge-cards-grid">
                         {[
