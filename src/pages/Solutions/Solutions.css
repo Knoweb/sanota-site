@@ -176,25 +176,16 @@
     border-radius: 50%;
 }
 
-/* 2. THE OPERATIONAL REALITY (Redesigned) */
-.solutions-reality.dark-v2 {
-    background-color: #080b1a;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* 2. THE OPERATIONAL REALITY (Light Theme Redesign) */
+.solutions-reality {
+    background-color: #fff;
     position: relative;
     overflow: hidden;
 }
 
-.reality-section-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, 
-        #080b1a 0%, 
-        rgba(8, 11, 26, 0.85) 50%, 
-        #080b1a 100%
-    );
-    z-index: 2;
+.solutions-reality .container {
+    position: relative;
+    z-index: 5;
 }
 
 .reality-technical-grid {
@@ -213,7 +204,9 @@
     min-height: 240px;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     overflow: hidden;
 }
 
@@ -223,7 +216,7 @@
     background-size: cover;
     background-position: center;
     z-index: 1;
-    opacity: 0.35;
+    opacity: 0.15;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -231,8 +224,8 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, 
-        rgba(8, 11, 26, 0.95) 10%, 
-        rgba(8, 11, 26, 0.5) 100%
+        #fff 15%, 
+        rgba(255, 255, 255, 0.4) 100%
     );
     z-index: 2;
 }
@@ -248,15 +241,14 @@
 
 .technical-unit:hover {
     border-color: #2233AD;
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(34, 51, 173, 0.12);
 }
 
 .technical-unit:hover .unit-image-bg {
     transform: scale(1.1);
-    opacity: 0.6;
+    opacity: 0.35;
 }
-
 
 .unit-header {
     display: flex;
@@ -268,9 +260,14 @@
 .unit-index {
     font-size: 0.8rem;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.2);
+    color: #ddd;
     letter-spacing: 3px;
     font-family: monospace;
+    transition: color 0.3s ease;
+}
+
+.technical-unit:hover .unit-index {
+    color: #2233AD;
 }
 
 .unit-icon {
@@ -282,26 +279,26 @@
 
 .technical-unit:hover .unit-icon {
     transform: rotate(15deg) scale(1.2);
-    color: #fff;
 }
 
 .unit-title {
     font-size: 1.15rem;
     font-weight: 700;
-    color: #fff;
+    color: #080b1a;
     line-height: 1.4;
     margin-bottom: 30px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .technical-unit:hover .unit-title {
+    color: #2233AD;
     transform: translateX(5px);
 }
 
 .unit-data-bar {
     width: 100%;
     height: 2px;
-    background: rgba(255, 255, 255, 0.08);
+    background: #f0f0f0;
     position: relative;
     overflow: hidden;
 }
@@ -318,16 +315,34 @@
 
 .technical-unit:hover .data-bar-fill {
     width: 100%;
-    background: #fff;
 }
 
-/* Background Tech Animations */
+/* Background Tech Animations for Light Theme */
 .reality-tech-bg {
     position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: 1;
 }
+
+.reality-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(#f8f9fa 1px, transparent 1px),
+        linear-gradient(90deg, #f8f9fa 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+.reality-energy-orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(34, 51, 173, 0.04) 0%, transparent 70%);
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
 
 /* 3. SANOTA APPROACH (Redesigned) */
 .solutions-approach.light-theme {

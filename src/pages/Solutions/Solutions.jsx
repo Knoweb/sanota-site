@@ -81,12 +81,11 @@ const Solutions = () => {
             </section>
 
             {/* 2. THE OPERATIONAL REALITY */}
-            <section className="solutions-reality section-padding dark-v2" style={{ backgroundImage: `url(${realityTechBg})` }}>
-                <div className="reality-section-overlay"></div>
+            <section className="solutions-reality section-padding">
                 <div className="container">
                     <div className="section-header centered">
                         <motion.h2 
-                            className="section-title light"
+                            className="section-title"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false }}
@@ -94,7 +93,7 @@ const Solutions = () => {
                             The Operational Reality
                         </motion.h2>
                         <motion.p 
-                            className="section-subtitle light"
+                            className="section-subtitle"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false }}
