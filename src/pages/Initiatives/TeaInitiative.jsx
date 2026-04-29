@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './TeaInitiative.css';
 import initiativeHero from '../../assets/tea-initiative-hero.png';
-import initiativeContext from '../../assets/tea-initiative-context.png';
-import initiativeSolutions from '../../assets/tea-initiative-solutions.png';
 import caseDryer from '../../assets/case-dryer.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
@@ -56,29 +54,12 @@ const TeaInitiative = () => {
             <section className="initiative-context-section">
                 <div className="container">
                     <div className="initiative-context-grid">
-                        <motion.div 
-                            className="initiative-context-text"
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
+                        <div className="initiative-context-text">
                             <h2 className="initiative-section-title">Industry Context</h2>
                             <p className="initiative-context-lead">
                                 Many industries face structural challenges that create a critical need for practical engineering improvements.
                             </p>
-                            
-                            <div className="initiative-context-visual-box">
-                                <motion.img 
-                                    src={initiativeContext} 
-                                    alt="Aging Infrastructure vs Modern Engineering" 
-                                    className="initiative-context-img"
-                                    animate={{ y: [0, -10, 0] }}
-                                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                />
-                                <div className="initiative-context-glow"></div>
-                            </div>
-                        </motion.div>
-                        
+                        </div>
                         <div className="initiative-challenges-list">
                             {[
                                 "Inefficient processes",
@@ -89,16 +70,10 @@ const TeaInitiative = () => {
                                 "Increasing global competition",
                                 "Evolving regulatory expectations"
                             ].map((challenge, index) => (
-                                <motion.div 
-                                    className="initiative-challenge-item" 
-                                    key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                >
+                                <div className="initiative-challenge-item" key={index}>
                                     <span className="initiative-challenge-dot"></span>
                                     {challenge}
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -197,53 +172,25 @@ const TeaInitiative = () => {
             {/* 5. SOLUTION DIRECTIONS UNDER DEVELOPMENT */}
             <section className="initiative-solutions-direction">
                 <div className="container">
-                    <div className="initiative-solutions-main-flex">
-                        <motion.div 
-                            className="initiative-solutions-text-side"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h2 className="initiative-section-title">Solution Directions</h2>
-                            <p className="initiative-section-subtitle">Actively developing engineering concepts for the tea industry's future requirements.</p>
-                            
-                            <div className="initiative-solutions-concept-visual">
-                                <motion.img 
-                                    src={initiativeSolutions} 
-                                    alt="Future Solutions Concept" 
-                                    className="initiative-solutions-img"
-                                    animate={{ 
-                                        scale: [1, 1.02, 1],
-                                        rotate: [0, 1, 0, -1, 0]
-                                    }}
-                                    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                                />
-                                <div className="initiative-blueprint-overlay"></div>
-                            </div>
-                        </motion.div>
+                    <div className="initiative-section-header">
+                        <h2 className="initiative-section-title">Solution Directions</h2>
+                        <p className="initiative-section-subtitle">Actively developing engineering concepts for the tea industry's future requirements.</p>
+                    </div>
 
-                        <div className="initiative-solutions-grid">
-                            {[
-                                { title: "Energy-Efficient Drying Systems", desc: "Developing thermal systems focused on reducing firewood and electricity footprint." },
-                                { title: "Process Automation Modules", desc: "Modular control units designed for incremental factory-wide automation." },
-                                { title: "Monitoring and Control Systems", desc: "Advanced sensor integration for real-time visibility of process variables." },
-                                { title: "Workflow Optimization Approaches", desc: "Engineering studies to streamline leaf flow and reduce handling losses." },
-                                { title: "Quality Consistency Improvement", desc: "Automated feedback loops to ensure uniform product grade and flavor profile." }
-                            ].map((solution, index) => (
-                                <motion.div 
-                                    className="initiative-solution-card modern" 
-                                    key={index}
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                >
-                                    <div className="initiative-solution-status">Development Direction</div>
-                                    <h3 className="initiative-solution-title">{solution.title}</h3>
-                                    <p className="initiative-solution-desc">{solution.desc}</p>
-                                    <div className="initiative-card-tech-detail"></div>
-                                </motion.div>
-                            ))}
-                        </div>
+                    <div className="initiative-solutions-grid">
+                        {[
+                            { title: "Energy-Efficient Drying Systems", desc: "Developing thermal systems focused on reducing firewood and electricity footprint." },
+                            { title: "Process Automation Modules", desc: "Modular control units designed for incremental factory-wide automation." },
+                            { title: "Monitoring and Control Systems", desc: "Advanced sensor integration for real-time visibility of process variables." },
+                            { title: "Workflow Optimization Approaches", desc: "Engineering studies to streamline leaf flow and reduce handling losses." },
+                            { title: "Quality Consistency Improvement", desc: "Automated feedback loops to ensure uniform product grade and flavor profile." }
+                        ].map((solution, index) => (
+                            <div className="initiative-solution-card" key={index}>
+                                <div className="initiative-solution-status">Development Direction</div>
+                                <h3 className="initiative-solution-title">{solution.title}</h3>
+                                <p className="initiative-solution-desc">{solution.desc}</p>
+                            </div>
+                        ))}
                     </div>
 
                     <div className="initiative-disclaimer">
