@@ -181,9 +181,22 @@ const TeaInitiative = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
-                                <div className="approach-image-tech-wrapper">
-                                    <div className="approach-corner-square"></div>
-                                    <img src={approachVisual} alt="Engineering Approach Visual" className="initiative-approach-img" />
+                                <div className="approach-image-container">
+                                    <motion.div 
+                                        className="approach-corner-square"
+                                        animate={{ 
+                                            y: [0, -10, 0],
+                                            x: [0, 5, 0]
+                                        }}
+                                        transition={{ 
+                                            duration: 5, 
+                                            repeat: Infinity, 
+                                            ease: "easeInOut" 
+                                        }}
+                                    ></motion.div>
+                                    <div className="approach-image-tech-wrapper">
+                                        <img src={approachVisual} alt="Engineering Approach Visual" className="initiative-approach-img" />
+                                    </div>
                                 </div>
                             </motion.div>
                         </div>
