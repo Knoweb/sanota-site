@@ -238,17 +238,46 @@ const TeaInitiative = () => {
 
                     <div className="initiative-solutions-grid">
                         {[
-                            { title: "Energy-Efficient Drying Systems", desc: "Developing thermal systems focused on reducing firewood and electricity footprint." },
-                            { title: "Process Automation Modules", desc: "Modular control units designed for incremental factory-wide automation." },
-                            { title: "Monitoring and Control Systems", desc: "Advanced sensor integration for real-time visibility of process variables." },
-                            { title: "Workflow Optimization Approaches", desc: "Engineering studies to streamline leaf flow and reduce handling losses." },
-                            { title: "Quality Consistency Improvement", desc: "Automated feedback loops to ensure uniform product grade and flavor profile." }
+                            { 
+                                title: "Energy-Efficient Drying Systems", 
+                                desc: "Developing thermal systems focused on reducing firewood and electricity footprint.",
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6M2 12h3M19 12h3"/></svg>
+                            },
+                            { 
+                                title: "Process Automation Modules", 
+                                desc: "Modular control units designed for incremental factory-wide automation.",
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="3"/></svg>
+                            },
+                            { 
+                                title: "Monitoring and Control Systems", 
+                                desc: "Advanced sensor integration for real-time visibility of process variables.",
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9M14 15l3 3M17 15l-3 3"/></svg>
+                            },
+                            { 
+                                title: "Workflow Optimization Approaches", 
+                                desc: "Engineering studies to streamline leaf flow and reduce handling losses.",
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            },
+                            { 
+                                title: "Quality Consistency Improvement", 
+                                desc: "Automated feedback loops to ensure uniform product grade and flavor profile.",
+                                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                            }
                         ].map((solution, index) => (
-                            <div className="initiative-solution-card" key={index}>
-                                <div className="initiative-solution-status">Development Direction</div>
+                            <motion.div 
+                                className="initiative-solution-card modern" 
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false, amount: 0.1 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <div className="initiative-solution-icon-box">{solution.icon}</div>
+                                <div className="initiative-solution-status-tag">Development Direction</div>
                                 <h3 className="initiative-solution-title">{solution.title}</h3>
                                 <p className="initiative-solution-desc">{solution.desc}</p>
-                            </div>
+                                <div className="initiative-solution-footer-accent"></div>
+                            </motion.div>
                         ))}
                     </div>
 
