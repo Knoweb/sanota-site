@@ -6,10 +6,18 @@ import './Solutions.css';
 // Assets (Using placeholders if exact ones missing, but common ones are likely available)
 import solutionsHeroBg from '../../assets/solutions-hero-bg.png';
 import realityTechBg from '../../assets/reality-tech-bg.png';
+import reality1 from '../../assets/reality-1.png';
+import reality2 from '../../assets/reality-2.png';
+import reality3 from '../../assets/reality-3.png';
+import reality4 from '../../assets/reality-4.png';
+import reality5 from '../../assets/reality-5.png';
+import reality6 from '../../assets/reality-6.png';
+import reality7 from '../../assets/reality-7.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseDryer from '../../assets/case-dryer.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
+
 
 
 
@@ -98,13 +106,13 @@ const Solutions = () => {
 
                     <div className="reality-technical-grid">
                         {[
-                            { title: "Inefficient manual processes", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> },
-                            { title: "Inconsistent output quality", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5c0 1.66 4 3 9 3s9-1.34 9-3"/><path d="M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg> },
-                            { title: "Aging machinery", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> },
-                            { title: "Fragmented systems", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> },
-                            { title: "Limited operational visibility", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> },
-                            { title: "High dependency on manual intervention", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg> },
-                            { title: "Need for modernization without disruption", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> }
+                            { title: "Inefficient manual processes", image: reality1, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> },
+                            { title: "Inconsistent output quality", image: reality2, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5c0 1.66 4 3 9 3s9-1.34 9-3"/><path d="M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg> },
+                            { title: "Aging machinery", image: reality3, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> },
+                            { title: "Fragmented systems", image: reality4, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> },
+                            { title: "Limited operational visibility", image: reality5, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> },
+                            { title: "High dependency on manual intervention", image: reality6, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg> },
+                            { title: "Need for modernization without disruption", image: reality7, icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> }
                         ].map((item, index) => (
                             <motion.div 
                                 className="technical-unit glass" 
@@ -119,13 +127,18 @@ const Solutions = () => {
                                     stiffness: 100 
                                 }}
                             >
-                                <div className="unit-header">
-                                    <span className="unit-index">0{index + 1}</span>
-                                    <div className="unit-icon">{item.icon}</div>
-                                </div>
-                                <h3 className="unit-title">{item.title}</h3>
-                                <div className="unit-data-bar">
-                                    <div className="data-bar-fill"></div>
+                                <div className="unit-image-bg" style={{ backgroundImage: `url(${item.image})` }}></div>
+                                <div className="unit-overlay-v3"></div>
+                                
+                                <div className="unit-content-v3">
+                                    <div className="unit-header">
+                                        <span className="unit-index">0{index + 1}</span>
+                                        <div className="unit-icon">{item.icon}</div>
+                                    </div>
+                                    <h3 className="unit-title">{item.title}</h3>
+                                    <div className="unit-data-bar">
+                                        <div className="data-bar-fill"></div>
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
