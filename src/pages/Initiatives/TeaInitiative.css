@@ -1177,79 +1177,140 @@
     to { transform: rotate(360deg); }
 }
 
-/* --- Knowledge Connection Section --- */
-.initiative-knowledge-connection {
-    padding: 120px 0 160px;
-    background-color: #fff;
+/* --- Knowledge Connection Section (Modernized) --- */
+.initiative-knowledge-connection.dark-v2 {
+    padding: 140px 0;
+    background-color: #080b1a;
+    position: relative;
+    overflow: hidden;
 }
 
-.initiative-knowledge-grid {
+.initiative-knowledge-connection.dark-v2 .container {
+    position: relative;
+    z-index: 2;
+}
+
+.initiative-knowledge-cards-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 100px;
-    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
 }
 
-.initiative-knowledge-lead {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-.initiative-knowledge-links {
+.initiative-knowledge-card.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 45px 35px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.initiative-insight-item {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px;
-    background: #fcfcfc;
-    border: 1px solid #eee;
     text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.initiative-insight-item:hover {
-    background: #fff;
-    border-color: #2233AD;
-    transform: translateX(15px);
-    box-shadow: 0 10px 30px rgba(34, 51, 173, 0.08);
+.initiative-knowledge-card.glass:hover {
+    background: #2233AD;
+    border-color: #fff;
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(34, 51, 173, 0.4);
 }
 
-.initiative-insight-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #080b1a;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.initiative-insight-arrow {
-    font-size: 1.5rem;
+.knowledge-card-icon {
+    width: 44px;
+    height: 44px;
     color: #2233AD;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
 }
 
-.mt-30 {
-    margin-top: 30px;
+.knowledge-card-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-@media (max-width: 1100px) {
-    .initiative-knowledge-grid {
+.initiative-knowledge-card.glass:hover .knowledge-card-icon {
+    color: #fff;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.knowledge-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+.knowledge-card-link {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #2233AD;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.initiative-knowledge-card.glass:hover .knowledge-card-link {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* Knowledge Tech Background */
+.knowledge-tech-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.knowledge-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.6;
+}
+
+.knowledge-floating-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(34, 51, 173, 0.1) 0%, transparent 70%);
+    filter: blur(100px);
+    transform: translate(-50%, -50%);
+    animation: pulseGlow 12s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+    50% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.7; }
+}
+
+@media (max-width: 1200px) {
+    .initiative-knowledge-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .initiative-knowledge-cards-grid {
         grid-template-columns: 1fr;
-        gap: 60px;
+    }
+    .initiative-knowledge-card.glass {
+        padding: 35px 25px;
     }
 }
 
-@media (max-width: 768px) {
-    .initiative-insight-item {
-        padding: 20px 25px;
-    }
-}
 
 @media (max-width: 1100px) {
     .initiative-collab-title {

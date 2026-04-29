@@ -484,32 +484,43 @@ const TeaInitiative = () => {
                 </div>
             </section>
             {/* 11. KNOWLEDGE CONNECTION */}
-            <section className="initiative-knowledge-connection">
+            <section className="initiative-knowledge-connection dark-v2">
                 <div className="container">
-                    <div className="initiative-knowledge-grid">
-                        <div className="initiative-knowledge-content">
-                            <h2 className="initiative-section-title">Knowledge Connection</h2>
-                            <p className="initiative-knowledge-lead">
-                                Explore detailed technical insights and research relevant to tea industry modernization.
-                            </p>
-                            <Link to="/insights" className="btn btn-secondary-outline initiative-btn-secondary mt-30">
-                                View Related Insights
-                            </Link>
-                        </div>
-                        <div className="initiative-knowledge-links">
-                            {[
-                                "Automation trends in agriculture",
-                                "Retrofit vs replacement",
-                                "Energy efficiency engineering",
-                                "Monitoring systems benefits"
-                            ].map((insight, index) => (
-                                <Link to="/insights" className="initiative-insight-item" key={index}>
-                                    <span className="initiative-insight-title">{insight}</span>
-                                    <span className="initiative-insight-arrow">→</span>
-                                </Link>
-                            ))}
-                        </div>
+                    <div className="initiative-section-header centered">
+                        <h2 className="initiative-section-title light">Knowledge Connection</h2>
+                        <p className="initiative-section-subtitle light">
+                            Explore detailed technical insights and research relevant to tea industry modernization.
+                        </p>
                     </div>
+
+                    <div className="initiative-knowledge-cards-grid">
+                        {[
+                            { title: "Automation trends in agriculture", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg> },
+                            { title: "Retrofit vs replacement", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> },
+                            { title: "Energy efficiency engineering", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> },
+                            { title: "Monitoring systems benefits", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> }
+                        ].map((insight, index) => (
+                            <motion.div 
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <Link to="/insights" className="initiative-knowledge-card glass">
+                                    <div className="knowledge-card-icon">{insight.icon}</div>
+                                    <h3 className="knowledge-card-title">{insight.title}</h3>
+                                    <span className="knowledge-card-link">Read Analysis →</span>
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Background Tech Animation */}
+                <div className="knowledge-tech-bg">
+                    <div className="knowledge-grid-pattern"></div>
+                    <div className="knowledge-floating-glow"></div>
                 </div>
             </section>
         </div>
