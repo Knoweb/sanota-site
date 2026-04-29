@@ -74,8 +74,23 @@ const Solutions = () => {
             <section className="solutions-reality section-padding dark-v2">
                 <div className="container">
                     <div className="section-header centered">
-                        <h2 className="section-title light">The Operational Reality</h2>
-                        <p className="section-subtitle light">Common Operational Challenges Organizations Face</p>
+                        <motion.h2 
+                            className="section-title light"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                        >
+                            The Operational Reality
+                        </motion.h2>
+                        <motion.p 
+                            className="section-subtitle light"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ delay: 0.1 }}
+                        >
+                            Common Operational Challenges Organizations Face
+                        </motion.p>
                     </div>
                     <div className="reality-grid">
                         {[
@@ -90,10 +105,15 @@ const Solutions = () => {
                             <motion.div 
                                 className="reality-card glass" 
                                 key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                initial={{ opacity: 0, y: -40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: false }}
-                                transition={{ delay: index * 0.1 }}
+                                transition={{ 
+                                    duration: 0.6, 
+                                    delay: index * 0.1,
+                                    type: "spring",
+                                    stiffness: 100 
+                                }}
                             >
                                 <div className="reality-icon-box">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -102,6 +122,13 @@ const Solutions = () => {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+
+                {/* Section Background Tech Animation */}
+                <div className="reality-tech-bg">
+                    <div className="reality-grid-pattern"></div>
+                    <div className="reality-energy-orb orb-1"></div>
+                    <div className="reality-energy-orb orb-2"></div>
                 </div>
             </section>
 

@@ -179,6 +179,61 @@
 /* 2. THE OPERATIONAL REALITY */
 .solutions-reality.dark-v2 {
     background-color: #080b1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.solutions-reality.dark-v2 .container {
+    position: relative;
+    z-index: 5;
+}
+
+/* Background Tech Animations */
+.reality-tech-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.reality-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(34, 51, 173, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 51, 173, 0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+.reality-energy-orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(34, 51, 173, 0.12) 0%, transparent 70%);
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+.orb-1 {
+    top: -10%;
+    right: -10%;
+    animation: moveOrb1 15s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+    bottom: -15%;
+    left: -10%;
+    animation: moveOrb2 20s ease-in-out infinite alternate;
+}
+
+@keyframes moveOrb1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-150px, 100px) scale(1.1); }
+}
+
+@keyframes moveOrb2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(150px, -100px) scale(1.2); }
 }
 
 .reality-grid {
