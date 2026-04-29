@@ -382,7 +382,7 @@ const TeaInitiative = () => {
             <section className="initiative-related-industries">
                 <div className="container">
                     <div className="initiative-section-header">
-                        <h2 className="initiative-section-title">Related Industries</h2>
+                        <h2 className="initiative-section-title light">Related Industries</h2>
                     </div>
                     <div className="initiative-industries-tag-cloud">
                         {[
@@ -393,7 +393,7 @@ const TeaInitiative = () => {
                             "Infrastructure"
                         ].map((industry, index) => (
                             <motion.div 
-                                className="initiative-industry-tag" 
+                                className="initiative-industry-tag dark" 
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -404,6 +404,12 @@ const TeaInitiative = () => {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+                
+                {/* Background Tech Animation */}
+                <div className="industries-tech-bg">
+                    <div className="industries-grid-pattern"></div>
+                    <div className="industries-floating-glow"></div>
                 </div>
             </section>
             {/* 9. RELATED CASE STUDIES */}
