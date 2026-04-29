@@ -222,7 +222,70 @@ const Solutions = () => {
                 </div>
             </section>
 
-            {/* 4. CAPABILITY DETAILS */}
+    const [capIndex, setCapIndex] = useState(0);
+
+    const capabilities = [
+        { 
+            title: "Custom machine development", 
+            category: "MANUFACTURING", 
+            subtitle: "Precision Engineering Facility", 
+            desc: "Design and fabrication of specialized machinery tailored to unique production requirements, ensuring maximum throughput and durability.",
+            image: cap1 
+        },
+        { 
+            title: "Process automation systems", 
+            category: "AUTOMATION", 
+            subtitle: "Industrial Processing Plant", 
+            desc: "End-to-end automation of complex workflows using advanced PLC and HMI systems to minimize manual error and increase consistency.",
+            image: cap2 
+        },
+        { 
+            title: "Mechanical + Electrical integration", 
+            category: "INTEGRATION", 
+            subtitle: "Complex Assembly Lines", 
+            desc: "Seamless fusion of mechanical robusticity with sophisticated electrical controls for unified system performance and easier maintenance.",
+            image: cap3 
+        },
+        { 
+            title: "Control systems", 
+            category: "ELECTRONICS", 
+            subtitle: "Centralized Monitoring Hub", 
+            desc: "Developing intelligent control architectures that provide real-time logic processing and critical safety interlocks for large-scale operations.",
+            image: cap4 
+        },
+        { 
+            title: "System optimization", 
+            category: "EFFICIENCY", 
+            subtitle: "Legacy Plant Modernization", 
+            desc: "Analyzing and re-engineering existing systems to identify bottlenecks and implement software/hardware upgrades for peak operational efficiency.",
+            image: cap5 
+        },
+        { 
+            title: "Greenfield and brownfield implementation", 
+            category: "PROJECTS", 
+            subtitle: "Global Industrial Expansion", 
+            desc: "Full lifecycle support for new facility builds or retrofitting established sites with modern automation without interrupting current production.",
+            image: cap6 
+        }
+    ];
+
+    const nextCap = () => {
+        if (capIndex < capabilities.length - 3) {
+            setCapIndex(capIndex + 1);
+        }
+    };
+
+    const prevCap = () => {
+        if (capIndex > 0) {
+            setCapIndex(capIndex - 1);
+        }
+    };
+
+    return (
+        <div className="solutions-page">
+            {/* ... previous sections ... */}
+            
+            {/* 4. CAPABILITY DETAILS (Slider) */}
             <section className="solutions-capabilities section-padding light-theme">
                 <div className="container">
                     <div className="section-header centered">
@@ -245,78 +308,55 @@ const Solutions = () => {
                         </motion.p>
                     </div>
 
-                    <div className="capabilities-grid-v2">
-                        {[
-                            { 
-                                title: "Custom machine development", 
-                                category: "MANUFACTURING", 
-                                subtitle: "Precision Engineering Facility", 
-                                desc: "Design and fabrication of specialized machinery tailored to unique production requirements, ensuring maximum throughput and durability.",
-                                image: cap1 
-                            },
-                            { 
-                                title: "Process automation systems", 
-                                category: "AUTOMATION", 
-                                subtitle: "Industrial Processing Plant", 
-                                desc: "End-to-end automation of complex workflows using advanced PLC and HMI systems to minimize manual error and increase consistency.",
-                                image: cap2 
-                            },
-                            { 
-                                title: "Mechanical + Electrical integration", 
-                                category: "INTEGRATION", 
-                                subtitle: "Complex Assembly Lines", 
-                                desc: "Seamless fusion of mechanical robusticity with sophisticated electrical controls for unified system performance and easier maintenance.",
-                                image: cap3 
-                            },
-                            { 
-                                title: "Control systems", 
-                                category: "ELECTRONICS", 
-                                subtitle: "Centralized Monitoring Hub", 
-                                desc: "Developing intelligent control architectures that provide real-time logic processing and critical safety interlocks for large-scale operations.",
-                                image: cap4 
-                            },
-                            { 
-                                title: "System optimization", 
-                                category: "EFFICIENCY", 
-                                subtitle: "Legacy Plant Modernization", 
-                                desc: "Analyzing and re-engineering existing systems to identify bottlenecks and implement software/hardware upgrades for peak operational efficiency.",
-                                image: cap5 
-                            },
-                            { 
-                                title: "Greenfield and brownfield implementation", 
-                                category: "PROJECTS", 
-                                subtitle: "Global Industrial Expansion", 
-                                desc: "Full lifecycle support for new facility builds or retrofitting established sites with modern automation without interrupting current production.",
-                                image: cap6 
-                            }
-                        ].map((cap, index) => (
+                    <div className="capabilities-slider-container">
+                        <button className={`slider-arrow left ${capIndex === 0 ? 'disabled' : ''}`} onClick={prevCap}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+                        
+                        <div className="capabilities-slider-viewport">
                             <motion.div 
-                                className="cap-card-v2" 
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="capabilities-slider-track"
+                                animate={{ x: `-${capIndex * 33.333}%` }}
+                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             >
-                                <div className="cap-img-wrapper">
-                                    <img src={cap.image} alt={cap.title} />
-                                    <div className="cap-badge">{cap.category}</div>
-                                </div>
-                                <div className="cap-body">
-                                    <h3 className="cap-card-title">{cap.title}</h3>
-                                    <p className="cap-card-subtitle">{cap.subtitle}</p>
-                                    <p className="cap-card-desc">{cap.desc}</p>
-                                </div>
-                                <div className="cap-footer">
-                                    <a href="#" className="see-details">SEE MORE DETAILS <span className="arrow-down">▾</span></a>
-                                    <a href="#" className="inquire-btn">Inquire →</a>
-                                </div>
+                                {capabilities.map((cap, index) => (
+                                    <div className="cap-card-v2" key={index}>
+                                        <div className="cap-img-wrapper">
+                                            <img src={cap.image} alt={cap.title} />
+                                            <div className="cap-badge">{cap.category}</div>
+                                        </div>
+                                        <div className="cap-body">
+                                            <h3 className="cap-card-title">{cap.title}</h3>
+                                            <p className="cap-card-subtitle">{cap.subtitle}</p>
+                                            <p className="cap-card-desc">{cap.desc}</p>
+                                        </div>
+                                        <div className="cap-footer">
+                                            <a href="#" className="see-details">SEE MORE DETAILS <span className="arrow-down">▾</span></a>
+                                            <a href="#" className="inquire-btn">Inquire →</a>
+                                        </div>
+                                    </div>
+                                ))}
                             </motion.div>
+                        </div>
+
+                        <button className={`slider-arrow right ${capIndex >= capabilities.length - 3 ? 'disabled' : ''}`} onClick={nextCap}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
+                    </div>
+
+                    <div className="slider-dots">
+                        {Array.from({ length: capabilities.length - 2 }).map((_, i) => (
+                            <div 
+                                key={i} 
+                                className={`slider-dot ${capIndex === i ? 'active' : ''}`}
+                                onClick={() => setCapIndex(i)}
+                            ></div>
                         ))}
                     </div>
                 </div>
                 <div className="cap-tech-overlay"></div>
             </section>
+
 
             {/* 5. BUSINESS OUTCOMES */}
             <section className="solutions-outcomes section-padding dark-v2">
