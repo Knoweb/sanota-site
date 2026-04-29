@@ -572,49 +572,127 @@
     background-color: #fcfcfc;
 }
 
-.initiative-solutions-link-grid {
+/* --- Related Solutions V2 --- */
+.initiative-solutions-link-grid-v2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1px;
-    background-color: #eee;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
     border: 1px solid #eee;
+    overflow: hidden;
 }
 
-.initiative-solution-link-card {
+.initiative-solution-card-v2 {
     background: #fff;
-    padding: 45px 40px;
+    padding: 55px 45px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    min-height: 240px;
     text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 0.5px solid #eee;
+    transition: all 0.4s ease;
+    position: relative;
 }
 
-.initiative-solution-link-card:hover {
+.initiative-solution-card-v2:hover {
+    background: #f8f9ff;
+}
+
+.solution-card-icon {
+    width: 32px;
+    height: 32px;
+    color: #2233AD;
+    margin-bottom: 25px;
+}
+
+.solution-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #080b1a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.solution-card-arrow {
+    width: 22px;
+    height: 22px;
+    color: #2233AD;
+    align-self: flex-end;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.initiative-solution-card-v2:hover .solution-card-arrow {
+    transform: translateX(10px);
+}
+
+.initiative-solution-cta-box {
+    background: #080b1a;
+    padding: 55px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    min-height: 240px;
+    transition: all 0.4s ease;
+}
+
+.initiative-solution-cta-box:hover {
     background: #2233AD;
 }
 
-.initiative-solution-link-card:hover .initiative-solution-link-title,
-.initiative-solution-link-card:hover .initiative-solution-link-arrow {
+.cta-box-title {
     color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
 }
 
-.initiative-solution-link-title {
-    font-size: 1.15rem;
+.cta-box-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.cta-box-link {
+    color: #fff;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: #080b1a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.initiative-solution-link-arrow {
-    font-size: 1.6rem;
-    color: #2233AD;
-    transition: transform 0.3s ease;
+.cta-box-link svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.initiative-solution-link-card:hover .initiative-solution-link-arrow {
+.initiative-solution-cta-box:hover .cta-box-link svg {
     transform: translateX(10px);
+}
+
+@media (max-width: 1024px) {
+    .initiative-solutions-link-grid-v2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .initiative-solutions-link-grid-v2 {
+        grid-template-columns: 1fr;
+    }
+    .initiative-solution-card-v2,
+    .initiative-solution-cta-box {
+        min-height: 220px;
+        padding: 45px 35px;
+    }
 }
 
 /* --- Related Industries Section --- */

@@ -336,19 +336,31 @@ const TeaInitiative = () => {
                     <div className="initiative-section-header">
                         <h2 className="initiative-section-title">Related Solution Areas</h2>
                     </div>
-                    <div className="initiative-solutions-link-grid">
+                    <div className="initiative-solutions-link-grid-v2">
                         {[
-                            { title: "Engineering & Automation", link: "/solutions" },
-                            { title: "Products", link: "/products" },
-                            { title: "Software & Digital Solutions", link: "/solutions" },
-                            { title: "Retrofit Capability", link: "/solutions" },
-                            { title: "Lifecycle Support", link: "/solutions" }
+                            { title: "Engineering & Automation", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> },
+                            { title: "Products", link: "/products", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> },
+                            { title: "Software & Digital Solutions", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> },
+                            { title: "Retrofit Capability", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.77 3.77Z"/></svg> },
+                            { title: "Lifecycle Support", link: "/solutions", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg> }
                         ].map((item, index) => (
-                            <Link to={item.link} className="initiative-solution-link-card" key={index}>
-                                <span className="initiative-solution-link-title">{item.title}</span>
-                                <span className="initiative-solution-link-arrow">→</span>
+                            <Link to={item.link} className="initiative-solution-card-v2" key={index}>
+                                <div className="solution-card-content">
+                                    <div className="solution-card-icon">{item.icon}</div>
+                                    <h3 className="solution-card-title">{item.title}</h3>
+                                </div>
+                                <div className="solution-card-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
                             </Link>
                         ))}
+                        <Link to="/contact" className="initiative-solution-cta-box">
+                            <h3 className="cta-box-title">Need a Custom Solution?</h3>
+                            <p className="cta-box-desc">Talk to our engineering team today.</p>
+                            <div className="cta-box-link">
+                                Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </section>
