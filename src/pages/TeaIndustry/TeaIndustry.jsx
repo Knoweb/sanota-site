@@ -9,6 +9,11 @@ import picture1 from '../../assets/picture1.jpg';
 import teaSolutionsImg from '../../assets/tea-solutions.png';
 import productsBg from '../../assets/products-bg.png';
 
+import caseDryer from '../../assets/case-dryer.png';
+import caseRfid from '../../assets/case-rfid.png';
+import caseGreenhouse from '../../assets/case-greenhouse.png';
+import caseRetrofit from '../../assets/case-retrofit.png';
+
 import appDrying from '../../assets/app-drying.png';
 import appRolling from '../../assets/app-rolling.png';
 import appSorting from '../../assets/app-sorting.png';
@@ -17,6 +22,8 @@ import appEnergy from '../../assets/app-energy.png';
 import appPackaging from '../../assets/app-packaging.png';
 
 const TeaIndustry = () => {
+    const [activeCaseIndex, setActiveCaseIndex] = React.useState(0);
+    
     const apps = [
         { title: "Drying & Withering Systems", image: appDrying, desc: "Automated controls for withering troughs and fluid bed dryers to maintain precise moisture levels." },
         { title: "Rolling & Fermentation Control", image: appRolling, desc: "Digital monitoring of rolling pressure and fermentation temperature for optimum quality." },
@@ -25,6 +32,40 @@ const TeaIndustry = () => {
         { title: "Energy Management Systems", image: appEnergy, desc: "Optimizing firewood and electricity consumption through intelligent combustion and motor controls." },
         { title: "Packaging & Quality Control", image: appPackaging, desc: "Precision weighing and inspection systems to ensure batch consistency and compliance." }
     ];
+
+    const caseStudies = [
+        { 
+            title: "Industrial Dryer Deployment", 
+            category: "Automation",
+            subtitle: "Major Tea Factory, Kandy",
+            image: caseDryer, 
+            desc: "Optimizing thermal efficiency and quality consistency in a high-capacity tea factory." 
+        },
+        { 
+            title: "RFID Tracking Implementation", 
+            category: "Digital Solutions",
+            subtitle: "Export Hub, Colombo",
+            image: caseRfid, 
+            desc: "End-to-end traceability of tea batches from withering troughs to final packaging." 
+        },
+        { 
+            title: "Smart Greenhouse Monitoring", 
+            category: "Smart Agro",
+            subtitle: "Nuwara Eliya Research Center",
+            image: caseGreenhouse, 
+            desc: "Automated climate and irrigation control for specialized tea cultivation environments." 
+        },
+        { 
+            title: "Retrofit Automation Project", 
+            category: "Engineering",
+            subtitle: "Legacy Tea Estate, Galle",
+            image: caseRetrofit, 
+            desc: "Modernizing legacy rolling and sifting lines with integrated digital control systems." 
+        }
+    ];
+
+    const nextCase = () => setActiveCaseIndex((prev) => (prev + 1) % caseStudies.length);
+    const prevCase = () => setActiveCaseIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
 
     return (
         <div className="tea-industry-page">
@@ -360,30 +401,51 @@ const TeaIndustry = () => {
             {/* 8. RELATED CASE STUDIES */}
             <section className="tea-case-studies-section">
                 <div className="container">
-                    <div className="tea-section-header">
+                    <div className="tea-section-header centered">
                         <h2 className="tea-section-title">Related Case Studies</h2>
                         <p className="tea-section-subtitle">Real-world implementations of Sanota's engineering and digital solutions.</p>
                     </div>
-                    <div className="tea-case-grid">
-                        {[
-                            { title: "Industrial Dryer Deployment", desc: "Optimizing thermal efficiency and quality consistency in a high-capacity tea factory." },
-                            { title: "RFID Tracking Implementation", desc: "End-to-end traceability of tea batches from withering troughs to final packaging." },
-                            { title: "Smart Greenhouse Monitoring", desc: "Automated climate and irrigation control for specialized tea cultivation environments." },
-                            { title: "Retrofit Automation Project", desc: "Modernizing legacy rolling and sifting lines with integrated digital control systems." }
-                        ].map((item, index) => (
-                            <div className="tea-case-card" key={index}>
-                                <div className="tea-case-content">
-                                    <h3 className="tea-case-title">{item.title}</h3>
-                                    <p className="tea-case-desc">{item.desc}</p>
-                                    <Link to="/case-studies" className="tea-case-link">Read More</Link>
-                                </div>
-                            </div>
-                        ))}
+
+                    <div className="tea-case-carousel-container">
+                        <button className="tea-case-nav-btn prev" onClick={prevCase}>←</button>
+                        
+                        <div className="tea-case-carousel-viewport">
+                            <motion.div 
+                                className="tea-case-carousel-track"
+                                animate={{ x: `-${activeCaseIndex * (100 / (window.innerWidth > 1100 ? 3 : window.innerWidth > 768 ? 2 : 1))}%` }}
+                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            >
+                                {caseStudies.map((item, index) => (
+                                    <div className="tea-case-card-v2" key={index}>
+                                        <div className="tea-case-card-img-box">
+                                            <img src={item.image} alt={item.title} className="tea-case-card-img" />
+                                            <div className="tea-case-card-tag">{item.category}</div>
+                                        </div>
+                                        <div className="tea-case-card-body">
+                                            <h3 className="tea-case-card-title">{item.title}</h3>
+                                            <p className="tea-case-card-subtitle">{item.subtitle}</p>
+                                            <p className="tea-case-card-desc">{item.desc}</p>
+                                            <div className="tea-case-card-footer">
+                                                <Link to="/case-studies" className="tea-case-link-details">SEE MORE DETAILS ▾</Link>
+                                                <Link to="/contact" className="tea-case-link-inquire">Inquire —</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </motion.div>
+                        </div>
+
+                        <button className="tea-case-nav-btn next" onClick={nextCase}>→</button>
                     </div>
-                    <div className="tea-case-footer">
-                        <Link to="/case-studies" className="btn btn-secondary-outline tea-btn-secondary">
-                            View All Case Studies
-                        </Link>
+
+                    <div className="tea-case-dots">
+                        {caseStudies.map((_, index) => (
+                            <div 
+                                key={index} 
+                                className={`tea-case-dot ${activeCaseIndex === index ? 'active' : ''}`}
+                                onClick={() => setActiveCaseIndex(index)}
+                            ></div>
+                        ))}
                     </div>
                 </div>
             </section>
