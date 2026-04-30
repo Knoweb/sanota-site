@@ -66,7 +66,7 @@ function Header() {
                             </li>
 
                             {/* 4. Case Studies */}
-                            <li><NavLink to="/case-studies" className={({ isActive }) => isActive ? "active" : ""}>CASE STUDIES</NavLink></li>
+                            {/* <li><NavLink to="/case-studies" className={({ isActive }) => isActive ? "active" : ""}>CASE STUDIES</NavLink></li> */}
 
                             {/* 5. Knowledge Centre Dropdown */}
                             <li className="nav-dropdown">
