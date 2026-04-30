@@ -225,11 +225,14 @@
     /* Square/Sharp edges as per screenshot */
     letter-spacing: 0.5px;
     white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .quote-button:hover {
     background-color: #1a288a !important;
     color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(34, 51, 173, 0.3);
 }
 
 /* User Profile / Login - Minimal */
@@ -312,16 +315,18 @@
     width: 36px;
     height: 36px;
     border: 1px solid #2233AD !important;
-    border-radius: 4px;
-    /* Slight rounding or 0 for square */
+    border-radius: 0;
+    /* Square/Sharp edges */
     color: #ffffff !important;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:hover {
     background-color: #2233AD !important;
     border-color: #2233AD !important;
     color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(34, 51, 173, 0.3);
 }
 
 .social-icon svg {
