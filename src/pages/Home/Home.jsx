@@ -441,40 +441,41 @@ const Home = () => {
                     <div className="industries-header">
                         <p className="industries-count">9+ Industries Served</p>
                         <h2 className="industries-title">Engineering Experience Across <br />Diverse Industries</h2>
-                        
-                        <div className="industries-nav">
-                            <button className="nav-btn prev" onClick={prevIndustry}>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                            </button>
-                            <button className="nav-btn next" onClick={nextIndustry}>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </button>
-                        </div>
                     </div>
 
-                    <div className="industries-slider-container">
-                        <motion.div 
-                            className="industries-slider-track"
-                            animate={{ x: `-${industryIndex * (100 / 3)}%` }}
-                            transition={{ type: "spring", damping: 20, stiffness: 100 }}
-                        >
-                            {industries.map((item, index) => (
-                                <motion.div 
-                                    key={index} 
-                                    className="industry-card-v2"
-                                >
-                                    <div className="industry-card-image" style={{ backgroundImage: `url(${item.image})` }}></div>
-                                    <div className="industry-card-overlay"></div>
-                                    <div className="industry-card-content">
-                                        <div className="industry-card-icon">
-                                            {item.icon}
+                    <div className="industries-carousel-wrapper">
+                        <button className="nav-btn prev" onClick={prevIndustry}>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        </button>
+                        
+                        <div className="industries-slider-container">
+                            <motion.div 
+                                className="industries-slider-track"
+                                animate={{ x: `-${industryIndex * (100 / 3)}%` }}
+                                transition={{ type: "spring", damping: 20, stiffness: 100 }}
+                            >
+                                {industries.map((item, index) => (
+                                    <motion.div 
+                                        key={index} 
+                                        className="industry-card-v2"
+                                    >
+                                        <div className="industry-card-image" style={{ backgroundImage: `url(${item.image})` }}></div>
+                                        <div className="industry-card-overlay"></div>
+                                        <div className="industry-card-content">
+                                            <div className="industry-card-icon">
+                                                {item.icon}
+                                            </div>
+                                            <h3 className="industry-card-name">{item.name}</h3>
+                                            <Link to="/industries" className="industry-card-link">LEARN MORE →</Link>
                                         </div>
-                                        <h3 className="industry-card-name">{item.name}</h3>
-                                        <Link to="/industries" className="industry-card-link">LEARN MORE →</Link>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
+                        </div>
+
+                        <button className="nav-btn next" onClick={nextIndustry}>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
                     </div>
 
                     <div className="industries-cta">

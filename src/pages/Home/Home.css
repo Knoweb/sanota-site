@@ -1545,37 +1545,45 @@
 }
 
 .industries-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 70px;
 }
 
 .industries-count {
     color: #2233AD;
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    display: inline-block;
 }
 
 .industries-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #1a1a1a;
     line-height: 1.2;
     margin: 0;
 }
 
-.industries-nav {
+.industries-carousel-wrapper {
+    position: relative;
+    width: 100%;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 0;
+    padding: 0 60px;
+    margin-bottom: 50px;
 }
 
 .nav-btn {
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 1px solid #eeeeee;
     background: #ffffff;
@@ -1585,6 +1593,15 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav-btn.prev {
+    left: 0;
+}
+
+.nav-btn.next {
+    right: 0;
 }
 
 .nav-btn:hover {
