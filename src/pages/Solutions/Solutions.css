@@ -25,13 +25,8 @@
     justify-content: center;
 }
 
-.mt-50 {
-    margin-top: 50px;
-}
-
-.mt-60 {
-    margin-top: 60px;
-}
+.mt-50 { margin-top: 50px; }
+.mt-60 { margin-top: 60px; }
 
 /* Button Utilities */
 .btn-primary {
@@ -101,11 +96,10 @@
 
 /* 1. HERO SECTION */
 .solutions-hero {
-    height: 80vh !important;
-    min-height: 500px !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    padding-top: 60px !important;
+    height: 100vh;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
     position: relative;
     background-color: #05070f;
     overflow: hidden;
@@ -122,22 +116,18 @@
 }
 
 @keyframes slowZoom {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.1);
-    }
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right,
-            rgba(5, 7, 15, 0.95) 0%,
-            rgba(5, 7, 15, 0.8) 40%,
-            rgba(5, 7, 15, 0.4) 100%);
+    background: linear-gradient(to right, 
+        rgba(5, 7, 15, 0.95) 0%, 
+        rgba(5, 7, 15, 0.8) 40%, 
+        rgba(5, 7, 15, 0.4) 100%
+    );
     z-index: 2;
 }
 
@@ -152,29 +142,29 @@
 }
 
 .hero-title {
-    font-size: 2.8rem !important;
+    font-size: 4.5rem;
     font-weight: 800;
     line-height: 1.1;
     color: #fff;
-    margin-bottom: 10px !important;
+    margin-bottom: 30px;
 }
 
 .hero-supporting-line {
-    font-size: 1.2rem !important;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #2233AD;
-    height: 1.6rem;
-    margin-bottom: 10px !important;
+    height: 2.5rem;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
 }
 
 .hero-desc {
-    font-size: 0.95rem !important;
-    line-height: 1.4;
+    font-size: 1.25rem;
+    line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 25px !important;
-    max-width: 600px;
+    margin-bottom: 40px;
+    max-width: 700px;
 }
 
 .hero-cta {
@@ -194,7 +184,7 @@
 .hero-grid-pattern {
     position: absolute;
     inset: 0;
-    background-image:
+    background-image: 
         linear-gradient(rgba(34, 51, 173, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(34, 51, 173, 0.1) 1px, transparent 1px);
     background-size: 80px 80px;
@@ -259,10 +249,11 @@
 .unit-overlay-v3 {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0.8) 40%,
-            rgba(255, 255, 255, 0.2) 100%);
+    background: linear-gradient(to top, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.8) 40%, 
+        rgba(255, 255, 255, 0.2) 100%
+    );
     z-index: 2;
 }
 
@@ -365,7 +356,7 @@
 .reality-grid-pattern {
     position: absolute;
     inset: 0;
-    background-image:
+    background-image: 
         linear-gradient(#f8f9fa 1px, transparent 1px),
         linear-gradient(90deg, #f8f9fa 1px, transparent 1px);
     background-size: 80px 80px;
@@ -485,15 +476,12 @@
         grid-template-columns: 1fr;
         gap: 80px;
     }
-
     .approach-left {
         text-align: left;
     }
-
     .approach-lead {
         max-width: 100%;
     }
-
     .approach-visual-box {
         margin: 0 auto;
     }
@@ -608,12 +596,10 @@
     .capabilities-slider-container {
         gap: 10px;
     }
-
     .slider-arrow {
         width: 40px;
         height: 40px;
     }
-
     .cap-card-v2 {
         flex: 0 0 100%;
     }
@@ -832,11 +818,9 @@
         grid-template-columns: 1fr;
         gap: 60px;
     }
-
     .outcomes-left-v5 {
         max-width: 100%;
     }
-
     .visual-box-v5 {
         margin: 50px auto 0;
     }
@@ -847,11 +831,9 @@
         flex-direction: column;
         gap: 10px;
     }
-
     .outcome-num-v5 {
         padding-top: 0;
     }
-
     .item-title-v5 {
         font-size: 1.1rem;
     }
@@ -905,13 +887,8 @@
 }
 
 @keyframes scrollIndustries {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .industry-card-v3 {
@@ -1160,7 +1137,6 @@
     .initiatives-modern-grid-v4 {
         grid-template-columns: 1fr;
     }
-
     .init-card-v4 {
         padding: 35px 30px;
     }
@@ -1305,15 +1281,12 @@
     .why-grid-v5 {
         grid-template-columns: 1fr;
     }
-
     .why-hero-v5 {
         height: 400px;
     }
-
     .why-cards-section-v5 {
         margin-top: -80px;
     }
-
     .why-title-v5 {
         font-size: 2.2rem;
     }
@@ -1369,51 +1342,17 @@
 
 /* Responsive Overrides */
 @media (max-width: 1100px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
-    .capabilities-grid,
-    .industries-links-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .initiatives-modern-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .hero-title { font-size: 3.5rem; }
+    .capabilities-grid, .industries-links-grid { grid-template-columns: repeat(2, 1fr); }
+    .initiatives-modern-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-title {
-        font-size: 2.8rem;
-    }
-
-    .hero-supporting-line {
-        font-size: 1.4rem;
-    }
-
-    .approach-flow {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .flow-connector {
-        display: none;
-    }
-
-    .case-studies-modern-grid,
-    .why-solutions-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .capabilities-grid,
-    .industries-links-grid,
-    .initiatives-modern-grid {
-        grid-template-columns: 1fr;
-    }
+    .section-title { font-size: 2.5rem; }
+    .hero-title { font-size: 2.8rem; }
+    .hero-supporting-line { font-size: 1.4rem; }
+    .approach-flow { flex-direction: column; align-items: center; gap: 40px; }
+    .flow-connector { display: none; }
+    .case-studies-modern-grid, .why-solutions-grid { grid-template-columns: 1fr; }
+    .capabilities-grid, .industries-links-grid, .initiatives-modern-grid { grid-template-columns: 1fr; }
 }
