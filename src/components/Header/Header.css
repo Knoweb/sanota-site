@@ -216,47 +216,44 @@
     color: #2233AD;
 }
 
-/* Quote Button */
-.quote-button {
-    background-color: #2233AD !important;
-    /* Forced Blue */
-    color: #fff !important;
-    font-size: 0.7rem !important;
-    font-weight: 700 !important;
-    padding: 8px 16px;
-    border-radius: 0;
-    /* Square/Sharp edges as per screenshot */
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Login Plus Icon */
+.login-plus-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.quote-button:hover {
-    background-color: #1a288a !important;
-    color: #fff !important;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(34, 51, 173, 0.3);
+.plus-icon {
+    font-size: 1.4rem;
+    color: #aeaeae;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-weight: 300;
 }
 
-/* User Profile / Login - Minimal */
+.login-plus-link:hover .plus-icon {
+    color: #fff;
+    background-color: #2233AD;
+    border-color: #2233AD;
+    transform: rotate(90deg);
+}
+
+/* User Profile - Minimal */
 .user-icon {
     font-size: 1.2rem;
     color: #fff;
 }
 
-.profile-icon-link,
-.login-link {
+.profile-icon-link {
     color: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
     text-decoration: none;
-    opacity: 0.8;
-}
-
-.login-link:hover {
-    opacity: 1;
-    color: #2233AD;
 }
 
 /* Responsive */

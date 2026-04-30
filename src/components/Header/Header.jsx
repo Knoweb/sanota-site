@@ -118,13 +118,14 @@ function Header() {
 
                     {/* Right: Actions */}
                     <div className="header-actions">
-                        <Link to="/contact" className="quote-button">DISCUSS YOUR REQUIREMENT</Link>
                         {isAuthenticated ? (
                             <Link to="/profile" className="profile-icon-link">
                                 <span className="user-icon">👤</span>
                             </Link>
                         ) : (
-                            <Link to="/login" className="login-link">Login</Link>
+                            <Link to="/login" className="login-plus-link">
+                                <span className="plus-icon">+</span>
+                            </Link>
                         )}
                     </div>
                 </div>
