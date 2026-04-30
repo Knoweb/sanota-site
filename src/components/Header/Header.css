@@ -63,7 +63,7 @@
 .nav-list li:not(:last-child)::after {
     content: '|';
     color: rgba(255, 255, 255, 0.2);
-    margin: 0 12px;
+    margin: 0 5px;
     font-size: 0.8rem;
     font-weight: 300;
     pointer-events: none;
@@ -81,7 +81,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px 0;
+    padding: 8px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
