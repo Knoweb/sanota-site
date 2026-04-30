@@ -1540,12 +1540,8 @@
 /* --- Industries Served --- */
 .industries-served-section {
     padding: 120px 0;
-    background-image: linear-gradient(rgba(10, 15, 30, 0.65), rgba(10, 15, 30, 0.65)), url('../../assets/industries-bg.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: #ffffff;
     position: relative;
-    color: #ffffff;
 }
 
 .industries-header {
