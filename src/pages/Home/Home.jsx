@@ -21,6 +21,15 @@ import project5 from '../../assets/picture2.jpg';
 import project6 from '../../assets/picture1.jpg';
 import knowledgeThumb from '../../assets/knowledge-thumbnails.png';
 import slMap from '../../assets/sl-map-creative.png';
+import indManuf from '../../assets/industry_manufacturing.png';
+import indFood from '../../assets/industry_food.png';
+import indTea from '../../assets/industry_tea.png';
+import indAgri from '../../assets/industry_agri.png';
+import indLogistics from '../../assets/industry_logistics.png';
+import indInfra from '../../assets/industry_infra.png';
+import indEnergy from '../../assets/app-energy.png';
+import indEnviro from '../../assets/picture5.jpg';
+import indInst from '../../assets/picture1.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -101,6 +110,28 @@ const Home = () => {
 
     const prevTestimonial = () => {
         setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    };
+
+    // Industries Carousel Logic
+    const [industryIndex, setIndustryIndex] = useState(0);
+    const industries = [
+        { name: "Manufacturing", image: indManuf, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg> },
+        { name: "Food Processing", image: indFood, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 12.5A10 10 0 1 1 12 2v10z"></path></svg> },
+        { name: "Tea Industry", image: indTea, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a9 9 0 0 1-18 0c0-1.5.1-3 .4-4.4"></path></svg> },
+        { name: "Agriculture", image: indAgri, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 20h10"></path><path d="M10 20c5.5 0 8-10 8-10"></path><path d="M14 20c-5.5 0-8-10-8-10"></path></svg> },
+        { name: "Logistics", image: indLogistics, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 17h4V5H2v12h3"></path><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L17 7h-3"></path><circle cx="7.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> },
+        { name: "Infrastructure", image: indInfra, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 4v.01"></path><path d="M16 4v.01"></path><path d="M12 4v.01"></path><path d="M12 8v.01"></path><path d="M12 12v.01"></path></svg> },
+        { name: "Institutions", image: indInst, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> },
+        { name: "Energy", image: indEnergy, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg> },
+        { name: "Environmental Systems", image: indEnviro, icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.2 20.2A9 9 0 1 0 3.8 3.8a9 9 0 1 0 16.4 16.4Z"></path><path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path><path d="M12 12v10"></path><path d="m12 12 4 4"></path><path d="m12 12-4 4"></path></svg> }
+    ];
+
+    const nextIndustry = () => {
+        setIndustryIndex((prev) => (prev + 1) % (industries.length - 2)); // Show 3 at a time
+    };
+
+    const prevIndustry = () => {
+        setIndustryIndex((prev) => (prev - 1 + (industries.length - 2)) % (industries.length - 2));
     };
 
     return (
@@ -404,49 +435,54 @@ const Home = () => {
                 <div className="initiatives-cta">
                     <Link to="/initiatives" className="btn btn-secondary-outline">EXPLORE INDUSTRY INITIATIVES <span className="arrow">→</span></Link>
                 </div>
-            </section>
-
-            {/* Industries Served */}
+            </section>            {/* Industries Served */}
             <section className="industries-served-section">
                 <div className="container">
                     <div className="industries-header">
                         <p className="industries-count">9+ Industries Served</p>
                         <h2 className="industries-title">Engineering Experience Across <br />Diverse Industries</h2>
+                        
+                        <div className="industries-nav">
+                            <button className="nav-btn prev" onClick={prevIndustry}>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                            </button>
+                            <button className="nav-btn next" onClick={nextIndustry}>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
                     </div>
 
-                    <div className="industries-grid">
-                        {[
-                            { name: "Manufacturing", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg> },
-                            { name: "Food Processing", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 12.5A10 10 0 1 1 12 2v10z"></path></svg> },
-                            { name: "Tea Industry", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a9 9 0 0 1-18 0c0-1.5.1-3 .4-4.4"></path></svg> },
-                            { name: "Agriculture", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 20h10"></path><path d="M10 20c5.5 0 8-10 8-10"></path><path d="M14 20c-5.5 0-8-10-8-10"></path></svg> },
-                            { name: "Logistics", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 17h4V5H2v12h3"></path><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L17 7h-3"></path><circle cx="7.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> },
-                            { name: "Infrastructure", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 4v.01"></path><path d="M16 4v.01"></path><path d="M12 4v.01"></path><path d="M12 8v.01"></path><path d="M12 12v.01"></path></svg> },
-                            { name: "Institutions", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> },
-                            { name: "Energy", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg> },
-                            { name: "Environmental Systems", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.2 20.2A9 9 0 1 0 3.8 3.8a9 9 0 1 0 16.4 16.4Z"></path><path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path><path d="M12 12v10"></path><path d="m12 12 4 4"></path><path d="m12 12-4 4"></path></svg> }
-                        ].map((item, index) => (
-                            <motion.div 
-                                key={index} 
-                                className="industry-item"
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
-                            >
-                                <div className="industry-icon-box">
-                                    {item.icon}
-                                </div>
-                                <p className="industry-name">{item.name}</p>
-                            </motion.div>
-                        ))}
+                    <div className="industries-slider-container">
+                        <motion.div 
+                            className="industries-slider-track"
+                            animate={{ x: `-${industryIndex * (100 / 3)}%` }}
+                            transition={{ type: "spring", damping: 20, stiffness: 100 }}
+                        >
+                            {industries.map((item, index) => (
+                                <motion.div 
+                                    key={index} 
+                                    className="industry-card-v2"
+                                >
+                                    <div className="industry-card-image" style={{ backgroundImage: `url(${item.image})` }}></div>
+                                    <div className="industry-card-overlay"></div>
+                                    <div className="industry-card-content">
+                                        <div className="industry-card-icon">
+                                            {item.icon}
+                                        </div>
+                                        <h3 className="industry-card-name">{item.name}</h3>
+                                        <Link to="/industries" className="industry-card-link">LEARN MORE →</Link>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </motion.div>
                     </div>
 
                     <div className="industries-cta">
-                        <Link to="/industries" className="btn btn-primary">VIEW INDUSTRIES</Link>
+                        <Link to="/industries" className="btn btn-primary">VIEW ALL INDUSTRIES</Link>
                     </div>
                 </div>
             </section>
+n>
 
             {/* Differentiation Section */}
             <section className="differentiation-section">
