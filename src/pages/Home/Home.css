@@ -7,8 +7,8 @@
 /* --- Hero Section --- */
 .hero {
     position: relative;
-    height: 75vh;
-    min-height: 500px;
+    height: 50vh;
+    min-height: 400px;
     display: flex;
     align-items: flex-start;
     padding-top: 60px;
@@ -207,7 +207,7 @@
     .trust-inline-strip {
         gap: 15px;
     }
-    
+
     .trust-item {
         font-size: 0.9rem;
     }
