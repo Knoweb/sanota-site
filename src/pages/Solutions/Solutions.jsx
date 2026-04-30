@@ -500,28 +500,41 @@ const Solutions = () => {
                 </div>
             </section>
 
-            {/* 8. RELATED INDUSTRY INITIATIVES */}
-            <section className="solutions-initiatives section-padding dark-v2">
+            {/* 8. RELATED INDUSTRY INITIATIVES - Redesigned to be Modern & Light */}
+            <section className="solutions-initiatives-v4 section-padding bg-light-v2">
+                <div className="initiatives-bg-pattern"></div>
                 <div className="container">
                     <div className="section-header centered">
-                        <h2 className="section-title light">Industry Initiatives</h2>
-                        <p className="section-subtitle light">Strategic programs driving sector-wide modernization.</p>
+                        <h2 className="section-title">Industry Initiatives</h2>
+                        <p className="section-subtitle">Strategic programs driving sector-wide modernization.</p>
                     </div>
-                    <div className="initiatives-modern-grid">
+                    <div className="initiatives-modern-grid-v4">
                         {[
-                            { name: "Tea Modernization Initiative", link: "/tea-modernization" },
-                            { name: "Smart Greenhouse Initiative", link: "/industries" },
-                            { name: "Smart Monitoring Initiative", link: "/industries" },
-                            { name: "Energy Efficiency Initiative", link: "/industries" }
+                            { name: "Tea Modernization Initiative", link: "/tea-modernization", desc: "Digitalizing the traditional tea industry with IoT and automation." },
+                            { name: "Smart Greenhouse Initiative", link: "/industries", desc: "Optimizing agricultural output through climate-controlled environments." },
+                            { name: "Smart Monitoring Initiative", link: "/industries", desc: "Factory-wide data acquisition for real-time operational visibility." },
+                            { name: "Energy Efficiency Initiative", link: "/industries", desc: "Reducing operational costs through intelligent power management." }
                         ].map((init, index) => (
-                            <Link to={init.link} className="init-link-card glass" key={index}>
-                                <span className="init-tag">INITIATIVE</span>
-                                <h3 className="init-name">{init.name}</h3>
-                                <div className="init-footer">
-                                    <span>Learn More</span>
-                                    <span className="init-arrow-v2">→</span>
-                                </div>
-                            </Link>
+                            <motion.div 
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                            >
+                                <Link to={init.link} className="init-card-v4">
+                                    <div className="init-top">
+                                        <span className="init-tag-v4">INITIATIVE</span>
+                                        <div className="init-icon-dot"></div>
+                                    </div>
+                                    <h3 className="init-name-v4">{init.name}</h3>
+                                    <p className="init-desc-v4">{init.desc}</p>
+                                    <div className="init-footer-v4">
+                                        <span>Learn More</span>
+                                        <span className="init-arrow-v4">→</span>
+                                    </div>
+                                </Link>
+                            </motion.div>
                         ))}
                     </div>
                     <div className="centered-content mt-60">
