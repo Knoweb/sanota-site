@@ -19,6 +19,7 @@ import cap3 from '../../assets/cap-3.png';
 import cap4 from '../../assets/cap-4.png';
 import cap5 from '../../assets/cap-5.png';
 import cap6 from '../../assets/cap-6.png';
+import outcomesVisual from '../../assets/solutions_outcomes_engineering_1777521314789.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 
 import caseDryer from '../../assets/case-dryer.png';
@@ -353,44 +354,73 @@ const Solutions = () => {
             </section>
 
 
-            {/* 5. BUSINESS OUTCOMES */}
-            <section className="solutions-outcomes section-padding dark-v2">
+            {/* 5. BUSINESS OUTCOMES - Redesigned to match Engineering Approach style */}
+            <section className="solutions-outcomes-v5 section-padding dark-v2">
                 <div className="container">
-                    <div className="section-header centered">
-                        <h2 className="section-title light">Operational and Strategic Benefits</h2>
-                        <p className="section-subtitle light">Tangible Business Outcomes Through Integrated Engineering</p>
-                    </div>
-                    <div className="outcomes-grid">
-                        {[
-                            "Improved productivity",
-                            "Better consistency",
-                            "Reduced operational risk",
-                            "Improved process control",
-                            "Improved visibility",
-                            "Scalability for growth",
-                            "Long-term reliability",
-                            "Technical excellence"
-                        ].map((outcome, index) => (
+                    <div className="outcomes-container-v5">
+                        <div className="outcomes-content-v5">
                             <motion.div 
-                                className="outcome-card-v4 glass" 
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false, amount: 0.2 }}
-                                transition={{ 
-                                    duration: 0.6, 
-                                    delay: index * 0.1,
-                                    ease: "easeOut"
-                                }}
+                                className="outcomes-left-v5"
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.8 }}
                             >
-                                <div className="outcome-check-box">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
+                                <h2 className="section-title light">Operational & Strategic Benefits</h2>
+                                <p className="section-subtitle light">
+                                    Tangible business outcomes achieved through integrated engineering, 
+                                    automation, and technical excellence.
+                                </p>
+
+                                <div className="visual-box-v5">
+                                    <motion.div 
+                                        className="blue-accent-v5"
+                                        animate={{ 
+                                            scale: [1, 1.05, 1],
+                                            rotate: [0, 1, 0]
+                                        }}
+                                        transition={{ 
+                                            duration: 6, 
+                                            repeat: Infinity, 
+                                            ease: "easeInOut" 
+                                        }}
+                                    ></motion.div>
+                                    <div className="outcomes-main-img-v5">
+                                        <img src={outcomesVisual} alt="Business Outcomes Engineering" />
+                                    </div>
                                 </div>
-                                <h3 className="outcome-text">{outcome}</h3>
                             </motion.div>
-                        ))}
+
+                            <div className="outcomes-right-v5">
+                                <div className="outcomes-list-v5">
+                                    {[
+                                        { title: "Improved Productivity", desc: "Optimized operational flows for maximum output efficiency." },
+                                        { title: "Better Consistency", desc: "Ensuring uniform product quality through precision control." },
+                                        { title: "Reduced Operational Risk", desc: "Robust engineering frameworks for safe and stable production." },
+                                        { title: "Improved Process Control", desc: "Seamlessly embedding automation into existing workflows." },
+                                        { title: "Improved Visibility", desc: "Real-time data acquisition and factory-wide monitoring." },
+                                        { title: "Scalability for Growth", desc: "Modular designs that evolve with your business requirements." },
+                                        { title: "Long-term Reliability", desc: "Engineering for lifecycle stability and maintenance efficiency." },
+                                        { title: "Technical Excellence", desc: "Applying state-of-the-art standards to industrial challenges." }
+                                    ].map((item, index) => (
+                                        <motion.div 
+                                            className="outcome-item-v5" 
+                                            key={index}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: false }}
+                                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        >
+                                            <div className="outcome-num-v5">0{index + 1}</div>
+                                            <div className="outcome-text-v5">
+                                                <h3 className="item-title-v5">{item.title}</h3>
+                                                <p className="item-desc-v5">{item.desc}</p>
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
