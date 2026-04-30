@@ -195,8 +195,18 @@
 
 .trust-card-v2:hover {
     transform: translateY(-8px);
-    border-top-color: #2233AD;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background-color: #2233AD;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.trust-card-v2:hover .trust-card-icon {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.trust-card-v2:hover h3,
+.trust-card-v2:hover p {
+    color: white;
 }
 
 .trust-card-icon {
