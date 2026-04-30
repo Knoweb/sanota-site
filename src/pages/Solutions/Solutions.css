@@ -712,40 +712,38 @@
     background-color: #080b1a;
 }
 
-.outcomes-track-viewport {
-    width: 100%;
-    overflow: hidden;
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
     margin-top: 60px;
 }
 
-.outcomes-track {
-    display: flex;
-    width: max-content;
-    animation: scrollOutcomes 40s linear infinite;
-}
-
-.outcomes-track:hover {
-    animation-play-state: paused;
-}
-
-@keyframes scrollOutcomes {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.outcome-card {
-    width: 340px;
-    margin-right: 25px;
-    padding: 35px;
+.outcome-card-v4 {
+    padding: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
-    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.outcome-card:hover {
-    background: rgba(255, 255, 255, 0.08);
+.outcome-card-v4:hover {
+    background: rgba(34, 51, 173, 0.1);
     border-color: #2233AD;
+    transform: scale(1.02);
+}
+
+@media (max-width: 1100px) {
+    .outcomes-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 850px) {
+    .outcomes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 550px) {
+    .outcomes-grid { grid-template-columns: 1fr; }
 }
 
 .outcome-check-box {

@@ -360,25 +360,37 @@ const Solutions = () => {
                         <h2 className="section-title light">Operational and Strategic Benefits</h2>
                         <p className="section-subtitle light">Tangible Business Outcomes Through Integrated Engineering</p>
                     </div>
-                    <div className="outcomes-track-viewport">
-                        <div className="outcomes-track">
-                            {[
-                                "Improved productivity",
-                                "Better consistency",
-                                "Reduced operational risk",
-                                "Improved process control",
-                                "Improved visibility",
-                                "Scalability for growth",
-                                "Long-term reliability"
-                            ].concat(["Improved productivity", "Better consistency", "Reduced operational risk"]).map((outcome, index) => (
-                                <div className="outcome-card glass" key={index}>
-                                    <div className="outcome-check-box">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
-                                    </div>
-                                    <p className="outcome-text">{outcome}</p>
+                    <div className="outcomes-grid">
+                        {[
+                            "Improved productivity",
+                            "Better consistency",
+                            "Reduced operational risk",
+                            "Improved process control",
+                            "Improved visibility",
+                            "Scalability for growth",
+                            "Long-term reliability",
+                            "Technical excellence"
+                        ].map((outcome, index) => (
+                            <motion.div 
+                                className="outcome-card-v4 glass" 
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false, amount: 0.2 }}
+                                transition={{ 
+                                    duration: 0.6, 
+                                    delay: index * 0.1,
+                                    ease: "easeOut"
+                                }}
+                            >
+                                <div className="outcome-check-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
                                 </div>
-                            ))}
-                        </div>
+                                <h3 className="outcome-text">{outcome}</h3>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
