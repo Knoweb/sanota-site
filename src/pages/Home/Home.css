@@ -174,76 +174,87 @@
 
 .trust-cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: -150px; /* Pull up to overlap hero banner */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-top: -120px; /* Pull up to overlap hero banner */
     position: relative;
     z-index: 100;
 }
 
 .trust-card-v2 {
     background-color: #ffffff;
-    padding: 40px 30px;
+    padding: 25px 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-top: 4px solid transparent;
+    border-top: 3px solid transparent;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    min-height: 280px;
+    min-height: 220px;
 }
 
 .trust-card-v2:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     border-top-color: #2233AD;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .trust-card-icon {
     color: #2233AD;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     background: rgba(34, 51, 173, 0.05);
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
 }
 
+.trust-card-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
 .trust-card-v2 h3 {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     font-weight: 800;
     color: #1a1a1a;
     line-height: 1.3;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
 .trust-card-v2 p {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: #666;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
     .trust-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         margin-top: -100px;
     }
 }
 
 @media (max-width: 768px) {
     .trust-cards-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         margin-top: -50px;
         padding: 0 20px;
     }
     
     .trust-cards-section {
         padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-cards-grid {
+        grid-template-columns: 1fr;
     }
 }
 
