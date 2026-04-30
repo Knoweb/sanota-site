@@ -9,6 +9,9 @@ import logo2 from '../../assets/logo2.png';
 import logo3 from '../../assets/logo3.png';
 import logo4 from '../../assets/logo4.png';
 import logo5 from '../../assets/logo5.png';
+import picture2 from '../../assets/picture3.jpg';
+import picture3 from '../../assets/picture5.jpg';
+import picture4 from '../../assets/picture4.jpg';
 import { CountUp } from '../../components/AnimatedStats/AnimatedStats';
 
 function About() {
@@ -63,134 +66,93 @@ function About() {
             </div>
 
             <div className="container">
-                {/* History Section */}
-                <section className="history-section">
-                    <div className="history-content">
-                        <span className="section-subtitle">ABOUT OUR COMPANY</span>
-                        <h2 className="section-title">Our History</h2>
-
-                        <div className="history-text">
-                            <p>
-                                Founded in 2009 with a vision to modernize Sri Lanka's industrial sector,
-                                Sanota has grown from a specialized engineering team into a nationwide
-                                leader in automation. Today, we power over 200 factories with cutting-edge
-                                technology, ensuring they operate at maximum efficiency and safety.
+                {/* About Section (Transferred from Home) */}
+                <section className="about-section">
+                    <div className="about-grid">
+                        {/* Left: Text Content */}
+                        <div className="about-content">
+                            <p className="about-tagline">ABOUT OUR COMPANY</p>
+                            <h2>We Engineer Innovation, We Are Sanota</h2>
+                            <p className="about-description">
+                                Founded in 2008, Sanota has grown into one of Sri Lanka's trusted names in
+                                industrial automation and engineering solutions. With over 15 years of
+                                experience and 200+ completed projects, we deliver innovative automation
+                                systems backed by technical expertise, quality, and reliability.
                             </p>
                         </div>
 
-                        <div className="features-grid">
-                            <div className="feature-item">
-                                <div className="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                    </svg>
-                                </div>
-                                <div className="feature-info">
-                                    <h3>Turnkey Projects</h3>
-                                    <p>End-to-end design & build</p>
-                                </div>
-                            </div>
-                            <div className="feature-item">
-                                <div className="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                    </svg>
-                                </div>
-                                <div className="feature-info">
-                                    <h3>Sustainable Solutions</h3>
-                                    <p>Energy efficiency & waste reduction</p>
-                                </div>
-                            </div>
-                            <div className="feature-item">
-                                <div className="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                    </svg>
-                                </div>
-                                <div className="feature-info">
-                                    <h3>Advanced Automation</h3>
-                                    <p>Robotics & PLC integration</p>
-                                </div>
-                            </div>
-                            <div className="feature-item">
-                                <div className="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                                    </svg>
-                                </div>
-                                <div className="feature-info">
-                                    <h3>Power Systems</h3>
-                                    <p>High-voltage safety & distribution</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="history-image-wrapper" style={{ position: 'relative' }}>
-                        {/* Background Blue Shape with smooth scale-in and infinite float */}
-                        <motion.div
-                            style={{ position: 'absolute', bottom: '-40px', right: '-40px', zIndex: 1 }}
-                            initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
-                            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                            transition={{ duration: 1.1, ease: 'easeOut' }}
-                            viewport={{ once: true, amount: 0.3 }}
-                        >
+                        {/* Right: Image Collage */}
+                        <div className="about-images">
+                            {/* Background Grey Box */}
                             <motion.div
-                                className="orange-accent-box"
-                                style={{ position: 'relative', bottom: 'auto', right: 'auto' }}
-                                animate={{ y: [0, -12, 0], x: [0, 8, 0], rotate: [0, 1, 0] }}
-                                transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut', delay: 0.5 }}
+                                className="collage-bg-box"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                                viewport={{ once: true, amount: 0.2 }}
                             ></motion.div>
-                        </motion.div>
 
-                        {/* Image Entrance Animation with complex cinematic floating and hover scale */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 40, scale: 0.96 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 1, ease: 'easeOut', delay: 0.1 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            style={{ position: 'relative', zIndex: 2 }}
-                        >
+                            {/* Image 1: Top Right */}
                             <motion.div
-                                animate={{ y: [0, -12, 0], x: [0, 8, 0], rotate: [0, 1, 0] }}
-                                transition={{
-                                    y: { repeat: Infinity, duration: 7, ease: 'easeInOut' },
-                                    x: { repeat: Infinity, duration: 8, ease: 'easeInOut' },
-                                    rotate: { repeat: Infinity, duration: 9, ease: 'easeInOut' }
-                                }}
-                                whileHover={{ scale: 1.02, transition: { duration: 0.5, ease: 'easeOut' } }}
-                                style={{ position: 'relative', display: 'inline-block', width: '100%' }}
+                                className="collage-top-right"
+                                initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+                                viewport={{ once: true, amount: 0.2 }}
                             >
-                                <img src={historyImage} alt="Sanota History - Factory Floor" className="history-image" style={{ display: 'block' }} />
-
-                                {/* Premium Sparkle Overlay */}
-                                <motion.div
-                                    style={{
-                                        position: 'absolute',
-                                        bottom: '30px',
-                                        right: '30px',
-                                        zIndex: 10,
-                                        width: '28px',
-                                        height: '28px',
-                                        pointerEvents: 'none'
-                                    }}
-                                    animate={{
-                                        opacity: [0.4, 1, 0.4],
-                                        scale: [0.85, 1.1, 0.85],
-                                        y: [0, -4, 0]
-                                    }}
+                                <motion.img
+                                    src={picture3}
+                                    alt="Engineering Work"
+                                    className="image-cover"
+                                    animate={{ y: [0, -8, 0], rotate: [0, -0.5, 0] }}
                                     transition={{
-                                        duration: 2.5,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
+                                        y: { repeat: Infinity, duration: 6.5, ease: "easeInOut", delay: 0.5 },
+                                        rotate: { repeat: Infinity, duration: 9, ease: "easeInOut", delay: 0.5 }
                                     }}
-                                >
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0Z" fill="white" style={{ filter: 'drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.6))' }} />
-                                    </svg>
-                                </motion.div>
+                                />
                             </motion.div>
-                        </motion.div>
+
+                            {/* Image 2: Left Middle (Largest) */}
+                            <motion.div
+                                className="collage-left"
+                                initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
+                                <motion.img
+                                    src={picture2}
+                                    alt="Circuit Board Technology"
+                                    className="image-cover"
+                                    animate={{ y: [0, -10, 0], x: [0, 5, 0], rotate: [0, 0.5, 0] }}
+                                    transition={{
+                                        y: { repeat: Infinity, duration: 7, ease: "easeInOut" },
+                                        x: { repeat: Infinity, duration: 8.5, ease: "easeInOut" },
+                                        rotate: { repeat: Infinity, duration: 10, ease: "easeInOut" }
+                                    }}
+                                />
+                            </motion.div>
+
+                            {/* Image 3: Bottom Right */}
+                            <motion.div
+                                className="collage-bottom-right"
+                                initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
+                                <motion.img
+                                    src={picture4}
+                                    alt="Technical Inspection"
+                                    className="image-cover"
+                                    animate={{ y: [0, -6, 0], x: [0, -4, 0] }}
+                                    transition={{
+                                        y: { repeat: Infinity, duration: 8, ease: "easeInOut", delay: 1 },
+                                        x: { repeat: Infinity, duration: 7.5, ease: "easeInOut", delay: 1 }
+                                    }}
+                                />
+                            </motion.div>
+                        </div>
                     </div>
                 </section>
 
