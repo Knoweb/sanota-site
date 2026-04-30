@@ -96,10 +96,11 @@
 
 /* 1. HERO SECTION */
 .solutions-hero {
-    height: 100vh;
-    min-height: 800px;
+    height: 70vh;
+    min-height: 550px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 160px;
     position: relative;
     background-color: #05070f;
     overflow: hidden;
