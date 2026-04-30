@@ -26,6 +26,7 @@ import industryTea from '../../assets/industry_tea.png';
 import industryAgri from '../../assets/industry_agri.png';
 import industryLogistics from '../../assets/industry_logistics.png';
 import industryInfra from '../../assets/industry_infra.png';
+import whySanotaBg from '../../assets/why_sanota_bg.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 
 import caseDryer from '../../assets/case-dryer.png';
@@ -543,36 +544,53 @@ const Solutions = () => {
                 </div>
             </section>
 
-            {/* 9. WHY SANOTA */}
-            <section className="solutions-why section-padding light-theme">
-                <div className="container">
-                    <div className="section-header centered">
-                        <h2 className="section-title">Why Sanota for Solutions</h2>
-                        <p className="section-subtitle">The advantages of an integrated engineering partner.</p>
+            {/* 9. WHY SANOTA - Redesigned to match Image 2 */}
+            <section className="why-sanota-v5">
+                <div className="why-hero-v5" style={{ backgroundImage: `url(${whySanotaBg})` }}>
+                    <div className="why-overlay-v5"></div>
+                    <div className="container">
+                        <div className="why-header-v5">
+                            <h2 className="why-title-v5">Why Sanota for Solutions</h2>
+                            <p className="why-subtitle-v5">The advantages of an integrated engineering partner.</p>
+                        </div>
                     </div>
-                    <div className="why-solutions-grid">
-                        {[
-                            { title: "Integrated engineering capability", desc: "Single source for mechanical, electrical & digital engineering." },
-                            { title: "Practical implementation approach", desc: "Designed for real-world operational environments." },
-                            { title: "Modernization-first thinking", desc: "Upgrading existing assets for maximum efficiency." },
-                            { title: "Digital + Engineering integration", desc: "Bringing data-driven insights to physical systems." },
-                            { title: "Lifecycle support mindset", desc: "Long-term partnership beyond initial installation." },
-                            { title: "Multi-industry experience", desc: "Transferring best practices across diverse sectors." }
-                        ].map((item, index) => (
-                            <div className="why-solution-item" key={index}>
-                                <div className="why-indicator-v2"></div>
-                                <div className="why-content-v2">
-                                    <h3 className="why-title-v2">{item.title}</h3>
-                                    <p className="why-desc-v2">{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
+                </div>
+
+                <div className="why-cards-section-v5">
+                    <div className="container">
+                        <div className="why-grid-v5">
+                            {[
+                                { title: "Integrated Engineering", desc: "Single source for mechanical, electrical & digital engineering.", icon: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" },
+                                { title: "Practical Approach", desc: "Designed for real-world operational environments.", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
+                                { title: "Modernization First", desc: "Upgrading existing assets for maximum efficiency.", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
+                                { title: "Digital Integration", desc: "Bringing data-driven insights to physical systems.", icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4", highlighted: true },
+                                { title: "Lifecycle Support", desc: "Long-term partnership beyond initial installation.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" },
+                                { title: "Multi-Industry Exp", desc: "Transferring best practices across diverse sectors.", icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9h18" }
+                            ].map((item, index) => (
+                                <motion.div 
+                                    className={`why-card-v5 ${item.highlighted ? 'highlighted' : ''}`} 
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: false }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
+                                    <div className="why-icon-v5">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d={item.icon}></path>
+                                        </svg>
+                                    </div>
+                                    <h3 className="why-item-title-v5">{item.title}</h3>
+                                    <p className="why-item-desc-v5">{item.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* 10. FINAL CTA SECTION */}
-            <section className="solutions-final-cta section-padding dark-theme">
+            {/* 10. FINAL CTA SECTION - Modern Light Theme */}
+            <section className="solutions-final-cta section-padding light-theme">
                 <div className="container centered">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -585,15 +603,10 @@ const Solutions = () => {
                         </p>
                         <div className="cta-actions-v2">
                             <Link to="/contact" className="btn btn-primary cta-btn">Discuss Your Requirement</Link>
-                            <Link to="/contact" className="btn btn-secondary-outline white-border cta-btn">Request Technical Consultation</Link>
-                            <Link to="/contact" className="btn btn-secondary-outline white-border cta-btn">Request System Assessment</Link>
+                            <Link to="/contact" className="btn btn-secondary-outline dark-border cta-btn">Request Technical Consultation</Link>
+                            <Link to="/contact" className="btn btn-secondary-outline dark-border cta-btn">Request System Assessment</Link>
                         </div>
                     </motion.div>
-                </div>
-                {/* Background animations */}
-                <div className="cta-tech-bg-v2">
-                    <div className="cta-grid-pattern-v2"></div>
-                    <div className="cta-floating-glow-v2"></div>
                 </div>
             </section>
         </div>
