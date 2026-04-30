@@ -8,10 +8,10 @@
 .hero {
     position: relative;
     height: 75vh;
-    min-height: 550px;
+    min-height: 500px;
     display: flex;
     align-items: flex-start;
-    padding-top: 120px;
+    padding-top: 60px;
     color: var(--color-white);
     text-align: left;
 }
