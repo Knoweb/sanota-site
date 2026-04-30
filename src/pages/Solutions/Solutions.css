@@ -859,47 +859,141 @@
     margin: 0;
 }
 
-/* 6. WHERE THIS SOLUTION IS USED */
-.industries-links-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 50px;
+/* 6. WHERE THIS SOLUTION IS USED - Redesigned Slider */
+.solutions-industries-v3 {
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
 }
 
-.industry-link-card-v2 {
+.industries-slider-container {
+    position: relative;
+    margin-top: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 40px;
-    background: #f8f9fa;
+    gap: 30px;
+}
+
+.industries-slider-viewport {
+    flex: 1;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.industries-slider-track {
+    display: flex;
+    gap: 30px;
+}
+
+.industry-card-v3 {
+    flex: 0 0 calc(33.333% - 20px);
+    background: #fff;
     border: 1px solid #eee;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.industry-link-card-v2:hover {
-    background: #2233AD;
+.industry-card-v3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     border-color: #2233AD;
-    transform: translateY(-5px);
 }
 
-.industry-name {
-    font-size: 1.1rem;
+.ind-img-box {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.ind-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.industry-card-v3:hover .ind-img-box img {
+    transform: scale(1.1);
+}
+
+.ind-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(8, 11, 26, 0.4));
+}
+
+.ind-body {
+    padding: 30px;
+}
+
+.ind-name {
+    font-size: 1.25rem;
     font-weight: 800;
     color: #080b1a;
+    margin-bottom: 12px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.industry-arrow {
-    font-size: 1.5rem;
+.ind-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.ind-link-v3 {
+    font-size: 0.85rem;
+    font-weight: 800;
     color: #2233AD;
-    transition: color 0.3s ease;
+    letter-spacing: 1px;
 }
 
-.industry-link-card-v2:hover .industry-name,
-.industry-link-card-v2:hover .industry-arrow {
+.slider-arrow-v3 {
+    width: 50px;
+    height: 50px;
+    background: #080b1a;
+    border: none;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slider-arrow-v3:hover {
+    background: #2233AD;
+    transform: scale(1.1);
+}
+
+.slider-arrow-v3.disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.slider-arrow-v3 svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 1100px) {
+    .industry-card-v3 {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .industries-slider-container {
+        flex-direction: column;
+    }
+    .industry-card-v3 {
+        flex: 0 0 100%;
+    }
+    .slider-arrow-v3 {
+        display: none;
+    }
 }
 
 /* 7. RELATED CASE STUDIES */

@@ -20,6 +20,12 @@ import cap4 from '../../assets/cap-4.png';
 import cap5 from '../../assets/cap-5.png';
 import cap6 from '../../assets/cap-6.png';
 import outcomesVisual from '../../assets/solutions_outcomes_engineering_1777521314789.png';
+import industryManufacturing from '../../assets/industry_manufacturing.png';
+import industryFood from '../../assets/industry_food.png';
+import industryTea from '../../assets/industry_tea.png';
+import industryAgri from '../../assets/industry_agri.png';
+import industryLogistics from '../../assets/industry_logistics.png';
+import industryInfra from '../../assets/industry_infra.png';
 import caseGreenhouse from '../../assets/case-greenhouse.png';
 
 import caseDryer from '../../assets/case-dryer.png';
@@ -39,6 +45,28 @@ const Solutions = () => {
     ];
     const [lineIndex, setLineIndex] = useState(0);
     const [capIndex, setCapIndex] = useState(0);
+    const [indIndex, setIndIndex] = useState(0);
+
+    const industries = [
+        { name: "Manufacturing", image: industryManufacturing, link: "/industries", desc: "Advanced robotics and precision automation for modern factory floors." },
+        { name: "Food Processing", image: industryFood, link: "/industries", desc: "Hygienic automated processing and packaging solutions for the food industry." },
+        { name: "Tea Processing", image: industryTea, link: "/tea-modernization", desc: "Revolutionizing traditional tea factories with smart engineering and digital control." },
+        { name: "Agriculture", image: industryAgri, link: "/industries", desc: "Smart greenhouse and vertical farming systems driven by sensor data." },
+        { name: "Logistics", image: industryLogistics, link: "/industries", desc: "Automated warehouse management and robotic sorting for efficient distribution." },
+        { name: "Infrastructure", image: industryInfra, link: "/industries", desc: "Smart urban engineering and monitoring systems for resilient cities." }
+    ];
+
+    const nextInd = () => {
+        if (indIndex < industries.length - 3) {
+            setIndIndex(indIndex + 1);
+        }
+    };
+
+    const prevInd = () => {
+        if (indIndex > 0) {
+            setIndIndex(indIndex - 1);
+        }
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -425,27 +453,44 @@ const Solutions = () => {
                 </div>
             </section>
 
-            {/* 6. WHERE THIS SOLUTION IS USED */}
-            <section className="solutions-industries section-padding light-theme">
+            {/* 6. WHERE THIS SOLUTION IS USED - Redesigned as Image Slider */}
+            <section className="solutions-industries-v3 section-padding light-theme">
                 <div className="container">
                     <div className="section-header centered">
                         <h2 className="section-title">Applied Across Industries</h2>
                         <p className="section-subtitle">Engineering solutions tailored for diverse operational sectors.</p>
                     </div>
-                    <div className="industries-links-grid">
-                        {[
-                            { name: "Manufacturing", link: "/industries" },
-                            { name: "Food Processing", link: "/industries" },
-                            { name: "Tea Processing", link: "/tea-modernization" },
-                            { name: "Agriculture", link: "/industries" },
-                            { name: "Logistics", link: "/industries" },
-                            { name: "Infrastructure", link: "/industries" }
-                        ].map((ind, index) => (
-                            <Link to={ind.link} className="industry-link-card-v2" key={index}>
-                                <span className="industry-name">{ind.name}</span>
-                                <span className="industry-arrow">→</span>
-                            </Link>
-                        ))}
+
+                    <div className="industries-slider-container">
+                        <button className={`slider-arrow-v3 left ${indIndex === 0 ? 'disabled' : ''}`} onClick={prevInd}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+
+                        <div className="industries-slider-viewport">
+                            <motion.div 
+                                className="industries-slider-track"
+                                animate={{ x: `-${indIndex * 33.333}%` }}
+                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            >
+                                {industries.map((ind, index) => (
+                                    <Link to={ind.link} className="industry-card-v3" key={index}>
+                                        <div className="ind-img-box">
+                                            <img src={ind.image} alt={ind.name} />
+                                            <div className="ind-overlay"></div>
+                                        </div>
+                                        <div className="ind-body">
+                                            <h3 className="ind-name">{ind.name}</h3>
+                                            <p className="ind-desc">{ind.desc}</p>
+                                            <span className="ind-link-v3">Explore Industry →</span>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </motion.div>
+                        </div>
+
+                        <button className={`slider-arrow-v3 right ${indIndex >= industries.length - 3 ? 'disabled' : ''}`} onClick={nextInd}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
                     </div>
                 </div>
             </section>
