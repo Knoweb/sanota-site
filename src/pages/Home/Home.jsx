@@ -159,21 +159,92 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Trust Signal Strip */}
-            <section className="trust-signal-strip">
-                <div className="container trust-container">
-                    <div className="trust-inline-strip">
-                        <span className="trust-item"><span className="trust-blue">15+</span> Years Experience</span>
-                        <span className="trust-separator">|</span>
-                        <span className="trust-item"><span className="trust-blue">250+</span> Projects</span>
-                        <span className="trust-separator">|</span>
-                        <span className="trust-item">Multi-Industry</span>
-                        <span className="trust-separator">|</span>
-                        <span className="trust-item">Nationwide</span>
-                        <span className="trust-separator">|</span>
-                        <span className="trust-item">Eng + Digital</span>
-                        <span className="trust-separator">|</span>
-                        <span className="trust-item">Lifecycle Support</span>
+            {/* Trust Cards Section (Modernized) */}
+            <section className="trust-cards-section">
+                <div className="container">
+                    <div className="trust-cards-grid">
+                        <motion.div 
+                            className="trust-card-v2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="trust-card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20M12 2l-2 2M12 2l2 2M12 22l-2-2M12 22l2-2M2 12l2-2M2 12l2 2M22 12l-2-2M22 12l-2 2"/></svg>
+                            </div>
+                            <h3>15+ YEARS <br/>EXPERIENCE</h3>
+                            <p>Delivering proven engineering excellence and innovation since 2008.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="trust-card-v2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                        >
+                            <div className="trust-card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                            </div>
+                            <h3>250+ <br/>PROJECTS</h3>
+                            <p>Successfully executed automation and engineering projects nationwide.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="trust-card-v2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <div className="trust-card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+                            </div>
+                            <h3>MULTI- <br/>INDUSTRY</h3>
+                            <p>Deep technical expertise across diverse and evolving industrial sectors.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="trust-card-v2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                        >
+                            <div className="trust-card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <h3>NATIONWIDE <br/>CAPABILITY</h3>
+                            <p>Comprehensive execution and support capability across all 9 provinces.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="trust-card-v2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4 }}
+                        >
+                            <div className="trust-card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <h3>ENG + <br/>DIGITAL</h3>
+                            <p>Seamless integration of mechanical, electrical and digital engineering.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            className="trust-card-v2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.5 }}
+                        >
+                            <div className="trust-card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            </div>
+                            <h3>LIFECYCLE <br/>SUPPORT</h3>
+                            <p>Committed long-term partnership for sustained operational reliability.</p>
+                        </motion.div>
                     </div>
                 </div>
             </section>
