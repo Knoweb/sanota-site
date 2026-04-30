@@ -371,11 +371,11 @@
 }
 
 .capability-card {
-    flex: 0 0 380px;
+    flex: 0 0 320px;
     background: #ffffff;
     border: 1px solid #eeeeee;
     border-radius: 0 !important;
-    padding: 50px 35px;
+    padding: 40px 25px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
@@ -392,14 +392,14 @@
 }
 
 .capability-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: rgba(34, 51, 173, 0.05);
-    border-radius: 50%;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: #2233AD;
     transition: all 0.4s ease;
 }
@@ -411,7 +411,7 @@
 }
 
 .capability-card-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 800;
     color: #1a1a1a;
     margin-bottom: 20px;
