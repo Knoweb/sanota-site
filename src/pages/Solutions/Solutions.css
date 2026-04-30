@@ -96,11 +96,11 @@
 
 /* 1. HERO SECTION */
 .solutions-hero {
-    height: 50vh;
-    min-height: 400px;
-    display: flex;
-    align-items: flex-start;
-    padding-top: 80px;
+    height: 40vh !important;
+    min-height: 300px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    padding-top: 60px !important;
     position: relative;
     background-color: #05070f;
     overflow: hidden;
@@ -143,29 +143,29 @@
 }
 
 .hero-title {
-    font-size: 3.2rem;
+    font-size: 2.8rem !important;
     font-weight: 800;
     line-height: 1.1;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 10px !important;
 }
 
 .hero-supporting-line {
-    font-size: 1.3rem;
+    font-size: 1.2rem !important;
     font-weight: 700;
     color: #2233AD;
-    height: 1.8rem;
-    margin-bottom: 15px;
+    height: 1.6rem;
+    margin-bottom: 10px !important;
     display: flex;
     align-items: center;
 }
 
 .hero-desc {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.95rem !important;
+    line-height: 1.4;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 30px;
-    max-width: 700px;
+    margin-bottom: 25px !important;
+    max-width: 600px;
 }
 
 .hero-cta {
