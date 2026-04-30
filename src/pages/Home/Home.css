@@ -7,10 +7,11 @@
 /* --- Hero Section --- */
 .hero {
     position: relative;
-    height: 90vh;
-    min-height: 600px;
+    height: 75vh;
+    min-height: 550px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 120px;
     color: var(--color-white);
     text-align: left;
 }
@@ -49,7 +50,7 @@
     flex-direction: column;
     align-items: flex-start;
     /* Force flex items to start */
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero-content {
