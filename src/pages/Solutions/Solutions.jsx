@@ -24,7 +24,6 @@ import caseGreenhouse from '../../assets/case-greenhouse.png';
 import caseDryer from '../../assets/case-dryer.png';
 import caseRetrofit from '../../assets/case-retrofit.png';
 import caseMonitoring from '../../assets/case-rfid.png';
-import approachVisual from '../../assets/engineering-approach.png';
 
 
 
@@ -221,80 +220,62 @@ const Solutions = () => {
             {/* 3. SANOTA APPROACH */}
             <section className="solutions-approach section-padding light-theme">
                 <div className="container">
-                    <div className="approach-section-header">
-                        <motion.h2 
-                            className="section-title"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false }}
-                        >
-                            Engineering Approach
-                        </motion.h2>
-                        <motion.p 
-                            className="approach-lead-v4"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false }}
-                            transition={{ delay: 0.1 }}
-                        >
-                            Sanota develops integrated engineering solutions combining mechanical systems, 
-                            automation technologies, and digital monitoring capabilities aligned with real 
-                            operational environments.
-                        </motion.p>
-                    </div>
-
-                    <div className="approach-grid-v4">
+                    <div className="approach-grid">
                         <motion.div 
-                            className="approach-visual-v4"
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            className="approach-left"
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: false }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div className="visual-box-wrapper">
-                                <motion.div 
-                                    className="blue-accent-box-v4"
-                                    animate={{ 
-                                        scale: [1, 1.05, 1],
-                                        opacity: [0.8, 1, 0.8]
-                                    }}
-                                    transition={{ 
-                                        duration: 4, 
-                                        repeat: Infinity, 
-                                        ease: "easeInOut" 
-                                    }}
-                                ></motion.div>
-                                <div className="approach-main-img-v4">
-                                    <img src={approachVisual} alt="Engineering Approach" />
+                            <h2 className="section-title">Engineering Approach</h2>
+                            <p className="approach-lead">
+                                Sanota develops integrated engineering solutions combining mechanical systems, 
+                                automation technologies, and digital monitoring capabilities aligned with real 
+                                operational environments.
+                            </p>
+                            
+                            <div className="approach-visual-box">
+                                <div className="blue-accent-box"></div>
+                                <div className="approach-main-img">
+                                    <img src={caseDryer} alt="Engineering Approach" />
                                 </div>
                             </div>
                         </motion.div>
 
-                        <div className="approach-list-v4">
-                            {[
-                                { num: "01", title: "ENGINEERING SYSTEM DESIGN", desc: "Developing robust mechanical frameworks tailored for tea processing." },
-                                { num: "02", title: "PROCESS OPTIMIZATION", desc: "Refining operational flows for maximum output and quality consistency." },
-                                { num: "03", title: "AUTOMATION INTEGRATION", desc: "Seamlessly embedding PLC and SCADA systems into existing lines." },
-                                { num: "04", title: "MONITORING CAPABILITY DEVELOPMENT", desc: "Real-time data acquisition and factory-wide visibility solutions." },
-                                { num: "05", title: "RETROFIT MODERNIZATION CONCEPTS", desc: "Modernizing legacy machinery with current automation standards." },
-                                { num: "06", title: "LIFECYCLE RELIABILITY FOCUS", desc: "Ensuring long-term operational stability and maintenance efficiency." }
-                            ].map((item, index) => (
-                                <motion.div 
-                                    className="approach-item-v4" 
-                                    key={index}
-                                    initial={{ opacity: 0, x: 30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: false }}
-                                    transition={{ delay: 0.2 + (index * 0.1) }}
-                                >
-                                    <div className="item-num-v4">{item.num}</div>
-                                    <div className="item-content-v4">
-                                        <h3 className="item-title-v4">{item.title}</h3>
-                                        <p className="item-desc-v4">{item.desc}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
+                        <motion.div 
+                            className="approach-right"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="approach-list">
+                                {[
+                                    { num: "01", title: "ENGINEERING SYSTEM DESIGN", desc: "Developing robust mechanical frameworks tailored for tea processing." },
+                                    { num: "02", title: "PROCESS OPTIMIZATION", desc: "Refining operational flows for maximum output and quality consistency." },
+                                    { num: "03", title: "AUTOMATION INTEGRATION", desc: "Seamlessly embedding PLC and SCADA systems into existing lines." },
+                                    { num: "04", title: "MONITORING CAPABILITY DEVELOPMENT", desc: "Real-time data acquisition and factory-wide visibility solutions." },
+                                    { num: "05", title: "RETROFIT MODERNIZATION CONCEPTS", desc: "Modernizing legacy machinery with current automation standards." },
+                                    { num: "06", title: "LIFECYCLE RELIABILITY FOCUS", desc: "Ensuring long-term operational stability and maintenance efficiency." }
+                                ].map((item, index) => (
+                                    <motion.div 
+                                        className="approach-item" 
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: false }}
+                                        transition={{ delay: 0.3 + (index * 0.1) }}
+                                    >
+                                        <div className="item-num">{item.num}</div>
+                                        <div className="item-content">
+                                            <h3 className="item-title">{item.title}</h3>
+                                            <p className="item-desc">{item.desc}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

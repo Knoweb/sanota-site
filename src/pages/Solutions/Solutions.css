@@ -369,39 +369,35 @@
 }
 
 
-/* 3. SANOTA APPROACH (V4 Redesign) */
+/* 3. SANOTA APPROACH (Redesigned) */
 .solutions-approach.light-theme {
     background-color: #fff;
     padding: 140px 0;
 }
 
-.approach-section-header {
-    margin-bottom: 80px;
-    max-width: 1000px;
-}
-
-.approach-lead-v4 {
-    font-size: 1.35rem;
-    line-height: 1.6;
-    color: #444;
-    margin-top: 25px;
-    max-width: 800px;
-}
-
-.approach-grid-v4 {
+.approach-grid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 80px;
-    align-items: flex-start;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 100px;
+    align-items: center;
 }
 
-.visual-box-wrapper {
+.approach-lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 30px 0 60px;
+    max-width: 580px;
+}
+
+.approach-visual-box {
     position: relative;
-    padding-top: 40px;
-    padding-left: 40px;
+    padding-left: 35px;
+    padding-top: 35px;
+    max-width: 550px;
 }
 
-.blue-accent-box-v4 {
+.blue-accent-box {
     position: absolute;
     top: 0;
     left: 0;
@@ -411,78 +407,79 @@
     z-index: 1;
 }
 
-.approach-main-img-v4 {
+.approach-main-img {
     position: relative;
     z-index: 2;
-    box-shadow: 30px 30px 80px rgba(0, 0, 0, 0.15);
+    box-shadow: 25px 25px 70px rgba(0, 0, 0, 0.15);
 }
 
-.approach-main-img-v4 img {
+.approach-main-img img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.approach-list-v4 {
+.approach-list {
     display: flex;
     flex-direction: column;
 }
 
-.approach-item-v4 {
+.approach-item {
     display: flex;
     gap: 30px;
-    padding: 35px 0;
+    padding: 30px 0;
     border-bottom: 1px solid #eee;
     transition: all 0.3s ease;
 }
 
-.approach-item-v4:first-child {
-    padding-top: 0;
-}
-
-.approach-item-v4:last-child {
+.approach-item:last-child {
     border-bottom: none;
 }
 
-.item-num-v4 {
+.item-num {
     font-size: 0.9rem;
     font-weight: 800;
     color: #2233AD;
     margin-top: 5px;
-    min-width: 30px;
 }
 
-.item-title-v4 {
-    font-size: 1.15rem;
+.item-title {
+    font-size: 1.05rem;
     font-weight: 800;
     color: #080b1a;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
 }
 
-.item-desc-v4 {
-    font-size: 1rem;
+.item-desc {
+    font-size: 0.9rem;
     color: #666;
     line-height: 1.6;
 }
 
-.approach-item-v4:hover .item-title-v4 {
+.approach-item:hover .item-title {
     color: #2233AD;
 }
 
 @media (max-width: 1100px) {
-    .approach-grid-v4 {
+    .approach-grid {
         gap: 50px;
     }
 }
 
 @media (max-width: 992px) {
-    .approach-grid-v4 {
+    .approach-grid {
         grid-template-columns: 1fr;
         gap: 80px;
     }
-    .visual-box-wrapper {
-        max-width: 600px;
+    .approach-left {
+        text-align: left;
+    }
+    .approach-lead {
+        max-width: 100%;
+    }
+    .approach-visual-box {
         margin: 0 auto;
     }
 }
