@@ -54,7 +54,7 @@ function Header() {
                             {/* 3. Industry Initiatives Dropdown */}
                             <li className="nav-dropdown">
                                 <NavLink to="/initiatives" className={({ isActive }) => isActive ? "active nav-dropdown-button" : "nav-dropdown-button"}>
-                                    INDUSTRY INITIATIVES <span className="nav-dropdown-arrow">▼</span>
+                                    INDUSTRY<br />INITIATIVES <span className="nav-dropdown-arrow">▼</span>
                                 </NavLink>
                                 <ul className="nav-dropdown-menu">
                                     <li><Link to="/initiatives/tea-modernization" className="nav-dropdown-item">Tea Industry Modernization</Link></li>
@@ -71,7 +71,7 @@ function Header() {
                             {/* 5. Knowledge Centre Dropdown */}
                             <li className="nav-dropdown">
                                 <NavLink to="/knowledge-centre" className={({ isActive }) => isActive ? "active nav-dropdown-button" : "nav-dropdown-button"}>
-                                    KNOWLEDGE CENTRE <span className="nav-dropdown-arrow">▼</span>
+                                    KNOWLEDGE<br />CENTRE <span className="nav-dropdown-arrow">▼</span>
                                 </NavLink>
                                 <ul className="nav-dropdown-menu">
                                     <li><Link to="/knowledge-centre/insights" className="nav-dropdown-item">Insights</Link></li>

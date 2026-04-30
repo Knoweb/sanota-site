@@ -84,10 +84,13 @@
     padding: 8px 0;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
     gap: 6px;
     font-family: var(--font-primary);
     position: relative;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 /* Triangle Indicator - Adjusted for new spacing */
