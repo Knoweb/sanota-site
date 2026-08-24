@@ -629,3 +629,140 @@
         height: 60px;
     }
 }
+/* Animated Map Glow and Pulse Styles copied from Home.css */
+.map-glow-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    animation: mapFloat 6s ease-in-out infinite;
+}
+
+.sl-map-creative {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(34, 51, 173, 0.3));
+}
+
+@keyframes mapFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+
+.map-glow-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 0%,
+            transparent 40%,
+            rgba(34, 51, 173, 0.1) 50%,
+            transparent 60%,
+            transparent 100%);
+    animation: lightSweep 8s linear infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes lightSweep {
+    0% {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+}
+
+/* Map Pulse Animations */
+.map-pulse {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+    z-index: 5;
+    box-shadow: 0 0 8px #38bdf8;
+}
+
+.map-pulse::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    border-radius: 50%;
+    border: 2px solid #38bdf8;
+    animation: pulseNode 2s ease-out infinite;
+}
+
+.map-pulse::after {
+    content: attr(data-city);
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.map-pulse:hover::after {
+    opacity: 1;
+}
+
+@keyframes pulseNode {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Specific Positions - Adjusted for landmass accuracy */
+.p-jaffna {
+    top: 12%;
+    left: 45%;
+}
+.p-anuradhapura {
+    top: 35%;
+    left: 48%;
+}
+.p-trinco {
+    top: 32%;
+    left: 65%;
+}
+.p-kuranegala {
+    top: 55%;
+    left: 42%;
+}
+.p-kandy {
+    top: 65%;
+    left: 52%;
+}
+.p-colombo {
+    top: 75%;
+    left: 32%;
+}
+.p-galle {
+    top: 90%;
+    left: 40%;
+}
+.p-matara {
+    top: 92%;
+    left: 50%;
+}

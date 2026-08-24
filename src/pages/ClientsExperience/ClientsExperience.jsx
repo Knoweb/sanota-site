@@ -2,9 +2,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MapContainer, TileLayer, CircleMarker, Popup, Tooltip } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+
+
 import './ClientsExperience.css';
+import slMap from '../../assets/sl-map-creative.png';
 import heroBg from '../../assets/pic1.jpg';
 import picture1 from '../../assets/picture1.jpg';
 import picture2 from '../../assets/picture2.jpg';
@@ -244,56 +245,17 @@ function ClientsExperience() {
                         {/* Left: Map Image */}
                         <div className="coverage-map-container">
                             <div className="orange-l-shape"></div>
-                            <div className="leaflet-map-wrapper">
-                                {loading ? (
-                                    <div className="map-loading-state" style={{ height: '600px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#e0e0e0' }}>
-                                        <p>Loading project data...</p>
-                                    </div>
-                                ) : (
-                                    <MapContainer
-                                        center={[7.8731, 80.7718]} // Center of Sri Lanka
-                                        zoom={7}
-                                        minZoom={7}
-                                        maxZoom={10}
-                                        scrollWheelZoom={false}
-                                        style={{ height: '750px', width: '100%', borderRadius: '0px' }}
-                                    >
-                                        <TileLayer
-                                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                                        />
-
-                                        {/* Province Markers */}
-                                        {provinces.map((province, index) => (
-                                            <CircleMarker
-                                                key={index}
-                                                center={province.coords}
-                                                radius={Math.max(10, province.projects / 3)} // Dynamic size
-                                                pathOptions={{ fillColor: '#2233AD', color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.8 }}
-                                                eventHandlers={{
-                                                    mouseover: (e) => {
-                                                        e.target.setStyle({ fillColor: '#000000' }); // Black on Hover
-                                                    },
-                                                    mouseout: (e) => {
-                                                        e.target.setStyle({ fillColor: '#2233AD' }); // Back to Blue
-                                                    }
-                                                }}
-                                            >
-                                                <Popup>
-                                                    <div style={{ textAlign: 'center', color: '#000' }}>
-                                                        <h3 style={{ margin: '0 0 5px 0', color: '#000', fontSize: '1.2rem', fontWeight: 'bold' }}>{province.name}</h3>
-                                                        <p style={{ margin: 0, fontWeight: 'bold', color: '#000' }}>{province.projects} Projects</p>
-                                                        <p style={{ fontSize: '0.9rem', color: '#000', marginTop: '5px' }}>{province.cities.join(' • ')}</p>
-                                                    </div>
-                                                </Popup>
-                                                <Tooltip direction="top" offset={[0, -10]} opacity={0.9}>
-                                                    <strong>{province.name}</strong><br />
-                                                    {province.projects} Projects
-                                                </Tooltip>
-                                            </CircleMarker>
-                                        ))}
-                                    </MapContainer>
-                                )}
+                            <div className="map-glow-container">
+                                <img src={slMap} alt="Sri Lanka Coverage Map" className="sl-map-creative" />
+                                {/* Animated Pulse Nodes */}
+                                <div className="map-pulse p-colombo" data-city="Colombo"></div>
+                                <div className="map-pulse p-kandy" data-city="Kandy"></div>
+                                <div className="map-pulse p-galle" data-city="Galle"></div>
+                                <div className="map-pulse p-trinco" data-city="Trincomalee"></div>
+                                <div className="map-pulse p-jaffna" data-city="Jaffna"></div>
+                                <div className="map-pulse p-anuradhapura" data-city="Anuradhapura"></div>
+                                <div className="map-pulse p-matara" data-city="Matara"></div>
+                                <div className="map-pulse p-kuranegala" data-city="Kurunegala"></div>
                             </div>
                         </div>
 
