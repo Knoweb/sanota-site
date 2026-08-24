@@ -3,7 +3,7 @@ import './SanotaLogo.css';
 
 const SanotaLogo = ({ className = '' }) => {
     return (
-        <div className={sanota-logo }>
+        <div className={`sanota-logo ${className}`}>
             <span className="sanota-text sanota-san">SAN</span>
             <span className="sanota-o-container">
                 <svg
