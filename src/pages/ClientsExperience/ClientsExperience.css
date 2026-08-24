@@ -149,7 +149,8 @@
 
 .stat-value {
     font-size: 4.5rem;
-    color: #2233AD;
+    color: #38bdf8;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
     /* Bright orange numbers */
     font-weight: 300;
     /* Thin font style as per screenshot */

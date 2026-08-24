@@ -152,7 +152,7 @@
 .hero-supporting-line {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #2233AD;
+    color: #38bdf8;
     height: 2.5rem;
     margin-bottom: 30px;
     display: flex;
@@ -268,7 +268,7 @@
 }
 
 .technical-unit:hover {
-    border-color: #2233AD;
+    border-color: #38bdf8;
     transform: translateY(-12px);
     box-shadow: 0 30px 60px rgba(34, 51, 173, 0.12);
 }
@@ -295,13 +295,13 @@
 }
 
 .technical-unit:hover .unit-index {
-    color: #2233AD;
+    color: #38bdf8;
 }
 
 .unit-icon {
     width: 32px;
     height: 32px;
-    color: #2233AD;
+    color: #38bdf8;
     transition: all 0.4s ease;
 }
 
@@ -319,7 +319,7 @@
 }
 
 .technical-unit:hover .unit-title {
-    color: #2233AD;
+    color: #38bdf8;
     transform: translateX(5px);
 }
 
@@ -442,7 +442,7 @@
 .item-num {
     font-size: 0.9rem;
     font-weight: 800;
-    color: #2233AD;
+    color: #38bdf8;
     margin-top: 5px;
 }
 
@@ -462,7 +462,7 @@
 }
 
 .approach-item:hover .item-title {
-    color: #2233AD;
+    color: #38bdf8;
 }
 
 @media (max-width: 1100px) {
@@ -672,7 +672,7 @@
 }
 
 .see-details {
-    color: #2233AD;
+    color: #38bdf8;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 800;
@@ -692,7 +692,7 @@
 }
 
 .inquire-btn {
-    color: #2233AD;
+    color: #38bdf8;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 800;
@@ -701,7 +701,7 @@
 }
 
 .inquire-btn:hover {
-    border-bottom-color: #2233AD;
+    border-bottom-color: #38bdf8;
 }
 
 @media (max-width: 768px) {
@@ -790,7 +790,7 @@
 .outcome-num-v5 {
     font-size: 0.9rem;
     font-weight: 800;
-    color: #2233AD;
+    color: #38bdf8;
     letter-spacing: 1px;
     padding-top: 4px;
 }
@@ -810,7 +810,7 @@
 }
 
 .outcome-item-v5:hover .item-title-v5 {
-    color: #2233AD;
+    color: #38bdf8;
 }
 
 @media (max-width: 1100px) {
@@ -843,7 +843,7 @@
     width: 40px;
     height: 40px;
     background: rgba(34, 51, 173, 0.2);
-    color: #2233AD;
+    color: #38bdf8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -904,7 +904,7 @@
 .industry-card-v3:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    border-color: #2233AD;
+    border-color: #38bdf8;
 }
 
 .ind-img-box {
@@ -953,7 +953,7 @@
 .ind-link-v3 {
     font-size: 0.85rem;
     font-weight: 800;
-    color: #2233AD;
+    color: #38bdf8;
     letter-spacing: 1px;
 }
 
@@ -1018,7 +1018,7 @@
 .case-link-v2 {
     font-size: 0.9rem;
     font-weight: 700;
-    color: #2233AD;
+    color: #38bdf8;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1062,7 +1062,7 @@
 .init-card-v4:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(34, 51, 173, 0.1);
-    border-color: #2233AD;
+    border-color: #38bdf8;
 }
 
 .init-top {
@@ -1075,14 +1075,14 @@
 .init-tag-v4 {
     font-size: 0.75rem;
     font-weight: 800;
-    color: #2233AD;
+    color: #38bdf8;
     letter-spacing: 2px;
 }
 
 .init-icon-dot {
     width: 6px;
     height: 6px;
-    background-color: #2233AD;
+    background-color: #38bdf8;
 }
 
 .init-name-v4 {
@@ -1114,7 +1114,7 @@
 }
 
 .init-arrow-v4 {
-    color: #2233AD;
+    color: #38bdf8;
     font-size: 1.2rem;
     transition: transform 0.3s ease;
 }
@@ -1124,7 +1124,7 @@
 }
 
 .init-card-v4:hover .init-footer-v4 {
-    color: #2233AD;
+    color: #38bdf8;
 }
 
 @media (max-width: 1200px) {
@@ -1183,7 +1183,7 @@
 
 .why-subtitle-v5 {
     font-size: 1.2rem;
-    color: #2233AD;
+    color: #38bdf8;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1215,13 +1215,13 @@
     transform: translateY(-10px);
     box-shadow: 0 30px 60px rgba(34, 51, 173, 0.2);
     background: #2233AD;
-    border-color: #2233AD;
+    border-color: #38bdf8;
 }
 
 .why-icon-v5 {
     width: 45px;
     height: 45px;
-    color: #2233AD;
+    color: #38bdf8;
     margin-bottom: 25px;
     transition: color 0.3s ease;
 }
@@ -1355,4 +1355,10 @@
     .flow-connector { display: none; }
     .case-studies-modern-grid, .why-solutions-grid { grid-template-columns: 1fr; }
     .capabilities-grid, .industries-links-grid, .initiatives-modern-grid { grid-template-columns: 1fr; }
+}
+/* Added for high contrast hover states */
+.case-modern-card:hover .case-link-v2 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
 }
