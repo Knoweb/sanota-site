@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import './Header.css';
-import sanotalogo from '../../assets/sanotalogo.png';
+import SanotaLogo from '../SanotaLogo/SanotaLogo';
 
 function Header() {
     const { isAuthenticated } = useAuth();
@@ -13,7 +13,7 @@ function Header() {
                 <div className="header-content">
                     {/* Left: Logo */}
                     <Link to="/" className="logo">
-                        <img src={sanotalogo} alt="Sanota" className="logo-image" />
+                        <SanotaLogo className="logo-image" />
                     </Link>
 
                     {/* Center: Navigation */}

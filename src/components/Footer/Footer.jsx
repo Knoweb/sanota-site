@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import sanotalogo from '../../assets/sanotalogo.png';
+import SanotaLogo from '../SanotaLogo/SanotaLogo';
 
 function Footer() {
     return (
@@ -10,7 +10,7 @@ function Footer() {
                 <div className="footer-grid">
                     {/* Column 1: Brand & Message */}
                     <div className="footer-col brand-col">
-                        <img src={sanotalogo} alt="SANOTA" className="footer-logo" />
+                        <SanotaLogo className="footer-logo" />
                         <h4 className="brand-tagline">Integrated Engineering for Evolving Industries</h4>
                         <p className="brand-desc">
                             Delivering advanced automation, IoT, and mechanical engineering solutions 

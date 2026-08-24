@@ -483,7 +483,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-n>
 
             {/* Differentiation Section */}
             <section className="differentiation-section">

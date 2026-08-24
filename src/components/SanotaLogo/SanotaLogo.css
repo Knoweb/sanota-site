@@ -1,0 +1,174 @@
+/* Sanota Animated Logo Styling */
+.sanota-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    font-weight: 700;
+    user-select: none;
+    transform: translateZ(0); /* Hardware acceleration */
+}
+
+.sanota-text {
+    font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+/* Header Specific Colors (Default) */
+.header .sanota-san,
+.header .sanota-ta {
+    color: #2563eb; /* Royal blue */
+}
+
+.header .sanota-o-svg {
+    --logo-primary: #eab308; /* Yellow */
+    --glow-color: rgba(234, 179, 8, 0.6);
+}
+
+/* Footer Specific Colors */
+.footer-new .sanota-san,
+.footer-new .sanota-ta {
+    color: #ffffff; /* White */
+}
+
+.footer-new .sanota-o-svg {
+    --logo-primary: #ffffff; /* White */
+    --glow-color: rgba(255, 255, 255, 0.6);
+}
+
+/* O Icon styling */
+.sanota-o-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    margin: 0 1px;
+}
+
+.sanota-o-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* SVG Circuit paths styling */
+.circuit-bg-circle {
+    stroke: var(--logo-primary);
+    opacity: 0.18;
+    stroke-linecap: round;
+}
+
+.circuit-glow-circle {
+    stroke: var(--logo-primary);
+    stroke-linecap: round;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 1px var(--glow-color));
+}
+
+.circuit-line-bg {
+    stroke: var(--logo-primary);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.18;
+}
+
+.circuit-line-glow {
+    stroke: var(--logo-primary);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 25 75;
+    stroke-dashoffset: 100;
+    opacity: 0.95;
+    filter: drop-shadow(0 0 2px var(--glow-color));
+    animation: electric-pulse 3.5s infinite linear;
+}
+
+/* Stagger animation start times for realistic organic flow */
+.line-top {
+    animation-delay: 0s;
+    animation-duration: 2.8s;
+}
+
+.line-mid-top {
+    animation-delay: 0.7s;
+    animation-duration: 3.2s;
+}
+
+.line-mid-bot {
+    animation-delay: 1.4s;
+    animation-duration: 3s;
+}
+
+.line-bot {
+    animation-delay: 2.1s;
+    animation-duration: 2.6s;
+}
+
+/* Nodes styling */
+.circuit-node {
+    fill: var(--logo-primary);
+    filter: drop-shadow(0 0 3px var(--glow-color));
+    transform-origin: center;
+    animation: node-pulse 2s infinite ease-in-out;
+}
+
+.node-top { animation-delay: 0.2s; }
+.node-mid-top { animation-delay: 0.9s; }
+.node-mid-bot { animation-delay: 1.6s; }
+.node-bot { animation-delay: 2.3s; }
+
+.circuit-node-small {
+    fill: var(--logo-primary);
+    opacity: 0.6;
+}
+
+/* Animation Keyframes */
+@keyframes electric-pulse {
+    0% {
+        stroke-dashoffset: 100;
+    }
+    100% {
+        stroke-dashoffset: -100;
+    }
+}
+
+@keyframes node-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 1;
+        filter: drop-shadow(0 0 5px var(--glow-color));
+    }
+}
+
+/* Login and SignUp Page Specific Colors */
+.login-page .sanota-san,
+.login-page .sanota-ta,
+.signup-page .sanota-san,
+.signup-page .sanota-ta {
+    color: #ffffff; /* White */
+}
+
+.login-page .sanota-o-svg,
+.signup-page .sanota-o-svg {
+    --logo-primary: #ffffff; /* White */
+    --glow-color: rgba(255, 255, 255, 0.6);
+}
+
+.login-page .sanota-o-container,
+.signup-page .sanota-o-container {
+    height: 48px;
+    width: 48px;
+}
+
+.login-page .sanota-text,
+.signup-page .sanota-text {
+    font-size: 40px;
+}
