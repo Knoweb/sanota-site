@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { MapContainer, TileLayer, CircleMarker, Popup, Tooltip } from 'react-leaflet';
 import { motion } from 'framer-motion';
 import pic1 from '../../assets/pic1.jpg';
 import picture1 from '../../assets/picture1.jpg';
@@ -31,6 +32,18 @@ import indEnergy from '../../assets/app-energy.png';
 import indEnviro from '../../assets/picture5.jpg';
 import indInst from '../../assets/picture1.jpg';
 import './Home.css';
+
+const provincesData = [
+    { name: 'Western Province', projects: 85, cities: ['Colombo', 'Gampaha', 'Kalutara'], coords: [6.9271, 79.8612] },
+    { name: 'Central Province', projects: 28, cities: ['Kandy', 'Matale', 'Nuwara Eliya'], coords: [7.2906, 80.6337] },
+    { name: 'Southern Province', projects: 22, cities: ['Galle', 'Matara', 'Hambantota'], coords: [6.0535, 80.2210] },
+    { name: 'Northern Province', projects: 12, cities: ['Jaffna', 'Kilinochchi', 'Mannar'], coords: [9.6615, 80.0255] },
+    { name: 'Eastern Province', projects: 15, cities: ['Trincomalee', 'Batticaloa', 'Ampara'], coords: [8.5874, 81.2152] },
+    { name: 'North Western Province', projects: 18, cities: ['Kurunegala', 'Puttalam'], coords: [7.4863, 80.3623] },
+    { name: 'North Central Province', projects: 14, cities: ['Anuradhapura', 'Polonnaruwa'], coords: [8.3114, 80.4037] },
+    { name: 'Uva Province', projects: 10, cities: ['Badulla', 'Monaragala'], coords: [6.9934, 81.0550] },
+    { name: 'Sabaragamuwa Province', projects: 16, cities: ['Ratnapura', 'Kegalle'], coords: [6.6828, 80.4014] }
+];
 
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -701,17 +714,50 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="nationwide-visual">
-                            <div className="map-glow-container">
-                                <img src={slMap} alt="Sri Lanka Coverage Map" className="sl-map-creative" />
-                                {/* Animated Pulse Nodes */}
-                                <div className="map-pulse p-colombo" data-city="Colombo"></div>
-                                <div className="map-pulse p-kandy" data-city="Kandy"></div>
-                                <div className="map-pulse p-galle" data-city="Galle"></div>
-                                <div className="map-pulse p-trinco" data-city="Trincomalee"></div>
-                                <div className="map-pulse p-jaffna" data-city="Jaffna"></div>
-                                <div className="map-pulse p-anuradhapura" data-city="Anuradhapura"></div>
-                                <div className="map-pulse p-matara" data-city="Matara"></div>
-                                <div className="map-pulse p-kuranegala" data-city="Kurunegala"></div>
+                            <div className="leaflet-map-home-wrapper" style={{ width: '100%', height: '550px', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)', position: 'relative', zIndex: 1 }}>
+                                <MapContainer
+                                    center={[7.8731, 80.7718]} // Center of Sri Lanka
+                                    zoom={7}
+                                    minZoom={7}
+                                    maxZoom={10}
+                                    scrollWheelZoom={false}
+                                    style={{ height: '100%', width: '100%' }}
+                                >
+                                    <TileLayer
+                                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    />
+
+                                    {/* Province Markers */}
+                                    {provincesData.map((province, index) => (
+                                        <CircleMarker
+                                            key={index}
+                                            center={province.coords}
+                                            radius={Math.max(10, province.projects / 3)} // Dynamic size
+                                            pathOptions={{ fillColor: '#38bdf8', color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.8 }}
+                                            eventHandlers={{
+                                                mouseover: (e) => {
+                                                    e.target.setStyle({ fillColor: '#ffffff' }); // White on Hover
+                                                },
+                                                mouseout: (e) => {
+                                                    e.target.setStyle({ fillColor: '#38bdf8' }); // Back to Cyan
+                                                }
+                                            }}
+                                        >
+                                            <Popup>
+                                                <div style={{ textAlign: 'center', color: '#000' }}>
+                                                    <h3 style={{ margin: '0 0 5px 0', color: '#000', fontSize: '1.2rem', fontWeight: 'bold' }}>{province.name}</h3>
+                                                    <p style={{ margin: 0, fontWeight: 'bold', color: '#000' }}>{province.projects} Projects</p>
+                                                    <p style={{ fontSize: '0.9rem', color: '#000', marginTop: '5px' }}>{province.cities.join(' • ')}</p>
+                                                </div>
+                                            </Popup>
+                                            <Tooltip direction="top" offset={[0, -10]} opacity={0.9}>
+                                                <strong>{province.name}</strong><br />
+                                                {province.projects} Projects
+                                            </Tooltip>
+                                        </CircleMarker>
+                                    ))}
+                                </MapContainer>
                             </div>
                         </div>
                     </div>
