@@ -386,10 +386,10 @@
 
 /* Map Container - Left */
 .coverage-map-container {
-    flex: 0 0 45%;
+    flex: 0 0 52%;
     position: relative;
-    margin-top: -60px;
-    margin-left: 80px;
+    margin-top: -40px;
+    margin-left: 60px;
     margin-bottom: -20px;
     z-index: 10;
 }
@@ -633,9 +633,10 @@
 .map-glow-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 650px;
     margin: 0 auto;
     animation: mapFloat 6s ease-in-out infinite;
+    z-index: 2;
 }
 
 .sl-map-creative {
