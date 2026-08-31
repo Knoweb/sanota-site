@@ -5,7 +5,7 @@
 /* Hero Section */
 .initiatives-hero {
     background-color: #050505;
-    padding: 140px 0 100px;
+    padding: 70px 0 60px;
     color: #ffffff;
     position: relative;
     overflow: hidden;
@@ -54,7 +54,7 @@
 
 /* Content Section */
 .initiatives-content {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: #ffffff;
     position: relative;
 }
@@ -138,13 +138,13 @@
 
 /* Footer CTA */
 .initiatives-footer-cta {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: #f8fafc;
 }
 
 .initiatives-footer-cta .cta-box {
     background-color: #050505;
-    padding: 80px;
+    padding: 60px;
     text-align: center;
     color: #ffffff;
     position: relative;
@@ -203,7 +203,7 @@
 
 @media (max-width: 768px) {
     .initiatives-hero {
-        padding: 120px 0 80px;
+        padding: 60px 0 60px;
     }
     
     .initiatives-footer-cta .cta-box {

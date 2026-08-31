@@ -5,7 +5,7 @@
 
 /* --- Hero Section --- */
 .initiative-hero {
-    padding: 160px 0 100px;
+    padding: 80px 0 60px;
     background-color: #080b1a;
     color: #fff;
     overflow: hidden;
@@ -104,7 +104,7 @@
 
 @media (max-width: 768px) {
     .initiative-hero {
-        padding: 120px 0 80px;
+        padding: 60px 0 60px;
     }
 
     .initiative-hero-title {
@@ -118,7 +118,7 @@
 
 /* --- Industry Context Section --- */
 .initiative-context-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fcfcfc;
 }
 
@@ -197,7 +197,7 @@
 
 /* --- Engineering Approach Section --- */
 .initiative-approach-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fff;
 }
 
@@ -339,7 +339,7 @@
 
 /* --- Solution Directions Section --- */
 .initiative-solutions-direction {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fcfcfc;
     background-image: radial-gradient(rgba(34, 51, 173, 0.05) 2px, transparent 2px);
     background-size: 40px 40px;
@@ -355,7 +355,7 @@
 /* --- Solution Directions V2 --- */
 .initiative-solutions-direction-v2 {
     background-color: #080b1a;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
     overflow: hidden;
 }
 
@@ -366,7 +366,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 .banner-overlay {
@@ -484,7 +484,7 @@
 
 /* --- Expected Benefits Section (Dark V2) --- */
 .initiative-benefits-section.dark-v2 {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #080b1a;
     position: relative;
     overflow: hidden;
@@ -607,7 +607,7 @@
 
 /* --- Expected Benefits Section (Dark V2) --- */
 .initiative-benefits-section.dark-v2 {
-    padding: 140px 0;
+    padding: 70px 0;
     background-color: #080b1a;
     position: relative;
     overflow: hidden;
@@ -747,7 +747,7 @@
 
 /* --- Related Solution Areas Section --- */
 .initiative-related-solutions {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fcfcfc;
 }
 
@@ -906,7 +906,7 @@
 
 /* --- Related Industries Section (Dark Mode) --- */
 .initiative-related-industries {
-    padding: 120px 0 160px;
+    padding: 60px 0 80px;
     background-color: #080b1a;
     position: relative;
     overflow: hidden;
@@ -1023,7 +1023,7 @@
 
 /* --- Case Studies Section --- */
 .initiative-case-studies {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fff;
     overflow: hidden;
 }
@@ -1108,7 +1108,7 @@
 
 /* --- Collaboration Section --- */
 .initiative-collaboration {
-    padding: 160px 0;
+    padding: 80px 0;
     background-color: #080b1a;
     color: #fff;
     text-align: center;
@@ -1179,7 +1179,7 @@
 
 /* --- Knowledge Connection Section (Light Mode) --- */
 .initiative-knowledge-connection {
-    padding: 140px 0;
+    padding: 70px 0;
     background-color: #fff;
     position: relative;
     overflow: hidden;
@@ -1333,7 +1333,7 @@
     }
 
     .initiative-collaboration {
-        padding: 100px 0;
+        padding: 60px 0;
     }
 }
 
@@ -1345,7 +1345,7 @@
 
 /* --- Operational Challenges Section --- */
 .initiative-challenges-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #080b1a;
     color: #fff;
     overflow: hidden;

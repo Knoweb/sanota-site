@@ -61,7 +61,7 @@
     align-items: center;
     /* Center vertically */
     gap: 60px;
-    padding: 100px 0;
+    padding: 60px 0;
     /* overflow: hidden; Removed to let accent box show */
 }
 
@@ -106,7 +106,7 @@
 /* --- Results Section --- */
 .results-section {
     position: relative;
-    padding: 80px 0;
+    padding: 60px 0;
     color: white;
     text-align: center;
     background-image: url('../../assets/pic1.jpg');
@@ -277,7 +277,7 @@
 
 /* --- Testimonials Section (About Page) --- */
 .about-testimonials-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: #fff;
     text-align: center;
 }
@@ -416,7 +416,7 @@
 /* --- History Dark Section (New) --- */
 .history-dark-section {
     background-color: #111;
-    padding: 80px 0;
+    padding: 60px 0;
     color: white;
     /* Ensure full width background if container limits it */
     width: 100vw;
@@ -543,7 +543,7 @@
 
 /* --- Services Accordion Section --- */
 .services-accordion-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: #fff;
 }
 

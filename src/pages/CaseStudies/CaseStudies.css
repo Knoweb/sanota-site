@@ -54,7 +54,7 @@
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    padding: 180px 0 160px;
+    padding: 80px 0 80px;
     /* Increased padding significantly for more height */
     text-align: center;
 }
@@ -76,7 +76,7 @@
 
 /* ── Carousel Section ── */
 .cs-carousel-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: #f8fafc;
     min-height: auto;
     overflow: hidden;
@@ -339,7 +339,7 @@
 .cta-section {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: #ffffff;
-    padding: 80px 0;
+    padding: 60px 0;
     margin-top: 60px;
 }
 
@@ -452,7 +452,7 @@
 .cs-history-section {
     background-color: #ffffff;
     /* White background */
-    padding: 120px 0;
+    padding: 60px 0;
     color: #1a1a1a;
     /* Dark text */
     overflow: hidden;

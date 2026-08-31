@@ -9,7 +9,7 @@
 .tea-hero-section {
     background-color: #080b1a;
     color: #fff;
-    padding: 140px 0 100px;
+    padding: 70px 0 60px;
     position: relative;
     overflow: hidden;
 }
@@ -191,7 +191,7 @@
 
 @media (max-width: 768px) {
     .tea-hero-section {
-        padding: 120px 0 60px;
+        padding: 60px 0 60px;
     }
 
     .tea-hero-title {
@@ -241,7 +241,7 @@
 
 /* --- Context Section Refined (Split Layout) --- */
 .tea-context-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #ffffff;
     /* White background as requested */
     color: #080b1a;
@@ -356,7 +356,7 @@
 
 /* --- Support Section Refined (Interactive Split) --- */
 .tea-support-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #080b1a;
     /* Dark background as requested */
     color: #fff;
@@ -522,7 +522,7 @@
 
 /* --- Relevant Solutions Section (White/Clean) --- */
 .tea-solutions-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fff;
 }
 
@@ -628,7 +628,7 @@
 
 /* --- Application Areas Carousel --- */
 .tea-applications-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #f8f9fa;
     overflow: hidden;
 }
@@ -729,7 +729,7 @@
 
 /* --- Initiatives Section --- */
 .tea-initiatives-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #080b1a;
     color: #fff;
     position: relative;
@@ -779,7 +779,7 @@
 
 /* --- Related Products Section (Dark/Image BG) --- */
 .tea-products-section {
-    padding: 150px 0;
+    padding: 70px 0;
     position: relative;
     background-color: #080b1a;
     overflow: hidden;
@@ -944,13 +944,13 @@
 
 /* --- Case Studies Section --- */
 .tea-case-studies-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #f8f9fa;
 }
 
 /* --- Case Studies Carousel (Design V2) --- */
 .tea-case-studies-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fff;
 }
 
@@ -1117,7 +1117,7 @@
 
 /* --- Why Sanota Section --- */
 .tea-why-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #000;
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
@@ -1231,7 +1231,7 @@
 
 /* --- Final CTA Section --- */
 .tea-final-cta-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background-color: #fff;
     text-align: center;
 }

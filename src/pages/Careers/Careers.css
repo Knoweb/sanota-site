@@ -139,7 +139,7 @@
 
 /* Why Careers Section */
 .why-careers-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: #ffffff;
 }
 
@@ -258,7 +258,7 @@
 /* Life at Sanota Section */
 .life-at-sanota-section {
     position: relative;
-    padding: 100px 0 100px 0;
+    padding: 60px 0 60px 0;
     margin-bottom: 200px;
     /* Space for overlapping card */
     background-size: cover;
@@ -462,7 +462,7 @@
 
 /* Open Positions Section */
 .open-positions-section {
-    padding: 100px 0 80px 0;
+    padding: 60px 0 60px 0;
     background-color: #ffffff;
 }
 
@@ -574,7 +574,7 @@
 
 /* Application Form Section */
 .application-form-section {
-    padding: 80px 0 100px 0;
+    padding: 60px 0 60px 0;
     background-color: #e0e0e0;
     /* Light grey background */
     display: flex;
