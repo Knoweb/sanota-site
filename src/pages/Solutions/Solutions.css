@@ -13,7 +13,7 @@
 }
 
 .section-padding {
-    padding: 140px 0;
+    padding: 70px 0;
 }
 
 .centered {
@@ -375,7 +375,7 @@
 /* 3. SANOTA APPROACH (Redesigned) */
 .solutions-approach.light-theme {
     background-color: #fff;
-    padding: 140px 0;
+    padding: 70px 0;
 }
 
 .approach-grid {
@@ -492,7 +492,7 @@
 .solutions-capabilities.light-theme {
     background-color: #f8f9fa;
     position: relative;
-    padding: 120px 0;
+    padding: 70px 0;
 }
 
 .capabilities-slider-container {
@@ -1145,7 +1145,7 @@
 /* 9. WHY SANOTA - Redesigned V5 */
 .why-sanota-v5 {
     background-color: #080b1a;
-    padding-bottom: 140px;
+    padding-bottom: 70px;
 }
 
 .why-hero-v5 {
