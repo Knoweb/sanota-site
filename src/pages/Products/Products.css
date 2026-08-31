@@ -95,6 +95,16 @@
     max-width: 800px;
     margin: 0 auto;
     font-weight: 400;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.products-hero .hero-subtitle:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #38bdf8 !important;
 }
 
 /* 3. Cards Section */
