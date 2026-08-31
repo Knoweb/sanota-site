@@ -727,3 +727,15 @@
         padding: 0 10px;
     }
 }
+/* Emerging section title contrast and spacing overrides */
+.ind-emerging-section .ind-section-label h2 {
+    color: #0f172a !important;
+}
+
+.ind-emerging-section .ind-section-label p {
+    color: #475569 !important;
+}
+
+.ind-emerging-section .ind-section-label {
+    margin-bottom: 35px !important;
+}

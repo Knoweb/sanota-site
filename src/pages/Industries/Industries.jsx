@@ -344,12 +344,34 @@ function Industries() {
                     </div>
                     <div className="ind-emerging-grid">
                         {[
-                            { name: 'Energy Systems', icon: '⚡' },
-                            { name: 'Environmental Systems', icon: '🌱' },
-                            { name: 'Healthcare & Specialized Systems', icon: '🏥' }
+                            { 
+                                name: 'Energy Systems', 
+                                icon: (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '56px', height: '56px', color: '#f59e0b', filter: 'drop-shadow(0 0 8px rgba(245, 158, 11, 0.3))' }}>
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                    </svg>
+                                )
+                            },
+                            { 
+                                name: 'Environmental Systems', 
+                                icon: (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '56px', height: '56px', color: '#10b981', filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.3))' }}>
+                                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c0 2-.42 4.48-1.5 10.2A7 7 0 0 1 11 20z" />
+                                        <path d="M9 22V12" />
+                                    </svg>
+                                )
+                            },
+                            { 
+                                name: 'Healthcare & Specialized Systems', 
+                                icon: (
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '56px', height: '56px', color: '#ef4444', filter: 'drop-shadow(0 0 8px rgba(239, 68, 68, 0.3))' }}>
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                    </svg>
+                                )
+                            }
                         ].map((sector, i) => (
                             <div key={i} className="ind-emerging-card">
-                                <div className="ind-emerging-icon">{sector.icon}</div>
+                                <div className="ind-emerging-icon" style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>{sector.icon}</div>
                                 <h3 className="ind-emerging-name">{sector.name}</h3>
                                 <span className="ind-emerging-badge">Active R&D</span>
                             </div>
