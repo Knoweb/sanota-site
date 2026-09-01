@@ -90,8 +90,7 @@
 
 .products-hero .hero-subtitle {
     font-size: 1.2rem;
-    color: #2233AD !important;
-    /* Blue Subtitle with !important to force override */
+    color: #ffffff !important;
     max-width: 800px;
     margin: 0 auto;
     font-weight: 400;
@@ -100,12 +99,14 @@
     border-radius: 4px;
     display: inline-block;
     cursor: pointer;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .products-hero .hero-subtitle:hover {
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(4px);
     color: #ffffff !important;
+    text-shadow: none;
 }
 
 /* 3. Cards Section */
